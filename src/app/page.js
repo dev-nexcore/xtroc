@@ -1,4 +1,5 @@
-import Home from '@/components/Home/Home.jsx';
+// import Home from '@/components/Home/Home.jsx';
+import Home from '@/components/Home/Home';
 import OurProducts from '@/components/Home/OurProducts';
 import Footer from '@/layout/footer';
 import React from 'react'
