@@ -23,29 +23,27 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen px-4 sm:px-6 lg:px-12">
+    <div className="overflow-x-hidden bg-black text-white min-h-screen">
       {/* Header Section */}
-      <div className="max-w-6xl mx-auto py-12">
+      <div className="max-w-6xl mx-auto px-4 md:px-0 py-12 text-left">
         <h2
-          className="text-5xl sm:text-6xl lg:text-7xl mb-6"
+          className="text-4xl sm:text-5xl md:text-7xl mb-6 md:-ml-10 text-center md:text-left"
           style={{ fontFamily: "Impact, sans-serif" }}
         >
           Contact Us
         </h2>
-        <div className="h-1.5 mb-6 bg-red-600 rounded-full w-48 sm:w-64 lg:w-80"></div>
+        <div className="h-1.5 mb-6 bg-red-600 rounded-full mx-auto md:mx-0 md:-ml-10 w-32 md:w-40"></div>
 
-        {/* Main Content Row (Text + Info Box) */}
         <div className="flex flex-col md:flex-row justify-between gap-8">
-          {/* Left Side - Text */}
-          <div className="flex-1">
+          <div className="flex-1 text-left">
             <h3
-              className="text-2xl sm:text-3xl mb-8"
+              className="text-2xl sm:text-3xl font-semi mb-6 md:mb-8 text-center md:text-left md:-ml-10"
               style={{ fontFamily: "Impact, sans-serif" }}
             >
               Get in Touch with <span className="text-red-600">XTROC</span>
             </h3>
             <p
-              className="text-base sm:text-lg lg:text-xl mb-4"
+              className="text-base sm:text-lg md:text-xl font-base mb-6 md:mb-4 text-center md:text-left md:-ml-10"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Need expert advice or tailored solutions?
@@ -56,45 +54,47 @@ export default function ContactPage() {
               <br />
               our products and services or to request a personalized quote.
             </p>
-          </div>
 
-          {/* Right Side - Contact Info Box */}
-          <div className="w-full md:w-96 bg-gray-900 p-6 rounded-2xl border-2 border-white shadow-[0_0_0_4px_#D01A1A]">
-            <div className="space-y-4 text-sm sm:text-base">
-              <p className="flex items-center gap-3">
-                <MapPinned size={40} className="text-red-600" /> B-35, Plot No
-                C-39A, TTC Industrial Area, MIDC Industrial Area, Pawne, Navi
-                Mumbai, Maharashtra 400710
-              </p>
-              <p className="flex items-center gap-3">
-                <Mail className="text-red-600" /> Enquiry@xtorcind.com
-              </p>
-              <p className="flex items-center gap-3">
-                <Phone className="text-red-600" /> +91-9619561695 / 8108810057
-              </p>
+            {/* Contact Info */}
+            <div className="overfolw-x-hidden ">
+            <div className="relative translate-x-10 md:absolute top-10 md:right-0  bg-gray-900 p-6 rounded-2xl border-2 border-white shadow-[0_0_0_4px_#D01A1A] mx-auto md:mx-0 max-w-md w-full overflow-hidden">
+              <div className="space-y-4 text-sm sm:text-base">
+                <p className="flex items-start gap-3">
+                  <MapPinned size={30} className="text-red-600 flex-shrink-0" />{" "}
+                  B-35, Plot No C-39A, TTC Industrial Area, MIDC Industrial
+                  Area, Pawne, Navi Mumbai, Maharashtra 400710
+                </p>
+                <p className="flex items-center gap-3">
+                  <Mail className="text-red-600" /> Enquiry@xtorcind.com
+                </p>
+                <p className="flex items-center gap-3">
+                  <Phone className="text-red-600" /> +91-9619561695 / 8108810057
+                </p>
+              </div>
+            </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Section Divider */}
-      <div className="flex items-center justify-center gap-6 sm:gap-12 mb-6">
-        <div className="w-16 sm:w-20 md:w-24 h-2 bg-red-600 rounded-full"></div>
-        <h2
-          className="text-3xl sm:text-4xl md:text-5xl"
-          style={{ fontFamily: "Impact, sans-serif" }}
-        >
-          Contact Us
-        </h2>
-        <div className="w-16 sm:w-20 md:w-24 h-2 bg-red-600 rounded-full"></div>
+      {/* Contact Form Title */}
+      <div className="px-4">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16 mb-6 mt-8">
+          <div className="w-16 md:w-24 h-2 bg-red-600 rounded-full"></div>
+          <h2
+            className="text-white text-3xl sm:text-4xl md:text-5xl text-center"
+            style={{ fontFamily: "Impact, sans-serif" }}
+          >
+            Contact Us
+          </h2>
+          <div className="w-16 md:w-24 h-2 bg-red-600 rounded-full"></div>
+        </div>
+        <ContactSection />
       </div>
 
-      {/* Contact Form */}
-      <ContactSection />
-
       {/* Map Section */}
-      <div className="mt-12 md:mt-20 flex items-center justify-center px-2">
-        <div className="w-full md:w-[900px] h-[250px] sm:h-[350px] md:h-[500px] rounded-xl overflow-hidden">
+      <div className="mt-8 px-4 flex items-center justify-center">
+        <div className="w-full md:w-[900px] h-[250px] sm:h-[300px] md:h-[500px] rounded-xl overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.7979768111245!2d72.8778437752053!3d19.072617982131263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d250f21f0d%3A0xdb46fbfa10678856!2sNexcore%20Alliance%20LLP!5e0!3m2!1sen!2sin!4v1756550911980!5m2!1sen!2sin"
             width="100%"
