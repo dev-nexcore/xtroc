@@ -1,4 +1,5 @@
 import ContactPage from "@/components/contact/contact";
+import Footer from "@/layout/footer";
 
 export default function Page() {
   return (
@@ -6,6 +7,7 @@ export default function Page() {
     
 
     <ContactPage />
+    <Footer/>
     
     </>
   )
