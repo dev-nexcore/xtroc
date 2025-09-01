@@ -1,9 +1,18 @@
-import Image from "next/image";
+// import Home from '@/components/Home/Home.jsx';
+import Home from '@/components/Home/Home';
+import OurProducts from '@/components/Home/OurProducts';
+import Footer from '@/layout/footer';
+import React from 'react'
 
-export default function Home() {
- return(
-  <div className="flex text-2xl text-amber-900 text-center">
-    <h1>this is Our Home page</h1>
-  </div>
- )
+const page = () => {
+  return (
+    <div>
+        <Home/>
+        <OurProducts/>
+        <Footer/>
+    </div>
+  )
 }
+
+export default page;
+

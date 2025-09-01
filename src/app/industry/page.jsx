@@ -1,4 +1,4 @@
-import ContactPage from "@/components/contact/contact";
+import IndustryPage from "@/components/industry/industry";
 import Footer from "@/layout/footer";
 
 export default function Page() {
@@ -6,7 +6,7 @@ export default function Page() {
     <>
     
 
-    <ContactPage />
+    <IndustryPage/>
     <Footer/>
     
     </>
