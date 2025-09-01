@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import { Mail, MapPinned, Phone } from "lucide-react";
 import ContactSection from "./form";
@@ -40,7 +41,9 @@ export default function ContactPage() {
               className="text-2xl sm:text-3xl font-semi mb-6 md:mb-8 text-center md:text-left md:-ml-10"
               style={{ fontFamily: "Impact, sans-serif" }}
             >
-              Get in Touch with <span className="text-red-600">XTROC</span>
+              Get in Touch with  <span className="inline-block align-middle">
+        <Image src="/xtroc.png" width={160} height={80} alt="Xtroc Logo" />
+      </span>
             </h3>
             <p
               className="text-base sm:text-lg md:text-xl font-base mb-6 md:mb-4 text-center md:text-left md:-ml-10"
