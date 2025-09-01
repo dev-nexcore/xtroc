@@ -23,16 +23,16 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="overflow-x-hidden bg-black text-white min-h-screen">
+    <div className="  overflow-x-hidden bg-black text-white min-h-screen">
       {/* Header Section */}
-      <div className="max-w-6xl mx-auto px-4 md:px-0 py-12 text-left">
+      <div className="  max-w-6xl mx-auto px-4 md:px-6 py-12 text-left">
         <h2
           className="text-4xl sm:text-5xl md:text-7xl mb-6 md:-ml-10 text-center md:text-left"
           style={{ fontFamily: "Impact, sans-serif" }}
         >
           Contact Us
         </h2>
-        <div className="h-1.5 mb-6 bg-red-600 rounded-full mx-auto md:mx-0 md:-ml-10 w-32 md:w-40"></div>
+        <div className="h-1.5 mb-6 bg-red-600 rounded-full mx-auto md:mx-0 md:-ml-10 w-32 md:w-140"></div>
 
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div className="flex-1 text-left">
@@ -57,12 +57,13 @@ export default function ContactPage() {
 
             {/* Contact Info */}
             <div className="overfolw-x-hidden ">
-            <div className="relative translate-x-10 md:absolute top-10 md:right-0  bg-gray-900 p-6 rounded-2xl border-2 border-white shadow-[0_0_0_4px_#D01A1A] mx-auto md:mx-0 max-w-md w-full overflow-hidden">
+            <div className="relative translate-x-10 md:absolute top-10 md:-right-16  bg-gray-900 p-4 rounded-2xl border-2 border-white shadow-[0_0_0_4px_#D01A1A] mx-auto md:mx-0 max-w-md w-full overflow-hidden ">
               <div className="space-y-4 text-sm sm:text-base">
                 <p className="flex items-start gap-3">
-                  <MapPinned size={30} className="text-red-600 flex-shrink-0" />{" "}
-                  B-35, Plot No C-39A, TTC Industrial Area, MIDC Industrial
-                  Area, Pawne, Navi Mumbai, Maharashtra 400710
+                  <MapPinned  className="text-red-600 flex-shrink-0" />{" "}
+                  B-35, Plot No C-39A, TTC Industrial
+                  <br /> Area, MIDC Industrial Area, Pawne,
+                  <br /> Navi Mumbai, Maharashtra 400710
                 </p>
                 <p className="flex items-center gap-3">
                   <Mail className="text-red-600" /> Enquiry@xtorcind.com
