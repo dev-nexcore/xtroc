@@ -44,20 +44,20 @@ const Product = () => {
       <div className="relative translate-x-10 md:absolute top-10 md:-right-16 bg-gray-900 p-6 rounded-2xl border-2 border-white shadow-[0_0_0_4px_#D01A1A] mx-auto md:mx-0 max-w-md w-full overflow-hidden">
         <div className="text-center">
           <h4 
-            className="text-xl sm:text-2xl font-bold mb-2 text-white"
-            style={{ fontFamily: "Impact, sans-serif" }}
+            className="text-xl sm:text-2xl font-bold mb-2 text-white "
+            
           >
             Optimized &
           </h4>
           <h4 
             className="text-xl sm:text-2xl font-bold mb-4 text-white"
-            style={{ fontFamily: "Impact, sans-serif" }}
+            
           >
             Industry-Ready
           </h4>
           <h4 
             className="text-xl sm:text-2xl font-bold text-red-600"
-            style={{ fontFamily: "Impact, sans-serif" }}
+            
           >
             Solutions
           </h4>

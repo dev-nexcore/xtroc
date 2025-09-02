@@ -91,8 +91,6 @@ const OurValues = () => {
 
         </div>
 
-
-
         {/* Mission and Vision Section */}
         <div className="flex flex-col lg:flex-row gap-12 mb-16" id="mission-vision-section">
           {/* Our Mission */}
