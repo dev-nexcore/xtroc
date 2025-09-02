@@ -4,11 +4,13 @@ import Home from '@/components/Home/Home';
 import Industries from '@/components/Home/Industries';
 import OurProducts from '@/components/Home/OurProducts';
 import Footer from '@/layout/footer';
+import Navbar from '@/layout/Navbar';
 import React from 'react'
 
 const page = () => {
   return (
     <div>
+      <Navbar/>
         <Home/>
         <OurProducts/>
         <Industries/>

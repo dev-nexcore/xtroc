@@ -36,11 +36,11 @@ export default function IndustryPage() {
   };
 
   return (
-    <div className="overflow-x-hidden bg-black text-white min-h-screen">
+    <div className="overflow-x-hidden  bg-black text-white min-h-screen">
       {/* Header Section */}
       <div className="max-w-6xl mx-auto px-4 md:px-6 py-12 text-left">
         <h2
-          className="text-4xl sm:text-5xl md:text-7xl mb-6 md:-ml-10 text-center md:text-left"
+          className="text-4xl sm:text-5xl md:text-7xl mb-2 md:-ml-10 text-center md:text-left"
           style={{ fontFamily: "Impact, sans-serif" }}
         >
           Industries We Serve
@@ -73,31 +73,18 @@ export default function IndustryPage() {
             </div>
             </div>
                {/* Contributions Section */}
-      <section className="py-12 px-4">
+      <section className="pt-26  px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Title with Borders */}
-          <div className="flex items-center justify-center mb-4 mt-26" style={{ fontFamily: "Impact, sans-serif" }}>
+          <div className="flex items-center justify-center  mt-10" style={{ fontFamily: "Impact, sans-serif" }}>
            
             <h2 className="text-4xl  mx-8"> Industries <span className="text-red-600">We Serve</span> Include:</h2>
            
           </div>
 
-          {/* Subtitle */}
         
 
-          {/* Industry Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 mt-10">
-            {industries.map((industry, index) => (
-              <div key={index} className="text-center">
-                <img
-                  src={industry.image}
-                  alt={industry.alt}
-                  className="w-full h-64 object-cover rounded-lg mb-4"
-                />
-                <h3 className="text-xl font-semibold">{industry.title}</h3>
-              </div>
-            ))}
-          </div>
+        
 
          
         </div>
