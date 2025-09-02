@@ -24,3 +24,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+@layer utilities {
+  .slant-card {
+    background: white;
+    color: black;
+    border-radius: 1rem;
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 92%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  .slant-card:hover {
+    transform: translateY(-6px);
+  }
+}

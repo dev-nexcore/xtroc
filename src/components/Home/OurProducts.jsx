@@ -1,20 +1,34 @@
 "use client";
-import React, { useState } from "react";
-import { MapPin, Mail, Phone } from "lucide-react";
+import React, { useState, useEffect } from "react";
 
 const OurProducts = () => {
-  const [selectedProduct, setSelectedProduct] = useState(1); // Default to middle product
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const products = [
-    { id: 0, src: "/product1.png", alt: "Product 1" },
-    { id: 1, src: "/product2.png", alt: "Product 2" },
-    { id: 2, src: "/product3.png", alt: "Product 3" },
-    { id: 4, src: "/product4.png", alt: "Product 4" },
+    { id: 0, src: "/product1.png", alt: "Product 1", title: "Hydraulic Torque Wrenches" },
+    { id: 1, src: "/product2.png", alt: "Product 2", title: "Bolt Tensioning Solutions" },
+    { id: 2, src: "/product3.png", alt: "Product 3", title: "Hydraulic Equipment" },
+    { id: 3, src: "/product4.png", alt: "Product 4", title: "Pipe Cutting & Beveling Machines" },
   ];
 
-  const handleProductClick = (productId) => {
-    setSelectedProduct(productId);
+  // Auto rotate every 1.5s
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % products.length);
+    }, 1500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Get 3 images (center + left + right)
+  const getVisibleImages = () => {
+    const left = (currentIndex - 1 + products.length) % products.length;
+    const center = currentIndex;
+    const right = (currentIndex + 1) % products.length;
+    return [products[left], products[center], products[right]];
   };
+
+  const visibleImages = getVisibleImages();
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -34,62 +48,40 @@ const OurProducts = () => {
           </p>
 
           {/* Product Images */}
-          <div className="flex justify-center items-center gap-8 mb-8">
-            {/* left wali images */}
-            {products
-              .filter((p) => p.id !== selectedProduct)
-              .slice(0, 1) // sirf ek left wali
-              .map((product) => (
-                <div
-                  key={product.id}
-                  className="cursor-pointer transition-all duration-300 scale-90 opacity-70 hover:opacity-90"
-                  onClick={() => handleProductClick(product.id)}
-                >
-                  <img
-                    src={product.src}
-                    alt={product.alt}
-                    className="w-48 h-36 object-cover rounded-lg border-2 border-red-600"
-                  />
-                </div>
-              ))}
-
-            {/* center wali image → default badi */}
-            <div className="cursor-pointer transition-all duration-300">
-              <img
-                src={products.find((p) => p.id === selectedProduct).src}
-                alt={products.find((p) => p.id === selectedProduct).alt}
-                className="w-80 h-60 object-cover rounded-lg border-4 border-red-600"
-              />
-            </div>
-
-            {/* right wali images */}
-            {products
-              .filter((p) => p.id !== selectedProduct)
-              .slice(1) // baki images right side pe
-              .map((product) => (
-                <div
-                  key={product.id}
-                  className="cursor-pointer transition-all duration-300 scale-90 opacity-70 hover:opacity-90"
-                  onClick={() => handleProductClick(product.id)}
-                >
-                  <img
-                    src={product.src}
-                    alt={product.alt}
-                    className="w-48 h-36 object-cover rounded-lg border-2 border-red-600"
-                  />
-                </div>
-              ))}
+          <div className="flex justify-center items-center gap-8 mb-8 transition-all duration-500">
+            {visibleImages.map((product, index) => (
+              <div
+                key={product.id}
+                className={`transition-all duration-500 ${
+                  index === 1
+                    ? "scale-110 opacity-100" // center wali badi
+                    : "scale-90 opacity-70" // side wali chhoti
+                }`}
+              >
+                <img
+                  src={product.src}
+                  alt={product.alt}
+                  className={`object-cover rounded-lg border-red-600 ${
+                    index === 1
+                      ? "w-80 h-60 border-4"
+                      : "w-48 h-36 border-2"
+                  }`}
+                />
+              </div>
+            ))}
           </div>
 
-          {/* Product Title */}
-          <h3 className="text-2xl font-semibold mb-6">
-            Bolt Tensioning Solutions
+          {/* Dynamic Product Title */}
+          <h3 className="inline-block bg-white text-black px-6 py-3 rounded-2xl text-2xl font-semibold mb-6 transition-all duration-500 shadow-md">
+            {products[currentIndex].title}
           </h3>
 
           {/* View More Button */}
-          <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            View More Products
-          </button>
+          <div className="mt-6">
+            <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-md">
+              View More Products
+            </button>
+          </div>
         </div>
       </section>
     </div>

@@ -65,7 +65,7 @@ const Home = () => {
                   Contact Us
                 </button>
                 <button className="bg-white hover:bg-gray-100 text-black px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
-                  <FaWhatsapp className="w-6 h-6 text-green-500" />
+                  {/* <FaWhatsapp className="w-6 h-6 text-green-500" /> */}
                   <span>Explore Products</span>
                 </button>
               </div>
