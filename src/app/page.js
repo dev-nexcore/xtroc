@@ -6,11 +6,17 @@ import OurProducts from '@/components/Home/OurProducts';
 import Footer from '@/layout/footer';
 import Navbar from '@/layout/Navbar';
 import React from 'react'
+import MobileNavbar from '@/layout/mobileNavbar';
 
 const page = () => {
   return (
     <div>
-      <Navbar/>
+      <div className="hidden md:block">
+    <Navbar />
+  </div>
+        <div className="md:hidden">
+    <MobileNavbar />
+  </div>
         <Home/>
         <OurProducts/>
         <Industries/>
