@@ -68,10 +68,10 @@ const ContactUs = () => {
 
               {/* Contact Details */}
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
+                <div className="flex items-center gap-4">
                   <MapPin className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-white hover:text-red-600">
+                    <p className="text-white hover:text-red-600 ml-20">
                       Office Address
                       <br />
                       Your Company Address Here
@@ -82,18 +82,18 @@ const ContactUs = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <Mail className="w-6 h-6 text-red-600 flex-shrink-0" />
+                  <Mail className="w-6 h-6 text-red-600 flex-shrink-0 " />
                   <a
                     href="mailto:ENQUIRY@XTORCIND.COM"
-                    className="text-white hover:text-red-600 transition-colors"
+                    className="text-white hover:text-red-600 transition-colors ml-20"
                   >
                     ENQUIRY@XTORCIND.COM
                   </a>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <Phone className="w-6 h-6 text-red-600 flex-shrink-0" />
-                  <div className="space-y-1">
+                  <Phone className="w-6 h-6 text-red-600 flex-shrink-0 " />
+                  <div className="space-y-1 ml-20">
                     <a
                       href="tel:+919619561695"
                       className="block text-white hover:text-red-600 transition-colors"

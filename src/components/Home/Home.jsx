@@ -23,7 +23,7 @@ const Home = () => {
   }, [products.length]);
 
   return (
-    <div className=" bg-black text-white">
+    <div className="bg-black text-white">
       {/* Hero Section */}
       <div className="bg-black px-4 sm:px-6 md:px-8 py-8">
         <div className="max-w-7xl mx-auto">
@@ -65,7 +65,6 @@ const Home = () => {
                   Contact Us
                 </button>
                 <button className="bg-white hover:bg-gray-100 text-black px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
-                  {/* <FaWhatsapp className="w-6 h-6 text-green-500" /> */}
                   <span>Explore Products</span>
                 </button>
               </div>
@@ -76,88 +75,84 @@ const Home = () => {
 
       {/* About Us Section */}
       <div className="relative pt-6 sm:pt-8">
-  <div
-    className="bg-[#1B1B1B] bg-opacity-25 px-4 sm:px-8 py-8 relative"
-    style={{
-      clipPath: "polygon(0 0, 100% 12%, 100% 88%, 0% 100%)"
-    }}
-  >
-    <div className="max-w-4xl mx-auto text-center relative z-10 pt-4 pb-4">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-        About Us
-      </h2>
+        <div
+          className="bg-[#1B1B1B] bg-opacity-25 px-4 sm:px-8 py-8 relative h-[48rem]"
+          style={{
+            clipPath: "polygon(0px 0px, 150% 25%, 100% 80%, 0% 100%)"
+          }}
+        >
+          <div className="max-w-4xl mx-auto text-center relative z-10 pt-4 pb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 mt-5 pt-18">
+              About Us
+            </h2>
 
-      {/* Red horizontal border */}
-      <div className="w-16 sm:w-24 md:w-32 h-1.5 bg-red-500 mx-auto mb-8 rounded-lg"></div>
+            {/* Red horizontal border */}
+            <div className="w-16 sm:w-24 md:w-32 h-1.5 bg-red-500 mx-auto mb-8 rounded-lg"></div>
 
-      <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-8">
-        Engineering Excellence Driven by Experience
-      </h3>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-8">
+              Engineering Excellence Driven by Experience
+            </h3>
 
-      <p className="text-gray-300 text-base sm:text-lg mb-6 leading-relaxed">
-        Xtorc was founded with a vision to provide world-class industrial tools
-        and services tailored to modern challenges. As a startup with over a
-        decade of experience, we're redefining how industries achieve precision,
-        efficiency, and safety. All our products are proudly manufactured in
-        India and certified to the highest standards, including ISO 9001:15000,
-        CE, and ATEX.
-      </p>
+            <p className="text-gray-300 text-base sm:text-lg mb-6 leading-relaxed">
+              Xtorc was founded with a vision to provide world-class industrial tools
+              and services tailored to modern challenges. As a startup with over a
+              decade of experience, we're redefining how industries achieve precision,
+              efficiency, and safety. All our products are proudly manufactured in
+              India and certified to the highest standards, including ISO 9001:15000,
+              CE, and ATEX.
+            </p>
 
-      <p className="text-gray-300 text-base sm:text-lg mb-10 leading-relaxed">
-        At Xtorc, we believe in creating value that extends beyond products. Our
-        WIN-WIN-WIN philosophy ensures that our customers win, our employees
-        thrive, and our entrepreneurs succeed.
-      </p>
+            <p className="text-gray-300 text-base sm:text-lg mb-10 leading-relaxed">
+              At Xtorc, we believe in creating value that extends beyond products. Our
+              WIN-WIN-WIN philosophy ensures that our customers win, our employees
+              thrive, and our entrepreneurs succeed.
+            </p>
 
-      <button className="bg-red-500 hover:bg-red-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors ">
-        Learn more about us
-      </button>
-    </div>
-  </div>
-</div>
-
-
-      {/* Why Choose Section */}
-      <div className="bg-black px-4 py-8">
-  <div className="max-w-7xl mx-auto">
-    <div className="flex flex-col items-center mb-2">
-      {/* Center - Why To Choose Text and Xtorc Image */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold text-white text-center">
-          Why To Choose
-        </h2>
-
-        {/* Images Wrapper */}
-        <div className="flex flex-row sm:flex-col md:flex-row items-center gap-2">
-          <img
-            src="xtroc_india.png"
-            alt="Xtorc India"
-            className="h-12 w-auto sm:h-12 md:h-20 object-contain"
-          />
-
-          <img
-            src="build.png"
-            alt="Build Quality"
-            className="h-36 w-auto sm:h-28 md:h-80 object-contain"
-          />
+            <button className="bg-red-500 hover:bg-red-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors">
+              Learn more about us
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
-    {/* Red horizontal border */}
-    <div className="w-16 sm:w-20 h-1 bg-red-500 mx-auto mb-4 rounded-xl"></div>
+      {/* Why Choose Section - FIXED */}
+      <div className="bg-black px-4 py-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Center - Why To Choose Text and Xtorc Images */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8">
+            {/* Title - Shifted slightly right */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white text-center lg:mr-8">
+              Why To Choose
+            </h2>
 
-    {/* Tagline */}
-    <div className="text-center px-2">
-      <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-        "The X Factor in Your Industrial Needs"
-      </h3>
-    </div>
-  </div>
-</div>
+            {/* Images Wrapper - Bigger size with better overlap */}
+            <div className="relative flex items-center justify-start h-32 lg:h-40">
+              {/* First Image - Reduced width */}
+              <img
+                src="xtroc_india.png"
+                alt="Xtorc India"
+                className="h-20 lg:h-28 w-auto object-contain z-10"
+                style={{ maxWidth: '250px' }}
+              />
 
+              {/* Second Image - Bigger and overlapping at first image's end */}
+              <img
+                src="build.png"
+                alt="Build Quality"
+                className="h-32 lg:h-40 w-auto object-contain -ml-8 lg:-ml-12 z-20 mt-10 "
+              />
+            </div>
+          </div>
 
-
+          {/* Red horizontal border + Tagline - MOVED CLOSER */}
+          <div className="mt-6 text-center">
+            <div className="w-16 sm:w-20 h-1 bg-red-500 mx-auto mb-2 rounded-xl"></div>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              "The X Factor in Your Industrial Needs"
+            </h3>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
