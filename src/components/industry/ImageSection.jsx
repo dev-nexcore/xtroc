@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-const Industries = () => {
+const ImageSection = () => {
   const industries = [
     {
       image: "/oil.png",
@@ -32,23 +32,8 @@ const Industries = () => {
   ];
   return (
     <div>
-      <section className=" bg-black py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Title with Borders */}
-          <div className="flex items-center justify-center mb-4">
-            <div className="flex-1 h-0.5 bg-red-600"></div>
-            <h2 className="text-4xl font-bold mx-8">Our Contributions</h2>
-            <div className="flex-1 h-0.5 bg-red-600"></div>
-          </div>
-
-          {/* Subtitle */}
-          <p
-            className="text-center text-2xl mb-12"
-            style={{ color: "#D01A1A" }}
-          >
-            Industries We Serve!
-          </p>
-
+      <section className=" bg-black py-1 px-4 ">
+        <div className="max-w-6xl min-h-screen mx-auto">
           {/* Industry Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {industries.map((industry, index) => (
@@ -70,23 +55,16 @@ const Industries = () => {
                     </p>
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mt-4">{industry.title}</h3>
+                <h3 className="text-xl font-semibold text-white mt-4">{industry.title}</h3>
               </div>
             ))}
           </div>
 
-          {/* Bottom Text */}
-          <p className="text-center text-lg mb-8">
-            The only place where you'll get the perfect solution for all your
-            industry needs.
-          </p>
 
-          {/* Red Border */}
-          <div className="w-full h-0.5 bg-red-600 mb-12"></div>
         </div>
       </section>
     </div>
   );
 };
 
-export default Industries;
+export default ImageSection;
