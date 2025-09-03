@@ -3,7 +3,7 @@ import { MapPin, Mail, Phone } from "lucide-react";
 
 const ContactUs = () => {
   return (
-    <div><section className="py-12 px-4">
+    <div><section className="py-12 px-4 bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -56,12 +56,12 @@ const ContactUs = () => {
 
             {/* Contact Info */}
             <div>
-              <h2 className="text-4xl font-bold mb-6">CONTACT US NOW!</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">CONTACT US NOW!</h2>
 
               {/* Red Border */}
               <div className="w-24 h-0.5 bg-red-600 mb-6"></div>
 
-              <p className="text-lg mb-8">
+              <p className="text-lg mb-8 text-white">
                 Need expert advice or tailored solutions? Get in touch with
                 Xtorc for unmatched support and personalized service.
               </p>
@@ -71,7 +71,7 @@ const ContactUs = () => {
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">
+                    <p className="text-white hover:text-red-600">
                       Office Address
                       <br />
                       Your Company Address Here
@@ -98,14 +98,9 @@ const ContactUs = () => {
                       href="tel:+919619561695"
                       className="block text-white hover:text-red-600 transition-colors"
                     >
-                      +91 9619561695
+                      +91 9619561695 / 8108810057
                     </a>
-                    <a
-                      href="tel:+918108810057"
-                      className="block text-white hover:text-red-600 transition-colors"
-                    >
-                      +91 8108810057
-                    </a>
+                  
                   </div>
                 </div>
               </div>

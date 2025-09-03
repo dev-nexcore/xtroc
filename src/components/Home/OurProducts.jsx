@@ -5,10 +5,30 @@ const OurProducts = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const products = [
-    { id: 0, src: "/product1.png", alt: "Product 1", title: "Hydraulic Torque Wrenches" },
-    { id: 1, src: "/product2.png", alt: "Product 2", title: "Bolt Tensioning Solutions" },
-    { id: 2, src: "/product3.png", alt: "Product 3", title: "Hydraulic Equipment" },
-    { id: 3, src: "/product4.png", alt: "Product 4", title: "Pipe Cutting & Beveling Machines" },
+    {
+      id: 0,
+      src: "/product1.png",
+      alt: "Product 1",
+      title: "Hydraulic Torque Wrenches",
+    },
+    {
+      id: 1,
+      src: "/product2.png",
+      alt: "Product 2",
+      title: "Bolt Tensioning Solutions",
+    },
+    {
+      id: 2,
+      src: "/product3.png",
+      alt: "Product 3",
+      title: "Hydraulic Equipment",
+    },
+    {
+      id: 3,
+      src: "/product4.png",
+      alt: "Product 4",
+      title: "Pipe Cutting & Beveling Machines",
+    },
   ];
 
   // Auto rotate every 1.5s
@@ -48,33 +68,48 @@ const OurProducts = () => {
           </p>
 
           {/* Product Images */}
-          <div className="flex justify-center items-center gap-8 mb-8 transition-all duration-500">
-            {visibleImages.map((product, index) => (
-              <div
-                key={product.id}
-                className={`transition-all duration-500 ${
-                  index === 1
-                    ? "scale-110 opacity-100" // center wali badi
-                    : "scale-90 opacity-70" // side wali chhoti
-                }`}
-              >
-                <img
-                  src={product.src}
-                  alt={product.alt}
-                  className={`object-cover rounded-lg border-red-600 ${
-                    index === 1
-                      ? "w-80 h-60 border-4"
-                      : "w-48 h-36 border-2"
-                  }`}
-                />
-              </div>
-            ))}
-          </div>
 
-          {/* Dynamic Product Title */}
-          <h3 className="inline-block bg-white text-black px-6 py-3 rounded-2xl text-2xl font-semibold mb-6 transition-all duration-500 shadow-md">
-            {products[currentIndex].title}
-          </h3>
+{/* Product Images with Shape Background */}
+<div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-12 bg-black">
+  {/* Background Shape */}
+  <div className="absolute inset-0 w-full">
+    <div
+      className="w-full h-[500px] "
+      style={{
+        clipPath: "polygon(0 0, 50% 10%, 100% 0, 100% 100%, 50% 90%, 0 100%)",
+        backgroundColor: "#1B1B1B",
+      }}
+    ></div>
+  </div>
+
+  {/* Foreground Content */}
+  <div className="relative flex flex-col items-center justify-center mt-10">
+    <div className="flex justify-center items-center gap-8 mb-8 transition-all duration-500">
+      {visibleImages.map((product, index) => (
+        <div
+          key={product.id}
+          className={`transition-all duration-500 ${
+            index === 1 ? "scale-110 opacity-100" : "scale-90 opacity-70"
+          }`}
+        >
+          <img
+            src={product.src}
+            alt={product.alt}
+            className={`object-cover rounded-lg border-red-600 ${
+              index === 1 ? "w-80 h-60 border-4" : "w-48 h-36 border-2"
+            }`}
+          />
+        </div>
+      ))}
+    </div>
+
+    {/* Dynamic Product Title */}
+    <h3 className="inline-block bg-white text-black px-6 py-3 rounded-2xl text-2xl font-semibold mb-6 transition-all duration-500 shadow-md">
+      {products[currentIndex].title}
+    </h3>
+  </div>
+</div>
+
 
           {/* View More Button */}
           <div className="mt-6">

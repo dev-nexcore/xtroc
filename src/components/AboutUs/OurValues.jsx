@@ -68,28 +68,47 @@ const OurValues = () => {
         
 
         {/* Stats Section */}
-        <div className="mb-16">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-8">
-            {/* 25 Products */}
-            <div className="text-center p-8 rounded-lg w-80" style={{backgroundColor: '#1B1B1B'}}>
-              <div className="text-6xl font-bold mb-2" style={{color: '#D01A1A'}}>
-                <CountingNumber target={25} />
-              </div>
-              <div className="text-white text-xl">Products</div>
-            </div>
+<div className="mb-16">
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-0">
+    
+    {/* 25 Products Card */}
+    <div
+      className="text-center p-10 w-100 relative h-[12.5rem]"
+      style={{
+        backgroundColor: "#1B1B1B",
+        clipPath: "polygon(0 0, 100% 0, 77% 100%, 0 100%)", // left side cut
+      }}
+    >
+      <div
+        className="text-6xl font-bold mb-2"
+        style={{ color: "#D01A1A" }}
+      >
+        <CountingNumber target={25} />
+      </div>
+      <div className="text-white text-xl">Products</div>
+    </div>
 
-            {/* 15 Years */}
-            <div className="text-center p-8 rounded-lg w-80" style={{backgroundColor: '#1B1B1B'}}>
-              <div className="text-6xl font-bold mb-2" style={{color: '#D01A1A'}}>
-                <CountingNumber target={15} />
-              </div>
-              <div className="text-white text-xl">Years of Combined Sales<br />& Operation Expertise</div>
-            </div>
-          </div>
+    {/* 15 Years Card */}
+    <div
+      className="text-center p-10 w-100 relative -ml-6 lg:-ml-12"
+      style={{
+        backgroundColor: "#1B1B1B",
+        clipPath: "polygon(25% 0px, 100% 0px, 100% 100%, 0% 100%)", // right side cut
+      }}
+    >
+      <div
+        className="text-6xl font-bold mb-2"
+        style={{ color: "#D01A1A" }}
+      >
+        <CountingNumber target={15} />
+      </div>
+      <div className="text-white text-xl">
+        Years of Combined Sales <br /> & Operation Expertise
+      </div>
+    </div>
+  </div>
+</div>
 
-          {/* Center White Border */}
-
-        </div>
 
         {/* Mission and Vision Section */}
         <div className="flex flex-col lg:flex-row gap-12 mb-16" id="mission-vision-section">

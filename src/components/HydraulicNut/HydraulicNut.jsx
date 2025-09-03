@@ -37,7 +37,7 @@ const HydraulicNut = () => {
 
             {/* Download Catalog Button */}
             <div className="flex justify-center">
-              <button className="bg-red-600 text-white px-8 py-3 rounded-2xl font-semibold hover:bg-red-700 transition-colors">
+              <button className="bg-white text-red-600 px-8 py-3 text-2xl rounded-2xl font-bold transition-colors">
                 Download Catalog
               </button>
             </div>

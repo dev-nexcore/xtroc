@@ -37,7 +37,7 @@ const Industries = () => {
           {/* Section Title with Borders */}
           <div className="flex items-center justify-center mb-4">
             <div className="flex-1 h-0.5 bg-red-600"></div>
-            <h2 className="text-4xl font-bold mx-8">Our Contributions</h2>
+            <h2 className="text-4xl font-bold mx-8 text-white">Our Contributions</h2>
             <div className="flex-1 h-0.5 bg-red-600"></div>
           </div>
 
@@ -52,7 +52,7 @@ const Industries = () => {
           {/* Industry Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {industries.map((industry, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center text-white">
                 <div className="relative group overflow-hidden rounded-lg">
                   <img
                     src={industry.image}
@@ -76,13 +76,13 @@ const Industries = () => {
           </div>
 
           {/* Bottom Text */}
-          <p className="text-center text-lg mb-8">
+          <p className="text-center text-2xl mb-8 text-white">
             The only place where you'll get the perfect solution for all your
             industry needs.
           </p>
 
           {/* Red Border */}
-          <div className="w-full h-0.5 bg-red-600 mb-12"></div>
+          <div className="w-full h-0.5 bg-red-600 mb-6"></div>
         </div>
       </section>
     </div>
