@@ -7,6 +7,9 @@ const Navbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
    const [activeSubmenu, setActiveSubmenu] = useState(null);
    const [hoveredProduct, setHoveredProduct] = useState(null);
+   const [selectedProduct, setSelectedProduct] = useState(null); 
+// format: { id: 'electric-wrench', link: '/products/torque-wrenches/electric' }
+
    // Define this at the top of your component
 const productImages = {
   'multi-stud': '/images/bolt-tensioning/multi-stud.png',
@@ -60,7 +63,7 @@ const productImages = {
               
               {isProductsOpen && (
                 <div 
-                  className="absolute top-full left-0 mt-1 bg-white border border-gray-200 shadow-lg z-50 rounded-md flex"
+                  className="absolute top-full  -left-75 mt-6 bg-white border border-gray-200 shadow-lg z-50 w-5xl h-[550] rounded-md flex"
                   onMouseLeave={() => {
                     setIsProductsOpen(false);
                     setActiveSubmenu(null);
@@ -108,212 +111,176 @@ const productImages = {
 
                   {/* Secondary Menu */}
                   {activeSubmenu && (
-                    <div className="w-80 py-2 border-l border-gray-200 bg-gray-50">
+                    <div className="w-96 py-2 border-l border-gray-200 bg-gray-50">
                       {activeSubmenu === 'bolt-tensioning' && (
                         <>
                         
-                          <Link 
+                          <button 
                           
-                            href="/products/bolt-tensioning/multi-stud" 
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('multi-stud')}
-                            onMouseLeave={() => setHoveredProduct(null)}
+                            onClick={() => setSelectedProduct({id: 'multi-stud', link: '/products/bolt-tensioning/multi-stud'})}
+                            className="flex items-center w-full px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 group text-left"
                           >
                              <span className=" w-20 text-red-500 mr-3 text-lg group-hover:text-red-600">-</span>
                             Multi Stud Bolt Tensioners
-                          </Link>
-                          <Link 
-                            href="/products/bolt-tensioning/hydraulic" 
+                          </button>
+                          <button 
+                            onClick={() => setSelectedProduct({id: 'hydraulic-tensioner', link: '/products/bolt-tensioning/hydraulic'}) }
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('hydraulic-tensioner')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Hydraulic Bolt Tensioners
-                          </Link>
-                          <Link 
-                            href="/products/bolt-tensioning/pneumatic" 
+                          </button>
+                          <button 
+                           onClick={() => setSelectedProduct({id: 'pneumatic-powerpack', link: '/products/bolt-tensioning/pneumatic'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('pneumatic-powerpack')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Pneumatic & Electric Powerpack
-                          </Link>
-                          <Link 
-                            href="/products/bolt-tensioning/electric" 
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('electric-torque')}
-                            onMouseLeave={() => setHoveredProduct(null)}
+                          </button>
+                          <button 
+                           onClick={() => setSelectedProduct({id: 'electric-torque', link: '/products/bolt-tensioning/electric'})}
+                            className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
                             Electric & Pneumatic Torque Wrenches
-                          </Link>
+                          </button>
                         </>
                       )}
                       
                       {activeSubmenu === 'torque-wrenches' && (
                         <>
-                          <Link 
-                            href="/products/torque-wrenches/hydraulic" 
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('hydraulic-wrench')}
-                            onMouseLeave={() => setHoveredProduct(null)}
+                        <button
+                        onClick={() =>setSelectedProduct({ id: 'electric-wrench', link: '/products/torque-wrenches/electric'})}
+                        className="block w-full text-left px-5 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                        Hydrolic Torque Wrenches
+                    </button>
+
+                          <button
+                          onClick={()=>setSelectedProduct({id: 'electric-wrench', link: '/products/torque-wrenches/electric'})}
+                          className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
-                            Hydraulic Torque Wrenches
-                          </Link>
-                          <Link 
-                            href="/products/torque-wrenches/electric" 
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('electric-wrench')}
-                            onMouseLeave={() => setHoveredProduct(null)}
-                          >
-                            Electric Torque Wrenches
-                          </Link>
-                          <Link 
-                            href="/products/torque-wrenches/pneumatic" 
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('pneumatic-wrench')}
-                            onMouseLeave={() => setHoveredProduct(null)}
+                            Electric Torque Wrenches 
+                          </button>
+                          <button 
+                            onClick={()=>setSelectedProduct({id: 'pneumatic-wrench', link: '/products/torque-wrenches/pneumatic'})}
+                            className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"  
                           >
                             Pneumatic Torque Wrenches
-                          </Link>
-                          <Link 
-                            href="/products/torque-wrenches/manual" 
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('manual-wrench')}
-                            onMouseLeave={() => setHoveredProduct(null)}
+                          </button>
+                          <button 
+                            onClick={()=>setSelectedProduct({id: 'manual-wrench', link: '/products/torque-wrenches/manual'})}
+                            className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
                             Manual Torque Wrenches
-                          </Link>
+                          </button>
                         </>
                       )}
                       
                       {activeSubmenu === 'hydraulic-equipment' && (
                         <>
-                          <Link 
-                            href="/products/hydraulic/pumps" 
+                          <button 
+                            onClick={()=>setSelectedProduct({id: 'hydraulic-pump', link: '/products/hydraulic/pumps'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('hydraulic-pump')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Hydraulic Pumps
-                          </Link>
-                          <Link 
-                            href="/products/hydraulic/cylinders" 
+                          </button>
+                          <button 
+                           onClick={()=>setSelectedProduct({id: 'hydraulic-cylinder', link: '/products/hydraulic/cylinders'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('hydraulic-cylinder')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Hydraulic Cylinders
-                          </Link>
-                          <Link 
-                            href="/products/hydraulic/hoses" 
+                          </button>
+                          <button 
+                            onClick={()=>setSelectedProduct({id: 'hydraulic-hose', link: '/products/hydraulic/hoses-and-fittings'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('hydraulic-hose')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Hydraulic Hoses & Fittings
-                          </Link>
-                          <Link 
-                            href="/products/hydraulic/accessories" 
+                          </button>
+                          <button 
+                            onClick={()=>setSelectedProduct({id: 'hydraulic-accessory', link: '/products/hydraulic/accessories'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('hydraulic-accessory')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Hydraulic Accessories
-                          </Link>
+                          </button>
                         </>
                       )}
                       
                       {activeSubmenu === 'cold-cutting' && (
                         <>
-                          <Link 
-                            href="/products/cold-cutting/pipe-cutting" 
+                          <button 
+                            onClick={()=>setSelectedProduct({id: 'pipe-cutting', link: '/products/cold-cutting/pipe-cutting'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('pipe-cutting')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Pipe Cutting Machines
-                          </Link>
-                          <Link 
-                            href="/products/cold-cutting/beveling" 
+                          </button>
+                          <button 
+                            onClick={()=>setSelectedProduct({id: 'beveling-machine', link: '/products/cold-cutting/beveling-machines'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('beveling-machine')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Beveling Machines
-                          </Link>
-                          <Link 
-                            href="/products/cold-cutting/tube-cutting" 
+                          </button>
+                          <button 
+                            onClick={()=>setSelectedProduct({id: 'tube-cutting', link: '/products/cold-cutting/tube-cutting'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('tube-cutting')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Tube Cutting Tools
-                          </Link>
-                          <Link 
-                            href="/products/cold-cutting/accessories" 
+                          </button>
+                          <button 
+                            onClick={()=>setSelectedProduct({id: 'cutting-accessory', link: '/products/cold-cutting/accessories'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('cutting-accessory')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Cutting Accessories
-                          </Link>
+                          </button>
                         </>
                       )}
                       
                       {activeSubmenu === 'specialized-tools' && (
                         <>
-                          <Link 
-                            href="/products/specialized/flange-tools" 
+                          <button 
+                            onClick={()=>setSelectedProduct({id: 'flange-tool', link: '/products/specialized/flange-tools'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('flange-tool')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Flange Tools
-                          </Link>
-                          <Link 
-                            href="/products/specialized/valve-tools" 
+                          </button>
+                          <button 
+                           onClick={()=>setSelectedProduct({id: 'valve-tool', link: '/products/specialized/valve-maintenance-tools'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('valve-tool')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Valve Maintenance Tools
-                          </Link>
-                          <Link 
-                            href="/products/specialized/lifting" 
+                          </button>
+                          <button 
+                           onClick={()=>setSelectedProduct({id: 'lifting-positioning', link: '/products/specialized/lifting-positioning-tools'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('lifting-tool')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Lifting & Positioning Tools
-                          </Link>
-                          <Link 
-                            href="/products/specialized/custom" 
+                          </button>
+                          <button 
+                            onClick={()=>setSelectedProduct({id: 'custom-solutions', link: '/products/specialized/custom-solutions'})}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            onMouseEnter={() => setHoveredProduct('custom-solution')}
-                            onMouseLeave={() => setHoveredProduct(null)}
                           >
                             Custom Solutions
-                          </Link>
+                          </button>
                         </>
                       )}
                     </div>
                   )}
 
                   {/* Image Display Panel */}
-                  {hoveredProduct && (
-                    <div className="w-50 h-full mt-10 border-l border-gray-200 bg-white">
-                      <div className="px-4 py-2">
-                      <img 
-  src={productImages[hoveredProduct] || '/images/placeholder-product.jpg'}
-  alt={hoveredProduct}
-  className="w-full h-40 object-cover rounded-md"
-/>
-                        <div className=" text-xs text-gray-600 capitalize">
-                          {hoveredProduct.replace('-', ' ')}
-                        </div>
-                      </div>
-                    </div>
-                  )}
+               {selectedProduct && (
+  <div className="w-50 h-full  border-l border-gray-200 bg-white">
+    <div className="px-4 py-2">
+      <Link href={selectedProduct.link}>
+        <img
+          src={productImages[selectedProduct.id] || '/images/placeholder-product.jpg'}
+          alt={selectedProduct.id}
+          className="w-full h-40 object-cover rounded-md cursor-pointer hover:opacity-90 transition"
+        />
+      </Link>
+      <div className="text-xs text-gray-600 capitalize mt-2">
+        {selectedProduct.id.replace('-', ' ')}
+      </div>
+    </div>
+  </div>
+)}
+
                 </div>
               )}
             </div>
