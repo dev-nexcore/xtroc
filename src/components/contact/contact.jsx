@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Mail, MapPinned, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 import ContactSection from "./form";
 
 export default function ContactPage() {
@@ -24,29 +25,43 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="  overflow-x-hidden bg-black text-white min-h-screen">
+    <div className="overflow-x-hidden bg-black text-white min-h-screen">
       {/* Header Section */}
-      <div className="  max-w-6xl mx-auto px-4 md:px-6 py-12 text-left">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="max-w-6xl mx-auto px-4 md:px-6 py-12"
+      >
         <h2
-          className="text-4xl sm:text-5xl md:text-7xl mb-6 md:-ml-10 text-center md:text-left"
+          className="text-4xl sm:text-5xl md:text-7xl mb-6 text-center md:text-left"
           style={{ fontFamily: "Impact, sans-serif" }}
         >
           Contact Us
         </h2>
-        <div className="h-1.5 mb-6 bg-red-600 rounded-full mx-auto md:mx-0 md:-ml-10 w-32 md:w-140"></div>
+        <div className="h-1.5 mb-6 bg-red-600 rounded-full mx-auto md:mx-0 w-32 md:w-140"></div>
 
-        <div className="flex flex-col md:flex-row justify-between gap-8">
-          <div className="flex-1 text-left">
+        <div className="flex flex-col md:flex-row justify-between gap-8 relative">
+          {/* Left Side Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex-1 text-left"
+          >
             <h3
-              className="text-2xl sm:text-3xl font-semi mb-6 md:mb-8 text-center md:text-left md:-ml-10"
+              className="text-2xl sm:text-3xl mb-6 md:mb-8 text-center md:text-left"
               style={{ fontFamily: "Impact, sans-serif" }}
             >
-              Get in Touch with  <span className="inline-block align-middle">
-        <Image src="/xtroc.png" width={160} height={80} alt="Xtroc Logo" />
-      </span>
+              Get in Touch with{" "}
+              <span className="inline-block align-middle">
+                <Image src="/xtroc.png" width={160} height={80} alt="Xtroc Logo" />
+              </span>
             </h3>
             <p
-              className="text-base sm:text-lg md:text-xl font-base mb-6 md:mb-4 text-center md:text-left md:-ml-10"
+              className="text-base sm:text-lg md:text-xl font-base mb-6 md:mb-4 text-center md:text-left"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Need expert advice or tailored solutions?
@@ -57,14 +72,18 @@ export default function ContactPage() {
               <br />
               our products and services or to request a personalized quote.
             </p>
+          </motion.div>
 
-            {/* Contact Info */}
-            <div className="overfolw-x-hidden ">
-            <div className="relative translate-x-10 md:absolute top-10 md:-right-16  bg-gray-900 p-4 rounded-2xl border-2 border-white shadow-[0_0_0_4px_#D01A1A] mx-auto md:mx-0 max-w-md w-full overflow-hidden ">
+          {/* Right Side Card - Static */}
+          <div className="flex-1 md:flex-none md:w-[360px] relative">
+            <div
+              className="bg-gray-900 p-6 rounded-2xl border-2 border-white 
+                         shadow-[0_0_0_4px_#D01A1A] w-full 
+                         md:absolute md:top-[-6rem] md:right-[-14rem]"
+            >
               <div className="space-y-4 text-sm sm:text-base">
                 <p className="flex items-start gap-3">
-                  <MapPinned  className="text-red-600 flex-shrink-0" />{" "}
-                  B-35, Plot No C-39A, TTC Industrial
+                  <MapPinned className="text-red-600 flex-shrink-0" /> B-35, Plot No C-39A, TTC Industrial
                   <br /> Area, MIDC Industrial Area, Pawne,
                   <br /> Navi Mumbai, Maharashtra 400710
                 </p>
@@ -76,13 +95,18 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
-            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Contact Form Title */}
-      <div className="px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="px-4"
+      >
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16 mb-6 mt-8">
           <div className="w-16 md:w-24 h-2 bg-red-600 rounded-full"></div>
           <h2
@@ -94,10 +118,16 @@ export default function ContactPage() {
           <div className="w-16 md:w-24 h-2 bg-red-600 rounded-full"></div>
         </div>
         <ContactSection />
-      </div>
+      </motion.div>
 
       {/* Map Section */}
-      <div className="mt-8 px-4 flex items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="mt-8 px-4 flex items-center justify-center"
+      >
         <div className="w-full md:w-[900px] h-[250px] sm:h-[300px] md:h-[500px] rounded-xl overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.7979768111245!2d72.8778437752053!3d19.072617982131263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d250f21f0d%3A0xdb46fbfa10678856!2sNexcore%20Alliance%20LLP!5e0!3m2!1sen!2sin!4v1756550911980!5m2!1sen!2sin"
@@ -109,7 +139,7 @@ export default function ContactPage() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

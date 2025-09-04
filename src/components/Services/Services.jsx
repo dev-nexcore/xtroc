@@ -1,40 +1,77 @@
-import React from 'react';
+'use client'
+import React from "react";
+import { motion } from "framer-motion";
+
+// Animation Variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3, // delay for each child
+    },
+  },
+};
 
 function Services() {
   return (
     <div className="bg-black flex items-start justify-center pt-16 px-8">
-      <div className="max-w-2xl mx-auto text-center">
+      <motion.div
+        className="max-w-2xl mx-auto text-center"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }} // triggers on scroll
+      >
         {/* Service Heading */}
-        <h1 className="text-white text-6xl font-bold mb-4">
+        <motion.h1
+          variants={fadeInUp}
+          className="text-white text-6xl font-bold mb-4"
+        >
           Service
-        </h1>
-        
+        </motion.h1>
+
         {/* Red Border Line */}
-        <div 
+        <motion.div
+          variants={fadeInUp}
           className="w-96 h-1 mx-auto mb-8 rounded-2xl"
-          style={{ backgroundColor: '#D01A1A' }}
-        ></div>
-        
+          style={{ backgroundColor: "#D01A1A" }}
+        ></motion.div>
+
         {/* Main Description Text */}
-        <h2 className="text-white text-3xl font-bold mb-8 leading-tight">
-          "Comprehensive Industrial Services<br />
+        <motion.h2
+          variants={fadeInUp}
+          className="text-white text-3xl font-bold mb-8 leading-tight"
+        >
+          "Comprehensive Industrial Services
+          <br />
           with The Right Tools"
-        </h2>
-        
+        </motion.h2>
+
         {/* CTA Button */}
-        <button 
+        <motion.button
+          variants={fadeInUp}
           className="text-white text-lg font-semibold px-8 py-3 rounded hover:opacity-90 transition-opacity"
-          style={{ backgroundColor: '#FF0000' }}
+          style={{ backgroundColor: "#FF0000" }}
         >
           Discover Our Services
-        </button>
-        
+        </motion.button>
+
         {/* Bottom Description Text */}
-        <p className="text-white text-lg leading-relaxed max-w-lg mx-auto mt-6">
-          At Xtorc, we offer end-to-end solutions tailored to industrial requirements.
-        </p>
-      </div>
+        <motion.p
+          variants={fadeInUp}
+          className="text-white text-lg leading-relaxed max-w-lg mx-auto mt-6"
+        >
+          At Xtorc, we offer end-to-end solutions tailored to industrial
+          requirements.
+        </motion.p>
+      </motion.div>
     </div>
   );
 }
+
 export default Services;

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const productVariants = {
   hidden: (direction) => ({
     opacity: 0,
-    x: direction === "left" ? -100 : 100, // left side -> -100, right side -> +100
+    x: direction === "left" ? -100 : 100,
   }),
   visible: {
     opacity: 1,
@@ -44,21 +44,32 @@ const products = [
 const Innovations = () => {
   return (
     <div className="bg-black min-h-screen p-8">
-      {/* Header Section */}
-      <div className="mb-12">
+      {/* Header Section with bottom-to-top animation */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="mb-12"
+      >
         <div className="flex items-center mb-4">
-          <h1 className="text-white text-4xl font-bold mr-4 ml-20">Our Innovations</h1>
+          <h1 className="text-white text-4xl font-bold mr-4 ml-20">
+            Our Innovations
+          </h1>
           <div className="h-1 bg-red-600 w-20"></div>
         </div>
-        <h2 className="text-2xl font-semibold ml-20 " style={{ color: '#D01A1A' }}>
+        <h2
+          className="text-2xl font-semibold ml-20"
+          style={{ color: '#D01A1A' }}
+        >
           Industry Focused Products!
         </h2>
-      </div>
+      </motion.div>
 
-      {/* Products Grid */}
+      {/* Products Grid (keep old left-right animation intact) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
         {products.map((product, i) => {
-          const direction = i % 2 === 0 ? "left" : "right"; // odd index -> left, even -> right
+          const direction = i % 2 === 0 ? "left" : "right";
           return (
             <motion.div
               key={product.id}
@@ -71,8 +82,8 @@ const Innovations = () => {
             >
               {/* Product Image */}
               <div className="relative">
-                <img 
-                  src={product.img} 
+                <img
+                  src={product.img}
                   alt={product.title}
                   className="w-48 h-48 object-cover bg-gray-200 rounded"
                   onError={(e) => {
@@ -81,7 +92,7 @@ const Innovations = () => {
                   }}
                 />
                 <div className="w-48 h-48 bg-gray-200 rounded flex items-center justify-center hidden">
-                  <span className="text-gray-500">Product {i+1}</span>
+                  <span className="text-gray-500">Product {i + 1}</span>
                 </div>
                 <div className="absolute top-0 right-0 w-8 h-full bg-red-600 flex items-center justify-center transition-all duration-300 hover:w-12">
                   <span className="text-white text-xs font-bold transform -rotate-90 whitespace-nowrap">

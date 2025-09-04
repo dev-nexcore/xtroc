@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Industries = () => {
   const industries = [
@@ -30,6 +31,7 @@ const Industries = () => {
       hoverText: "Offering robust tools for safe and efficient operations.",
     },
   ];
+
   return (
     <div>
       <section className=" bg-black py-12 px-4">
@@ -37,26 +39,57 @@ const Industries = () => {
           {/* Section Title with Borders */}
           <div className="flex items-center justify-center mb-4">
             <div className="flex-1 h-0.5 bg-red-600"></div>
-            <h2 className="text-4xl font-bold mx-8 text-white">Our Contributions</h2>
-            <div className="flex-1 h-0.5 bg-red-600"></div>
+            <motion.h2
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-4xl font-bold mx-8 text-white"
+            >
+              Our Contributions
+            </motion.h2>
+            {/* <div className="flex-1 h-0.5 bg-red-600"></div> */}
+            <motion.div
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            viewport={{ once: true }}
+            className="flex-1 h-0.5 bg-red-600"
+          ></motion.div>
+            
           </div>
 
           {/* Subtitle */}
-          <p
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="text-center text-2xl mb-12"
             style={{ color: "#D01A1A" }}
           >
             Industries We Serve!
-          </p>
+          </motion.p>
 
           {/* Industry Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {industries.map((industry, index) => (
-              <div key={index} className="text-center text-white">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.3 }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="text-center text-white"
+              >
                 <div className="relative group overflow-hidden rounded-lg">
-                  <img
+                  <motion.img
                     src={industry.image}
                     alt={industry.alt}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: index * 0.3 }}
+                    viewport={{ once: true }}
                     className="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110"
                   />
                   {/* Hover Overlay */}
@@ -70,19 +103,39 @@ const Industries = () => {
                     </p>
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mt-4">{industry.title}</h3>
-              </div>
+                <motion.h3
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.3 + 0.2 }}
+                  viewport={{ once: true }}
+                  className="text-xl font-semibold mt-4"
+                >
+                  {industry.title}
+                </motion.h3>
+              </motion.div>
             ))}
           </div>
 
           {/* Bottom Text */}
-          <p className="text-center text-2xl mb-8 text-white">
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-center text-2xl mb-8 text-white"
+          >
             The only place where you'll get the perfect solution for all your
             industry needs.
-          </p>
+          </motion.p>
 
           {/* Red Border */}
-          <div className="w-full h-0.5 bg-red-600 mb-6"></div>
+          <motion.div
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            viewport={{ once: true }}
+            className="w-full h-0.5 bg-red-600 mb-6"
+          ></motion.div>
         </div>
       </section>
     </div>

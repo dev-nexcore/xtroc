@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion"; // 👈 animation ke liye import
 
 const OurProducts = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,67 +57,102 @@ const OurProducts = () => {
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
           {/* Title */}
-          <h2 className="text-4xl font-bold mb-8">Our Products</h2>
+          <motion.h2
+            className="text-4xl font-bold mb-8"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Our Products
+          </motion.h2>
 
           {/* Center Border */}
-          <div className="w-32 h-0.5 bg-red-600 mx-auto mb-8"></div>
+          <motion.div
+            className="w-32 h-0.5 bg-red-600 mx-auto mb-8"
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          ></motion.div>
 
           {/* Description */}
-          <p className="text-lg mb-12 max-w-2xl mx-auto">
+          <motion.p
+            className="text-lg mb-12 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
             We are the industry heads and produce the most reliable and trendy
             solution you are looking for.
-          </p>
+          </motion.p>
 
-          {/* Product Images */}
+          {/* Product Images with Shape Background */}
+          <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-12 bg-black">
+            {/* Background Shape */}
+            <div className="absolute inset-0 w-full">
+              <div
+                className="w-full h-[500px]"
+                style={{
+                  clipPath:
+                    "polygon(0 0, 50% 10%, 100% 0, 100% 100%, 50% 90%, 0 100%)",
+                  backgroundColor: "#1B1B1B",
+                }}
+              ></div>
+            </div>
 
-{/* Product Images with Shape Background */}
-<div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-12 bg-black">
-  {/* Background Shape */}
-  <div className="absolute inset-0 w-full">
-    <div
-      className="w-full h-[500px] "
-      style={{
-        clipPath: "polygon(0 0, 50% 10%, 100% 0, 100% 100%, 50% 90%, 0 100%)",
-        backgroundColor: "#1B1B1B",
-      }}
-    ></div>
-  </div>
+            {/* Foreground Content */}
+            <div className="relative flex flex-col items-center justify-center mt-10">
+              <motion.div
+                className="flex justify-center items-center gap-8 mb-8 transition-all duration-500"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1 }}
+              >
+                {visibleImages.map((product, index) => (
+                  <div
+                    key={product.id}
+                    className={`transition-all duration-500 ${
+                      index === 1
+                        ? "scale-110 opacity-100"
+                        : "scale-90 opacity-70"
+                    }`}
+                  >
+                    <img
+                      src={product.src}
+                      alt={product.alt}
+                      className={`object-cover rounded-lg border-red-600 ${
+                        index === 1
+                          ? "w-80 h-60 border-4"
+                          : "w-48 h-36 border-2"
+                      }`}
+                    />
+                  </div>
+                ))}
+              </motion.div>
 
-  {/* Foreground Content */}
-  <div className="relative flex flex-col items-center justify-center mt-10">
-    <div className="flex justify-center items-center gap-8 mb-8 transition-all duration-500">
-      {visibleImages.map((product, index) => (
-        <div
-          key={product.id}
-          className={`transition-all duration-500 ${
-            index === 1 ? "scale-110 opacity-100" : "scale-90 opacity-70"
-          }`}
-        >
-          <img
-            src={product.src}
-            alt={product.alt}
-            className={`object-cover rounded-lg border-red-600 ${
-              index === 1 ? "w-80 h-60 border-4" : "w-48 h-36 border-2"
-            }`}
-          />
-        </div>
-      ))}
-    </div>
-
-    {/* Dynamic Product Title */}
-    <h3 className="inline-block bg-white text-black px-6 py-3 rounded-2xl text-2xl font-semibold mb-6 transition-all duration-500 shadow-md">
-      {products[currentIndex].title}
-    </h3>
-  </div>
-</div>
-
+              {/* Dynamic Product Title */}
+              <motion.h3
+                key={products[currentIndex].title}
+                className="inline-block bg-white text-black px-6 py-3 rounded-2xl text-2xl font-semibold mb-6 transition-all duration-500 shadow-md"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                {products[currentIndex].title}
+              </motion.h3>
+            </div>
+          </div>
 
           {/* View More Button */}
-          <div className="mt-6">
+          <motion.div
+            className="mt-6"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.5 }}
+          >
             <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-md">
               View More Products
             </button>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

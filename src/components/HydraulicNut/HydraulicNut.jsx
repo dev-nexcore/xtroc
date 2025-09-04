@@ -7,8 +7,8 @@ const HydraulicNut = () => {
   return (
     <div className="bg-black text-white">
       {/* Header with white background */}
-      <div className="bg-white py-4">
-        <div className="flex items-center justify-center gap-2 text-black">
+      <div className="bg-white py-6">
+        <div className="flex items-center justify-center gap-4 text-black">
           <span className="font-medium">Specialized Tools</span>
           <FaArrowRightLong className="w-4 h-4 ml-8 mr-8" />
           <span className="font-medium">Hydraulic Nut Splitters</span>
@@ -16,8 +16,8 @@ const HydraulicNut = () => {
       </div>
 
       {/* Main content */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-23 items-start">
           {/* Left Section */}
           <div className="space-y-6">
             {/* Product Image */}
@@ -75,19 +75,19 @@ const HydraulicNut = () => {
 
               <ul className="space-y-2 text-gray-200">
                 <li className="flex items-start gap-2">
-                  {/* <span className="text-red-600 mt-2">•</span> */}
+                  <span className="text-white mb-2">•</span>
                   <span>
-                    • The fast, sure and safe method to cut and remove seized
+                    The fast, sure and safe method to cut and remove seized
                     nuts
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  {/* <span className="text-red-600 mt-2">•</span> */}
-                  <span>• Compact and ergonomic angled head design</span>
+                  <span className="text-white mb-2">•</span>
+                  <span>Compact and ergonomic angled head design</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  {/* <span className="text-red-600 mt-2">•</span> */}
-                  <span>• Heavy duty cutting tool, can be re-ground</span>
+                  <span className="text-white mb-2">•</span>
+                  <span>Heavy duty cutting tool, can be re-ground</span>
                 </li>
               </ul>
             </div>

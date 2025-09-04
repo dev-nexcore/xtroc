@@ -5,7 +5,7 @@ const MultiStageBolt = () => {
   return (
     <div className="bg-black text-white">
       {/* Header with white background */}
-      <div className="bg-white py-4">
+      <div className="bg-white py-6">
         <div className="flex items-center justify-center gap-2 text-black">
           <span className="font-medium">Bolt Tensioning Solutions</span>
           <FaArrowRightLong className="w-4 h-4 ml-8 mr-8" />
@@ -14,8 +14,8 @@ const MultiStageBolt = () => {
       </div>
 
       {/* Main content */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-23 items-start">
           {/* Left Section */}
           <div className="space-y-6">
             {/* Title */}
@@ -111,28 +111,28 @@ const MultiStageBolt = () => {
 
               <ul className="space-y-2 text-gray-200">
                 <li className="flex items-start gap-2">
-                  <span className="text-white  flex-shrink-0 p-3">•</span>
-                  <span>Working Pressure 1500Bar / 21755 psi</span>
+                  <span className="text-white flex-shrink mb-2 pl-3">•</span>
+                  <span className="ml-2">Working Pressure 1500Bar / 21755 psi</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-white  flex-shrink-0 p-3">•</span>
-                  <span>Fast, simple, accurate, reliable and ideal tightening and bolting tool for Wind</span>
+                  <span className="text-white flex-shrink mb-2 pl-3">•</span>
+                  <span className="ml-2">Fast, simple, accurate, reliable and ideal tightening and bolting tool for Wind</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-white  flex-shrink-0 p-3">•</span>
-                  <span>Turbine Small, compact, can impart large tensioning load</span>
+                  <span className="text-white flex-shrink mb-2 pl-3">•</span>
+                  <span className="ml-2">Turbine Small, compact, can impart large tensioning load</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-white  flex-shrink-0 p-3">•</span>
-                  <span>Durable composite material seal kit</span>
+                  <span className="text-white flex-shrink mb-2 pl-3">•</span>
+                  <span className="ml-2">Durable composite material seal kit</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-white  flex-shrink-0 p-3">•</span>
-                  <span>Clear over stroke alarming mark</span>
+                  <span className="text-white flex-shrink mb-2 pl-3">•</span>
+                  <span className="ml-2">Clear over stroke alarming mark</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-white  flex-shrink-0 p-3">•</span>
-                  <span>Optional gear drive allows the user rotate the nut quickly</span>
+                  <span className="text-white flex-shrink mb-2 pl-3">•</span>
+                  <span className="ml-2">Optional gear drive allows the user rotate the nut quickly</span>
                 </li>
               </ul>
             </div>
