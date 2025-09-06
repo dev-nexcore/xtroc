@@ -44,7 +44,7 @@ const products = [
 const Innovations = () => {
   return (
     <div className="bg-black min-h-screen p-8">
-      {/* Header Section with bottom-to-top animation */}
+      {/* Header Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -66,14 +66,14 @@ const Innovations = () => {
         </h2>
       </motion.div>
 
-      {/* Products Grid (keep old left-right animation intact) */}
+      {/* Products Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
         {products.map((product, i) => {
           const direction = i % 2 === 0 ? "left" : "right";
           return (
             <motion.div
               key={product.id}
-              className="flex flex-col lg:flex-row items-start gap-6"
+              className="flex flex-col items-center gap-6" // always column
               variants={productVariants}
               initial="hidden"
               whileInView="visible"
@@ -85,25 +85,25 @@ const Innovations = () => {
                 <img
                   src={product.img}
                   alt={product.title}
-                  className="w-48 h-48 object-cover bg-gray-200 rounded"
+                  className="w-128 h-88 object-cover bg-gray-200 rounded"
                   onError={(e) => {
                     e.target.style.display = 'none';
                     e.target.nextSibling.style.display = 'flex';
                   }}
                 />
-                <div className="w-48 h-48 bg-gray-200 rounded flex items-center justify-center hidden">
+                <div className="w-96 h-72 bg-gray-200 rounded flex items-center justify-center hidden">
                   <span className="text-gray-500">Product {i + 1}</span>
                 </div>
-                <div className="absolute top-0 right-0 w-8 h-full bg-red-600 flex items-center justify-center transition-all duration-300 hover:w-12">
-                  <span className="text-white text-xs font-bold transform -rotate-90 whitespace-nowrap">
+                <div className="absolute top-0 right-0 w-8 h-full bg-red-600 flex items-center justify-center transition-all duration-300">
+                  <span className="text-white text-xs font-bold transform -rotate-90 whitespace-nowrap md:text-xl">
                     {product.title}
                   </span>
                 </div>
               </div>
 
-              {/* Product Text */}
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold mb-2" style={{ color: '#D01A1A' }}>
+              
+              <div className="flex-1 text-center">
+                <h3 className="text-3xl font-bold mb-2" style={{ color: '#D01A1A' }}>
                   {product.title}
                 </h3>
                 <p className="text-white text-sm leading-relaxed">
