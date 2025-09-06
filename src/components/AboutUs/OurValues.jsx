@@ -82,7 +82,10 @@ const OurValues = () => {
                 clipPath: "polygon(0 0, 100% 0, 77% 100%, 0 100%)",
               }}
             >
-              <div className="text-6xl font-bold mb-2" style={{ color: "#D01A1A" }}>
+              <div
+                className="text-6xl font-bold mb-2"
+                style={{ color: "#D01A1A" }}
+              >
                 <CountingNumber target={25} />
               </div>
               <div className="text-white text-xl">Products</div>
@@ -96,7 +99,10 @@ const OurValues = () => {
                 clipPath: "polygon(25% 0px, 100% 0px, 100% 100%, 0% 100%)",
               }}
             >
-              <div className="text-6xl font-bold mb-2" style={{ color: "#D01A1A" }}>
+              <div
+                className="text-6xl font-bold mb-2"
+                style={{ color: "#D01A1A" }}
+              >
                 <CountingNumber target={15} />
               </div>
               <div className="text-white text-xl">
@@ -119,7 +125,10 @@ const OurValues = () => {
             }`}
             id="mission-section"
           >
-            <h3 className="text-3xl font-bold mb-4" style={{ color: "#D01A1A" }}>
+            <h3
+              className="text-3xl font-bold mb-4"
+              style={{ color: "#D01A1A" }}
+            >
               Our Mission
             </h3>
             <div className="w-44 h-0.5 bg-white mb-6"></div>
@@ -141,7 +150,10 @@ const OurValues = () => {
             }`}
             id="vision-section"
           >
-            <h3 className="text-3xl font-bold mb-4" style={{ color: "#D01A1A" }}>
+            <h3
+              className="text-3xl font-bold mb-4"
+              style={{ color: "#D01A1A" }}
+            >
               Our Vision
             </h3>
             <div className="w-38.5 h-0.5 bg-white mb-6"></div>
@@ -191,13 +203,14 @@ const OurValues = () => {
                 <img
                   src="/quality.png"
                   alt="Quality"
-                  className="w-16 h-16 mx-auto mb-4"
+                  className="w-16 h-16 mx-auto mb-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
                 />
                 <h4 className="text-black group-hover:text-white text-xl font-bold mb-3">
                   Quality
                 </h4>
                 <p className="text-black group-hover:text-white text-sm">
-                  Ensuring every product and service meets the highest standards.
+                  Ensuring every product and service meets the highest
+                  standards.
                 </p>
               </div>
 
@@ -214,7 +227,7 @@ const OurValues = () => {
                 <img
                   src="/innovation.png"
                   alt="Innovation"
-                  className="w-16 h-16 mx-auto mb-4"
+                  className="w-16 h-16 mx-auto mb-4 group-hover:brightness-0 group-hover:invert"
                 />
                 <h4 className="text-black group-hover:text-white text-xl font-bold mb-3">
                   Innovation
@@ -237,7 +250,7 @@ const OurValues = () => {
                 <img
                   src="/verified_user.png"
                   alt="Integrity"
-                  className="w-16 h-16 mx-auto mb-4"
+                  className="w-16 h-16 mx-auto mb-4 group-hover:brightness-0 group-hover:invert"
                 />
                 <h4 className="text-black group-hover:text-white text-xl font-bold mb-3">
                   Integrity
@@ -260,7 +273,7 @@ const OurValues = () => {
                 <img
                   src="/group.png"
                   alt="Customer Centricity"
-                  className="w-16 h-16 mx-auto mb-4"
+                  className="w-16 h-16 mx-auto mb-4 group-hover:brightness-0 group-hover:invert"
                 />
                 <h4 className="text-black group-hover:text-white text-xl font-bold mb-3">
                   Customer-Centricity
@@ -271,13 +284,10 @@ const OurValues = () => {
               </div>
             </div>
 
-            {/* Central Our Values Circle */}
+           
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-              <div
-                className="w-32 h-32 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: "#D01A1A" }}
-              >
-                <h4 className="text-white text-lg font-bold text-center leading-tight">
+              <div className="w-40 h-40 rounded-full flex items-center justify-center bg-[#D01A1A] text-white hover:bg-white hover:text-[#D01A1A] transition-colors duration-300 shadow-lg">
+                <h4 className="text-3xl font-bold text-center leading-tight">
                   Our
                   <br />
                   Values
