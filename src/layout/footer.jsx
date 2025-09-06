@@ -12,12 +12,12 @@ const Footer = () => {
           {/* Logo & About */}
           <div className="space-y-4 pl-2 sm:pl-4">
             <div className="w-60 h-20 sm:w-72 sm:h-24 flex items-center">
-  <img
-    src="/xtorc.png"
-    alt="Xtorc Logo"
-    className="w-[24rem] h-[8rem] sm:w-[26rem] sm:h-[9rem] object-contain"
-  />
-</div>
+              <img
+                src="/xtorc.png"
+                alt="Xtorc Logo"
+                className="w-[24rem] h-[8rem] sm:w-[26rem] sm:h-[9rem] object-contain"
+              />
+            </div>
 
             <p className="text-sm sm:text-base leading-relaxed max-w-xs">
               Xtorc was founded with a vision to provide world-class industrial
@@ -25,11 +25,12 @@ const Footer = () => {
             </p>
 
             {/* Social Media Icons */}
-            <div className="flex space-x-3">
+            <div className="flex items-center md:ml-8 ">
+              <div className="flex space-x-6">
               {/* Facebook */}
               <a
                 href="#"
-                className="w-8 h-8 sm:w-10 sm:h-10 rounded flex items-center justify-center transition-transform hover:scale-110"
+                className="w-8 h-8  sm:w-10 sm:h-10 rounded flex items-center justify-center transition-transform hover:scale-110"
                 aria-label="Facebook"
               >
                 <img
@@ -65,6 +66,8 @@ const Footer = () => {
                 />
               </a>
             </div>
+
+            </div>
           </div>
 
           {/* Company Links */}
@@ -72,10 +75,7 @@ const Footer = () => {
             <h3 className="text-2xl font-semibold relative inline-block pb-1 md:ml-7">
               Company
               <span className="absolute left-0 bottom-0 w-full h-[2px] flex">
-                {/* White Half */}
                 <span className="w-1/2 h-full bg-white"></span>
-
-                {/* Red Half with Animation */}
                 <motion.span
                   className="w-1/2 h-full bg-red-600"
                   initial={{ width: "0%" }}
@@ -86,19 +86,23 @@ const Footer = () => {
               </span>
             </h3>
             <div className="space-y-3.5 ">
-              {["about us", "products", "carrier", "event", "services"].map(
-                (item, idx) => (
-                  <div key={idx} className="flex items-center space-x-2">
-                    <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 " />
-                    <a
-                      href="#"
-                      className="text-xs sm:text-sm hover:text-gray-300 transition-colors"
-                    >
-                      {item}
-                    </a>
-                  </div>
-                )
-              )}
+              {[
+                { name: "about us", path: "/aboutus" },
+                { name: "products", path: "/product" },
+                { name: "carrier", path: "#" },
+                { name: "event", path: "#" },
+                { name: "services", path: "/services" },
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center space-x-2">
+                  <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 " />
+                  <a
+                    href={item.path}
+                    className="text-xs sm:text-sm hover:text-gray-300 transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -107,10 +111,7 @@ const Footer = () => {
             <h3 className="text-2xl font-semibold relative inline-block pb-1 md:ml-10">
               Products
               <span className="absolute left-0 bottom-0 w-full h-[2px] flex">
-                {/* White Half */}
                 <span className="w-1/2 h-full bg-white"></span>
-
-                {/* Red Half with Animation */}
                 <motion.span
                   className="w-1/2 h-full bg-red-600"
                   initial={{ width: "0%" }}
@@ -145,10 +146,7 @@ const Footer = () => {
             <h3 className="text-2xl font-semibold relative inline-block pb-1 md:ml-18">
               Contact
               <span className="absolute left-0 bottom-0 w-full h-[2px] flex">
-                {/* White Half */}
                 <span className="w-1/2 h-full bg-white"></span>
-
-                {/* Red Half with Animation */}
                 <motion.span
                   className="w-1/2 h-full bg-red-600"
                   initial={{ width: "0%" }}
