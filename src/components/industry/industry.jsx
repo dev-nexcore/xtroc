@@ -29,12 +29,14 @@ export default function IndustryPage() {
     <div className="overflow-x-hidden bg-black text-white min-h-screen">
       {/* Header Section */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="max-w-6xl mx-auto px-4 md:px-6 py-12 text-left"
-      >
+  className="max-w-6xl mx-auto px-4 md:px-6 py-12 text-left"
+  initial="hidden"
+  animate="visible"   // ← ye change
+  variants={{
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.3 } } // ← children stagger
+  }}
+>
         <h2
           className="text-4xl sm:text-5xl md:text-7xl mb-2 md:-ml-10 text-center md:text-left"
           style={{ fontFamily: "Impact, sans-serif" }}

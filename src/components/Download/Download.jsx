@@ -20,8 +20,9 @@ export default function DownloadSection() {
     <motion.section
       className="bg-black text-white py-10 px-6 text-center"
       initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
+      // whileInView="show"
+      // viewport={{ once: true }}
+      animate="show"
       variants={containerVariants}
     >
       {/* Heading */}

@@ -24,33 +24,39 @@ export default function ContactPage() {
     alert("Your query has been submitted!");
   };
 
+  // Animation Variants
+  const fadeInLeft = { hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 1 } } };
+  const fadeInRight = { hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 1 } } };
+  const container = { hidden: {}, visible: { transition: { staggerChildren: 0.3 } } };
+
   return (
     <div className="overflow-x-hidden bg-black text-white min-h-screen">
-      {/* Header Section */}
+      {/* Header + Contact Info Section */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="max-w-6xl mx-auto px-4 md:px-2 py-12 "
+        className="max-w-6xl mx-auto px-4 md:px-2 py-12"
+        initial="hidden"
+        animate="visible"
+        variants={container}
       >
-        <h2
+        <motion.h2
           className="text-4xl sm:text-5xl md:text-7xl mb-6 text-center md:text-left ml-5"
           style={{ fontFamily: "Impact, sans-serif" }}
+          variants={fadeInLeft}
         >
           Contact Us
-        </h2>
-        <div className="h-1.5 mb-6 bg-red-600 rounded-full mx-auto md:mx-0 w-32 md:w-140"></div>
+        </motion.h2>
+
+        <motion.div
+          className="h-1.5 mb-6 bg-red-600 rounded-full mx-auto md:mx-0 w-32 md:w-140"
+          variants={fadeInLeft}
+        ></motion.div>
 
         {/* Left + Right Section */}
         <div className="flex flex-col md:flex-row justify-between gap-8 relative">
           {/* Left Side */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="flex-1 text-left px-2 md:px-0"  
+            className="flex-1 text-left px-2 md:px-0"
+            variants={fadeInLeft}
           >
             <h3
               className="text-3xl md:text-4xl sm:text-3xl mb-6 md:mb-8 text-center md:text-left mt-4"
@@ -58,18 +64,16 @@ export default function ContactPage() {
             >
               Get in Touch with{" "}
               <span className="inline-block align-middle">
-                <Image
-                  src="/xtroc.png"
-                  width={246} 
-                  height={100} 
-                  alt="Xtroc Logo"
-                />
+                <Image src="/xtroc.png" width={246} height={100} alt="Xtroc Logo" />
               </span>
             </h3>
           </motion.div>
 
           {/* Right Side Card */}
-          <div className="flex-1 md:flex-none md:w-[600px] relative md:h-[100]">
+          <motion.div
+            className="flex-1 md:flex-none md:w-[600px] relative md:h-[100]"
+            variants={fadeInRight}
+          >
             <div
               className="bg-gray-900 p-6 rounded-4xl border-2 border-white 
                          shadow-[0_0_0_4px_#D01A1A] w-full 
@@ -90,11 +94,11 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Full width text below both sides */}
-        <div className="mt-22">
+        <motion.div variants={fadeInLeft} className="mt-22">
           <p
             className="text-base sm:text-lg md:text-3xl font-light leading-relaxed text-center"
             style={{ fontFamily: "Poppins, sans-serif" }}
@@ -104,37 +108,36 @@ export default function ContactPage() {
             Contact us today to learn more about our products and services or to
             request a personalized quote.
           </p>
-        </div>
+        </motion.div>
       </motion.div>
 
       {/* Contact Form Title */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
         className="px-4"
+        initial="hidden"
+        animate="visible"
+        variants={container}
       >
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16 mb-6 mt-8">
-          <div className="w-16 md:w-24 h-2 bg-red-600 rounded-full"></div>
-          <h2
+          <motion.div className="w-16 md:w-24 h-2 bg-red-600 rounded-full" variants={fadeInLeft}></motion.div>
+          <motion.h2
             className="text-white text-3xl sm:text-4xl md:text-5xl text-center"
             style={{ fontFamily: "Impact, sans-serif" }}
+            variants={fadeInLeft}
           >
             Contact Us
-          </h2>
-          <div className="w-16 md:w-24 h-2 bg-red-600 rounded-full"></div>
+          </motion.h2>
+          <motion.div className="w-16 md:w-24 h-2 bg-red-600 rounded-full" variants={fadeInLeft}></motion.div>
         </div>
         <ContactSection />
       </motion.div>
 
       {/* Map Section */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
         className="mt-8 px-4 flex items-center justify-center"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInLeft}
       >
         <div className="w-full md:w-[900px] h-[250px] sm:h-[300px] md:h-[500px] rounded-xl overflow-hidden">
           <iframe

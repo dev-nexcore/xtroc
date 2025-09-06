@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -14,23 +14,25 @@ const Home = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentProductIndex((prevIndex) => (prevIndex + 1) % products.length);
+      setCurrentProductIndex(
+        (prevIndex) => (prevIndex + 1) % products.length
+      );
     }, 2000);
 
     return () => clearInterval(interval);
   }, [products.length]);
 
-  // Parent container
+  // Parent container for staggered animation
   const container = {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.4, // children ek ek karke
+        staggerChildren: 0.4, // delay between child animations
       },
     },
   };
 
-  // Each child item
+  // Each child item animation
   const item = {
     hidden: { opacity: 0, y: 50 },
     show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -47,9 +49,8 @@ const Home = () => {
             <motion.div
               className="flex-1 flex justify-center"
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: true }}
             >
               <div className="relative w-3/4 sm:w-2/3 md:w-full max-w-md h-auto">
                 <img
@@ -66,8 +67,7 @@ const Home = () => {
               className="flex-1 text-center md:text-left md:pl-12"
               variants={container}
               initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
+              animate="show" // animate immediately on page load
             >
               <motion.h1
                 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"

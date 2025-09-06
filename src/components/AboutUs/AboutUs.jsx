@@ -8,6 +8,7 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
+// Container variant for stagger
 const container = {
   hidden: {},
   visible: {
@@ -24,8 +25,7 @@ const AboutSection = () => {
         className="max-w-7xl mx-auto"
         variants={container}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }} // triggers once when 20% visible
+        animate="visible" // changed from whileInView
       >
         {/* First Section */}
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12 mb-12 lg:mb-16">
@@ -65,10 +65,7 @@ const AboutSection = () => {
 
           {/* Right Side Image + Paragraph */}
           <div className="flex-1 flex flex-col items-center">
-            <motion.div
-              variants={fadeInUp}
-              className="flex justify-center mb-4 lg:mb-6"
-            >
+            <motion.div variants={fadeInUp} className="flex justify-center mb-4 lg:mb-6">
               <img
                 src="xtroc_india.png"
                 alt="Xtorc India"
@@ -101,10 +98,7 @@ const AboutSection = () => {
         </div>
 
         {/* Cool Facts Section */}
-        <motion.div
-          variants={container}
-          className="flex flex-col lg:flex-row items-start gap-4 lg:gap-12"
-        >
+        <motion.div variants={container} className="flex flex-col lg:flex-row items-start gap-4 lg:gap-12">
           {/* Left Side - Some Cool Facts */}
           <div className="flex-1 flex flex-col items-start gap-2">
             <motion.div
