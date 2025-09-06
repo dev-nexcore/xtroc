@@ -63,7 +63,7 @@ const ImageSection = () => {
                 variants={cardVariants}
                 custom={index} // pass index to variants
               >
-                <div className="relative group overflow-hidden rounded-lg">
+                <div className="relative group overflow-hidden ">
                   <img
                     src={industry.image}
                     alt={industry.alt}
