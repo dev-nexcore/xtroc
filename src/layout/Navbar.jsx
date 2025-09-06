@@ -43,7 +43,7 @@ const Navbar = () => {
           {/* Navigation Links */}
           <div className="hidden md:flex items-center ml-20 space-x-20">
             <Link
-              href="/about"
+              href="/aboutus"
               className="text-white font-bold  text-base  hover:border-b-2 border-red-500 transition-colors duration-200  "
             >
               About us
@@ -52,7 +52,7 @@ const Navbar = () => {
             {/* Products Dropdown */}
             <div className="relative">
               <button
-                className="flex items-center text-white hover:text-red-500 transition-colors duration-200 text-sm font-medium"
+                className="flex items-center text-white hover:text-red-500 transition-colors duration-200 text-base font-bold"
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
                 onMouseEnter={() => setIsProductsOpen(true)}
               >
@@ -70,10 +70,10 @@ const Navbar = () => {
                   }}
                 >
                   {/* Main Categories */}
-                  <div className="flex flex-col h-full w-[300px]">
+                  <div className="flex font-bold  flex-col h-full w-[300px]">
                     <button
                       onMouseEnter={() => setActiveSubmenu("bolt-tensioning")}
-                      className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 group text-left"
+                      className="flex items-center  w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 group text-left"
                     >
                       <span className="text-red-500 mr-3 text-lg group-hover:text-red-600">
                         »
@@ -83,7 +83,7 @@ const Navbar = () => {
 
                     <button
                       onMouseEnter={() => setActiveSubmenu("torque-wrenches")}
-                      className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 group text-left"
+                      className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 group text-left"
                     >
                       <span className="text-red-500 mr-3 text-lg group-hover:text-red-600">
                         »
@@ -95,7 +95,7 @@ const Navbar = () => {
                       onMouseEnter={() =>
                         setActiveSubmenu("hydraulic-equipment")
                       }
-                      className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 group text-left"
+                      className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 group text-left"
                     >
                       <span className="text-red-500 mr-3 text-lg group-hover:text-red-600">
                         »
@@ -105,7 +105,7 @@ const Navbar = () => {
 
                     <button
                       onMouseEnter={() => setActiveSubmenu("cold-cutting")}
-                      className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 group text-left"
+                      className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 group text-left"
                     >
                       <span className="text-red-500 mr-3 text-lg group-hover:text-red-600">
                         »
@@ -115,7 +115,7 @@ const Navbar = () => {
 
                     <button
                       onMouseEnter={() => setActiveSubmenu("specialized-tools")}
-                      className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 group text-left"
+                      className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 group text-left"
                     >
                       <span className="text-red-500 mr-3 text-lg group-hover:text-red-600">
                         »
@@ -126,7 +126,7 @@ const Navbar = () => {
 
                   {/* Secondary Menu */}
                   {activeSubmenu && (
-                    <div className="w-[350px] h-full flex flex-col border-l border-gray-200 bg-gray-50">
+                    <div className="w-[350px] h-full font-bold flex flex-col border-l border-gray-200 bg-gray-50">
                       {activeSubmenu === "bolt-tensioning" && (
                         <>
                           <button
@@ -136,7 +136,7 @@ const Navbar = () => {
                                 link: "/products/bolt-tensioning/multi-stud",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Multi Stud Bolt Tensioners
                           </button>
@@ -148,7 +148,7 @@ const Navbar = () => {
                                 link: "/products/bolt-tensioning/hydraulic",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Hydraulic Bolt Tensioners
                           </button>
@@ -160,7 +160,7 @@ const Navbar = () => {
                                 link: "/products/bolt-tensioning/pneumatic",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Pneumatic & Electric Powerpack
                           </button>
@@ -172,7 +172,7 @@ const Navbar = () => {
                                 link: "/products/bolt-tensioning/electric",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Electric & Pneumatic Torque Wrenches
                           </button>
@@ -188,7 +188,7 @@ const Navbar = () => {
                                 link: "/products/torque-wrenches/hydraulic-wrench",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Hydraulic Torque Wrenches
                           </button>
@@ -200,7 +200,7 @@ const Navbar = () => {
                                 link: "/products/torque-wrenches/electric",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Manual Torque Wrenches
                           </button>
@@ -212,7 +212,7 @@ const Navbar = () => {
                                 link: "/products/torque-wrenches/pneumatic",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Electric Torque Wrenches
                           </button>
@@ -228,7 +228,7 @@ const Navbar = () => {
                                 link: "/products/hydraulic/pumps",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Hydraulic Pumps and Hoses
                           </button>
@@ -240,7 +240,7 @@ const Navbar = () => {
                                 link: "/products/hydraulic/cylinders",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Hydrotest Pump
                           </button>
@@ -252,7 +252,7 @@ const Navbar = () => {
                                 link: "/products/hydraulic/hoses-and-fittings",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Hydraulic Jacks
                           </button>
@@ -268,7 +268,7 @@ const Navbar = () => {
                                 link: "/products/cold-cutting/pipe-cutting",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Pipe Cutting and Beveling Machines
                           </button>
@@ -280,7 +280,7 @@ const Navbar = () => {
                                 link: "/products/cold-cutting/beveling-machines",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Flange Machines
                           </button>
@@ -292,7 +292,7 @@ const Navbar = () => {
                                 link: "/products/cold-cutting/tube-cutting",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Casing Cutter
                           </button>
@@ -308,7 +308,7 @@ const Navbar = () => {
                                 link: "/products/specialized/flange-tools",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Hydraulic Nut Splitter
                           </button>
@@ -320,7 +320,7 @@ const Navbar = () => {
                                 link: "/products/specialized/valve-maintenance-tools",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-sm text-gray-800 hover:bg-gray-100 text-left"
+                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
                           >
                             Flange Spreader
                           </button>
@@ -343,7 +343,7 @@ const Navbar = () => {
                             className="w-full h-[400px]   px-2 py-2 object-contain rounded-md cursor-pointer hover:opacity-90 transition"
                           />
                         </Link>
-                        <div className="text-xs justify-center ml-20 text-center text-gray-600 capitalize mt-2">
+                        <div className="text-red-500 font-bold text-base justify-center  text-center capitalize mt-2">
                           {selectedProduct.id.replace("-", " ")}
                         </div>
                       </div>
@@ -361,7 +361,7 @@ const Navbar = () => {
             </Link>
 
             <Link
-              href="/industries"
+              href="/industry"
               className="text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold "
             >
               Industries
@@ -375,14 +375,14 @@ const Navbar = () => {
             </Link>
 
             <Link
-              href="/join"
+              href="/Joinus"
               className="text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold "
             >
               Join us
             </Link>
 
             <Link
-              href="/downloads"
+              href="/download"
               className="text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold "
             >
               Downloads
