@@ -68,7 +68,7 @@ const Footer = () => {
           </div>
 
           {/* Company Links */}
-          <div className="space-y-4 pl-5 md:pt-10">
+          <div className="space-y-4 pl-5 md:pt-10 md:pl-20">
             <h3 className="text-2xl font-semibold relative inline-block pb-1 md:ml-7">
               Company
               <span className="absolute left-0 bottom-0 w-full h-[2px] flex">
@@ -85,7 +85,7 @@ const Footer = () => {
                 />
               </span>
             </h3>
-            <div className="space-y-2">
+            <div className="space-y-3.5 ">
               {["about us", "products", "carrier", "event", "services"].map(
                 (item, idx) => (
                   <div key={idx} className="flex items-center space-x-2">
@@ -103,7 +103,7 @@ const Footer = () => {
           </div>
 
           {/* Products */}
-          <div className="space-y-4 md:pt-10">
+          <div className="space-y-6 md:pt-10">
             <h3 className="text-2xl font-semibold relative inline-block pb-1 md:ml-10">
               Products
               <span className="absolute left-0 bottom-0 w-full h-[2px] flex">
@@ -120,14 +120,14 @@ const Footer = () => {
                 />
               </span>
             </h3>
-            <div className="space-y-2">
+            <div className=" space-y-6">
               {[
                 "hydraulic torque wrenches",
                 "bolt tensioning solutions",
                 "hydraulic equipment",
                 "pipe cutting & beveling machines",
               ].map((item, idx) => (
-                <div key={idx} className="flex items-center space-x-2">
+                <div key={idx} className="flex items-center space-x-2  ">
                   <FaAngleDoubleRight className="text-red-500 text-xl flex-shrink-0" />
                   <a
                     href="#"
@@ -141,7 +141,7 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="space-y-4 md:pt-10">
+          <div className="space-y-7 md:pt-10">
             <h3 className="text-2xl font-semibold relative inline-block pb-1 md:ml-18">
               Contact
               <span className="absolute left-0 bottom-0 w-full h-[2px] flex">

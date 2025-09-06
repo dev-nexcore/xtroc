@@ -94,7 +94,7 @@ const Innovations = () => {
                 <div className="w-96 h-72 bg-gray-200 rounded flex items-center justify-center hidden">
                   <span className="text-gray-500">Product {i + 1}</span>
                 </div>
-                <div className="absolute top-0 right-0 w-8 h-full bg-red-600 flex items-center justify-center transition-all duration-300">
+                <div className="absolute top-0 right-0 w-11 h-full bg-red-600 flex items-center justify-center transition-all duration-300">
                   <span className="text-white text-xs font-bold transform -rotate-90 whitespace-nowrap md:text-xl">
                     {product.title}
                   </span>
