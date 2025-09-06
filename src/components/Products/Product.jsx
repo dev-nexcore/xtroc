@@ -8,9 +8,14 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
+// Container variant for stagger
 const container = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.3 } },
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
 };
 
 const Product = () => {
@@ -20,8 +25,7 @@ const Product = () => {
         className="max-w-7xl mx-auto px-4 md:px-6 py-12 text-left bg-black"
         variants={container}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        animate="visible" // changed from whileInView
       >
         <div className="flex flex-col md:flex-row justify-between gap-8 relative">
           {/* Left Content */}
@@ -60,7 +64,7 @@ const Product = () => {
           {/* Right Side Card */}
           <motion.div
             variants={fadeInUp}
-            className="relative md:absolute top-[-5] md:-right-60 bg-gray-900 p-6 rounded-4xl border-2 border-white shadow-[0_0_0_4px_#D01A1A] w-full max-w-sm md:max-w-lg overflow-hidden "
+            className="relative md:absolute top-[-5] md:-right-60 bg-gray-900 p-6 rounded-4xl border-2 border-white shadow-[0_0_0_4px_#D01A1A] w-full max-w-sm md:max-w-lg overflow-hidden"
           >
             <div className="text-center">
               <h4 className="text-xl sm:text-3xl font-semibold mb-2 text-white">Optimized &</h4>

@@ -24,8 +24,7 @@ function Services() {
         className="max-w-2xl mx-auto text-center"
         variants={container}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }} // triggers on scroll
+        animate="visible"  // changed from whileInView
       >
         {/* Service Heading */}
         <motion.h1

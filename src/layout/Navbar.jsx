@@ -33,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black  text-white">
+    <nav className="bg-black  text-white p-3">
       <div className="max-w-7xl mx-auto ">
         <div className="flex items-center justify-evenly h-12">
           {/* Logo */}
