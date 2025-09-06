@@ -43,7 +43,7 @@ const Navbar = () => {
           {/* Navigation Links */}
           <div className="hidden md:flex items-center ml-20 space-x-20">
             <Link
-              href="/about"
+              href="/aboutus"
               className="text-white font-bold  text-base  hover:border-b-2 border-red-500 transition-colors duration-200  "
             >
               About us
@@ -361,7 +361,7 @@ const Navbar = () => {
             </Link>
 
             <Link
-              href="/industries"
+              href="/industry"
               className="text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold "
             >
               Industries
@@ -375,14 +375,14 @@ const Navbar = () => {
             </Link>
 
             <Link
-              href="/join"
+              href="/Joinus"
               className="text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold "
             >
               Join us
             </Link>
 
             <Link
-              href="/downloads"
+              href="/download"
               className="text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold "
             >
               Downloads
