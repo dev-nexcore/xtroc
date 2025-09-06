@@ -71,9 +71,9 @@ export default function ContactPage() {
           {/* Right Side Card */}
           <div className="flex-1 md:flex-none md:w-[600px] relative md:h-[100]">
             <div
-              className="bg-gray-900 p-6 rounded-2xl border-2 border-white 
+              className="bg-gray-900 p-6 rounded-4xl border-2 border-white 
                          shadow-[0_0_0_4px_#D01A1A] w-full 
-                         md:absolute md:top-[-6rem] md:right-[-14rem]"
+                         md:absolute md:top-[-7rem] md:right-[-14rem]"
             >
               <div className="space-y-4 text-sm sm:text-base md:text-3xl">
                 <p className="flex items-start gap-3">
