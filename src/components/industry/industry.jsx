@@ -29,14 +29,12 @@ export default function IndustryPage() {
     <div className="overflow-x-hidden bg-black text-white min-h-screen">
       {/* Header Section */}
       <motion.div
-  className="max-w-6xl mx-auto px-4 md:px-6 py-12 text-left"
-  initial="hidden"
-  animate="visible"   // ← ye change
-  variants={{
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.3 } } // ← children stagger
-  }}
->
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="max-w-6xl mx-auto px-4 md:px-6 py-12 text-left"
+      >
         <h2
           className="text-4xl sm:text-5xl md:text-7xl mb-2 md:-ml-10 text-center md:text-left"
           style={{ fontFamily: "Impact, sans-serif" }}
@@ -61,7 +59,7 @@ export default function IndustryPage() {
               "Custom Solutions for <br />Diverse Industries"
             </h3>
             <p
-              className="text-base mt-12 sm:text-lg md:text-2xl font-base mb-6 md:mb-4 text-center md:text-left md:-ml-10"
+              className="text-base mt-12 sm:mb-10 sm:text-lg md:text-2xl font-base mb-6 md:mb-4 text-center md:text-left md:-ml-10"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               We are the industry heads and produce the most <br />
@@ -79,13 +77,13 @@ export default function IndustryPage() {
           >
             <div
   className="
-    bg-gray-900 py-6 rounded-2xl border-2 border-white shadow-[0_0_0_4px_#D01A1A] 
+    bg-gray-900 py-6  rounded-2xl border-2 border-white shadow-[0_0_0_4px_#D01A1A] 
     md:absolute md:top-[-55] md:right-[-130] md:w-[550px] md:h-[280] 
     w-full max-w-md h-auto mx-auto text-center -mt-14 
   "
 >
               <div className="space-y-4 py-4 text-center text-xl sm:text-base">
-                <p className="text-white text-center text-5xl md:text-4xl sm:text-3xl font-semibold leading-relaxed">
+                <p className="text-white text-center md:text-4xl sm:text-md font-semibold leading-relaxed">
                   Our tools and <br />services cater to a <br /> variety of industrial <br />needs.
                 </p>
               </div>
