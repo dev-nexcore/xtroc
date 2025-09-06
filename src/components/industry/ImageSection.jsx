@@ -32,19 +32,17 @@ const ImageSection = () => {
     },
   ];
 
-  // Framer Motion Variants for staggered animation
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.6,
-      },
-    },
-  };
-
+  // Card animation with delay groups
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        delay: i < 2 ? 0 : 0.8, // first 2 together, then next 2 together
+      },
+    }),
   };
 
   return (
@@ -54,7 +52,6 @@ const ImageSection = () => {
           {/* Industry Grid */}
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"
-            variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -64,6 +61,7 @@ const ImageSection = () => {
                 key={index}
                 className="text-center"
                 variants={cardVariants}
+                custom={index} // pass index to variants
               >
                 <div className="relative group overflow-hidden rounded-lg">
                   <img

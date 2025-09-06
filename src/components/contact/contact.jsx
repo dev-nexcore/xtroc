@@ -32,58 +32,53 @@ export default function ContactPage() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="max-w-6xl mx-auto px-4 md:px-6 py-12"
+        className="max-w-6xl mx-auto px-4 md:px-2 py-12 "
       >
         <h2
-          className="text-4xl sm:text-5xl md:text-7xl mb-6 text-center md:text-left"
+          className="text-4xl sm:text-5xl md:text-7xl mb-6 text-center md:text-left ml-5"
           style={{ fontFamily: "Impact, sans-serif" }}
         >
           Contact Us
         </h2>
         <div className="h-1.5 mb-6 bg-red-600 rounded-full mx-auto md:mx-0 w-32 md:w-140"></div>
 
+        {/* Left + Right Section */}
         <div className="flex flex-col md:flex-row justify-between gap-8 relative">
-          {/* Left Side Content */}
+          {/* Left Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="flex-1 text-left"
+            className="flex-1 text-left px-2 md:px-0"  
           >
             <h3
-              className="text-2xl sm:text-3xl mb-6 md:mb-8 text-center md:text-left"
+              className="text-3xl md:text-4xl sm:text-3xl mb-6 md:mb-8 text-center md:text-left mt-4"
               style={{ fontFamily: "Impact, sans-serif" }}
             >
               Get in Touch with{" "}
               <span className="inline-block align-middle">
-                <Image src="/xtroc.png" width={160} height={80} alt="Xtroc Logo" />
+                <Image
+                  src="/xtroc.png"
+                  width={246} 
+                  height={100} 
+                  alt="Xtroc Logo"
+                />
               </span>
             </h3>
-            <p
-              className="text-base sm:text-lg md:text-xl font-base mb-6 md:mb-4 text-center md:text-left"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
-              Need expert advice or tailored solutions?
-              <br />
-              We’re here to provide expert advice, tailored solutions, and
-              <br />
-              unmatched customer support. Contact us today to learn more about
-              <br />
-              our products and services or to request a personalized quote.
-            </p>
           </motion.div>
 
-          {/* Right Side Card - Static */}
-          <div className="flex-1 md:flex-none md:w-[360px] relative">
+          {/* Right Side Card */}
+          <div className="flex-1 md:flex-none md:w-[600px] relative md:h-[100]">
             <div
               className="bg-gray-900 p-6 rounded-2xl border-2 border-white 
                          shadow-[0_0_0_4px_#D01A1A] w-full 
                          md:absolute md:top-[-6rem] md:right-[-14rem]"
             >
-              <div className="space-y-4 text-sm sm:text-base">
+              <div className="space-y-4 text-sm sm:text-base md:text-3xl">
                 <p className="flex items-start gap-3">
-                  <MapPinned className="text-red-600 flex-shrink-0" /> B-35, Plot No C-39A, TTC Industrial
+                  <MapPinned className="text-red-600 flex-shrink-0" /> B-35, Plot
+                  No C-39A, TTC Industrial
                   <br /> Area, MIDC Industrial Area, Pawne,
                   <br /> Navi Mumbai, Maharashtra 400710
                 </p>
@@ -96,6 +91,19 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Full width text below both sides */}
+        <div className="mt-22">
+          <p
+            className="text-base sm:text-lg md:text-3xl font-light leading-relaxed text-center"
+            style={{ fontFamily: "Poppins, sans-serif" }}
+          >
+            Need expert advice or tailored solutions? We’re here to provide
+            expert advice, tailored solutions, and unmatched customer support.
+            Contact us today to learn more about our products and services or to
+            request a personalized quote.
+          </p>
         </div>
       </motion.div>
 

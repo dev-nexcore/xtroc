@@ -82,7 +82,7 @@ const Industries = () => {
                 viewport={{ once: true, amount: 0.2 }}
                 className="text-center text-white"
               >
-                <div className="relative group overflow-hidden rounded-lg">
+                <div className="relative group overflow-hidden ">
                   <motion.img
                     src={industry.image}
                     alt={industry.alt}
