@@ -51,14 +51,15 @@ const Navbar = () => {
 
             {/* Products Dropdown */}
             <div className="relative">
-              <button
-                className="flex items-center text-white hover:text-red-500 transition-colors duration-200 text-base font-bold"
-                onClick={() => setIsProductsOpen(!isProductsOpen)}
-                onMouseEnter={() => setIsProductsOpen(true)}
-              >
-                Products
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
+               <Link
+        href="/product"
+        className="flex items-center text-white hover:text-red-500 transition-colors duration-200 text-base font-bold"
+        onMouseEnter={() => setIsProductsOpen(true)}
+        onMouseLeave={() => setIsProductsOpen(false)}
+      >
+        Products
+        <ChevronDown className="ml-1 h-4 w-4" />
+      </Link>
 
               {isProductsOpen && (
                 <div
