@@ -3,13 +3,20 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
- 
+
 const Navbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
-  const [hoveredProduct, setHoveredProduct] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const router = useRouter();
+
+  // Function to handle product selection
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    setIsProductsOpen(false);
+    setActiveSubmenu(null);
+    router.push("/work-in-progress");
+  };
 
   // format: { id: 'electric-wrench', link: '/products/torque-wrenches/electric' }
 
@@ -53,35 +60,33 @@ const Navbar = () => {
             </Link>
 
             {/* Products Dropdown */}
-              <div className="relative">
-      {/* Products Button */}
-      <div
-        className="flex items-center text-white hover:text-red-500 transition-colors duration-200 text-base font-bold cursor-pointer"
-        onClick={(e) => {
-          e.preventDefault(); // stop auto navigation on click
-          setIsProductsOpen(!isProductsOpen);
-        }}
-        onMouseEnter={() => {
-          if (router.pathname !== "/product") {
-            router.push("/product"); // navigate only if not already on product page
-          }
-        }}
-      >
-        Products
-        <ChevronDown className="ml-1 h-4 w-4" />
-      </div>
+            <div className="relative">
+              {/* Products Button */}
+              <div
+                className="flex items-center text-white hover:text-red-500 transition-colors duration-200 text-base font-bold cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault(); // stop auto navigation on click
+                  setIsProductsOpen(!isProductsOpen);
+                }}
+                onMouseEnter={() => {
+                  if (router.pathname !== "/product") {
+                    router.push("/product"); // navigate only if not already on product page
+                  }
+                }}
+              >
+                Products
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </div>
 
-
-            {/* Dropdown */}
-  {isProductsOpen && (
-    <div
-      className="absolute top-full -left-85 mt-6 bg-white border border-gray-200 shadow-lg z-50 w-[1100px] h-[550px] rounded-md flex"
-      onMouseLeave={() => {
-        setIsProductsOpen(false);
-        setActiveSubmenu(null);
-        setHoveredProduct(null);
-      }}
-    >
+              {/* Dropdown */}
+              {isProductsOpen && (
+                <div
+                  className="absolute top-full -left-85 mt-6 bg-white border border-gray-200 shadow-lg z-50 w-[1100px] h-[550px] rounded-md flex"
+                  onMouseLeave={() => {
+                    setIsProductsOpen(false);
+                    setActiveSubmenu(null);
+                  }}
+                >
                   {/* Main Categories */}
                   <div className="flex font-bold  flex-col h-full w-[300px]">
                     <button
@@ -144,9 +149,9 @@ const Navbar = () => {
                         <>
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "multi-stud",
-                                link: "/products/bolt-tensioning/multi-stud",
+                                name: "Multi Stud Bolt Tensioners",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -156,9 +161,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "hydraulic-tensioner",
-                                link: "/products/bolt-tensioning/hydraulic",
+                                name: "Hydraulic Bolt Tensioners",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -168,9 +173,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "pneumatic-powerpack",
-                                link: "/products/bolt-tensioning/pneumatic",
+                                name: "Pneumatic & Electric Powerpack",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -180,9 +185,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "electric-torque",
-                                link: "/products/bolt-tensioning/electric",
+                                name: "Electric & Pneumatic Torque Wrenches",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -196,9 +201,9 @@ const Navbar = () => {
                         <>
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "hydraulic-wrench",
-                                link: "/products/torque-wrenches/hydraulic-wrench",
+                                name: "Hydraulic Torque Wrenches",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -208,9 +213,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "electric-wrench",
-                                link: "/products/torque-wrenches/electric",
+                                name: "Manual Torque Wrenches",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -220,9 +225,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "pneumatic-wrench",
-                                link: "/products/torque-wrenches/pneumatic",
+                                name: "Electric Torque Wrenches",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -236,9 +241,9 @@ const Navbar = () => {
                         <>
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "hydraulic-pump",
-                                link: "/products/hydraulic/pumps",
+                                name: "Hydraulic Pumps and Hoses",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -248,9 +253,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "hydraulic-cylinder",
-                                link: "/products/hydraulic/cylinders",
+                                name: "Hydrotest Pump",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -260,9 +265,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "hydraulic-hose",
-                                link: "/products/hydraulic/hoses-and-fittings",
+                                name: "Hydraulic Jacks",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -276,9 +281,9 @@ const Navbar = () => {
                         <>
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "pipe-cutting",
-                                link: "/products/cold-cutting/pipe-cutting",
+                                name: "Pipe Cutting and Beveling Machines",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -288,9 +293,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "beveling-machine",
-                                link: "/products/cold-cutting/beveling-machines",
+                                name: "Flange Machines",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -300,9 +305,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "tube-cutting",
-                                link: "/products/cold-cutting/tube-cutting",
+                                name: "Casing Cutter",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -316,9 +321,9 @@ const Navbar = () => {
                         <>
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "flange-tool",
-                                link: "/products/specialized/flange-tools",
+                                name: "Hydraulic Nut Splitter",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -328,9 +333,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              setSelectedProduct({
+                              handleProductClick({
                                 id: "valve-tool",
-                                link: "/products/specialized/valve-maintenance-tools",
+                                name: "Flange Spreader",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -346,18 +351,23 @@ const Navbar = () => {
                   {selectedProduct && (
                     <div className="w-[600px]  flex items-center justify-center h-full  border-l border-gray-200 bg-white">
                       <div className="px-2 ">
-                        <Link href={selectedProduct.link}>
+                        <div
+                          onClick={() =>
+                            handleProductClick(selectedProduct)
+                          }
+                          className="cursor-pointer"
+                        >
                           <img
                             src={
                               productImages[selectedProduct.id] ||
                               "/images/placeholder-product.jpg"
                             }
                             alt={selectedProduct.id}
-                            className="w-full h-[400px]   px-2 py-2 object-contain rounded-md cursor-pointer hover:opacity-90 transition"
+                            className="w-full h-[400px]   px-2 py-2 object-contain rounded-md hover:opacity-90 transition"
                           />
-                        </Link>
+                        </div>
                         <div className="text-red-500 font-bold text-base justify-center  text-center capitalize mt-2">
-                          {selectedProduct.id.replace("-", " ")}
+                          {selectedProduct.name}
                         </div>
                       </div>
                     </div>
