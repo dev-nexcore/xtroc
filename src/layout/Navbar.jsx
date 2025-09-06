@@ -1,13 +1,16 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
-
+ 
 const Navbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [hoveredProduct, setHoveredProduct] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const router = useRouter();
+
   // format: { id: 'electric-wrench', link: '/products/torque-wrenches/electric' }
 
   // Define this at the top of your component
@@ -50,22 +53,24 @@ const Navbar = () => {
             </Link>
 
             {/* Products Dropdown */}
-            <div className="relative">
-              {/* Products Button */}
-  <div
-    className="flex items-center text-white hover:text-red-500 transition-colors duration-200 text-base font-bold cursor-pointer"
-    onClick={(e) => {
-      e.preventDefault(); // stop auto navigation on click
-      setIsProductsOpen(!isProductsOpen);
-    }}
-    onMouseEnter={() => {
-      // navigate to /product when hovered
-      window.location.href = "/product";
-    }}
-  >
-    Products
-    <ChevronDown className="ml-1 h-4 w-4" />
-  </div>
+              <div className="relative">
+      {/* Products Button */}
+      <div
+        className="flex items-center text-white hover:text-red-500 transition-colors duration-200 text-base font-bold cursor-pointer"
+        onClick={(e) => {
+          e.preventDefault(); // stop auto navigation on click
+          setIsProductsOpen(!isProductsOpen);
+        }}
+        onMouseEnter={() => {
+          if (router.pathname !== "/product") {
+            router.push("/product"); // navigate only if not already on product page
+          }
+        }}
+      >
+        Products
+        <ChevronDown className="ml-1 h-4 w-4" />
+      </div>
+
 
             {/* Dropdown */}
   {isProductsOpen && (

@@ -77,7 +77,7 @@ export default function IndustryPage() {
           >
             <div
               className="bg-gray-900 py-6 rounded-2xl border-2 border-white shadow-[0_0_0_4px_#D01A1A] 
-                         md:absolute md:top-[-55] md:right-[-230] md:mx-0 max-w-sm w-140 h-60 overflow-hidden"
+                         md:absolute md:top-[-55] md:right-[-230] md:mx-0 max-w-sm w-140 h-60 overflow-hidden space-x-2"
             >
               <div className="space-y-4 text-center text-xl sm:text-base">
                 <p className="text-white text-center text-3xl sm:text-3xl font-semibold leading-relaxed">
