@@ -10,7 +10,7 @@ function ContactSection() {
         whileInView={{ opacity: 1, y: 0 }} // animate hote hi apni jagah
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl 
+        className="w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl 
                    rounded-2xl border border-gray-200 shadow-[0_0_0_4px_#D01A1A] 
                    bg-white p-4 sm:p-6 md:p-8"
       >
@@ -31,8 +31,8 @@ function ContactSection() {
               name="name"
               type="text"
               placeholder="Enter Name"
-              className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 sm:py-3 
-                         text-sm text-gray-900 placeholder:text-gray-400 
+              className="w-full rounded-lg border border-gray-500 bg-white px-4 py-2.5 sm:py-3 
+                         text-sm md:text-base text-gray-900 placeholder:text-gray-400 
                          focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500"
               required
             />
@@ -48,8 +48,8 @@ function ContactSection() {
               name="email"
               type="email"
               placeholder="Enter Email"
-              className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 sm:py-3 
-                         text-sm text-gray-900 placeholder:text-gray-400 
+              className="w-full rounded-lg border border-gray-500 bg-white px-4 py-2.5 sm:py-3 
+                         text-sm md:text-base text-gray-900 placeholder:text-gray-400 
                          focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500"
               required
             />
@@ -65,8 +65,8 @@ function ContactSection() {
               name="subject"
               type="text"
               placeholder="What Do You Want To Talk About?"
-              className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 sm:py-3 
-                         text-sm text-gray-900 placeholder:text-gray-400 
+              className="w-full rounded-lg border border-gray-500 bg-white px-4 py-2.5 sm:py-3 
+                         text-sm md:text-base text-gray-900 placeholder:text-gray-400 
                          focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500"
               required
             />
@@ -82,8 +82,8 @@ function ContactSection() {
               name="company"
               type="text"
               placeholder="Enter Your Company Name"
-              className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 sm:py-3 
-                         text-sm text-gray-900 placeholder:text-gray-400 
+              className="w-full rounded-lg border border-gray-500 bg-white px-4 py-2.5 sm:py-3 
+                         text-sm md:text-base text-gray-900 placeholder:text-gray-400 
                          focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500"
             />
           </div>
@@ -96,11 +96,11 @@ function ContactSection() {
             <textarea
               id="message"
               name="message"
-              rows={3}
+              rows={4}
               placeholder="Provide Detailed Information About Your Requirements To Help You"
-              className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 sm:py-3 
-                         text-sm text-gray-900 placeholder:text-gray-400 
-                         focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full rounded-lg border border-gray-500 bg-white px-4 py-2.5 sm:py-3 
+                         text-sm md:text-base text-gray-900 placeholder:text-gray-400 
+                         focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"
               required
             />
           </div>
@@ -110,14 +110,14 @@ function ContactSection() {
             <button
               type="submit"
               className="w-full sm:w-auto inline-flex justify-center items-center rounded-full 
-                         bg-red-600 px-5 py-2.5 text-sm font-semibold text-white 
+                         bg-red-600 px-5 py-2.5 text-sm md:text-base font-semibold text-white 
                          hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
             >
               Submit Your Query
             </button>
             <button
               type="button"
-              className="text-sm font-medium text-gray-900 hover:underline"
+              className="text-sm md:text-base font-medium text-gray-900 hover:underline"
               onClick={() => {
                 // handle request a call
               }}

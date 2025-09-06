@@ -59,7 +59,7 @@ export default function IndustryPage() {
               "Custom Solutions for <br />Diverse Industries"
             </h3>
             <p
-              className="text-base mt-12 sm:text-lg md:text-xl font-base mb-6 md:mb-4 text-center md:text-left md:-ml-10"
+              className="text-base mt-12 sm:text-lg md:text-2xl font-base mb-6 md:mb-4 text-center md:text-left md:-ml-10"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               We are the industry heads and produce the most <br />
@@ -78,12 +78,12 @@ export default function IndustryPage() {
             <div
   className="
     bg-gray-900 py-6 rounded-2xl border-2 border-white shadow-[0_0_0_4px_#D01A1A] 
-    md:absolute md:top-[-55] md:right-[-130] md:w-[320px] md:h-auto 
-    w-full max-w-md h-auto mx-auto text-center
+    md:absolute md:top-[-55] md:right-[-130] md:w-[550px] md:h-[280] 
+    w-full max-w-md h-auto mx-auto text-center -mt-14 
   "
 >
-              <div className="space-y-4 text-center text-xl sm:text-base">
-                <p className="text-white text-center text-3xl sm:text-3xl font-semibold leading-relaxed">
+              <div className="space-y-4 py-4 text-center text-xl sm:text-base">
+                <p className="text-white text-center text-5xl md:text-4xl sm:text-3xl font-semibold leading-relaxed">
                   Our tools and <br />services cater to a <br /> variety of industrial <br />needs.
                 </p>
               </div>
@@ -98,7 +98,7 @@ export default function IndustryPage() {
               className="flex items-center justify-center mt-10"
               style={{ fontFamily: "Impact, sans-serif" }}
             >
-              <h2 className="text-4xl mx-8">
+              <h2 className="text-5xl mx-8">
                 Industries <span className="text-red-600">We Serve</span> Include:
               </h2>
             </div>
