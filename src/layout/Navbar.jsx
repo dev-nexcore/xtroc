@@ -51,25 +51,32 @@ const Navbar = () => {
 
             {/* Products Dropdown */}
             <div className="relative">
-               <Link
-        href="/product"
-        className="flex items-center text-white hover:text-red-500 transition-colors duration-200 text-base font-bold"
-        onMouseEnter={() => setIsProductsOpen(true)}
-        onMouseLeave={() => setIsProductsOpen(false)}
-      >
-        Products
-        <ChevronDown className="ml-1 h-4 w-4" />
-      </Link>
+              {/* Products Button */}
+  <div
+    className="flex items-center text-white hover:text-red-500 transition-colors duration-200 text-base font-bold cursor-pointer"
+    onClick={(e) => {
+      e.preventDefault(); // stop auto navigation on click
+      setIsProductsOpen(!isProductsOpen);
+    }}
+    onMouseEnter={() => {
+      // navigate to /product when hovered
+      window.location.href = "/product";
+    }}
+  >
+    Products
+    <ChevronDown className="ml-1 h-4 w-4" />
+  </div>
 
-              {isProductsOpen && (
-                <div
-                  className="absolute top-full -left-85 mt-6 bg-white border border-gray-200 shadow-lg z-50 w-[1100px] h-[550px] rounded-md flex"
-                  onMouseLeave={() => {
-                    setIsProductsOpen(false);
-                    setActiveSubmenu(null);
-                    setHoveredProduct(null);
-                  }}
-                >
+            {/* Dropdown */}
+  {isProductsOpen && (
+    <div
+      className="absolute top-full -left-85 mt-6 bg-white border border-gray-200 shadow-lg z-50 w-[1100px] h-[550px] rounded-md flex"
+      onMouseLeave={() => {
+        setIsProductsOpen(false);
+        setActiveSubmenu(null);
+        setHoveredProduct(null);
+      }}
+    >
                   {/* Main Categories */}
                   <div className="flex font-bold  flex-col h-full w-[300px]">
                     <button
