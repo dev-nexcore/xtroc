@@ -2,6 +2,8 @@ import IndustryPage from "@/components/industry/industry";
 import ImageSection from "@/components/industry/ImageSection";
 import Footer from "@/layout/footer";
 import Navbar from "@/layout/Navbar";
+import WhatsappLogo from "@/components/WhatsappLogo/WhatsappLogo";
+import ChatBoat from "@/components/ChatBoat/ChatBoat";
 
 export default function Page() {
   return (
@@ -10,6 +12,8 @@ export default function Page() {
     <Navbar/>
     <IndustryPage/>
     <ImageSection/>
+    <WhatsappLogo/>
+    <ChatBoat/>
     <Footer/>
     
     </>

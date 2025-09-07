@@ -76,37 +76,44 @@ const OurValues = () => {
           <div className="flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-0 ">
             {/* 25 Products Card */}
             <div
-              className="text-center p-10 w-100 relative h-[12.5rem]"
+              className="text-center p-10 w-180 relative h-[15.5rem]"
               style={{
                 backgroundColor: "#1B1B1B",
                 clipPath: "polygon(0 0, 100% 0, 77% 100%, 0 100%)",
               }}
             >
               <div
-                className="text-6xl font-bold mb-2"
+                className="flex text-7xl font-bold mb-2 p-10 px-55  "
                 style={{ color: "#D01A1A" }}
               >
                 <CountingNumber target={25} />
+              <div className="text-white md:text-6xl text-4xl md:px-4 md:py-2 py-5 px-5">Products</div>
               </div>
-              <div className="text-white text-xl">Products</div>
+              {/* <div className="text-white text-xl">Products</div> */}
             </div>
 
             {/* 15 Years Card */}
             <div
-              className="text-center p-10 w-100 relative -ml-6 lg:-ml-12"
+              className="text-center p-10 w-180 relative h-[15.5rem] -ml-6 lg:-ml-25"
               style={{
                 backgroundColor: "#1B1B1B",
                 clipPath: "polygon(25% 0px, 100% 0px, 100% 100%, 0% 100%)",
               }}
             >
-              <div
+              {/* <div
                 className="text-6xl font-bold mb-2"
                 style={{ color: "#D01A1A" }}
               >
                 <CountingNumber target={15} />
-              </div>
-              <div className="text-white text-xl">
+              </div> */}
+              <div className="flex text-white text-2xl  md:px-30 md:py-10 px-40">
                 Years of Combined Sales <br /> & Operation Expertise
+                <div
+                className="text-7xl font-bold mb-2 px-2 "
+                style={{ color: "#D01A1A" }}
+              >
+                <CountingNumber target={15} />
+              </div>
               </div>
             </div>
           </div>

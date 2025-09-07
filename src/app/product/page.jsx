@@ -1,5 +1,7 @@
+import ChatBoat from '@/components/ChatBoat/ChatBoat';
 import Innovations from '@/components/Products/OurInnovation';
 import Product from '@/components/Products/Product';
+import WhatsappLogo from '@/components/WhatsappLogo/WhatsappLogo';
 import Footer from '@/layout/footer';
 import Navbar from '@/layout/Navbar';
 import React from 'react'
@@ -10,6 +12,8 @@ const page = () => {
       <Navbar/>
         <Product/>
         <Innovations/>
+        <WhatsappLogo/>
+        <ChatBoat/>
         <Footer/>
     </div>
   )

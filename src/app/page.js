@@ -3,12 +3,17 @@ import React, { useState, useEffect } from "react";
 import ContactUs from "@/components/Home/ContactUs";
 import Home from "@/components/Home/Home";
 import Industries from "@/components/Home/Industries";
-import OurProducts from "@/components/Home/OurProducts";
+
 import Footer from "@/layout/footer";
 import Navbar from "@/layout/Navbar";
 import MobileNavbar from "@/layout/mobileNavbar";
 import SplashScreen from "@/components/Home/SplashScreen"; // tumhara splash component
 import { motion, AnimatePresence } from "framer-motion";
+
+import AboutHome from "@/components/Home/AboutHome";
+import OurProducts from "@/components/Home/OurProducts";
+import WhatsappLogo from "@/components/WhatsappLogo/WhatsappLogo";
+import ChatBoat from "@/components/ChatBoat/ChatBoat";
 
 const Page = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -38,9 +43,11 @@ const Page = () => {
             <div className="md:hidden">
               <MobileNavbar />
             </div>
-
+            <WhatsappLogo/>
+            <ChatBoat/>
             <Home />
-            <OurProducts />
+            <AboutHome/>
+            <OurProducts/>
             <Industries />
             <ContactUs />
             <Footer />

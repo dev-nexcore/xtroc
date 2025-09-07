@@ -42,7 +42,7 @@ const Home = () => {
     <div className="bg-black text-white">
       {/* Hero Section */}
       <div className="bg-black px-4 sm:px-6 md:px-8 py-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto md:max-w-screen md:px-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             
             {/* Left side - Product Image */}
@@ -64,34 +64,34 @@ const Home = () => {
 
             {/* Right side - staggered text */}
             <motion.div
-              className="flex-1 text-center md:text-left md:pl-12"
+              className="flex-1 text-center md:text-right md:pl-12"
               variants={container}
               initial="hidden"
               animate="show" // animate immediately on page load
             >
               <motion.h1
-                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
+                className="text-3xl sm:text-4xl md:text-7xl font-impact mb-4"
                 variants={item}
               >
-                <span className="text-red-500">Perfect Product</span>
+                <span className="text-red-500 md:ml-30">Perfect Product</span>
               </motion.h1>
 
               <motion.h2
-                className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-2"
+                className="text-2xl sm:text-4xl md:text-7xl font-impact text-white mb-2 "
                 variants={item}
               >
                 Unmatched Quality
               </motion.h2>
 
               <motion.h2
-                className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-8"
+                className="text-2xl sm:text-4xl md:text-7xl font-impact text-white mb-8 "
                 variants={item}
               >
                 Unbeatable Prices
               </motion.h2>
 
               <motion.p
-                className="text-gray-300 text-base sm:text-lg mb-8 leading-relaxed"
+                className="text-gray-300 text-base sm:text-lg mb-8 leading-relaxed md:text-xl"
                 variants={item}
               >
                 Welcome to Xtorc, where precision meets innovation. With over 10
@@ -104,10 +104,10 @@ const Home = () => {
                 className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4"
                 variants={item}
               >
-                <button className="bg-red-500 hover:bg-red-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors w-full sm:w-auto">
+                <button className="relative bg-red-500  hover:bg-red-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors w-full sm:w-auto md:ml-70 ">
                   Contact Us
                 </button>
-                <button className="bg-white hover:bg-gray-100 text-black px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
+                <button className=" bg-white hover:bg-gray-100 text-black px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto ">
                   <span>Explore Products</span>
                 </button>
               </motion.div>

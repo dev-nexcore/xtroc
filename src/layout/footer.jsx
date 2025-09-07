@@ -94,7 +94,7 @@ const Footer = () => {
                 { name: "services", path: "/services" },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center space-x-2">
-                  <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 " />
+                  <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 md:mr-4" />
                   <a
                     href={item.path}
                     className="text-xs sm:text-sm hover:text-gray-300 transition-colors"
@@ -129,7 +129,7 @@ const Footer = () => {
                 "pipe cutting & beveling machines",
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center space-x-2  ">
-                  <FaAngleDoubleRight className="text-red-500 text-xl flex-shrink-0" />
+                  <FaAngleDoubleRight className="text-red-500 text-xl flex-shrink-0 md:mr-4" />
                   <a
                     href="#"
                     className="text-xs sm:text-sm hover:text-gray-300 transition-colors"
@@ -158,14 +158,14 @@ const Footer = () => {
             </h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-2">
-                <MapPin className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-red-600 mt-1 flex-shrink-0 md:mr-4" />
                 <p className="text-xs sm:text-sm leading-relaxed">
                   B-35, Plot No C-39A, TTC Industrial Area, MIDC Industrial
                   Area, Pawne, Navi Mumbai, Maharashtra 400710
                 </p>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5 text-red-600 flex-shrink-0" />
+                <Mail className="w-5 h-5 text-red-600 flex-shrink-0 md:mr-4" />
                 <a
                   href="mailto:enquiry@xtorcind.com"
                   className="text-xs sm:text-sm hover:text-gray-300 transition-colors break-all"
@@ -174,7 +174,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5 text-red-600 flex-shrink-0" />
+                <Phone className="w-5 h-5 text-red-600 flex-shrink-0 md:mr-4" />
                 <a
                   href="tel:+919619561695"
                   className="text-xs sm:text-sm hover:text-gray-300 transition-colors"

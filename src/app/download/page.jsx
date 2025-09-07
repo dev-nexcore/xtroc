@@ -1,4 +1,6 @@
+import ChatBoat from '@/components/ChatBoat/ChatBoat';
 import DownloadSection from '@/components/Download/Download';
+import WhatsappLogo from '@/components/WhatsappLogo/WhatsappLogo';
 import Footer from '@/layout/footer';
 import Navbar from '@/layout/Navbar';
 
@@ -8,6 +10,8 @@ export default function Page() {
     <>  
     <Navbar/>    
     <DownloadSection/>
+    <WhatsappLogo/>
+    <ChatBoat/>
     <Footer/>   
     </>
   )
