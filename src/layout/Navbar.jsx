@@ -69,7 +69,7 @@ const Navbar = () => {
                 }}
                 onMouseEnter={() => {
                   if (pathname !== "/product") {
-                    router.push("/product"); // navigate only if not already on product page
+                    router.push("/product"); 
                   }
                 }}
               >

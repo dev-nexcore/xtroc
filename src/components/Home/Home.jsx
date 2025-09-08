@@ -70,21 +70,21 @@ const Home = () => {
               animate="show" // animate immediately on page load
             >
               <motion.h1
-                className="text-3xl sm:text-4xl md:text-7xl font-impact mb-4"
+                className="text-3xl sm:text-4xl md:text-6xl font-impact mb-4"
                 variants={item}
               >
                 <span className="text-red-500 md:ml-30">Perfect Product</span>
               </motion.h1>
 
               <motion.h2
-                className="text-2xl sm:text-4xl md:text-7xl font-impact text-white mb-2 "
+                className="text-2xl sm:text-4xl md:text-6xl font-impact text-white mb-2 "
                 variants={item}
               >
                 Unmatched Quality
               </motion.h2>
 
               <motion.h2
-                className="text-2xl sm:text-4xl md:text-7xl font-impact text-white mb-8 "
+                className="text-2xl sm:text-4xl md:text-6xl font-impact text-white mb-8 "
                 variants={item}
               >
                 Unbeatable Prices

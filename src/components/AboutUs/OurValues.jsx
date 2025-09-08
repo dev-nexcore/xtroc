@@ -83,7 +83,7 @@ const OurValues = () => {
               }}
             >
               <div
-                className="flex text-7xl font-bold mb-2 p-10 px-55  "
+                className="flex text-7xl font-bold mb-2 p-10 px-40  "
                 style={{ color: "#D01A1A" }}
               >
                 <CountingNumber target={25} />
