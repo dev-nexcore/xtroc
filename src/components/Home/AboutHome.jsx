@@ -92,7 +92,7 @@ const AboutHome = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Left Text */}
           <motion.h2
-          variants={item} className="2xl:text-7xl xl:text-5xl lg:text-4xl font-extrabold text-center md:text-left md:ml-60 text-white ">
+          variants={item} className="2xl:text-7xl xl:text-5xl lg:text-3xl text-2xl font-extrabold text-center md:text-left lg:ml-40 xl:ml-40 text-white ">
             Why To Choose
           </motion.h2>
 
@@ -108,7 +108,7 @@ const AboutHome = () => {
             <img
               src="/build.png"
               alt="Build"
-              className="2xl:w-48 xl:40 lg:36  w-30 h-auto absolute 2xl:-bottom-48 -bottom-28  2xl:-right-6 xl:right-7 lg:right-10 -right-8 md:mr-42"
+              className="2xl:w-48   lg:36  w-30 h-auto absolute 2xl:-bottom-48 -bottom-28  2xl:-right-6 xl:right-7 lg:right-10 -right-8 md:mr-42"
             />
           </motion.div>
         </div>
