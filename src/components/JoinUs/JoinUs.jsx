@@ -47,13 +47,13 @@ export default function CareersSection() {
 
       {/* Buttons */}
       <motion.div
-        className="flex flex-col sm:flex-row justify-center gap-14 mb-10"
+        className="flex flex-col sm:flex-row justify-center gap-10 mb-10"
         variants={itemVariants}
       >
-        <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-md transition">
+        <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-md transition md:w-auto ">
           View Open Positions
         </button>
-        <button className="bg-red-300 w-50 hover:bg-red-400 text-black font-semibold px-6 py-3 rounded-md transition">
+        <button className="bg-red-300 w-85   hover:bg-red-400 text-black font-semibold md:px-6 py-3 rounded-md transition md:w-50" >
           Apply Now
         </button>
       </motion.div>

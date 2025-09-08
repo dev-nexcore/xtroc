@@ -70,21 +70,21 @@ const Home = () => {
               animate="show" // animate immediately on page load
             >
               <motion.h1
-                className="text-3xl sm:text-4xl md:text-6xl font-impact mb-4"
+                className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl font-impact mb-4"
                 variants={item}
               >
                 <span className="text-red-500 md:ml-30">Perfect Product</span>
               </motion.h1>
 
               <motion.h2
-                className="text-2xl sm:text-4xl md:text-6xl font-impact text-white mb-2 "
+                className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl font-impact text-white mb-2 "
                 variants={item}
               >
                 Unmatched Quality
               </motion.h2>
 
               <motion.h2
-                className="text-2xl sm:text-4xl md:text-6xl font-impact text-white mb-8 "
+                className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl font-impact text-white mb-8 "
                 variants={item}
               >
                 Unbeatable Prices
@@ -101,10 +101,10 @@ const Home = () => {
               </motion.p>
 
               <motion.div
-                className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4"
+                className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 "
                 variants={item}
               >
-                <button className="relative bg-red-500  hover:bg-red-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors w-full sm:w-auto 2xl:ml-70 xl:ml-40 lg:ml-16 ">
+                <button className="relative bg-red-500  hover:bg-red-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors w-full sm:w-auto 2xl:ml-70 xl:ml-40 lg:ml-16">
                   Contact Us
                 </button>
                 <button className=" bg-white hover:bg-gray-100 text-black px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto ">

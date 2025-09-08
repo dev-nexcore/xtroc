@@ -3,27 +3,18 @@ import ContactPage from "@/components/contact/contact";
 import MobileContactPage from "@/components/contact/MobileContact";
 import WhatsappLogo from "@/components/WhatsappLogo/WhatsappLogo";
 import Footer from "@/layout/footer";
+import MobileNavbar from "@/layout/mobileNavbar";
 import Navbar from "@/layout/Navbar";
 
 export default function Page() {
   return (
     <>
-
- <Navbar/>
-     <div className="hidden md:block">
-              <ContactPage />
-            </div>
-            <div className="md:hidden">
-              <MobileContactPage />
-            </div>
-            <WhatsappLogo/>
-            <ChatBoat/>
-
-   
-    <Footer/>
-    
+      <Navbar />
+      <MobileNavbar />
+      <ContactPage />
+      <WhatsappLogo />
+      <ChatBoat />
+      <Footer />
     </>
-  )
-}  
-
-
+  );
+}
