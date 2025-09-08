@@ -35,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black  text-white md:px-5 md:py-3 w-full">
+    <nav className="bg-black  text-white lg:px-5 xl-px-10  md:py-3 w-full hidden md:flex ">
       <div className=" ">
         <div className="flex items-center justify-evenly h-12">
           {/* Logo */}
@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex flex-wrap items-center justify-start 2xl:gap-x-20 xl:gap-x-20 lg:gap-x-10 gap-x-5 gap-y-2 ml-4">
+          <div className="hidden md:flex flex-wrap items-center justify-start 2xl:gap-x-20 xl:gap-x-10 xl:px-10 2xl:px-10 lg:gap-x-5 gap-x-5 md:gap-4 lg:px-10  gap-y-2  ml-4">
             <Link
               href="/aboutus"
               className={`text-white font-bold text-base transition-colors duration-200 
@@ -67,11 +67,11 @@ const Navbar = () => {
                   e.preventDefault(); // stop auto navigation on click
                   setIsProductsOpen(!isProductsOpen);
                 }}
-                onMouseEnter={() => {
-                  if (pathname !== "/product") {
-                    router.push("/product"); 
-                  }
-                }}
+                // onMouseEnter={() => {
+                //   if (pathname !== "/product") {
+                //     router.push("/product"); 
+                //   }
+                // }}
               >
                 Products
                 <ChevronDown className="ml-1 h-4 w-4" />

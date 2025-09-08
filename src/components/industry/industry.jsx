@@ -15,7 +15,7 @@ const container = {
 
 export default function IndustryPage() {
   return (
-    <div className="overflow-x-hidden bg-black text-white min-h-screen relative">
+    <div className="overflow-x-hidden bg-black text-white pb-20 relative">
       {/* ✅ LEFT SIDE CONTENT */}
       <motion.div
         className="max-w-6xl mx-auto px-4 md:px-6 py-12 text-left"

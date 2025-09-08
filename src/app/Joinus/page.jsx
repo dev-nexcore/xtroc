@@ -2,6 +2,7 @@ import ChatBoat from "@/components/ChatBoat/ChatBoat";
 import CareersSection from "@/components/JoinUs/JoinUs";
 import WhatsappLogo from "@/components/WhatsappLogo/WhatsappLogo";
 import Footer from "@/layout/footer";
+import MobileNavbar from "@/layout/mobileNavbar";
 import Navbar from "@/layout/Navbar";
 
 export default function Page() {
@@ -9,6 +10,7 @@ export default function Page() {
     <>
     
     <Navbar/>
+    <MobileNavbar/>
  <CareersSection/>
  <WhatsappLogo/>
  <ChatBoat/>

@@ -233,7 +233,7 @@ const MobileNavbar = () => {
       {/* Mobile menu */}
       {isOpen && (
         <div className="px-4 pb-4">
-          <Link href="/about" className="block py-2 text-sm font-semibold hover:text-red-500">
+          <Link href="/aboutus" className="block py-2 text-sm font-semibold hover:text-red-500">
             About us
           </Link>
 
@@ -283,16 +283,16 @@ const MobileNavbar = () => {
           <Link href="/services" className="block py-2 text-sm font-semibold hover:text-red-500">
             Services
           </Link>
-          <Link href="/industries" className="block py-2 text-sm font-semibold hover:text-red-500">
+          <Link href="/industry" className="block py-2 text-sm font-semibold hover:text-red-500">
             Industries
           </Link>
           <Link href="/contact" className="block py-2 text-sm font-semibold hover:text-red-500">
             Contact us
           </Link>
-          <Link href="/join" className="block py-2 text-sm font-semibold hover:text-red-500">
+          <Link href="/Joinus" className="block py-2 text-sm font-semibold hover:text-red-500">
             Join us
           </Link>
-          <Link href="/downloads" className="block py-2 text-sm font-semibold hover:text-red-500">
+          <Link href="/download" className="block py-2 text-sm font-semibold hover:text-red-500">
             Downloads
           </Link>
         </div>
