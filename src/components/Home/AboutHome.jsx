@@ -80,10 +80,10 @@ const AboutHome = () => {
 
       {/* Why To Choose Section */}
       <motion.div
-        className="px-6 py-16 text-black"
-        style={{
-          clipPath: "polygon(0 5%, 100% 0%, 100% 95%, 0% 100%)",
-        }}
+        className="px-6 py-16 text-white bg-black"
+        // style={{
+        //   clipPath: "polygon(0 5%, 100% 0%, 100% 95%, 0% 100%)",
+        // }}
         variants={container}
         initial="hidden"
         whileInView="show"
