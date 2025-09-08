@@ -1,7 +1,7 @@
 const WhatsappLogo = () =>{
     return (
         <div 
-        className="fixed h-24 w-24 object-cover top-130 right-10 z-50">
+        className="fixed h-24 w-24 object-cover 2xl:bottom-30 2xl:right-10 xl:right-10 xl:bottom-15 lg:bottom-20 lg:right-10 right-10 bottom-15  z-50">
             <img
             src="whatsapp.png"
             alt="whatsApp_Logo"

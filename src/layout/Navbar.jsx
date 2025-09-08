@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex flex-wrap items-center justify-start gap-x-20 gap-y-2 ml-4">
+          <div className="hidden md:flex flex-wrap items-center justify-start 2xl:gap-x-20 xl:gap-x-20 lg:gap-x-10 gap-x-5 gap-y-2 ml-4">
             <Link
               href="/aboutus"
               className={`text-white font-bold text-base transition-colors duration-200 
@@ -69,7 +69,7 @@ const Navbar = () => {
                 }}
                 onMouseEnter={() => {
                   if (pathname !== "/product") {
-                    router.push("/product"); // navigate only if not already on product page
+                    router.push("/product"); 
                   }
                 }}
               >

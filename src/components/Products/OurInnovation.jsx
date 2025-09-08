@@ -25,7 +25,7 @@ const products = [
     id: 2,
     title: "Pipe Cutting & Beveling Machines",
     img: "product4.png",
-    desc: "Engineered for precision and safety, our cold cutting and beveling tools are perfect for on-site machining tasks, delivering clean and accurate results without heat distortion."
+    desc: "Engineered for precision and safety...",
   },
   {
     id: 3,
@@ -85,7 +85,8 @@ const Innovations = () => {
                 <img
                   src={product.img}
                   alt={product.title}
-                  className="w-128 h-88 object-cover bg-gray-200 rounded"
+                  className={` object-cover bg-gray-200 rounded ${
+                    product.id === 2 ? "h-120 w-120  rotate-[-90deg] " : "w-120 h-120" }`}
                   onError={(e) => {
                     e.target.style.display = 'none';
                     e.target.nextSibling.style.display = 'flex';
