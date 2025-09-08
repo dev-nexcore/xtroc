@@ -3,20 +3,15 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [hoveredProduct, setHoveredProduct] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const router = useRouter();
-
-  // Function to handle product selection
-  const handleProductClick = (product) => {
-    setSelectedProduct(product);
-    setIsProductsOpen(false);
-    setActiveSubmenu(null);
-    router.push("/work-in-progress");
-  };
+  const pathname = usePathname();
 
   // format: { id: 'electric-wrench', link: '/products/torque-wrenches/electric' }
 
@@ -40,8 +35,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black  text-white p-3">
-      <div className="max-w-7xl mx-auto ">
+    <nav className="bg-black  text-white md:px-5 md:py-3 w-full">
+      <div className=" ">
         <div className="flex items-center justify-evenly h-12">
           {/* Logo */}
           <div className="flex  items-center">
@@ -54,7 +49,9 @@ const Navbar = () => {
           <div className="hidden md:flex items-center ml-20 space-x-20">
             <Link
               href="/aboutus"
-              className="text-white font-bold  text-base  hover:border-b-2 border-red-500 transition-colors duration-200  "
+              className={`text-white font-bold text-base transition-colors duration-200 
+    hover:border-b-2 hover:border-red-500 
+    ${pathname === "/aboutus" ? "border-b-2 border-red-500" : ""}`}
             >
               About us
             </Link>
@@ -63,13 +60,15 @@ const Navbar = () => {
             <div className="relative">
               {/* Products Button */}
               <div
-                className="flex items-center text-white hover:text-red-500 transition-colors duration-200 text-base font-bold cursor-pointer"
+                className={`flex items-center text-white transition-colors duration-200 text-base font-bold cursor-pointer 
+    hover:border-b-2 hover:border-red-500 
+    ${pathname === "/product" ? "border-b-2 border-red-500" : ""}`}
                 onClick={(e) => {
                   e.preventDefault(); // stop auto navigation on click
                   setIsProductsOpen(!isProductsOpen);
                 }}
                 onMouseEnter={() => {
-                  if (router.pathname !== "/product") {
+                  if (pathname !== "/product") {
                     router.push("/product"); // navigate only if not already on product page
                   }
                 }}
@@ -81,10 +80,11 @@ const Navbar = () => {
               {/* Dropdown */}
               {isProductsOpen && (
                 <div
-                  className="absolute top-full -left-85 mt-6 bg-white border border-gray-200 shadow-lg z-50 w-[1100px] h-[550px] rounded-md flex"
+                  className="absolute top-full -left-85 mt-6 bg-white border border-gray-200 shadow-lg z-100 w-[1100px] h-[550px] rounded-md flex"
                   onMouseLeave={() => {
                     setIsProductsOpen(false);
                     setActiveSubmenu(null);
+                    setHoveredProduct(null);
                   }}
                 >
                   {/* Main Categories */}
@@ -149,9 +149,9 @@ const Navbar = () => {
                         <>
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "multi-stud",
-                                name: "Multi Stud Bolt Tensioners",
+                                link: "/products/bolt-tensioning/multi-stud",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -161,9 +161,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "hydraulic-tensioner",
-                                name: "Hydraulic Bolt Tensioners",
+                                link: "/products/bolt-tensioning/hydraulic",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -173,9 +173,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "pneumatic-powerpack",
-                                name: "Pneumatic & Electric Powerpack",
+                                link: "/products/bolt-tensioning/pneumatic",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -185,9 +185,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "electric-torque",
-                                name: "Electric & Pneumatic Torque Wrenches",
+                                link: "/products/bolt-tensioning/electric",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -201,9 +201,9 @@ const Navbar = () => {
                         <>
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "hydraulic-wrench",
-                                name: "Hydraulic Torque Wrenches",
+                                link: "/products/torque-wrenches/hydraulic-wrench",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -213,9 +213,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "electric-wrench",
-                                name: "Manual Torque Wrenches",
+                                link: "/products/torque-wrenches/electric",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -225,9 +225,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "pneumatic-wrench",
-                                name: "Electric Torque Wrenches",
+                                link: "/products/torque-wrenches/pneumatic",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -241,9 +241,9 @@ const Navbar = () => {
                         <>
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "hydraulic-pump",
-                                name: "Hydraulic Pumps and Hoses",
+                                link: "/products/hydraulic/pumps",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -253,9 +253,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "hydraulic-cylinder",
-                                name: "Hydrotest Pump",
+                                link: "/products/hydraulic/cylinders",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -265,9 +265,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "hydraulic-hose",
-                                name: "Hydraulic Jacks",
+                                link: "/products/hydraulic/hoses-and-fittings",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -281,9 +281,9 @@ const Navbar = () => {
                         <>
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "pipe-cutting",
-                                name: "Pipe Cutting and Beveling Machines",
+                                link: "/products/cold-cutting/pipe-cutting",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -293,9 +293,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "beveling-machine",
-                                name: "Flange Machines",
+                                link: "/products/cold-cutting/beveling-machines",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -305,9 +305,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "tube-cutting",
-                                name: "Casing Cutter",
+                                link: "/products/cold-cutting/tube-cutting",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -321,9 +321,9 @@ const Navbar = () => {
                         <>
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "flange-tool",
-                                name: "Hydraulic Nut Splitter",
+                                link: "/products/specialized/flange-tools",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -333,9 +333,9 @@ const Navbar = () => {
 
                           <button
                             onClick={() =>
-                              handleProductClick({
+                              setSelectedProduct({
                                 id: "valve-tool",
-                                name: "Flange Spreader",
+                                link: "/products/specialized/valve-maintenance-tools",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -351,23 +351,18 @@ const Navbar = () => {
                   {selectedProduct && (
                     <div className="w-[600px]  flex items-center justify-center h-full  border-l border-gray-200 bg-white">
                       <div className="px-2 ">
-                        <div
-                          onClick={() =>
-                            handleProductClick(selectedProduct)
-                          }
-                          className="cursor-pointer"
-                        >
+                        <Link href={selectedProduct.link}>
                           <img
                             src={
                               productImages[selectedProduct.id] ||
                               "/images/placeholder-product.jpg"
                             }
                             alt={selectedProduct.id}
-                            className="w-full h-[400px]   px-2 py-2 object-contain rounded-md hover:opacity-90 transition"
+                            className="w-full h-[400px]   px-2 py-2 object-contain rounded-md cursor-pointer hover:opacity-90 transition"
                           />
-                        </div>
+                        </Link>
                         <div className="text-red-500 font-bold text-base justify-center  text-center capitalize mt-2">
-                          {selectedProduct.name}
+                          {selectedProduct.id.replace("-", " ")}
                         </div>
                       </div>
                     </div>
@@ -378,35 +373,40 @@ const Navbar = () => {
 
             <Link
               href="/services"
-              className="text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold "
+              className={`text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold
+                ${pathname === "/services" ? "border-b-2 border-red-500" : ""}`}
             >
               Services
             </Link>
 
             <Link
               href="/industry"
-              className="text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold "
+              className={`text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold 
+              ${pathname === "/industry" ? "border-b-2 border-red-500" : ""}`}
             >
               Industries
             </Link>
 
             <Link
               href="/contact"
-              className="text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold "
+              className={`text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold 
+              ${pathname === "/contact" ? "border-b-2 border-red-500" : ""}`}
             >
               Contact us
             </Link>
 
             <Link
               href="/Joinus"
-              className="text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold "
+              className={`text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold 
+              ${pathname === "/Joinus" ? "border-b-2 border-red-500" : ""}`}
             >
               Join us
             </Link>
 
             <Link
               href="/download"
-              className="text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold "
+              className={`text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold 
+              ${pathname === "/download" ? "border-b-2 border-red-500" : ""}`}
             >
               Downloads
             </Link>
