@@ -59,23 +59,30 @@ const Navbar = () => {
             {/* Products Dropdown */}
             <div className="relative">
               {/* Products Button */}
-              <div
-                className={`flex items-center text-white transition-colors duration-200 text-base font-bold cursor-pointer 
-    hover:border-b-2 hover:border-red-500 
-    ${pathname === "/product" ? "border-b-2 border-red-500" : ""}`}
-                onClick={(e) => {
-                  e.preventDefault(); // stop auto navigation on click
-                  setIsProductsOpen(!isProductsOpen);
-                }}
-                // onMouseEnter={() => {
-                //   if (pathname !== "/product") {
-                //     router.push("/product"); 
-                //   }
-                // }}
-              >
-                Products
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </div>
+            <div className="flex items-center">
+    {/* Products link (navigates to /product) */}
+    <a
+      href="/product"
+      className={`text-white font-bold text-base 
+                  transition-colors duration-200 
+                  hover:border-b-2 hover:border-red-500 
+                  ${pathname === "/product" ? "border-b-2 border-red-500" : ""}`}
+    >
+      Products
+    </a>
+
+    {/* Chevron button (toggles dropdown only) */}
+    <button
+      type="button"
+      onClick={(e) => {
+        e.preventDefault();
+        setIsProductsOpen((prev) => !prev);
+      }}
+      className="ml-1"
+    >
+      <ChevronDown className="h-4 w-4 text-white" />
+    </button>
+    </div>
 
               {/* Dropdown */}
               {isProductsOpen && (
