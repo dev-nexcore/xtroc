@@ -89,29 +89,41 @@ const AboutHome = () => {
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          {/* Left Text */}
-          <motion.h2
-          variants={item} className="2xl:text-7xl xl:text-7xl lg:text-3xl text-2xl font-base text-center md:text-left lg:ml-40 xl:ml-20 text-white " style={{ fontFamily: "Impact, sans-serif" }}>
-            Why To Choose
-          </motion.h2>
+     <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-center gap-6 lg:gap-20">
+  {/* Left Text */}
+  <motion.h2
+    variants={item}
+    className="text-white font-bold text-center lg:text-left 
+               text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+               leading-tight"
+    style={{ fontFamily: "Impact, sans-serif" }}
+  >
+    Why To Choose
+  </motion.h2>
 
-          {/* Right Images */}
-          <motion.div
-          variants={item}
-           className="relative mt-8 md:mt-0">
-            <img
-              src="/xtroc.png"
-              alt="Xtorc"
-              className="md:w-96 w-24 h-auto md:mr-70 "
-            />
-            <img
-              src="/build.png"
-              alt="Build"
-              className="2xl:w-48 lg:36  w-40 h-auto absolute 2xl:-bottom-48 -bottom-28 xl:-bottom-37  2xl:-right-6 xl:right-6 lg:right-8 -right-8 md:mr-42"
-            />
-          </motion.div>
-        </div>
+  {/* Right Images */}
+  <motion.div
+    variants={item}
+    className="relative flex-shrink-0"
+  >
+    {/* Main Logo */}
+    <img
+      src="/xtroc.png"
+      alt="Xtorc"
+      className="w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 h-auto"
+    />
+
+    {/* Overlay Image */}
+    <img
+      src="/build.png"
+      alt="Build"
+      className="absolute w-20 sm:w-28 md:w-36 lg:w-40 xl:w-48 
+                 -bottom-20 sm:-bottom-16 md:-bottom-36 lg:-bottom-40 xl:-bottom-46
+                 -right-14 sm:-right-6 md:-right-24 lg:-right-24 xl:-right-28"
+    />
+  </motion.div>
+</div>
+
 
         {/* Red border */}
         <div className="w-100 h-1.5 bg-[#D01A1A] mx-auto my-6 rounded"></div>
