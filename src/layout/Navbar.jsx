@@ -151,7 +151,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "multi-stud",
-                                link: "/products/bolt-tensioning/multi-stud",
+                                link: "/multistagebolt",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -163,7 +163,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "hydraulic-tensioner",
-                                link: "/products/bolt-tensioning/hydraulic",
+                                link: "/hydraulicbolttensioners",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -175,7 +175,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "pneumatic-powerpack",
-                                link: "/products/bolt-tensioning/pneumatic",
+                                link: "/pneumotic",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -187,7 +187,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "electric-torque",
-                                link: "/products/bolt-tensioning/electric",
+                                link: "ElectricTorque",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -203,7 +203,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "hydraulic-wrench",
-                                link: "/products/torque-wrenches/hydraulic-wrench",
+                                link: "/hydraulictorque",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -215,7 +215,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "electric-wrench",
-                                link: "/products/torque-wrenches/electric",
+                                link: "ElectricTorque",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -227,7 +227,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "pneumatic-wrench",
-                                link: "/products/torque-wrenches/pneumatic",
+                                link: "/electrictorquewrenches",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -243,7 +243,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "hydraulic-pump",
-                                link: "/products/hydraulic/pumps",
+                                link: "/handPumps",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -255,7 +255,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "hydraulic-cylinder",
-                                link: "/products/hydraulic/cylinders",
+                                link: "/hydrotest",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -267,7 +267,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "hydraulic-hose",
-                                link: "/products/hydraulic/hoses-and-fittings",
+                                link: "/hydraulicjack",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -283,7 +283,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "pipe-cutting",
-                                link: "/products/cold-cutting/pipe-cutting",
+                                link: "/pipeCutting",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -295,7 +295,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "beveling-machine",
-                                link: "/products/cold-cutting/beveling-machines",
+                                link: "/flangefacing",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -307,7 +307,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "tube-cutting",
-                                link: "/products/cold-cutting/tube-cutting",
+                                link: "/casingcutter",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -323,7 +323,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "flange-tool",
-                                link: "/products/specialized/flange-tools",
+                                link: "/hydralicnut",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
@@ -335,7 +335,7 @@ const Navbar = () => {
                             onClick={() =>
                               setSelectedProduct({
                                 id: "valve-tool",
-                                link: "/products/specialized/valve-maintenance-tools",
+                                link: "/FlangeSpreaders",
                               })
                             }
                             className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"

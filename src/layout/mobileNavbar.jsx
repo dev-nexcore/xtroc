@@ -181,34 +181,34 @@ const MobileNavbar = () => {
 
   const productMenu = {
     'Bolt Tensioning Solutions': [
-      { label: 'Multi Stud Bolt Tensioners', href: '/products/bolt-tensioning/multi-stud' },
-      { label: 'Hydraulic Bolt Tensioners', href: '/products/bolt-tensioning/hydraulic' },
-      { label: 'Pneumatic & Electric Powerpack', href: '/products/bolt-tensioning/pneumatic' },
-      { label: 'Electric & Pneumatic Torque Wrenches', href: '/products/bolt-tensioning/electric' },
+      { label: 'Multi Stud Bolt Tensioners', href: 'multistagebolt' },
+      { label: 'Hydraulic Bolt Tensioners', href: '/hydraulicbolttensioners' },
+      { label: 'Pneumatic & Electric Powerpack', href: '/pneumotic' },
+      { label: 'Electric & Pneumatic Torque Wrenches', href: '/ElectricTorque' },
     ],
     'Torque Wrenches': [
-      { label: 'Hydraulic Torque Wrenches', href: '/products/torque-wrenches/hydraulic' },
-      { label: 'Electric Torque Wrenches', href: '/products/torque-wrenches/electric' },
-      { label: 'Pneumatic Torque Wrenches', href: '/products/torque-wrenches/pneumatic' },
-      { label: 'Manual Torque Wrenches', href: '/products/torque-wrenches/manual' },
+      { label: 'Hydraulic Torque Wrenches', href: '/hydraulictorque' },
+      { label: 'Electric Torque Wrenches', href: '/electrictorquewrenches' },
+      // { label: 'Pneumatic Torque Wrenches', href: '/products/torque-wrenches/pneumatic' },//rem
+      { label: 'Manual Torque Wrenches', href: '/ElectricTorque' },
     ],
     'Hydraulic Equipment': [
-      { label: 'Hydraulic Pumps', href: '/products/hydraulic/pumps' },
-      { label: 'Hydraulic Cylinders', href: '/products/hydraulic/cylinders' },
-      { label: 'Hydraulic Hoses & Fittings', href: '/products/hydraulic/hoses' },
-      { label: 'Hydraulic Accessories', href: '/products/hydraulic/accessories' },
+      { label: 'Hydraulic Pumps and Hoses', href: '/handPumps' },
+      { label: 'HydroTest Pump', href: '/hydrotest' },
+      { label: 'Hydraulic Jacks', href: '/hydraulicjack' },
+      // { label: 'Hydraulic Accessories', href: '/products/hydraulic/accessories' },
     ],
     'Cold Cutting and Beveling Tools': [
-      { label: 'Pipe Cutting Machines', href: '/products/cold-cutting/pipe-cutting' },
-      { label: 'Beveling Machines', href: '/products/cold-cutting/beveling' },
-      { label: 'Tube Cutting Tools', href: '/products/cold-cutting/tube-cutting' },
-      { label: 'Cutting Accessories', href: '/products/cold-cutting/accessories' },
+      { label: 'Pipe Cutting and Beveling  Machines', href: '/pipeCutting' },
+      // { label: 'Beveling Machines', href: '/products/cold-cutting/beveling' },
+      { label: 'Flage Machines', href: '/flangefacing' },
+      { label: 'Casing Cutter', href: '/casingcutter' },
     ],
     'Specialized Tools': [
-      { label: 'Flange Tools', href: '/products/specialized/flange-tools' },
-      { label: 'Valve Maintenance Tools', href: '/products/specialized/valve-tools' },
-      { label: 'Lifting & Positioning Tools', href: '/products/specialized/lifting' },
-      { label: 'Custom Solutions', href: '/products/specialized/custom' },
+      { label: 'Hydraulic Nut Splitters', href: '/hydralicnut' },
+      { label: 'Flange Spreaders', href: '/FlangeSpreaders' },
+      // { label: 'Lifting & Positioning Tools', href: '/products/specialized/lifting' },
+      // { label: 'Custom Solutions', href: '/products/specialized/custom' },
     ],
   };
 

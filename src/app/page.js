@@ -27,7 +27,7 @@ const Page = () => {
 
   return (
     <div>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showSplash ? (
           <SplashScreen key="splash" />
         ) : (
@@ -36,7 +36,7 @@ const Page = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-          >
+          > */}
             <div className="hidden md:block">
               <Navbar />
             </div>
@@ -51,9 +51,9 @@ const Page = () => {
             <Industries />
             <ContactUs />
             <Footer />
-          </motion.div>
-        )}
-      </AnimatePresence>
+          {/* </motion.div> */}
+        {/* )} 
+      // </AnimatePresence>*/}
     </div>
   );
 };
