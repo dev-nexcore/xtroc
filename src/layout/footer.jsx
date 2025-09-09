@@ -3,6 +3,7 @@ import React from "react";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { path } from "framer-motion/client";
 
 const Footer = () => {
   return (
@@ -123,18 +124,18 @@ const Footer = () => {
             </h3>
             <div className=" space-y-6">
               {[
-                "hydraulic torque wrenches",
-                "bolt tensioning solutions",
-                "hydraulic equipment",
-                "pipe cutting & beveling machines",
+                {name:"hydraulic torque wrenches", path:"/hydraulictorque"},
+                {name:"bolt tensioning solutions", path:"/multistagebolt"},
+                {name:"hydraulic equipment", path:"/handPumps"},
+                {name:"pipe cutting & beveling machines", path:"/pipeCutting"}
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center space-x-2  ">
                   <FaAngleDoubleRight className="text-red-500 text-xl flex-shrink-0 md:mr-4" />
                   <a
-                    href="#"
+                    href={item.path}
                     className="text-xs sm:text-sm hover:text-gray-300 transition-colors"
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </div>
               ))}
