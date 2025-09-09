@@ -35,9 +35,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black  text-white lg:px-5 xl-px-10  md:py-3 w-full hidden md:flex ">
+    <nav className="bg-black  text-white lg:px-5 xl:px-25 2xl:px-10  md:py-3  w-full hidden md:flex justify-center">
       <div className=" ">
-        <div className="flex items-center justify-evenly h-12">
+        <div className="flex items-center  h-12">
           {/* Logo */}
           <div className="flex  items-center">
             <Link href="/" className="flex items-center ">
@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex flex-wrap items-center justify-evenly gap-x-10 2xl:gap-x-20 xl:gap-x-12 md:gap-20 xl:px-24 md:gap-x-10 2xl:px-10 lg:gap-x-5 lg:px-10  gap-y-2  ml-4">
+          <div className="hidden md:flex flex-wrap items-center  md:gap-x-3  lg:gap-x-6 xl:gap-x-11 2xl:px-20  lg:px-10  gap-y-2  ml-4">
             <Link
               href="/aboutus"
               className={`text-white font-bold text-base transition-colors duration-200 
