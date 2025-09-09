@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState , useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
@@ -12,6 +12,7 @@ const Navbar = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const router = useRouter();
   const pathname = usePathname();
+  const dropdownRef = useRef(null);
 
   // format: { id: 'electric-wrench', link: '/products/torque-wrenches/electric' }
 
@@ -33,6 +34,21 @@ const Navbar = () => {
     "flange-tool": "/images/specialized/flange.png",
     "valve-tool": "/images/specialized/valve.png",
   };
+
+
+useEffect(() => {
+  function handleClickOutside(event) {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsProductsOpen(false);
+      setActiveSubmenu(null);
+      setHoveredProduct(null);
+    }
+  }
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
 
   return (
     <nav className="bg-black  text-white lg:px-5 xl:px-25 2xl:px-10  md:py-3  w-full hidden md:flex justify-center">
@@ -88,11 +104,7 @@ const Navbar = () => {
               {isProductsOpen && (
                 <div
                   className="absolute top-full -left-85 mt-6 bg-white border border-gray-200 shadow-lg z-100 w-[1100px] h-[550px] rounded-md flex"
-                  onMouseLeave={() => {
-                    setIsProductsOpen(false);
-                    setActiveSubmenu(null);
-                    setHoveredProduct(null);
-                  }}
+                  ref={dropdownRef}
                 >
                   {/* Main Categories */}
                   <div className="flex font-bold  flex-col h-full w-[300px]">
