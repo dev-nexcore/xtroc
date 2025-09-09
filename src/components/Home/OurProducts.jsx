@@ -55,10 +55,10 @@ const OurProducts = () => {
     <div className="min-h-screen bg-black text-white">
       {/* Products Section */}
       <section className="py-12 px-4">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center "style={{ fontFamily: "Impact"}}>
           {/* Title */}
           <motion.h2
-            className="text-4xl font-bold mb-8"
+            className="text-6xl font-base mb-8"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -68,7 +68,7 @@ const OurProducts = () => {
 
           {/* Center Border */}
           <motion.div
-            className="w-32 h-0.5 bg-red-600 mx-auto mb-8"
+            className="w-44 h-1 bg-red-600 mx-auto mb-8"
             initial={{ opacity: 0, scaleX: 0 }}
             animate={{ opacity: 1, scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -76,12 +76,12 @@ const OurProducts = () => {
 
           {/* Description */}
           <motion.p
-            className="text-lg mb-12 max-w-2xl mx-auto"
+            className="text-2xl mb-12 max-w-2xl mx-auto " style={{ fontFamily: "Impact"}}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            We are the industry heads and produce the most reliable and trendy
+            We are the industry heads and produce the most reliable <br />and trendy
             solution you are looking for.
           </motion.p>
 
@@ -149,7 +149,7 @@ const OurProducts = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-md">
+            <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-base hover:bg-gray-100 transition-colors shadow-md">
               View More Products
             </button>
           </motion.div>

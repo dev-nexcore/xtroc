@@ -112,7 +112,7 @@ const ContactUs = () => {
                 >
                   <MapPin className="w-6 h-6 text-red-600 mt-1 flex-shrink-0 mb-2 md:ml-3" />
                   <div>
-                    <p className="text-white hover:text-red-600 ml-20">
+                    <p className="text-white hover:text-red-600 ml-5 mt-1">
                       Office Address
                       <br />
                       Your Company Address Here
@@ -132,7 +132,7 @@ const ContactUs = () => {
                   <Mail className="w-6 h-6 text-red-600 flex-shrink-0 md:ml-3 " />
                   <a
                     href="mailto:ENQUIRY@XTORCIND.COM"
-                    className="text-white hover:text-red-600 transition-colors ml-20"
+                    className="text-white hover:text-red-600 transition-colors ml-5"
                   >
                     ENQUIRY@XTORCIND.COM
                   </a>
@@ -146,7 +146,7 @@ const ContactUs = () => {
                   className="flex items-center gap-4"
                 >
                   <Phone className="w-6 h-6 text-red-600 flex-shrink-0 md:ml-3" />
-                  <div className="space-y-1 ml-20">
+                  <div className="space-y-1 ml-5">
                     <a
                       href="tel:+919619561695"
                       className="block text-white hover:text-red-600 transition-colors"
