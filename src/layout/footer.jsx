@@ -15,7 +15,7 @@ const Footer = () => {
               <img
                 src="/xtorc.png"
                 alt="Xtorc Logo"
-                className="w-[24rem] h-[8rem] sm:w-[26rem] sm:h-[9rem] object-contain"
+                className="w-[24rem] h-[8rem] sm:w-[26rem] sm:h-[9rem] xl:-ml-6"
               />
             </div>
 

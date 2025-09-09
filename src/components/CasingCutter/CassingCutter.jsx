@@ -24,14 +24,14 @@ const CasingCutter = () => {
           <div className="space-y-6">
             {/* Title with Impact font */}
             <div>
-              <h1 className="text-4xl px-10 text-center font-base text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl px-10 text-center font-base text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
                     Casing Cutters
 
 
 
 
               </h1>
-              <div className="w-120 rounded-2xl h-1 bg-red-600"></div>
+              <div className="rounded-2xl h-1 bg-red-600"></div>
             </div>
 
             {/* Description */}
@@ -60,7 +60,7 @@ const CasingCutter = () => {
             <div className="relative">
               <div className="bg-white rounded-2xl p-6 border-t-12 border-r-12 border-red-600 
                   rounded-tl-2xl rounded-br-2xl rounded-tr-none rounded-bl-none
-                  h-[400px] flex items-center justify-center">
+                  sm:h-[400px] h-[200px] flex items-center justify-center">
                 <img
                   src="casecutter.png"
                   alt="Hydraulic Bolt Tensioner"

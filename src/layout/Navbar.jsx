@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex flex-wrap items-center justify-start 2xl:gap-x-20 xl:gap-x-10 xl:px-10 2xl:px-10 lg:gap-x-5 gap-x-5 md:gap-4 lg:px-10  gap-y-2  ml-4">
+          <div className="hidden md:flex flex-wrap items-center justify-evenly gap-x-10 2xl:gap-x-20 xl:gap-x-12 md:gap-20 xl:px-24 md:gap-x-10 2xl:px-10 lg:gap-x-5 lg:px-10  gap-y-2  ml-4">
             <Link
               href="/aboutus"
               className={`text-white font-bold text-base transition-colors duration-200 

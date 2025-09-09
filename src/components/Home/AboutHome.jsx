@@ -92,7 +92,7 @@ const AboutHome = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Left Text */}
           <motion.h2
-          variants={item} className="2xl:text-7xl xl:text-5xl lg:text-3xl text-2xl font-extrabold text-center md:text-left lg:ml-40 xl:ml-40 text-white ">
+          variants={item} className="2xl:text-7xl xl:text-7xl lg:text-3xl text-2xl font-base text-center md:text-left lg:ml-40 xl:ml-20 text-white " style={{ fontFamily: "Impact, sans-serif" }}>
             Why To Choose
           </motion.h2>
 
@@ -103,21 +103,21 @@ const AboutHome = () => {
             <img
               src="/xtroc.png"
               alt="Xtorc"
-              className="md:w-96 w- 24 h-auto md:mr-60 "
+              className="md:w-96 w-24 h-auto md:mr-70 "
             />
             <img
               src="/build.png"
               alt="Build"
-              className="2xl:w-48   lg:36  w-30 h-auto absolute 2xl:-bottom-48 -bottom-28  2xl:-right-6 xl:right-7 lg:right-10 -right-8 md:mr-42"
+              className="2xl:w-48 lg:36  w-40 h-auto absolute 2xl:-bottom-48 -bottom-28 xl:-bottom-37  2xl:-right-6 xl:right-6 lg:right-8 -right-8 md:mr-42"
             />
           </motion.div>
         </div>
 
         {/* Red border */}
-        <div className="w-40 h-1.5 bg-[#D01A1A] mx-auto my-6 rounded"></div>
+        <div className="w-100 h-1.5 bg-[#D01A1A] mx-auto my-6 rounded"></div>
 
         {/* Tagline */}
-        <p className="text-center text-3xl md:text-5xl font-impact text-white">
+        <p className="text-center text-3xl md:text-5xl font-impact text-white" style={{ fontFamily: "Impact"}}>
           "The X Factor in Your Industrial Needs"
         </p>
       </motion.div>
