@@ -1,4 +1,4 @@
-import HydraulicJack from '@/components/HydraulicJack/HydraulicJack';
+import HydraulicTorque from '@/components/HydraulicTorque/HydraulicTorque';
 import WhatsappLogo from '@/components/WhatsappLogo/WhatsappLogo';
 import Footer from '@/layout/footer';
 import MobileNavbar from '@/layout/mobileNavbar';
@@ -9,10 +9,9 @@ const page = () => {
     <div>
       <MobileNavbar/>
       <WhatsappLogo/>
-      <HydraulicJack/>
+        <HydraulicTorque/>
         <Footer/>
     </div>
   )
 }
-
 export default page;

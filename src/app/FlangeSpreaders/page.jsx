@@ -5,6 +5,7 @@ import FlangeSpreaders from "@/components/FlangeSpreaders/FlangeSpreaders";
 import FlangeSpreadersmobile from "@/components/FlangeSpreaders/mobileView";
 import WhatsappLogo from "@/components/WhatsappLogo/WhatsappLogo";
 import Footer from "@/layout/footer";
+import MobileNavbar from "@/layout/mobileNavbar";
 import Navbar from "@/layout/Navbar";
 
 export default function Page() {
@@ -12,6 +13,8 @@ export default function Page() {
     <>
 
  <Navbar/>
+ <WhatsappLogo/>
+ <MobileNavbar/>
      <div className="hidden md:block">
               <FlangeSpreaders />
             </div>

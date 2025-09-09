@@ -52,7 +52,7 @@ const Page = () => {
             <ContactUs />
             <Footer />
           </motion.div>
-        )}
+         )} 
       </AnimatePresence>
     </div>
   );

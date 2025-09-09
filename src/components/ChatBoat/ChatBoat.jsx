@@ -44,7 +44,7 @@ const ChatBoat = () => {
                 <input
                   type="text"
                   placeholder="Type your message..."
-                  className="flex-1 text-lg font-poppins rounded-lg shadow-[0px_4px_10px_rgba(0,0,0,0.2)] bg-white text-black pl-1"
+                  className="flex-1 text-lg font-poppins rounded-lg shadow-[0px_4px_10px_rgba(0,0,0,0.2)] bg-white text-black pl-1 w-20"
                 />
                 
               </div>

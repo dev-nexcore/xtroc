@@ -1,4 +1,5 @@
-import HydraulicJack from '@/components/HydraulicJack/HydraulicJack';
+import ElectricTorqueWrenches from '@/components/ElectricTorqueWrenches/ElectricTorqueWrenches';
+import LinedBox from '@/components/ElectricTorqueWrenches/LinedBox';
 import WhatsappLogo from '@/components/WhatsappLogo/WhatsappLogo';
 import Footer from '@/layout/footer';
 import MobileNavbar from '@/layout/mobileNavbar';
@@ -7,12 +8,12 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      <MobileNavbar/>
       <WhatsappLogo/>
-      <HydraulicJack/>
+      <MobileNavbar/>
+        <ElectricTorqueWrenches/>
+        <LinedBox/>
         <Footer/>
     </div>
   )
 }
-
 export default page;

@@ -3,17 +3,16 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const CasingCutter = () => {
   return (
-    <div className="bg-black text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+    <div
+      className="bg-black text-white"
+      style={{ fontFamily: "Poppins, sans-serif" }}
+    >
       {/* Header with white background */}
       <div className="bg-white py-6">
         <div className="flex items-center justify-center gap-2 text-black">
-          <span className="font-medium">Bolt Tensioning Solutions</span>
+          <span className="font-medium px-2">Bolt Tensioning Solutions</span>
           <FaArrowRightLong className="w-4 h-4 ml-8 mr-8" />
-          <span className="font-medium">Casing Cutters
-
-
-
-</span>
+          <span className="font-medium">Casing Cutters</span>
         </div>
       </div>
 
@@ -58,7 +57,8 @@ const CasingCutter = () => {
           <div className="space-y-6">
             {/* Product Image */}
             <div className="relative">
-              <div className="bg-white rounded-2xl p-6 border-t-12 border-r-12 border-red-600 
+              <div
+                className="bg-white rounded-2xl p-6 border-t-12 border-r-12 border-red-600 
                   rounded-tl-2xl rounded-br-2xl rounded-tr-none rounded-bl-none
                   sm:h-[400px] h-[200px] flex items-center justify-center">
                 <img
@@ -71,9 +71,9 @@ const CasingCutter = () => {
 
             {/* Download Catalog Button */}
             <div className="flex justify-center">
-              <button 
+              <button
                 className="text-red-600 px-8 py-3 rounded-2xl text-2xl font-bold hover:bg-red-700 hover:text-white transition-colors"
-                style={{ backgroundColor: '#ffffff'}}
+                style={{ backgroundColor: "#ffffff" }}
               >
                 Download Catalog
               </button>
