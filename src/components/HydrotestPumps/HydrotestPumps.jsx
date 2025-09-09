@@ -7,7 +7,7 @@ const HydroTestPumps = () => {
       {/* Header with white background */}
       <div className="bg-white py-6">
         <div className="flex items-center justify-center gap-2 text-black">
-          <span className="font-medium">Bolt Tensioning Solutions</span>
+          <span className="font-medium px-2">Bolt Tensioning Solutions</span>
           <FaArrowRightLong className="w-4 h-4 ml-8 mr-8" />
           <span className="font-medium">Hydrotest Pumps
 
