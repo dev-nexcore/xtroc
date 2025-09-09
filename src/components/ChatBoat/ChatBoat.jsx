@@ -42,10 +42,10 @@ const ChatBoat = () => {
                 <img src="mood.png" alt="mood" className="h-6 w-6 cursor-pointer" />
                 <img src="attach_file.png" alt="attach" className="h-5 w-5 cursor-pointer" />
                 <input
-                  type="text"
-                  placeholder="Type your message..."
-                  className="flex-1 text-lg font-poppins rounded-lg shadow-[0px_4px_10px_rgba(0,0,0,0.2)] bg-white text-black pl-1 w-20"
-                />
+  type="text"
+  placeholder="Type your message..."
+  className="flex-1 min-w-0 text-lg font-poppins rounded-lg shadow-[0px_4px_10px_rgba(0,0,0,0.2)] bg-white text-black pl-2"
+/>
                 
               </div>
          )}
