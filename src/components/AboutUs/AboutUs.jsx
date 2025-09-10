@@ -71,7 +71,7 @@ const AboutSection = () => {
               <img
                 src="xtroc_india.png"
                 alt="Xtorc India"
-                className="max-w-full h-auto w-full max-w-sm lg:max-w-md"
+                className="max-w-full h-auto w-full lg:max-w-md"
                 onError={(e) => {
                   e.target.style.display = "none";
                   e.target.nextSibling.style.display = "flex";
