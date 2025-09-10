@@ -60,7 +60,7 @@ export default function CareersSection() {
 
       {/* Description */}
       <motion.p
-        className="max-w-3xl mx-auto text-sm sm:text-lg leading-relaxed text-gray-200"
+        className="max-w-3xl mx-auto text-sm sm:text-lg leading-relaxed text-gray-200 font-poppins"
         variants={itemVariants}
       >
         Xtorc is a growing startup driven by innovation, collaboration, and

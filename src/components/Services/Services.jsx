@@ -29,7 +29,7 @@ function Services() {
         {/* Service Heading */}
         <motion.h1
           variants={fadeInUp}
-          className="text-white text-6xl font-bold mb-4"
+          className="text-white text-6xl font-impact mb-4"
         >
           Service
         </motion.h1>
@@ -44,17 +44,16 @@ function Services() {
         {/* Main Description Text */}
         <motion.h2
           variants={fadeInUp}
-          className="text-white text-3xl font-bold mb-8 leading-tight"
+          className="text-white text-5xl font-impact mb-8 leading-tight"
         >
           "Comprehensive Industrial Services
-          <br />
           with The Right Tools"
         </motion.h2>
 
         {/* CTA Button */}
         <motion.button
           variants={fadeInUp}
-          className="text-white text-lg font-semibold px-8 py-3 rounded hover:opacity-90 transition-opacity"
+          className="text-white text-lg font-semibold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity"
           style={{ backgroundColor: "#FF0000" }}
         >
           Discover Our Services
