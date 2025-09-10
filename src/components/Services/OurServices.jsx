@@ -63,11 +63,11 @@ const ServiceItem = ({ title, description, imageSrc, imageOnLeft = true, index }
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <div className="bg-white rounded-lg p-4 shadow-lg">
+          <div className="shadow-lg">
             <img 
               src={imageSrc} 
               alt={title}
-              className="w-full h-auto object-cover rounded"
+              className="w-[600px] h-[500px] object-cover rounded"
               onError={(e) => {
                 e.target.style.display = 'none';
                 e.target.nextSibling.style.display = 'flex';
