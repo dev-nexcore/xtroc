@@ -94,11 +94,11 @@ const AboutHome = () => {
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
       >
-     <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-center gap-6 lg:gap-20">
+     <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-center gap-6 lg:gap-20 sm:">
   {/* Left Text */}
   <motion.h2
     variants={item}
-    className="text-white font-bold text-center lg:text-left 
+    className="text-white xl:font-bold text-center lg:text-left 
                text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
                leading-tight"
     style={{ fontFamily: "Impact, sans-serif" }}
