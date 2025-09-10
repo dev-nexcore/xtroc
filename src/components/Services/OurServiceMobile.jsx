@@ -9,68 +9,54 @@ const ServiceItem = ({ title, description, imageSrc, imageOnLeft = true, index }
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
 
   const textVariants = {
-    hidden: { 
-      opacity: 0, 
-      x: imageOnLeft ? 100 : -100 
-    },
-    visible: { 
-      opacity: 1, 
+    hidden: { opacity: 0, x: imageOnLeft ? 100 : -100 },
+    visible: {
+      opacity: 1,
       x: 0,
-      transition: { 
-        duration: 0.8, 
-        delay: 0.2,
-        ease: "easeOut"
-      }
-    }
+      transition: { duration: 0.8, delay: 0.2, ease: "easeOut" },
+    },
   };
 
   const imageVariants = {
-    hidden: { 
-      opacity: 0, 
-      x: imageOnLeft ? -100 : 100,
-      scale: 0.8
-    },
-    visible: { 
-      opacity: 1, 
+    hidden: { opacity: 0, x: imageOnLeft ? -100 : 100, scale: 0.8 },
+    visible: {
+      opacity: 1,
       x: 0,
       scale: 1,
-      transition: { 
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   const borderVariants = {
     hidden: { width: 0 },
-    visible: { 
+    visible: {
       width: "100%",
-      transition: { 
-        duration: 0.6, 
-        delay: 0.4,
-        ease: "easeOut"
-      }
-    }
+      transition: { duration: 0.6, delay: 0.4, ease: "easeOut" },
+    },
   };
 
   return (
     <div ref={ref} className="mb-16">
-      <div className={`flex ${imageOnLeft ? 'flex-row' : 'flex-row-reverse'} items-center gap-12 max-w-6xl mx-auto`}>
+      <div
+        className={`flex flex-col md:${
+          imageOnLeft ? "flex-row" : "flex-row-reverse"
+        } items-center gap-8 md:gap-12 max-w-6xl mx-auto`}
+      >
         {/* Image Section */}
-        <motion.div 
-          className="flex-1"
+        <motion.div
+          className="flex-1 w-full"
           variants={imageVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
           <div className="shadow-lg">
-            <img 
-              src={imageSrc} 
+            <img
+              src={imageSrc}
               alt={title}
-              className="w-[600px] h-[500px] object-cover rounded"
+              className="w-full max-w-[300px] h-auto object-cover rounded mx-auto"
               onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'flex';
+                e.target.style.display = "none";
+                e.target.nextSibling.style.display = "flex";
               }}
             />
             {/* Fallback placeholder */}
@@ -81,25 +67,25 @@ const ServiceItem = ({ title, description, imageSrc, imageOnLeft = true, index }
         </motion.div>
 
         {/* Text Section */}
-        <motion.div 
-          className="flex-1"
+        <motion.div
+          className="flex-1 w-full px-2 sm:px-4"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <h3 className="text-white text-2xl font-bold mb-3">
+          <h3 className="text-white text-xl sm:text-2xl font-bold mb-3 text-center md:text-left">
             {title}
           </h3>
-          
-          <motion.div 
-            className="h-1 bg-red-500 mb-4"
+
+          <motion.div
+            className="h-1 bg-red-500 mb-4 mx-auto md:mx-0"
             variants={borderVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            style={{ backgroundColor: '#FF0000' }}
+            style={{ backgroundColor: "#FF0000" }}
           ></motion.div>
-          
-          <p className="text-white text-lg leading-relaxed">
+
+          <p className="text-white text-base sm:text-lg leading-relaxed text-center md:text-left">
             {description}
           </p>
         </motion.div>
@@ -108,7 +94,7 @@ const ServiceItem = ({ title, description, imageSrc, imageOnLeft = true, index }
   );
 };
 
-function OurServicessMobile() {
+function OurServicess() {
   const headerRef = useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true, threshold: 0.5 });
 
@@ -198,4 +184,4 @@ function OurServicessMobile() {
   );
 }
 
-export default OurServicessMobile;
+export default OurServicess;
