@@ -38,13 +38,13 @@ const Industries = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Title with Borders */}
           <div className="flex items-center justify-center mb-4">
-            <div className="flex-1 h-0.5 bg-red-600"></div>
+            <div className="flex-1 h-1 rounded-2xl bg-red-600"></div>
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="text-4xl font-bold mx-8 text-white"
+              className="text-5xl  mx-8 text-white font-impact"
             >
               Our Contributions
             </motion.h2>
@@ -54,7 +54,7 @@ const Industries = () => {
             whileInView={{ opacity: 1, scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
             viewport={{ once: true }}
-            className="flex-1 h-0.5 bg-red-600"
+            className="flex-1 h-1 rounded-2xl bg-red-600"
           ></motion.div>
             
           </div>
@@ -65,7 +65,7 @@ const Industries = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="text-center text-2xl mb-12"
+            className="text-center text-3xl font-semibold mb-12 font-poppins"
             style={{ color: "#D01A1A" }}
           >
             Industries We Serve!

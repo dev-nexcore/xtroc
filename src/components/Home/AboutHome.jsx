@@ -1,5 +1,6 @@
 "use client";
 import { easeOut, motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const container = {
   hidden: {},
@@ -16,6 +17,7 @@ const item = {
 };
 
 const AboutHome = () => {
+   const router = useRouter();
   return (
     <>
       <div className="bg-black text-white">
@@ -29,7 +31,7 @@ const AboutHome = () => {
           <div
             className="bg-[#1B1B1B] md:py-40 py-70"
             style={{
-              clipPath: "polygon(0% 0, 100% 25%, 100% 75%, 0% 100%)",
+              clipPath: "polygon(0% 0, 100% 15%, 100% 75%, 0% 100%)",
             }}
           >
             {/* About Us */}
@@ -43,14 +45,14 @@ const AboutHome = () => {
 
             <motion.h3
               variants={item}
-              className="text-2xl md:text-3xl font-popins text-center mb-6"
+              className="text-2xl md:text-4xl font-impact text-center mb-6"
             >
               Engineering Excellence Driven by Experience
             </motion.h3>
 
             <motion.p
               variants={item}
-              className="text-center font-popins max-w-3xl mx-auto text-gray-300 leading-relaxed"
+              className="text-center font-popins max-w-3xl mx-auto text-white-700 leading-relaxed"
             >
               Xtorc was founded with a vision to provide world-class industrial
               tools and services tailored to modern challenges. As a startup
@@ -62,7 +64,7 @@ const AboutHome = () => {
 
             <motion.p
               variants={item}
-              className="text-center font-popins max-w-3xl mx-auto text-gray-300 leading-relaxed mt-6 "
+              className="text-center font-popins max-w-xl mx-auto text-white-700  leading-relaxed mt-6 "
             >
               At Xtorc, we believe in creating value that extends beyond
               products. Our WIN-WIN-WIN philosophy ensures that our customers
@@ -70,7 +72,10 @@ const AboutHome = () => {
             </motion.p>
 
             <motion.div variants={item} className="flex justify-center mt-8">
-              <button className="bg-[#D01A1A] text-white px-6 py-3 rounded-2xl font-medium hover:bg-red-700 transition">
+              <button className="bg-[#D01A1A] text-white px-6 py-3 rounded-2xl font-medium hover:bg-red-700 transition"
+              onClick={()=>{
+                router.push("/aboutus")
+              }}>
                 Learn more about us
               </button>
             </motion.div>
@@ -89,11 +94,11 @@ const AboutHome = () => {
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
       >
-     <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-center gap-6 lg:gap-20">
+     <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-center gap-6 lg:gap-20 sm:">
   {/* Left Text */}
   <motion.h2
     variants={item}
-    className="text-white font-bold text-center lg:text-left 
+    className="text-white xl:font-bold text-center lg:text-left 
                text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
                leading-tight"
     style={{ fontFamily: "Impact, sans-serif" }}
