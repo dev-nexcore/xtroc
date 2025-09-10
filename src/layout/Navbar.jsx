@@ -1,9 +1,10 @@
 "use client";
-import React, { useState , useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { BsDash } from "react-icons/bs";
 
 const Navbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
@@ -35,20 +36,19 @@ const Navbar = () => {
     "valve-tool": "/images/specialized/valve.png",
   };
 
-
-useEffect(() => {
-  function handleClickOutside(event) {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsProductsOpen(false);
-      setActiveSubmenu(null);
-      setHoveredProduct(null);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsProductsOpen(false);
+        setActiveSubmenu(null);
+        setHoveredProduct(null);
+      }
     }
-  }
-  document.addEventListener("mousedown", handleClickOutside);
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, []);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="bg-black  text-white lg:px-5 xl:px-25 2xl:px-10  md:py-3  w-full hidden md:flex justify-center">
@@ -62,7 +62,7 @@ useEffect(() => {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex flex-wrap items-center  md:gap-x-3  lg:gap-x-6 xl:gap-x-11 2xl:px-20  lg:px-10  gap-y-2  ml-4">
+          <div className="hidden md:flex flex-wrap items-center  md:gap-x-3  lg:gap-x-3 xl:gap-x-6 2xl:px-20  lg:px-10  gap-y-2  ml-4">
             <Link
               href="/aboutus"
               className={`text-white font-bold text-base transition-colors duration-200 
@@ -75,42 +75,63 @@ useEffect(() => {
             {/* Products Dropdown */}
             <div className="relative">
               {/* Products Button */}
-            <div className="flex items-center">
-    {/* Products link (navigates to /product) */}
-    <a
-      href="/product"
-      className={`text-white font-bold text-base 
+              <div className="flex items-center">
+                {/* Products link (navigates to /product) */}
+                <a
+                  href="/product"
+                  className={`text-white font-bold text-base 
                   transition-colors duration-200 
                   hover:border-b-2 hover:border-red-500 
-                  ${pathname === "/product" ? "border-b-2 border-red-500" : ""}`}
-    >
-      Products
-    </a>
+                  ${
+                    pathname === "/product" ? "border-b-2 border-red-500" : ""
+                  }`}
+                >
+                  Products
+                </a>
 
-    {/* Chevron button (toggles dropdown only) */}
-    <button
-      type="button"
-      onClick={(e) => {
-        e.preventDefault();
-        setIsProductsOpen((prev) => !prev);
-      }}
-      className="ml-1"
-    >
-      <ChevronDown className="h-4 w-4 text-white" />
-    </button>
-    </div>
+                {/* Chevron button (toggles dropdown only) */}
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (isProductsOpen) {
+                      // Close karte waqt reset
+                      setIsProductsOpen(false);
+                      setActiveSubmenu(null);
+                      setSelectedProduct(null);
+                    } else {
+                      // Open karte waqt always reset to stage 1
+                      setActiveSubmenu(null);
+                      setSelectedProduct(null);
+                      setIsProductsOpen(true);
+                    }
+                  }}
+                  className="ml-1"
+                >
+                  <ChevronDown className="h-4 w-4 text-white" />
+                </button>
+              </div>
 
               {/* Dropdown */}
               {isProductsOpen && (
                 <div
-                  className="absolute top-full -left-85 mt-6 bg-white border border-gray-200 shadow-lg z-100 w-[1100px] h-[550px] rounded-md flex"
+                  className={`absolute top-full md:ml-[-280] lg:ml-[-360] mt-6 bg-white border border-gray-200 shadow-lg z-100 h-[550px] rounded-md flex transition-all duration-300
+    ${
+      selectedProduct
+        ? "md:w-[800px] lg:w-[1000px] xl:w-[1100]" // stage 3 (image panel open)
+        : activeSubmenu
+        ? "w-[650px]" // stage 2 (sub categories open)
+        : "w-[300px]" // stage 1 (only main categories)
+    }`}
                   ref={dropdownRef}
                 >
                   {/* Main Categories */}
                   <div className="flex font-bold  flex-col h-full w-[300px]">
                     <button
-                      onMouseEnter={() => setActiveSubmenu("bolt-tensioning")}
-                      className="flex items-center  w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 group text-left"
+                      // onMouseEnter={() => setActiveSubmenu("bolt-tensioning")}
+                      onClick={() => setActiveSubmenu("bolt-tensioning")}
+                      className={`flex items-center  w-full flex-1 px-4 text-base text-gray-800 hover:bg-[#D9D9D9] group text-left
+                        ${activeSubmenu === "bolt-tensioning" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
                     >
                       <span className="text-red-500 mr-3 text-lg group-hover:text-red-600">
                         »
@@ -119,9 +140,11 @@ useEffect(() => {
                     </button>
 
                     <button
-                      onMouseEnter={() => setActiveSubmenu("torque-wrenches")}
-                      className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 group text-left"
+                      onClick={() => setActiveSubmenu("torque-wrenches")}
+                      className={`flex items-center  w-full flex-1 px-4 text-base text-gray-800 hover:bg-[#D9D9D9] group text-left
+                        ${activeSubmenu === "torque-wrenches" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
                     >
+                    
                       <span className="text-red-500 mr-3 text-lg group-hover:text-red-600">
                         »
                       </span>
@@ -129,10 +152,9 @@ useEffect(() => {
                     </button>
 
                     <button
-                      onMouseEnter={() =>
-                        setActiveSubmenu("hydraulic-equipment")
-                      }
-                      className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 group text-left"
+                      onClick={() => setActiveSubmenu("hydraulic-equipment")}
+                     className={`flex items-center  w-full flex-1 px-4 text-base text-gray-800 hover:bg-[#D9D9D9] group text-left
+                        ${activeSubmenu === "hydraulic-equipment" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
                     >
                       <span className="text-red-500 mr-3 text-lg group-hover:text-red-600">
                         »
@@ -141,8 +163,9 @@ useEffect(() => {
                     </button>
 
                     <button
-                      onMouseEnter={() => setActiveSubmenu("cold-cutting")}
-                      className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 group text-left"
+                      onClick={() => setActiveSubmenu("cold-cutting")}
+                      className={`flex items-center  w-full flex-1 px-4 text-base text-gray-800 hover:bg-[#D9D9D9] group text-left
+                        ${activeSubmenu === "cold-cutting" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
                     >
                       <span className="text-red-500 mr-3 text-lg group-hover:text-red-600">
                         »
@@ -151,8 +174,9 @@ useEffect(() => {
                     </button>
 
                     <button
-                      onMouseEnter={() => setActiveSubmenu("specialized-tools")}
-                      className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 group text-left"
+                      onClick={() => setActiveSubmenu("specialized-tools")}
+                      className={`flex items-center  w-full flex-1 px-4 text-base text-gray-800 hover:bg-[#D9D9D9] group text-left
+                        ${activeSubmenu === "specialized-tools" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
                     >
                       <span className="text-red-500 mr-3 text-lg group-hover:text-red-600">
                         »
@@ -173,8 +197,10 @@ useEffect(() => {
                                 link: "/multistagebolt",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                            className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "multi-stud" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Multi Stud Bolt Tensioners
                           </button>
 
@@ -185,8 +211,10 @@ useEffect(() => {
                                 link: "/hydraulicbolttensioners",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                            className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "hydraulic-tensioner" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Hydraulic Bolt Tensioners
                           </button>
 
@@ -197,8 +225,10 @@ useEffect(() => {
                                 link: "/pneumotic",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                            className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "pneumatic-powerpack" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Pneumatic & Electric Powerpack
                           </button>
 
@@ -209,8 +239,10 @@ useEffect(() => {
                                 link: "ElectricTorque",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                            className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "electric-torque" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Electric & Pneumatic Torque Wrenches
                           </button>
                         </>
@@ -225,8 +257,10 @@ useEffect(() => {
                                 link: "/hydraulictorque",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                            className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "hydraulic-wrench" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Hydraulic Torque Wrenches
                           </button>
 
@@ -237,8 +271,10 @@ useEffect(() => {
                                 link: "ElectricTorque",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                            className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "electric-wrench" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Manual Torque Wrenches
                           </button>
 
@@ -249,8 +285,10 @@ useEffect(() => {
                                 link: "/electrictorquewrenches",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                            className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "pneumatic-wrench" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Electric Torque Wrenches
                           </button>
                         </>
@@ -265,8 +303,10 @@ useEffect(() => {
                                 link: "/handPumps",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                           className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "hydraulic-pump" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Hydraulic Pumps and Hoses
                           </button>
 
@@ -277,8 +317,10 @@ useEffect(() => {
                                 link: "/hydrotest",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                            className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "hydraulic-cylinder" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Hydrotest Pump
                           </button>
 
@@ -289,8 +331,10 @@ useEffect(() => {
                                 link: "/hydraulicjack",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                           className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "hydraulic-hose" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Hydraulic Jacks
                           </button>
                         </>
@@ -305,8 +349,10 @@ useEffect(() => {
                                 link: "/pipeCutting",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                           className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "pipe-cutting" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Pipe Cutting and Beveling Machines
                           </button>
 
@@ -317,8 +363,10 @@ useEffect(() => {
                                 link: "/flangefacing",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                            className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "beveling-machine" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Flange Machines
                           </button>
 
@@ -329,8 +377,10 @@ useEffect(() => {
                                 link: "/casingcutter",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                            className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "tube-cutting" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Casing Cutter
                           </button>
                         </>
@@ -345,8 +395,10 @@ useEffect(() => {
                                 link: "/hydralicnut",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                            className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "flange-tool" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Hydraulic Nut Splitter
                           </button>
 
@@ -357,8 +409,10 @@ useEffect(() => {
                                 link: "/FlangeSpreaders",
                               })
                             }
-                            className="flex items-center w-full flex-1 px-4 text-base text-gray-800 hover:bg-gray-100 text-left"
-                          >
+                           className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left
+    ${selectedProduct?.id === "valve-tool" ? "bg-[#D9D9D9]" : "hover:bg-[#D9D9D9]"}`}
+>
+                            <BsDash className="w-7 text-red-500 h-10" />
                             Flange Spreader
                           </button>
                         </>
@@ -396,6 +450,13 @@ useEffect(() => {
                 ${pathname === "/services" ? "border-b-2 border-red-500" : ""}`}
             >
               Services
+            </Link>
+            <Link
+              href="/distributor"
+              className={`text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold
+    ${pathname === "/distributor" ? "border-b-2 border-red-500" : ""}`}
+            >
+              Distributor
             </Link>
 
             <Link
