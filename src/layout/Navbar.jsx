@@ -65,18 +65,18 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-black text-white lg:px-5 xl:px-25  2xl:px-10 md:py-3 w-full hidden md:flex justify-center">
+    <nav className="bg-black text-white lg:px-5 xl:px-25  2xl:px-10 md:py-3 w-full hidden md:flex md:justify-center">
       <div className="">
-        <div className="flex items-center h-12">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <img src="/xtroc.png" alt="Xtroc Logo" className="h-10 w-auto" />
-            </Link>
-          </div>
+        <div className="flex items-center h-12 lg:gap-12 xl:gap-16 2xl:gap-20">
+  {/* Logo */}
+  <div className="flex items-center">
+    <Link href="/" className="flex items-center">
+      <img src="/xtroc.png" alt="Xtroc Logo" className="h-10 w-auto" />
+    </Link>
+  </div>
 
-          {/* Navigation Links */}
-          <div className="hidden md:flex flex-wrap items-center md:gap-x-3 lg:gap-x-3 xl:gap-x-6 2xl:px-20 lg:px-10 gap-y-2 ml-4">
+  {/* Navigation Links */}
+  <div className="hidden md:flex flex-wrap items-center md:gap-x-3 lg:gap-x-6 xl:gap-x-8 2xl:gap-x-10 gap-y-2">
             <Link
               href="/aboutus"
               className={`text-white font-bold text-base transition-colors duration-200 hover:border-b-2 hover:border-red-500 ${
