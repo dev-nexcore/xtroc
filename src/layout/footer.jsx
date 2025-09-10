@@ -88,11 +88,12 @@ const Footer = () => {
             </h3>
             <div className="space-y-3.5 ">
               {[
-                { name: "about us", path: "/aboutus" },
-                { name: "products", path: "/product" },
-                { name: "carrier", path: "#" },
-                { name: "event", path: "#" },
-                { name: "services", path: "/services" },
+                { name: "Home", path: "/" },
+                { name: "About us", path: "/aboutus" },
+                { name: "Products", path: "/product" },
+                { name: "Carrier", path: "#" },
+                
+                { name: "Services", path: "/services" },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center space-x-2">
                   <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 md:mr-4" />
@@ -124,10 +125,10 @@ const Footer = () => {
             </h3>
             <div className=" space-y-6">
               {[
-                {name:"hydraulic torque wrenches", path:"/hydraulictorque"},
-                {name:"bolt tensioning solutions", path:"/multistagebolt"},
-                {name:"hydraulic equipment", path:"/handPumps"},
-                {name:"pipe cutting & beveling machines", path:"/pipeCutting"}
+                {name:"Hydraulic Torque Wrenches", path:"/hydraulictorque"},
+                {name:"Bolt Tensioning Solutions", path:"/multistagebolt"},
+                {name:"Hydraulic Equipment", path:"/handPumps"},
+                {name:"Pipe Cutting & Beveling Machines", path:"/pipeCutting"}
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center space-x-2  ">
                   <FaAngleDoubleRight className="text-red-500 text-xl flex-shrink-0 md:mr-4" />
