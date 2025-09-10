@@ -59,8 +59,7 @@ export default function DownloadSection() {
 
       {/* Description */}
       <motion.p
-        className="max-w-3xl mx-auto text-sm sm:text-lg leading-relaxed text-gray-200"
-        style={{ fontFamily: "Poppins, sans-serif" }}
+        className="max-w-3xl mx-auto text-sm sm:text-lg leading-relaxed text-gray-200 font-poppins"
         variants={itemVariants}
       >
         Get detailed information about our products and services. Download our

@@ -45,7 +45,7 @@ const AboutSection = () => {
             {/* Engineering Excellence Title */}
             <motion.h3
               variants={fadeInUp}
-              className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 lg:mb-6 leading-tight"
+              className="text-white text-2xl sm:text-3xl lg:text-4xl font-impact mb-4 lg:mb-6 leading-tight"
             >
               Engineering Excellence,
               <br />
@@ -57,9 +57,11 @@ const AboutSection = () => {
               variants={fadeInUp}
               className="text-white text-base sm:text-lg leading-relaxed"
             >
+              <p className="text-center max-w-100 leading-relaxed mb-20">
               At Xtorc, we believe in creating value that extends beyond
               products. Our WIN-WIN-WIN philosophy ensures that our customers
               win, our employees thrive, and our entrepreneurs succeed.
+              </p>
             </motion.p>
           </div>
 

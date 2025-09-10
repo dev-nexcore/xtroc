@@ -215,7 +215,7 @@ const OurValues = () => {
                 <h4 className="text-black group-hover:text-white text-xl font-bold mb-3">
                   Quality
                 </h4>
-                <p className="text-black group-hover:text-white text-sm">
+                <p className="text-black max-w-90 mr-20 group-hover:text-white text-md">
                   Ensuring every product and service meets the highest
                   standards.
                 </p>
@@ -239,7 +239,7 @@ const OurValues = () => {
                 <h4 className="text-black group-hover:text-white text-xl font-bold mb-3">
                   Innovation
                 </h4>
-                <p className="text-black group-hover:text-white text-sm">
+                  <p className="text-black max-w-90 ml-20 group-hover:text-white text-md">
                   Continuously pushing the boundaries of what's possible.
                 </p>
               </div>
@@ -262,7 +262,7 @@ const OurValues = () => {
                 <h4 className="text-black group-hover:text-white text-xl font-bold mb-3">
                   Integrity
                 </h4>
-                <p className="text-black group-hover:text-white text-sm">
+                <p className="text-black max-w-90 group-hover:text-white text-md">
                   Conducting business with honesty and transparency.
                 </p>
               </div>
@@ -285,7 +285,7 @@ const OurValues = () => {
                 <h4 className="text-black group-hover:text-white text-xl font-bold mb-3">
                   Customer-Centricity
                 </h4>
-                <p className="text-black group-hover:text-white text-sm">
+                 <p className="text-black max-w-90 group-hover:text-white text-md">
                   Tailoring solutions to meet and exceed customer expectations.
                 </p>
               </div>
@@ -293,7 +293,7 @@ const OurValues = () => {
 
            
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-              <div className="w-40 h-40 rounded-full flex items-center justify-center bg-[#D01A1A] text-white hover:bg-white hover:text-[#D01A1A] transition-colors duration-300 shadow-lg">
+              <div className="w-60 h-60 rounded-full flex items-center justify-center bg-[#D01A1A] text-white hover:bg-white hover:text-[#D01A1A] transition-colors duration-300 shadow-lg">
                 <h4 className="text-3xl font-bold text-center leading-tight">
                   Our
                   <br />
