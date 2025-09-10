@@ -2,6 +2,7 @@
 import React from "react";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
+import { FaLink } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
@@ -103,24 +104,57 @@ const ContactUs = () => {
 
               {/* Contact Details */}
               <div className="space-y-6">
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                  viewport={{ once: true }}
-                  className="flex items-center gap-4"
-                >
-                  <MapPin className="w-6 h-6 text-red-600 mt-1 flex-shrink-0 mb-2 md:ml-3" />
-                  <div>
-                    <p className="text-white hover:text-red-600 ml-5 mt-1">
-                      Office Address
-                      <br />
-                      Your Company Address Here
-                      <br />
-                      City, State, Pin Code
-                    </p>
-                  </div>
-                </motion.div>
+     <motion.div
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.6 }}
+  viewport={{ once: true }}
+  className="flex items-center gap-4"
+>
+  <MapPin className="w-6 h-6 text-red-600 mt-1 flex-shrink-0 mb-2 md:ml-3" />
+
+  <div className="relative group">
+    <a
+      href="https://www.google.com/maps/place/TTC+Industrial+Area,+MIDC+Industrial+Area,+Pawne,+Navi+Mumbai,+Maharashtra/@19.0977243,73.0073362,15z/data=!4m6!3m5!1s0x3be7c11f4122adab:0xbbf10ca80ffcb57f!8m2!3d19.0937817!4d73.0187585!16s%2Fg%2F12vsgftrg?entry=ttu"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white  underline hover:text-red-600 mt-1"
+    >
+      <p className=" ml-3 text-center">B-35, Plot No C-39A, TTC Industrial Area, <br />
+      MIDC Industrial Area, Pawne, Navi Mumbai, <br />
+      Maharashtra 400710</p>
+    </a>
+
+    {/* Tooltip */}
+    <div className="absolute left-1 -top-14 translate-x-1  hidden group-hover:flex items-center gap-2 bg-black text-white text-sm px-3 py-2 rounded-lg shadow-lg">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-4 w-4 text-red-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M10 14L21 3m0 0l-7.5 7.5M21 3h-6"
+        />
+      </svg>
+       <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 hidden group-hover:flex items-center gap-2 bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+<div className="absolute left-1 -translate-x-1 -top-14 mt-2 hidden group-hover:flex items-center bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+  <div className="flex items-center gap-2">
+    <FaLink className="text-red-500" />
+    <span>Open maps.app.goo.gl/Djw4bBEvEV2WwS3NA</span>
+  </div>
+</div>
+
+</div>
+
+    </div>
+  </div>
+</motion.div>
+
 
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}

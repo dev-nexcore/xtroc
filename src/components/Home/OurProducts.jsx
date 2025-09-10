@@ -76,7 +76,7 @@ const OurProducts = () => {
 
           {/* Description */}
           <motion.p
-            className="text-2xl mb-12 max-w-2xl mx-auto " style={{ fontFamily: "Impact"}}
+            className="text-xl mb-12 max-w-2xl mx-auto font-poppins"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -107,26 +107,30 @@ const OurProducts = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
               >
-                {visibleImages.map((product, index) => (
-                  <div
-                    key={product.id}
-                    className={`transition-all duration-500 ${
-                      index === 1
-                        ? "scale-110 opacity-100"
-                        : "scale-90 opacity-70"
-                    }`}
-                  >
-                    <img
-                      src={product.src}
-                      alt={product.alt}
-                      className={`object-cover rounded-lg border-red-600 ${
-                        index === 1
-                          ? "w-80 h-60 border-4"
-                          : "w-48 h-36 border-2"
-                      }`}
-                    />
-                  </div>
-                ))}
+              {visibleImages.map((product, index) => (
+  <div
+    key={product.id}
+    className={`transition-all duration-500 ${
+      index === 1 ? "scale-110 opacity-100" : "scale-90 opacity-70"
+    }`}
+  >
+    {/* Red background wrapper */}
+    <div
+      className={`flex items-center justify-center rounded-2xl bg-red-600 transition-all duration-500 ${
+        index === 1 ? "w-80 h-60" : "w-48 h-36"
+      }`}
+    >
+      <img
+        src={product.src}
+        alt={product.alt}
+        className={`object-contain rounded-lg ${
+          index === 1 ? "w-92 h-62" : "w-40 h-28"
+        }`}
+      />
+    </div>
+  </div>
+))}
+
               </motion.div>
 
               {/* Dynamic Product Title */}
@@ -149,7 +153,7 @@ const OurProducts = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-base hover:bg-gray-100 transition-colors shadow-md">
+            <button className="bg-white font-poppins text-md text-red-700 text-bold px-8 py-3 rounded-lg font-base hover:bg-gray-100 transition-colors shadow-md">
               View More Products
             </button>
           </motion.div>

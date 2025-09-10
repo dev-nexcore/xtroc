@@ -1,8 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
 const Home = () => {
+  const router = useRouter();
   const products = [
     { id: 0, src: "/product1.png", alt: "Product 1" },
     { id: 1, src: "/product2.png", alt: "Product 2" },
@@ -91,11 +93,10 @@ const Home = () => {
               </motion.h2>
 
               <motion.p
-                className="text-gray-300 text-base sm:text-lg mb-8 leading-relaxed md:text-xl"
+                className="text-white-700 font-poppins text-base sm:text-lg mb-8 leading-relaxed md:text-xl"
                 variants={item}
               >
-                Welcome to Xtorc, where precision meets innovation. With over 10
-                years of expertise, we offer top-tier hydraulic torque wrenches,
+                Welcome to Xtorc, where precision meets innovation. With over 10 years of expertise, we offer top-tier hydraulic torque wrenches,
                 cold cutting machines, and on-site services, all backed by ISO
                 9001:15000, CE, and ATEX certifications.
               </motion.p>
@@ -104,10 +105,16 @@ const Home = () => {
                 className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 "
                 variants={item}
               >
-                <button className="relative bg-red-500  hover:bg-red-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors w-full sm:w-auto 2xl:ml-70 xl:ml-40 lg:ml-16">
+                <button className="relative bg-red-500  hover:bg-red-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors w-full sm:w-auto 2xl:ml-70 xl:ml-40 lg:ml-16"
+                 onClick={() => {
+                  router.push("/contact")
+                 }}>
                   Contact Us
                 </button>
-                <button className=" bg-white hover:bg-gray-100 text-black px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto ">
+                <button className=" bg-white hover:bg-gray-100 text-black px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto "
+                onClick={()=>{
+                  router.push("/product")
+                }}>
                   <span>Explore Products</span>
                 </button>
               </motion.div>
