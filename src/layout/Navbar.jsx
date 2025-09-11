@@ -67,7 +67,7 @@ const Navbar = () => {
   return (
     <nav className="bg-black text-white lg:px-5 xl:px-25  2xl:px-10 md:py-3 w-full hidden md:flex md:justify-center">
       <div className="">
-        <div className="flex items-center h-12 lg:gap-12 xl:gap-16 2xl:gap-20">
+        <div className="flex items-center h-12 lg:gap-6 xl:gap-16 2xl:gap-20">
   {/* Logo */}
   <div className="flex items-center">
     <Link href="/" className="flex items-center">
@@ -279,7 +279,7 @@ const Navbar = () => {
             </Link>
             <Link
               href="/download"
-              className={`text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold ${
+              className={`hidden lg:block text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold ${
                 pathname === "/download" ? "border-b-2 border-red-500" : ""
               }`}
             >
