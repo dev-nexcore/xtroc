@@ -224,7 +224,7 @@ const Innovations = () => {
                   }}
                 />
 
-                <div className="w-[400px] h-[300px] bg-gray-200 rounded flex items-center justify-center hidden">
+                <div className="hidden w-[400px] h-[300px] bg-gray-200 rounded  items-center justify-center ">
                   <span className="text-gray-500">Product {i + 1}</span>
                 </div>
 
