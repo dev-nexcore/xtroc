@@ -33,20 +33,20 @@ const Navbar = () => {
       { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img: null, path: "subseabolt" },
     ],
     "hydraulic-powerpack": [
-      { id: "xep700", name: "XEP700", img: "images/Power-Pack/XEP700.png", path: "" },
-      { id: "xap700", name: "XAP 700", img: "images/Power-Pack/XAP 700.png", path: "" },
-      { id: "xep1500", name: "XEP1500", img: null, path: "" },
-      { id: "xap1500", name: "XAP1500", img: "images/Power-Pack/XAP1500.png", path: "" },
+      { id: "xep700", name: "XEP700", img: "images/Power-Pack/XEP700.png", path: "xep700" },
+      { id: "xap700", name: "XAP 700", img: "images/Power-Pack/XAP 700.png", path: "xap700" },
+      { id: "xep1500", name: "XEP1500", img: null, path: "xep1500" },
+      { id: "xap1500", name: "XAP1500", img: "images/Power-Pack/XAP1500.png", path: "xap1500" },
     ],
     "accesories": [
-      { id: "jacks", name: "Jacks / Cylinders", img: "images/accesories/jackscylinders.png", path: "" },
-      { id: "handpump", name: "Handpump", img: "images/accesories/handpump.png", path: "" },
-      { id: "flange-spreaders", name: "Flange Spreaders", img: "images/accesories/flangespreaders.png", path: "" },
+      { id: "jacks", name: "Jacks / Cylinders", img: "images/accesories/jackscylinders.png", path: "hydraulicjack" },
+      { id: "handpump", name: "Handpump", img: "images/accesories/handpump.png", path: "handPumps" },
+      { id: "flange-spreaders", name: "Flange Spreaders", img: "images/accesories/flangespreaders.png", path: "FlangeSpreaders" },
     ],
     "impact-sockets": [
-      { id: "nut-splitters", name: "Nut Splitters", img: null, path: "" },
-      { id: "sockets", name: "Sockets", img: "images/impact-sockets/Sockets.png", path: "" },
-      { id: "reducers", name: "Reducers", img: "images/impact-sockets/Reducers.png", path: "" },
+      { id: "nut-splitters", name: "Nut Splitters", img: null, path: "nutsplitter" },
+      { id: "sockets", name: "Sockets", img: "images/impact-sockets/Sockets.png", path: "socket" },
+      { id: "reducers", name: "Reducers", img: "images/impact-sockets/Reducers.png", path: "reducer" },
     ],
   };
 
