@@ -126,7 +126,7 @@ const ServiceItem = ({ title, description, imageSrc, imageOnLeft = true, index }
               maxHeight: expanded 
                 ? 'none' 
                 : isMobile 
-                  ? '4.5rem'   // About 3 lines on mobile
+                  ? '4.6rem'   // About 3 lines on mobile
                   : '20rem',    // About 4-5 lines on desktop
             }}
           >
