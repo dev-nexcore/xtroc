@@ -143,7 +143,7 @@ const Navbar = () => {
                           : "hover:bg-[#D9D9D9]"
                       }`}
                     >
-                      Bolting Tools
+                      Bolting Toolsb
                     </button>
 
                     <button

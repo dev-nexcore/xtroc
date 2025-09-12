@@ -27,7 +27,7 @@ const FlangeSpreaders = () => {
                 h-[400px] w-[450px] flex items-center justify-center"
               >
                 <img
-                  src="flange.png"
+                  src="images/accesories/flangespreaders.png"
                   alt="Hydraulic Flange Spreader"
                   className="w-full h-[350px] object-contain"
                 />

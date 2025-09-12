@@ -27,7 +27,7 @@ const HandPumps = () => {
                   h-[250px] sm:h-[300px] md:h-[400px] w-full max-w-[500px] flex items-center justify-center"
               >
                 <img
-                  src="handPumps.png"
+                  src="images/accesories/handpump.png"
                   alt="Hydraulic Nut Splitter"
                   className="w-full h-full object-contain"
                 />
