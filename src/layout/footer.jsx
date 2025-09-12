@@ -162,7 +162,7 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="w-5 h-5 text-red-600 mt-1 flex-shrink-0 md:mr-4" />
                 <p className="text-xs sm:text-sm leading-relaxed">
-                  B-35, Plot No C-39A, TTC Industrial Area, MIDC Industrial
+                  B-Wing 3rd Floor Office No.35, Plot No C-39A, TTC Industrial Area, MIDC Industrial
                   Area, Pawne, Navi Mumbai, Maharashtra 400710
                 </p>
               </div>

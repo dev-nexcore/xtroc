@@ -18,35 +18,35 @@ const Navbar = () => {
   // Subcategories + images
   const categories = {
     "insitu-machinning": [
-      { id: "pipe-cutting", name: "Pipe Cutting Machine XTCB Series", img: "images/Insitumachinning/pipe.png"},
-      { id: "id-bevelling", name: "ID Bevelling Machine", img: "images/Insitumachinning/bevelling.png" },
-      { id: "flange-facing", name: "Flange Facing Machine", img: null },
+      { id: "pipe-cutting", name: "Pipe Cutting Machine XTCB Series", img: "images/Insitumachinning/pipe.png", path: "pipeCutting"},
+      { id: "id-bevelling", name: "ID Bevelling Machine", img: "images/Insitumachinning/bevelling.png", path: "bevellingmachine" },
+      { id: "flange-facing", name: "Flange Facing Machine", img: "flangefacing.png", path: "flangefacing" },
     ],
     "bolting-tools": [
-      { id: "hydraulic-torque", name: "Hydraulic Torque Wrench", img: null },
-      { id: "square-drive", name: "Square Drive - XTS Series", img: "images/BoltingTools/squaredrive.png" },
-      { id: "hex-drive", name: "Hex Drive - XTH Series", img: "images/BoltingTools/hexdrive.png" },
+      { id: "hydraulic-torque", name: "Hydraulic Torque Wrench", img: "hydraulictorque.png", path: "hydraulictorque" },
+      { id: "square-drive", name: "Square Drive - XTS Series", img: "images/BoltingTools/squaredrive.png", path: "squaredrive" },
+      { id: "hex-drive", name: "Hex Drive - XTH Series", img: "images/BoltingTools/hexdrive.png", path: "hexdrive" },
     ],
     "bolt-tensioner": [
-      { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img: null },
-      { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner", img: null },
-      { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img: null },
+      { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img: null, path: "topsidebolt" },
+      { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner", img: null , path: "multistagebolt"},
+      { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img: null, path: "subseabolt" },
     ],
     "hydraulic-powerpack": [
-      { id: "xep700", name: "XEP700", img: "images/Power-Pack/XEP700.png" },
-      { id: "xap700", name: "XAP 700", img: "images/Power-Pack/XAP 700.png" },
-      { id: "xep1500", name: "XEP1500", img: null },
-      { id: "xap1500", name: "XAP1500", img: "images/Power-Pack/XAP1500.png" },
+      { id: "xep700", name: "XEP700", img: "images/Power-Pack/XEP700.png", path: "" },
+      { id: "xap700", name: "XAP 700", img: "images/Power-Pack/XAP 700.png", path: "" },
+      { id: "xep1500", name: "XEP1500", img: null, path: "" },
+      { id: "xap1500", name: "XAP1500", img: "images/Power-Pack/XAP1500.png", path: "" },
     ],
     "accesories": [
-      { id: "jacks", name: "Jacks / Cylinders", img: "images/accesories/jackscylinders.png" },
-      { id: "handpump", name: "Handpump", img: "images/accesories/handpump.png" },
-      { id: "flange-spreaders", name: "Flange Spreaders", img: "images/accesories/flangespreaders.png" },
+      { id: "jacks", name: "Jacks / Cylinders", img: "images/accesories/jackscylinders.png", path: "" },
+      { id: "handpump", name: "Handpump", img: "images/accesories/handpump.png", path: "" },
+      { id: "flange-spreaders", name: "Flange Spreaders", img: "images/accesories/flangespreaders.png", path: "" },
     ],
     "impact-sockets": [
-      { id: "nut-splitters", name: "Nut Splitters", img: null },
-      { id: "sockets", name: "Sockets", img: "images/impact-sockets/Sockets.png" },
-      { id: "reducers", name: "Reducers", img: "images/impact-sockets/Reducers.png" },
+      { id: "nut-splitters", name: "Nut Splitters", img: null, path: "" },
+      { id: "sockets", name: "Sockets", img: "images/impact-sockets/Sockets.png", path: "" },
+      { id: "reducers", name: "Reducers", img: "images/impact-sockets/Reducers.png", path: "" },
     ],
   };
 
@@ -220,13 +220,16 @@ const Navbar = () => {
                             src={selectedProduct.img}
                             alt={selectedProduct.name}
                             className="w-full h-[400px] object-contain rounded-md cursor-pointer hover:opacity-90 transition"
+                            onClick={() => router.push(selectedProduct.path)} 
                           />
                         ) : (
-                          <div className="w-full h-[400px] flex items-center justify-center text-gray-500">
+                          <div className="w-full h-[400px] flex items-center justify-center text-gray-500"
+                          onClick={() => router.push(selectedProduct.path)} >
                             Image not provided
                           </div>
                         )}
-                        <div className="text-red-500 font-bold text-base text-center capitalize mt-2">
+                        <div className="text-red-500 font-bold text-base text-center capitalize mt-2"
+                        onClick={() => router.push(selectedProduct.path)} >
                           {selectedProduct.name}
                         </div>
                       </div>

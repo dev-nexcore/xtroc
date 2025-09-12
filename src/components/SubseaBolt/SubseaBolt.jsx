@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const PipeCutting = () => {
+const SubseaBolt = () => {
   return (
     <div
       className="bg-black text-white"
@@ -12,7 +12,7 @@ const PipeCutting = () => {
         <div className="flex items-center justify-center gap-2 text-black">
           <span className="font-medium px-2">Bolt Tensioning Solutions</span>
           <FaArrowRightLong className="w-4 h-4 ml-8 mr-8" />
-          <span className="font-medium">Pipe Cutting & Beveling Machines</span>
+          <span className="font-medium">Subsea Bolt Tensioner</span>
         </div>
       </div>
 
@@ -24,7 +24,7 @@ const PipeCutting = () => {
             {/* Title with Impact font */}
             <div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl px-10 text-center font-base text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
-                Pipe Cutting Machine XTCB Series
+                Subsea Bolt Tensioner
               </h1>
               <div className=" rounded-2xl h-1 bg-red-600"></div>
             </div>
@@ -57,7 +57,7 @@ const PipeCutting = () => {
                   rounded-tl-2xl rounded-br-2xl rounded-tr-none rounded-bl-none 
                 h-[300px]  sm:h-[400px] flex items-center justify-center">
                 <img
-                  src="/images/insitumachinning/pipe.png"
+                  src=""
                   alt="Hydraulic Bolt Tensioner"
                   className="w-full h-full object-contain"
                 />
@@ -80,4 +80,4 @@ const PipeCutting = () => {
   );
 };
 
-export default PipeCutting;
+export default SubseaBolt;
