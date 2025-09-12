@@ -42,6 +42,7 @@ const ServiceItem = ({ title, description, imageSrc, imageOnLeft = true, index }
           imageOnLeft ? "flex-row" : "flex-row-reverse"
         } items-center gap-8 md:gap-12 max-w-6xl mx-auto`}
       >
+       
         {/* Image Section */}
         <motion.div
           className="flex-1 w-full"
