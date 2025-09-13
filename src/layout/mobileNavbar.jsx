@@ -6,35 +6,125 @@ import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 
 const categories = {
   "insitu-machinning": [
-    { id: "pipe-cutting", name: "Pipe Cutting Machine XTCB Series", img: "images/Insitumachinning/pipe.png"},
-    { id: "id-bevelling", name: "ID Bevelling Machine", img: "images/Insitumachinning/bevelling.png" },
-    { id: "flange-facing", name: "Flange Facing Machine", img: null },
+    {
+      id: "pipe-cutting",
+      name: "Pipe Cutting Machine XTCB Series",
+      img: "images/Insitumachinning/pipe.png",
+      path: "pipeCutting",
+    },
+    {
+      id: "id-bevelling",
+      name: "ID Bevelling Machine",
+      img: "images/Insitumachinning/bevelling.png",
+      path: "bevellingmachine",
+    },
+    {
+      id: "flange-facing",
+      name: "Flange Facing Machine",
+      img: null,
+      path: "flangefacing",
+    },
   ],
   "bolting-tools": [
-    { id: "hydraulic-torque", name: "Hydraulic Torque Wrench", img: null },
-    { id: "square-drive", name: "Square Drive - XTS Series", img: "images/BoltingTools/squaredrive.png" },
-    { id: "hex-drive", name: "Hex Drive - XTH Series", img: "images/BoltingTools/hexdrive.png" },
+    {
+      id: "hydraulic-torque",
+      name: "Hydraulic Torque Wrench",
+      img: null,
+      path: "hydraulictorque",
+    },
+    {
+      id: "square-drive",
+      name: "Square Drive - XTS Series",
+      img: "images/BoltingTools/squaredrive.png",
+      path: "squaredrive",
+    },
+    {
+      id: "hex-drive",
+      name: "Hex Drive - XTH Series",
+      img: "images/BoltingTools/hexdrive.png",
+      path: "hexdrive",
+    },
   ],
   "bolt-tensioner": [
-    { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img: null },
-    { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner", img: null },
-    { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img: null },
+    {
+      id: "topside-tensioner",
+      name: "Top Side Bolt Tensioner",
+      img: null,
+      path: "topsidebolt",
+    },
+    {
+      id: "multi-stage-tensioner",
+      name: "Multi Stage Bolt Tensioner",
+      img: null,
+      path: "multistagebolt",
+    },
+    {
+      id: "subsea-tensioner",
+      name: "Subsea Bolt Tensioner",
+      img: null,
+      path: "subseabolt",
+    },
   ],
   "hydraulic-powerpack": [
-    { id: "xep700", name: "XEP700", img: "images/Power-Pack/XEP700.png" },
-    { id: "xap700", name: "XAP 700", img: "images/Power-Pack/XAP 700.png" },
-    { id: "xep1500", name: "XEP1500", img: null },
-    { id: "xap1500", name: "XAP1500", img: "images/Power-Pack/XAP1500.png" },
+    {
+      id: "xep700",
+      name: "XEP700",
+      img: "images/Power-Pack/XEP700.png",
+      path: "xep700",
+    },
+    {
+      id: "xap700",
+      name: "XAP 700",
+      img: "images/Power-Pack/XAP 700.png",
+      path: "xap700",
+    },
+    { id: "xep1500", name: "XEP1500", img: null, path: "xep1500" },
+    {
+      id: "xap1500",
+      name: "XAP1500",
+      img: "images/Power-Pack/XAP1500.png",
+      path: "xap1500",
+    },
   ],
-  "accesories": [
-    { id: "jacks", name: "Jacks / Cylinders", img: "images/accesories/jackscylinders.png" },
-    { id: "handpump", name: "Handpump", img: "images/accesories/handpump.png" },
-    { id: "flange-spreaders", name: "Flange Spreaders", img: "images/accesories/flangespreaders.png" },
+  accesories: [
+    {
+      id: "jacks",
+      name: "Jacks / Cylinders",
+      img: "images/accesories/jackscylinders.png",
+      path: "hydraulicjack",
+    },
+    {
+      id: "handpump",
+      name: "Handpump",
+      img: "images/accesories/handpump.png",
+      path: "handPumps",
+    },
+    {
+      id: "flange-spreaders",
+      name: "Flange Spreaders",
+      img: "images/accesories/flangespreaders.png",
+      path: "FlangeSpreaders",
+    },
   ],
   "impact-sockets": [
-    { id: "nut-splitters", name: "Nut Splitters", img: null },
-    { id: "sockets", name: "Sockets", img: "images/impact-sockets/Sockets.png" },
-    { id: "reducers", name: "Reducers", img: "images/impact-sockets/Reducers.png" },
+    {
+      id: "nut-splitters",
+      name: "Nut Splitters",
+      img: null,
+      path: "nutsplitter",
+    },
+    {
+      id: "sockets",
+      name: "Sockets",
+      img: "images/impact-sockets/Sockets.png",
+      path: "socket",
+    },
+    {
+      id: "reducers",
+      name: "Reducers",
+      img: "images/impact-sockets/Reducers.png",
+      path: "reducer",
+    },
   ],
 };
 
@@ -44,6 +134,7 @@ const servicesList = [
     id: "bolt-torquing",
     name: "Bolt Torquing & Tensioning",
     img: "boltt.jpg",
+    path: "bolttorquing",
     width: 400,
     height: 390,
   },
@@ -51,6 +142,7 @@ const servicesList = [
     id: "cold-cutting",
     name: "Cold Cutting & Beveling",
     img: "pipeCold.jpg",
+    path: "coldcutting",
     width: 400,
     height: 390,
   },
@@ -58,6 +150,7 @@ const servicesList = [
     id: "flange-facing",
     name: "Flange Facing",
     img: "facing.jpg",
+    path: "flangefacingservice",
     width: 400,
     height: 390,
   },
@@ -65,6 +158,7 @@ const servicesList = [
     id: "hot-tapping",
     name: "Hot-Tapping & Line Stopple",
     img: "tap.jpg",
+    path: "hottapping",
     width: 400,
     height: 390,
   },
@@ -72,6 +166,7 @@ const servicesList = [
     id: "re-tubing",
     name: "Re-Tubing of Boilers & Heat Exchangers",
     img: "callib.avif",
+    path: "retubbing",
     width: 400,
     height: 300,
   },
@@ -79,6 +174,7 @@ const servicesList = [
     id: "water-jet",
     name: "Water Jet Cutting",
     img: "jet.png",
+    path: "waterjet",
     width: 400,
     height: 400,
   },
@@ -108,7 +204,9 @@ const MobileNavbar = () => {
         <div className="mt-4 space-y-1">
           <Link
             href="/aboutus"
-            className={`block py-1 ${pathname === "/aboutus" ? "text-red-500 font-bold" : ""}`}
+            className={`block py-1 ${
+              pathname === "/aboutus" ? "text-red-500 font-bold" : ""
+            }`}
           >
             About Us
           </Link>
@@ -121,7 +219,9 @@ const MobileNavbar = () => {
               </Link>
               <button
                 onClick={() =>
-                  setActiveCategory(activeCategory === "products" ? null : "products")
+                  setActiveCategory(
+                    activeCategory === "products" ? null : "products"
+                  )
                 }
               >
                 {activeCategory === "products" ? (
@@ -153,7 +253,11 @@ const MobileNavbar = () => {
                     {activeSub === cat && (
                       <div className="ml-4 mt-1 space-y-2">
                         {categories[cat].map((item) => (
-                          <div key={item.id} className="flex items-center gap-2 py-1">
+                          <Link
+                            key={item.id}
+                            href={`/${item.path}`} // add leading slash for correct routing
+                            className="flex items-center gap-2 py-1"
+                          >
                             {item.img && (
                               <img
                                 src={`/${item.img}`}
@@ -162,7 +266,7 @@ const MobileNavbar = () => {
                               />
                             )}
                             <span>{item.name}</span>
-                          </div>
+                          </Link>
                         ))}
                       </div>
                     )}
@@ -172,19 +276,21 @@ const MobileNavbar = () => {
             )}
           </div>
 
-          {/* Services Dropdown (NEW) */}
+          {/* Services Dropdown */}
           <div>
             <div className="flex justify-between items-center w-full">
               <Link href="/services" className="py-2 font-semibold">
                 Services
               </Link>
+
+              {/* 🔽 Dropdown icon button */}
               <button
-                onClick={() => setActiveService(!activeService)}
+                onClick={() => setActiveService(activeService ? null : true)}
               >
                 {activeService ? (
-                  <ChevronUp className="h-4 w-4" />
+                  <ChevronUp className="h-4 w-4" /> // ▲ when open
                 ) : (
-                  <ChevronDown className="h-4 w-4" />
+                  <ChevronDown className="h-4 w-4" /> // ▼ when closed
                 )}
               </button>
             </div>
@@ -192,15 +298,15 @@ const MobileNavbar = () => {
             {activeService && (
               <div className="ml-4 mt-2 space-y-2">
                 {servicesList.map((svc) => (
-                  <div
+                  <Link
                     key={svc.id}
+                    href={`/${svc.path}`} // add leading slash
                     className="flex items-center gap-3 py-2"
                   >
                     {svc.img && (
                       <img
                         src={`/${svc.img}`}
                         alt={svc.name}
-                        // use the service's own width/height but limit with max-w
                         style={{
                           width: `${svc.width / 8}px`,
                           height: `${svc.height / 8}px`,
@@ -209,7 +315,7 @@ const MobileNavbar = () => {
                       />
                     )}
                     <span>{svc.name}</span>
-                  </div>
+                  </Link>
                 ))}
               </div>
             )}
@@ -218,31 +324,41 @@ const MobileNavbar = () => {
           {/* Other Links */}
           <Link
             href="/distributor"
-            className={`block py-1 ${pathname === "/distributor" ? "text-red-500 font-bold" : ""}`}
+            className={`block py-1 ${
+              pathname === "/distributor" ? "text-red-500 font-bold" : ""
+            }`}
           >
             Distributor
           </Link>
           <Link
             href="/industry"
-            className={`block py-1 ${pathname === "/industry" ? "text-red-500 font-bold" : ""}`}
+            className={`block py-1 ${
+              pathname === "/industry" ? "text-red-500 font-bold" : ""
+            }`}
           >
             Industries
           </Link>
           <Link
             href="/contact"
-            className={`block py-1 ${pathname === "/contact" ? "text-red-500 font-bold" : ""}`}
+            className={`block py-1 ${
+              pathname === "/contact" ? "text-red-500 font-bold" : ""
+            }`}
           >
             Contact Us
           </Link>
           <Link
             href="/joinus"
-            className={`block py-1 ${pathname === "/joinus" ? "text-red-500 font-bold" : ""}`}
+            className={`block py-1 ${
+              pathname === "/joinus" ? "text-red-500 font-bold" : ""
+            }`}
           >
             Join Us
           </Link>
           <Link
             href="/download"
-            className={`block py-1 ${pathname === "/download" ? "text-red-500 font-bold" : ""}`}
+            className={`block py-1 ${
+              pathname === "/download" ? "text-red-500 font-bold" : ""
+            }`}
           >
             Downloads
           </Link>

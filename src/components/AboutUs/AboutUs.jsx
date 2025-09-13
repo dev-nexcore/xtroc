@@ -55,13 +55,13 @@ const AboutSection = () => {
             {/* First Paragraph */}
             <motion.p
               variants={fadeInUp}
-              className="text-white text-base sm:text-lg leading-relaxed"
+              className="text-white text-base sm:text-lg leading-relaxed text-center max-w-100  mb-20"
             >
-              <p className="text-center max-w-100 leading-relaxed mb-20">
+              {/* <p className="text-center max-w-100 leading-relaxed mb-20"> */}
               At Xtorc, we believe in creating value that extends beyond
               products. Our WIN-WIN-WIN philosophy ensures that our customers
               win, our employees thrive, and our entrepreneurs succeed.
-              </p>
+              {/* </p> */}
             </motion.p>
           </div>
 
