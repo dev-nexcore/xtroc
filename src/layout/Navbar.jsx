@@ -2,10 +2,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Rotate3D } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { BsDash } from "react-icons/bs";
-import { style } from "framer-motion/client";
 
 const Navbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
@@ -13,70 +12,232 @@ const Navbar = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const router = useRouter();
   const pathname = usePathname();
-  const dropdownRef = useRef(null);
+  const serviceRef = useRef(null);
+  const productRef = useRef(null);
 
   // Subcategories + images
   const categories = {
     "insitu-machinning": [
-      { id: "pipe-cutting", name: "Pipe Cutting Machine XTCB Series", img: "images/Insitumachinning/pipe.png", path: "pipeCutting"},
-      { id: "id-bevelling", name: "ID Bevelling Machine", img: "images/Insitumachinning/bevelling.png", path: "bevellingmachine" },
-      { id: "flange-facing", name: "Flange Facing Machine", img: "flangefacing.png", path: "flangefacing" },
+      {
+        id: "pipe-cutting",
+        name: "Pipe Cutting Machine XTCB Series",
+        img: "images/Insitumachinning/pipe.png",
+        path: "pipeCutting",
+        width: 500,
+        height: 400
+      },
+      {
+        id: "id-bevelling",
+        name: "ID Bevelling Machine",
+        img: "images/Insitumachinning/bevelling.png",
+        path: "bevellingmachine",
+      },
+      {
+        id: "flange-facing",
+        name: "Flange Facing Machine",
+        img: "flangefacing.png",
+        path: "flangefacing",
+      },
     ],
     "bolting-tools": [
-      { id: "hydraulic-torque", name: "Hydraulic Torque Wrench", img: "hydraulictorque.png", path: "hydraulictorque" },
-      { id: "square-drive", name: "Square Drive - XTS Series", img: "images/BoltingTools/squaredrive.png", path: "squaredrive" },
-      { id: "hex-drive", name: "Hex Drive - XTH Series", img: "images/BoltingTools/hexdrive.png", path: "hexdrive" },
+      {
+        id: "hydraulic-torque",
+        name: "Hydraulic Torque Wrench",
+        img: "hydraulictorque.png",
+        path: "hydraulictorque",
+      },
+      {
+        id: "square-drive",
+        name: "Square Drive - XTS Series",
+        img: "images/BoltingTools/squaredrive.png",
+        path: "squaredrive",
+      },
+      {
+        id: "hex-drive",
+        name: "Hex Drive - XTH Series",
+        img: "images/BoltingTools/hexdrive.png",
+        path: "hexdrive",
+      },
     ],
     "bolt-tensioner": [
-      { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img: null, path: "topsidebolt" },
-      { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner", img: null , path: "multistagebolt"},
-      { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img: null, path: "subseabolt" },
+      {
+        id: "topside-tensioner",
+        name: "Top Side Bolt Tensioner",
+        img: null,
+        path: "topsidebolt",
+      },
+      {
+        id: "multi-stage-tensioner",
+        name: "Multi Stage Bolt Tensioner",
+        img: null,
+        path: "multistagebolt",
+      },
+      {
+        id: "subsea-tensioner",
+        name: "Subsea Bolt Tensioner",
+        img: null,
+        path: "subseabolt",
+      },
     ],
     "hydraulic-powerpack": [
-      { id: "xep700", name: "XEP700", img: "images/Power-Pack/XEP700.png", path: "xep700" },
-      { id: "xap700", name: "XAP 700", img: "images/Power-Pack/XAP 700.png", path: "xap700" },
+      {
+        id: "xep700",
+        name: "XEP700",
+        img: "images/Power-Pack/XEP700.png",
+        path: "xep700",
+      },
+      {
+        id: "xap700",
+        name: "XAP 700",
+        img: "images/Power-Pack/XAP 700.png",
+        path: "xap700",
+      },
       { id: "xep1500", name: "XEP1500", img: null, path: "xep1500" },
-      { id: "xap1500", name: "XAP1500", img: "images/Power-Pack/XAP1500.png", path: "xap1500" },
+      {
+        id: "xap1500",
+        name: "XAP1500",
+        img: "images/Power-Pack/XAP1500.png",
+        path: "xap1500",
+      },
     ],
-    "accesories": [
-      { id: "jacks", name: "Jacks / Cylinders", img: "images/accesories/jackscylinders.png", path: "hydraulicjack" },
-      { id: "handpump", name: "Handpump", img: "images/accesories/handpump.png", path: "handPumps" },
-      { id: "flange-spreaders", name: "Flange Spreaders", img: "images/accesories/flangespreaders.png", path: "FlangeSpreaders" },
+    accesories: [
+      {
+        id: "jacks",
+        name: "Jacks / Cylinders",
+        img: "images/accesories/jackscylinders.png",
+        path: "hydraulicjack",
+      },
+      {
+        id: "handpump",
+        name: "Handpump",
+        img: "images/accesories/handpump.png",
+        path: "handPumps",
+      },
+      {
+        id: "flange-spreaders",
+        name: "Flange Spreaders",
+        img: "images/accesories/flangespreaders.png",
+        path: "FlangeSpreaders",
+      },
     ],
     "impact-sockets": [
-      { id: "nut-splitters", name: "Nut Splitters", img: null, path: "nutsplitter" },
-      { id: "sockets", name: "Sockets", img: "images/impact-sockets/Sockets.png", path: "socket" },
-      { id: "reducers", name: "Reducers", img: "images/impact-sockets/Reducers.png", path: "reducer" },
+      {
+        id: "nut-splitters",
+        name: "Nut Splitters",
+        img: null,
+        path: "nutsplitter",
+      },
+      {
+        id: "sockets",
+        name: "Sockets",
+        img: "images/impact-sockets/Sockets.png",
+        path: "socket",
+      },
+      {
+        id: "reducers",
+        name: "Reducers",
+        img: "images/impact-sockets/Reducers.png",
+        path: "reducer",
+      },
     ],
   };
 
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState(null);
+
+  const servicesList = [
+    {
+      id: "bolt-torquing",
+      name: "Bolt Torquing & Tensioning",
+      img: "boltt.jpg",
+      path: "boltTorquing",
+      width: 400,
+      height: 390,
+    },
+    {
+      id: "cold-cutting",
+      name: "Cold Cutting & Beveling",
+      img: "pipeCold.jpg",
+      path: "coldCutting",
+      width: 400,
+      height: 390,
+    },
+    {
+      id: "flange-facing",
+      name: "Flange Facing",
+      img: "facing.jpg",
+      path: "flangeFacing",
+      width: 400,
+      height: 390,
+    },
+    
+    {
+      id: "hot-tapping",
+      name: "Hot-Tapping & Line Stopple",
+      img: "tap.jpg",
+      path: "hotTapping",
+      width: 400,
+      height: 390,
+    },
+    {
+      id: "re-tubing",
+      name: "Re-Tubing of Boilers & Heat Exchangers",
+      img: "callib.avif",
+      path: "reTubing",
+      width: 400,
+      height: 300,
+    },
+    {
+      id: "water-jet",
+      name: "Water Jet Cutting",
+      img: "jet.png",
+      path: "waterJet",
+      width: 400,
+      height: 400,      
+    },
+    
+  ];
+
   useEffect(() => {
     function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      // Close Products dropdown if click is outside it
+      if (
+        productRef.current &&
+        !productRef.current.contains(event.target)
+      ) {
         setIsProductsOpen(false);
         setActiveSubmenu(null);
         setSelectedProduct(null);
       }
+
+      // Close Services dropdown if click is outside it
+      if (
+        serviceRef.current &&
+        !serviceRef.current.contains(event.target)
+      ) {
+        setIsServicesOpen(false);
+        setSelectedService(null);
+      }
     }
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
+    return () =>
       document.removeEventListener("mousedown", handleClickOutside);
-    };
   }, []);
 
   return (
     <nav className="bg-black text-white lg:px-5 xl:px-25  2xl:px-10 md:py-3 w-full hidden md:flex md:justify-center">
       <div className="">
         <div className="flex items-center h-12 lg:gap-6 xl:gap-16 2xl:gap-20">
-  {/* Logo */}
-  <div className="flex items-center">
-    <Link href="/" className="flex items-center">
-      <img src="/xtroc.png" alt="Xtroc Logo" className="h-10 w-auto" />
-    </Link>
-  </div>
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center">
+              <img src="/xtroc.png" alt="Xtroc Logo" className="h-10 w-auto" />
+            </Link>
+          </div>
 
-  {/* Navigation Links */}
-  <div className="hidden md:flex flex-wrap items-center md:gap-x-3 lg:gap-x-6 xl:gap-x-8 2xl:gap-x-10 gap-y-2">
+          {/* Navigation Links */}
+          <div className="hidden md:flex flex-wrap items-center md:gap-x-3 lg:gap-x-6 xl:gap-x-8 2xl:gap-x-10 gap-y-2">
             <Link
               href="/aboutus"
               className={`text-white font-bold text-base transition-colors duration-200 hover:border-b-2 hover:border-red-500 ${
@@ -120,7 +281,7 @@ const Navbar = () => {
                       ? "w-[650px]"
                       : "w-[300px]"
                   }`}
-                  ref={dropdownRef}
+                  ref={productRef}
                 >
                   {/* Main Categories */}
                   <div className="flex font-bold flex-col h-full w-[300px]">
@@ -143,7 +304,7 @@ const Navbar = () => {
                           : "hover:bg-[#D9D9D9]"
                       }`}
                     >
-                      Bolting Toolsb
+                      Bolting Tools
                     </button>
 
                     <button
@@ -219,17 +380,29 @@ const Navbar = () => {
                           <img
                             src={selectedProduct.img}
                             alt={selectedProduct.name}
-                            className="w-full h-[400px] object-contain rounded-md cursor-pointer hover:opacity-90 transition"
-                            onClick={() => router.push(selectedProduct.path)} 
+                            className="object-cover rounded-md cursor-pointer hover:opacity-90 transition"
+                            style={{
+                              width: `${selectedProduct.width || 400}px`,
+                              height: `${selectedProduct.height || 300}px`,
+                            }}
+                            onClick={() => router.push(selectedProduct.path)}
                           />
                         ) : (
-                          <div className="w-full h-[400px] flex items-center justify-center text-gray-500"
-                          onClick={() => router.push(selectedProduct.path)} >
+                          <div
+                            className="flex items-center justify-center text-gray-500"
+                            style={{
+                              width: `${selectedProduct.width || 400}px`,
+                              height: `${selectedProduct.height || 300}px`,
+                            }}
+                            onClick={() => router.push(selectedProduct.path)}
+                          >
                             Image not provided
                           </div>
                         )}
-                        <div className="text-red-500 font-bold text-base text-center capitalize mt-2"
-                        onClick={() => router.push(selectedProduct.path)} >
+                        <div
+                          className="text-red-500 font-bold text-base text-center capitalize mt-2 cursor-pointer"
+                          onClick={() => router.push(selectedProduct.path)}
+                        >
                           {selectedProduct.name}
                         </div>
                       </div>
@@ -239,15 +412,91 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Other nav links */}
-            <Link
-              href="/services"
-              className={`text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold ${
-                pathname === "/services" ? "border-b-2 border-red-500" : ""
-              }`}
-            >
-              Services
-            </Link>
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => {
+                  setIsServicesOpen((prev) => !prev);
+                  setSelectedService(null);
+                }}
+                className="flex items-center text-white font-bold text-base transition-colors duration-200 hover:border-b-2 hover:border-red-500"
+              >
+                Services
+                <ChevronDown className="h-4 w-4 text-white ml-1" />
+              </button>
+
+              {isServicesOpen && (
+                <div
+                  ref={serviceRef}
+                  className={`absolute top-full mt-6 bg-white border border-gray-200 shadow-lg z-100 h-[500px] rounded-bl-2xl rounded-br-2xl flex ml-[-300] transition-all duration-300`}
+                  style={{
+                    width: selectedService ? `${selectedService.width + 400}px` : "300px"
+                  }}
+                >
+                  {/* Service list */}
+                  <div className="flex flex-col h-full w-[300px] font-bold">
+                    {servicesList.map((svc) => (
+                      <button
+                        key={svc.id}
+                        onClick={() => setSelectedService(svc)}
+                        className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left ${
+                          selectedService?.id === svc.id
+                            ? "bg-[#D9D9D9] rounded-bl-xl"
+                            : "hover:bg-[#D9D9D9] rounded-bl-xl"
+                        }`}
+                      >
+                        <BsDash className="w-7 text-red-500 h-10" />
+                        {svc.name}
+                      </button>
+                    ))}
+                  </div>
+
+                  {/* Image preview appears only when clicked */}
+                  {selectedService && (
+                    <div className="w-[500px] flex flex-col items-center justify-center h-full border-l border-gray-200 bg-white rounded-br-2xl">
+                      {/* Image Section - Fixed container */}
+                      <div className="flex-1 flex items-center justify-center px-4">
+                        {selectedService.img ? (
+                          <img
+                            src={selectedService.img}
+                            alt={selectedService.name}
+                            className="object-contain cursor-pointer hover:opacity-90 transition rounded-md"
+                            style={{
+                              width: `${selectedService.width}px`,
+                              height: `${selectedService.height}px`,
+                            }}
+                            onClick={() => router.push(selectedService.path)}
+                          />
+                        ) : (
+                          <div
+                            className="flex items-center justify-center text-gray-500 cursor-pointer border border-gray-300 rounded-md"
+                            style={{
+                              width: `${selectedService.width}px`,
+                              height: `${selectedService.height}px`,
+                            }}
+                            onClick={() => router.push(selectedService.path)}
+                          >
+                            Image not provided
+                          </div>
+                        )}
+                      </div>
+                      
+                      {/* Text Section - Fixed height */}
+                      <div className="h-16 flex items-center justify-center px-4 w-full">
+                        <div
+                          className="text-red-500 font-bold text-lg text-center capitalize cursor-pointer hover:text-red-600 transition"
+                          onClick={() => router.push(selectedService.path)}
+                        >
+                          {selectedService.name}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
             <Link
               href="/distributor"
               className={`text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold ${
