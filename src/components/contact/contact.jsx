@@ -159,8 +159,7 @@ export default function ContactPage() {
         variants={fadeInUp}
       >
         <div className="w-full md:w-[900px] h-[250px] sm:h-[300px] md:h-[500px] rounded-xl overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.7979768111245!2d72.8778437752053!3d19.072617982131263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d250f21f0d%3A0xdb46fbfa10678856!2sNexcore%20Alliance%20LLP!5e0!3m2!1sen!2sin!4v1756550911980!5m2!1sen!2sin"
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15080.905330298856!2d73.0073362!3d19.0977243!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c11f4122adab%3A0xbbf10ca80ffcb57f!2sTTC%20Industrial%20Area%2C%20MIDC%20Industrial%20Area%2C%20Pawne%2C%20Navi%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1757759284480!5m2!1sen!2sin" 
             width="100%"
             height="100%"
             style={{ border: 0 }}
