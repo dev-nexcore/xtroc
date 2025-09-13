@@ -177,7 +177,7 @@ const Navbar = () => {
       img: "tap.jpg",
       path: "hotTapping",
       width: 400,
-      height: 390,
+      height: 391,
     },
     {
       id: "re-tubing",
