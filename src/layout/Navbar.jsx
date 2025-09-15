@@ -374,7 +374,7 @@ const Navbar = () => {
                   {/* Subcategories */}
                {/* Subcategories */}
 {activeSubmenu && (
-  <div className="w-[350px] gap-10 mt-20 h-full font-bold flex flex-col border-l border-gray-200 bg-gray-50">
+  <div className="w-[350px] gap-10  h-full font-bold flex flex-col border-l border-gray-200 bg-gray-50">
     {categories[activeSubmenu].map((item) => (
       <div key={item.id} className="flex flex-col">
         <button
