@@ -8,6 +8,8 @@ import { BsDash } from "react-icons/bs";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
 const Navbar = () => {
+  const [activeChildMenu, setActiveChildMenu] = useState(null);
+
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -41,45 +43,54 @@ const Navbar = () => {
       },
     ],
     "bolting-tools": [
-      {
-        id: "hydraulic-torque",
-        name: "Hydraulic Torque Wrench",
-        img: "hydraulictorque.png",
-        path: "hydraulictorque",
-      },
-      {
-        id: "square-drive",
-        name: "Square Drive - XTS Series",
-        img: "images/BoltingTools/squaredrive.png",
-        path: "squaredrive",
-      },
-      {
-        id: "hex-drive",
-        name: "Hex Drive - XTH Series",
-        img: "images/BoltingTools/hexdrive.png",
-        path: "hexdrive",
-      },
-    ],
-    "bolt-tensioner": [
-      {
-        id: "topside-tensioner",
-        name: "Top Side Bolt Tensioner",
-        img: null,
-        path: "topsidebolt",
-      },
-      {
-        id: "multi-stage-tensioner",
-        name: "Multi Stage Bolt Tensioner",
-        img: null,
-        path: "multistagebolt",
-      },
-      {
-        id: "subsea-tensioner",
-        name: "Subsea Bolt Tensioner",
-        img: null,
-        path: "subseabolt",
-      },
-    ],
+  {
+    id: "hydraulic-torque",   // 👇 must match child key
+    name: "Hydraulic Torque Wrench",
+    img: "hydraulictorque.png",
+    path: "hydraulictorque",
+  },
+  {
+    id: "bolt-tensioner",     // 👇 must match child key
+    name: "Bolt Tensioners",
+    img: "hydraulictorque.png",
+    path: "hydraulictorque",
+  },
+],
+
+// ✅ children of hydraulic-torque
+"hydraulic-torque": [
+  { id: "square-drive", name: "Square Drive" ,img:"squaredrive.png",path:"squaredrive"},
+  { id: "hex-drive", name: "Hex Drive",img:"hexdrive.png",path:"hexdrive" }
+  
+],
+
+// ✅ children of bolt-tensioner
+"bolt-tensioner": [
+  { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img:"",path: "topsidebolt" },
+  { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner",img:"multi-stud.png", path: "multistagebolt" },
+  { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img:"",path: "subseabolt" },
+],
+
+    // "bolt-tensioner": [
+    //   {
+    //     id: "topside-tensioner",
+    //     name: "Top Side Bolt Tensioner",
+    //     img: null,
+    //     path: "topsidebolt",
+    //   },
+    //   {
+    //     id: "multi-stage-tensioner",
+    //     name: "Multi Stage Bolt Tensioner",
+    //     img: null,
+    //     path: "multistagebolt",
+    //   },
+    //   {
+    //     id: "subsea-tensioner",
+    //     name: "Subsea Bolt Tensioner",
+    //     img: null,
+    //     path: "subseabolt",
+    //   },
+    // ],
     "hydraulic-powerpack": [
       {
         id: "xep700",
@@ -275,7 +286,7 @@ const Navbar = () => {
 
               {isProductsOpen && (
                 <div
-                  className={`absolute top-full mt-6 bg-white border border-gray-200 shadow-lg z-100 h-[550px] xl:ml-[-300] rounded-bl-2xl rounded-br-2xl flex transition-all duration-300 ${
+                  className={`absolute top-full mt-6 bg-white border border-gray-200 shadow-lg z-100 h-[550px] xl:ml-[-300] md:ml-[-200] rounded-bl-2xl rounded-br-2xl flex transition-all duration-300 ${
                     selectedProduct
                       ? "md:w-[800px] lg:w-[1000px] xl:w-[1100]"
                       : activeSubmenu
@@ -311,7 +322,7 @@ const Navbar = () => {
                       Bolting Tools
                     </button>
 
-                    <button
+                    {/* <button
                       onClick={() => setActiveSubmenu("bolt-tensioner")}
                       className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left ${
                         activeSubmenu === "bolt-tensioner"
@@ -321,7 +332,7 @@ const Navbar = () => {
                     >
                       <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 md:mr-4" />
                       Bolt Tensioner
-                    </button>
+                    </button> */}
 
                     <button
                       onClick={() => setActiveSubmenu("hydraulic-powerpack")}
@@ -361,24 +372,55 @@ const Navbar = () => {
                   </div>
 
                   {/* Subcategories */}
-                  {activeSubmenu && (
-                    <div className="w-[350px] h-full font-bold flex flex-col border-l border-gray-200 bg-gray-50">
-                      {categories[activeSubmenu].map((item) => (
-                        <button
-                          key={item.id}
-                          onClick={() => setSelectedProduct(item)}
-                          className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left ${
-                            selectedProduct?.id === item.id
-                              ? "bg-[#D9D9D9]"
-                              : "hover:bg-[#D9D9D9]"
-                          }`}
-                        >
-                          <BsDash className="w-7 text-red-500 h-10" />
-                          {item.name}
-                        </button>
-                      ))}
-                    </div>
-                  )}
+               {/* Subcategories */}
+{activeSubmenu && (
+  <div className="w-[350px] gap-10 mt-20 h-full font-bold flex flex-col border-l border-gray-200 bg-gray-50">
+    {categories[activeSubmenu].map((item) => (
+      <div key={item.id} className="flex flex-col">
+        <button
+          onClick={() => {
+            // If item has further children → open child menu
+            if (categories[item.id]) {
+              setActiveChildMenu(item.id);
+              setSelectedProduct(null);
+            } else {
+              setSelectedProduct(item);
+              setActiveChildMenu(null);
+            }
+          }}
+          className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left ${
+            selectedProduct?.id === item.id
+              ? "bg-[#D9D9D9]"
+              : "hover:bg-[#D9D9D9]"
+          }`}
+        >
+          <BsDash className="w-7 text-red-500 h-10" />
+          {item.name}
+        </button>
+
+        {/* Child Submenu */}
+        {activeChildMenu === item.id && categories[item.id] && (
+          <div className="ml-8  flex flex-col text-gray-500 text-md gap-10 mt-10">
+            {categories[item.id].map((child) => (
+              <button
+                key={child.id}
+                onClick={() => setSelectedProduct(child)}
+                className={`text-left py-1 px-2 ${
+                  selectedProduct?.id === child.id
+                    ? "text-red-500 font-semibold"
+                    : "hover:text-red-500"
+                }`}
+              >
+                {child.name}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+)}
+
 
                   {/* Image Preview */}
                   {selectedProduct && (
