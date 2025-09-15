@@ -34,23 +34,23 @@ const NutSplitter = () => {
             </div>
 
             {/* Description */}
-            {/* <div className="space-y-4 text-gray-200 leading-relaxed">
-              <p>
-                A hydraulic torque wrench is a power tool designed to exert torque on a fastener to achieve proper tightening or loosening of a connection through the use of hydraulics. A torque wrench is applied to the nut either directly or in conjunction with an impact socket. Hydraulic torque wrenches apply a predetermined, controlled amount of torque to a properly lubricated fastener.
-              </p>
-              <p>
-                The hydraulic torque wrench was invented in early 1970s. The concept of a hydraulic powered torque wrench was first introduced on the market sometime in the early 1960s in a primitive form, and several key advances have been developed by manufacturers since that time which provided major advancements in the technology and usability of the tools far beyond the original concept tool.
-              </p>
-              <p>
-                Newer tools offer benefits such as lighter weights, smaller nose radius dimensions for fitting into tight spaces, use of exotic alloys, actuation triggers on the tool itself, multi-position reaction members, 360° × 360° hose swivels, and the ability to run multiple tools simultaneously from a single power pack.
-              </p>
-              <p>
-                There are two types of hydraulic torque wrenches: square drive and low profile. Depending on the application, one or the other will be the best tool to use.
-              </p>
-              <p>
-                The main characteristics of a hydraulic torque wrench which set it apart from other powered wrenches of similar function are that (1) it must generate torque using only hydraulic means (2) it must be self ratcheting, and (3) it must include an accurate method of determining the amount of torque applied.
-              </p>
-            </div> */}
+            <div className="space-y-4 text-gray-200 text-2xl leading-relaxed">
+             <p>
+              XTORC’s Light Weight Hydraulic Nut
+ Splitters are used in applications that
+ involve corrosion; it can be used to remove
+ corroded or seized nuts fast and safely.
+ The light weight option helps the user to
+ apply the product to lower sized bolts. 
+             </p>
+            <p>
+              XTORC’s offers Weight Hydraulic Nut
+ Splitters for a range of Hex size 0.37" to
+ 2.95". Our product is designed for
+ operator comfort that fits tight spaces
+ and it cuts through the hardest of nuts. 
+            </p>
+                        </div> 
           </div>
 
           {/* Right Section */}

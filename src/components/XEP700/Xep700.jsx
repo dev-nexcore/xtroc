@@ -34,23 +34,27 @@ const Xep700= () => {
             </div>
 
             {/* Description */}
-            {/* <div className="space-y-4 text-gray-200 leading-relaxed">
-              <p>
-                A hydraulic torque wrench is a power tool designed to exert torque on a fastener to achieve proper tightening or loosening of a connection through the use of hydraulics. A torque wrench is applied to the nut either directly or in conjunction with an impact socket. Hydraulic torque wrenches apply a predetermined, controlled amount of torque to a properly lubricated fastener.
-              </p>
-              <p>
-                The hydraulic torque wrench was invented in early 1970s. The concept of a hydraulic powered torque wrench was first introduced on the market sometime in the early 1960s in a primitive form, and several key advances have been developed by manufacturers since that time which provided major advancements in the technology and usability of the tools far beyond the original concept tool.
-              </p>
-              <p>
-                Newer tools offer benefits such as lighter weights, smaller nose radius dimensions for fitting into tight spaces, use of exotic alloys, actuation triggers on the tool itself, multi-position reaction members, 360° × 360° hose swivels, and the ability to run multiple tools simultaneously from a single power pack.
-              </p>
-              <p>
-                There are two types of hydraulic torque wrenches: square drive and low profile. Depending on the application, one or the other will be the best tool to use.
-              </p>
-              <p>
-                The main characteristics of a hydraulic torque wrench which set it apart from other powered wrenches of similar function are that (1) it must generate torque using only hydraulic means (2) it must be self ratcheting, and (3) it must include an accurate method of determining the amount of torque applied.
-              </p>
-            </div> */}
+ <div className="space-y-4 text-lg text-gray-200 leading-relaxed">
+               Hydraulic Pump with Three Phase Electric Motor
+ ATEX Certified Version CE Ex li 2 G K T3
+ ATEX Zone-2 Class T3 Gas Group IIA<br/>
+ • Three Phase Electric Motor 1.1 kW 440V <br/>
+ • Axial-piston pump mod<br/>
+ • 3/2 solenoid valve 24DC and inversion valve
+ Weight
+ Kg (Lbs)
+ 36 (79)<br/>
+ • Oil flow 9.4 Litres/min @ 0-70 Bar (2.48 g/min@1015 PSI) and
+ 0.9 Litres/min @ 700 Bar (0.23 g/min@ 10000 PSI)<br/>
+ • Pressure regulator on P Line to set the torque value
+ Adjustable Relief Valve on return line
+ Pressure Gauge DN 100 range 0-1000 Bar (14500 PSI)<br/>
+ • Reservoir Capacity 10 Litres (2.64 Gallon)<br/>
+ • Recommended Hydraulic Oil ISO 32 and above Also available 
+in Air Operated Type (PAE-ATEX)<br/>
+ • The pump includes remote control and electric box
+
+            </div> 
           </div>
 
           {/* Right Section */}
