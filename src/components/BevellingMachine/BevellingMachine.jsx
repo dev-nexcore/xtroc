@@ -51,21 +51,20 @@ const BevellingMachine = () => {
                 ID Bevelling Machine
 
               </h1>
-              <div className="w-28 sm:w-40 md:w-60 h-1 bg-red-600 rounded-2xl"></div>
+              <div className="w-28 sm:w-40 md:w-110 h-1 bg-red-600 rounded-2xl"></div>
             </div>
 
             {/* Description */}
-            {/* <div className="text-base sm:text-lg md:text-2xl p-2 sm:p-4 font-base text-gray-200 leading-relaxed">
+           <div className="text-base sm:text-lg md:text-2xl p-2 sm:p-4 font-base text-gray-200 leading-relaxed">
               <p>
-                Model No.: XHP-1500 Maximum Working Pressure: 1600 Bar Tanks Size:
-                1.8 / 2.4 Ltr. The XTORC Two-Stage Hand Pumps come with Standard
-                Pressure Gauge; this gives the user precise and safe control over
-                the work carried out. The gauge is directly mounted onto the pump
-                and is well protected by the specially designed pump lever. - Return
-                connections on all pumps - Robust design - Aluminum Tank - Easy and
-                simple maintenance
+                 The Split Frame Machine is ideal for all types of pipe cutting, beveling and end preparation
+ operations.The split frame design allows the machine to split in half at the frame and mount around the
+ OD of the in-line pipe or fittings for strong, stable clamping.<br/>
+ The equipment performs precision in-line cut or simultaneous cut/bevel, single cut/bevel, counterbore
+ and flange facing operations, as well as weld end preparation on open ended pipe, ranging from 2 to 56
+ inches. O.D. (DN20-1400),on most wall thickness and material.
               </p>
-            </div> */}
+            </div> 
           </div>
         </div>
       </div>
