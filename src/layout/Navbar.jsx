@@ -8,7 +8,8 @@ import { BsDash } from "react-icons/bs";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
 const Navbar = () => {
-  const [activeChildMenu, setActiveChildMenu] = useState(null);
+  const [activeChildMenu, setActiveChildMenu] = useState([]);
+
 
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
@@ -59,15 +60,15 @@ const Navbar = () => {
 
 // ✅ children of hydraulic-torque
 "hydraulic-torque": [
-  { id: "square-drive", name: "Square Drive" ,img:"squaredrive.png",path:"squaredrive"},
-  { id: "hex-drive", name: "Hex Drive",img:"hexdrive.png",path:"hexdrive" }
+  { id: "square-drive", name: "Square Drive" ,img:"images/BoltingTools/squaredrive.png",path:"squaredrive"},
+  { id: "hex-drive", name: "Hex Drive",img:"images/BoltingTools/hexdrive.png",path:"hexdrive" }
   
 ],
 
 // ✅ children of bolt-tensioner
 "bolt-tensioner": [
   { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img:"",path: "topsidebolt" },
-  { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner",img:"multi-stud.png", path: "multistagebolt" },
+  { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner",img:"images/bolt-tensioning/multi-stud.png", path: "multistagebolt" },
   { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img:"",path: "subseabolt" },
 ],
 
@@ -374,32 +375,32 @@ const Navbar = () => {
                   {/* Subcategories */}
                {/* Subcategories */}
 {activeSubmenu && (
-  <div className="w-[350px] gap-10  h-full font-bold flex flex-col border-l border-gray-200 bg-gray-50">
+  <div className="w-[350px] gap-10 text-gray-800 h-full font-bold flex flex-col border-l border-gray-200 bg-gray-50">
     {categories[activeSubmenu].map((item) => (
       <div key={item.id} className="flex flex-col">
         <button
-          onClick={() => {
-            // If item has further children → open child menu
-            if (categories[item.id]) {
-              setActiveChildMenu(item.id);
-              setSelectedProduct(null);
-            } else {
-              setSelectedProduct(item);
-              setActiveChildMenu(null);
-            }
-          }}
-          className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left ${
-            selectedProduct?.id === item.id
-              ? "bg-[#D9D9D9]"
-              : "hover:bg-[#D9D9D9]"
-          }`}
-        >
-          <BsDash className="w-7 text-red-500 h-10" />
-          {item.name}
-        </button>
+  onClick={() => {
+    if (categories[item.id]) {
+      setActiveChildMenu((prev) =>
+        prev.includes(item.id)
+          ? prev.filter((id) => id !== item.id)
+          : [...prev, item.id]
+      );
+      setSelectedProduct(null);
+    } else {
+      setSelectedProduct(item);
+    }
+  }}
+  className="flex items-center gap-2 text-left py-2 px-4 hover:bg-gray-100"
+>
+  <BsDash className="text-red-500 w-5 h-5" />
+  <span>{item.name}</span>
+</button>
+
 
         {/* Child Submenu */}
-        {activeChildMenu === item.id && categories[item.id] && (
+       {activeChildMenu.includes(item.id) && categories[item.id] && (
+
           <div className="ml-8  flex flex-col text-gray-500 text-md gap-10 mt-10">
             {categories[item.id].map((child) => (
               <button
@@ -433,7 +434,7 @@ const Navbar = () => {
                             className="object-cover rounded-md cursor-pointer hover:opacity-90 transition"
                             style={{
                               width: `${selectedProduct.width || 400}px`,
-                              height: `${selectedProduct.height || 300}px`,
+                              height: `${selectedProduct.height || 400}px`,
                             }}
                             onClick={() => router.push(selectedProduct.path)}
                           />
