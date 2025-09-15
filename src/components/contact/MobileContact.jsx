@@ -88,7 +88,7 @@ export default function MobileContactPage() {
             >
               <div className="space-y-6 text-sm sm:text-base md:text-lg lg:text-xl">
                 <p className="flex items-start gap-4 sm:gap-6">
-                  <MapPinned className="text-red-600 flex-shrink-0" /> B-35, Plot
+                  <MapPinned className="text-red-600 flex-shrink-0" /> B-Wing 3rd Floor Office No.35, Plot
                   No C-39A, TTC Industrial
                   <br /> Area, MIDC Industrial Area, Pawne,
                   <br /> Navi Mumbai, Maharashtra 400710

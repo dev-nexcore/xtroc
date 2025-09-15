@@ -1,7 +1,10 @@
-import React from "react";
+'use client'
+import React, {useState} from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const BoltTorquing = () => {
+
+  const [isExpanded, setIsExpanded] = useState(false);
   return (
     <div
       className="bg-black text-white"
@@ -32,8 +35,17 @@ const BoltTorquing = () => {
             {/* Description */}
              <div className="space-y-4 text-gray-200 leading-relaxed">
               <p>
-                At XTORC, we specialize in providing high-precision controlled bolting services across a wide range of industries, including Oil & Gas, Infrastructure, Wind Energy, and more. Our expert team utilizes advanced tools and technology to ensure that every bolt is tightened to the exact specifications required, maintaining the integrity and safety of your operations.In sectors like Oil and Gas, Infrastructure, and Wind Energy, controlled bolting is crucial for preventing mechanical failures and ensuring the longevity of critical assets. Our services help avoid issues such as leaks, joint misalignments, and equipment malfunctions that can lead to costly downtime, safety hazards, and operational inefficiencies.With XTORC's controlled bolting services, you can rely on accurate torque, tension, and fastening for a variety of applications, including pressure vessels, pipelines, turbines, and structural installations. Our team works on-site, providing fast, reliable, and efficient solutions, ensuring that your equipment is securely assembled and functioning at its optimal performance.Choose XTORC for precision bolting services that enhance safety, efficiency, and reliability across all sectors.
-              </p>
+                {isExpanded 
+                ?`At XTORC, we specialize in providing high-precision controlled bolting services across a wide range of industries, including Oil & Gas, Infrastructure, Wind Energy, and more. Our expert team utilizes advanced tools and technology to ensure that every bolt is tightened to the exact specifications required, maintaining the integrity and safety of your operations.In sectors like Oil and Gas, Infrastructure, and Wind Energy, controlled bolting is crucial for preventing mechanical failures and ensuring the longevity of critical assets. Our services help avoid issues such as leaks, joint misalignments, and equipment malfunctions that can lead to costly downtime, safety hazards, and operational inefficiencies.With XTORC's controlled bolting services, you can rely on accurate torque, tension, and fastening for a variety of applications, including pressure vessels, pipelines, turbines, and structural installations. Our team works on-site, providing fast, reliable, and efficient solutions, ensuring that your equipment is securely assembled and functioning at its optimal performance.Choose XTORC for precision bolting services that enhance safety, efficiency, and reliability across all sectors.`
+                :`At XTORC, we specialize in providing high-precision controlled bolting services across a wide range of industries, including Oil & Gas, Infrastructure, Wind Energy, and more. Our expert team utilizes advanced tools and technology to ensure that every bolt is tightened to the exact specifications required, maintaining the integrity and safety of your operations.In sectors like Oil and Gas, Infrastructure, and Wind Energy, controlled bolting is crucial for preventing mechanical failures and ensuring the longevity of critical assets. Our services help avoid issues such as leaks, joint misalignments, and equipment malfunctions that can lead to costly downtime, safety hazards, and operational inefficiencies.With XTORC's controlled bolting services, you can rely on accurate torque, tension, and fastening for a variety of applications, including pressure vessels, pipelines, turbines, and structural installations`}
+                <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-red-500 fontsemibold text-lg pl-1"
+                >
+                  {isExpanded?"See Less ":"See More"}
+                </button>
+                </p>
+                
             </div>
           </div>
 

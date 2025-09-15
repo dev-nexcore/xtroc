@@ -1,7 +1,9 @@
-import React from "react";
+'use client'
+import React, {useState} from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const HotTaping = () => {
+  const [isExpanded, setIsExpanded] = useState(false)
   return (
     <div
       className="bg-black text-white"
@@ -32,7 +34,18 @@ const HotTaping = () => {
             {/* Description */}
             <div className="space-y-4 text-gray-200 leading-relaxed">
               <p>
-              XTORC provides expert on-site Hot Tapping services, offering a full suite of solutions that includes the supply of equipment, split tees, and other essential accessories for a range of critical applications. Hot tapping is a specialized procedure that allows for the safe and efficient installation of branches, fittings, or valves onto existing pipelines and pressure vessels without shutting down the active system. This service is crucial for industries such as Oil and Gas, petrochemicals, and utilities, where downtime can result in significant operational losses and safety risks.The nature of hot tapping with an active line makes it a highly technical and critical job. Ensuring the integrity of the pipeline and the safety of personnel while performing the tap is paramount. XTORC's experienced team utilizes state-of-the-art equipment and follows strict safety protocols to perform hot tapping on pressurized lines with minimal risk. Our services ensure that pipelines can continue to operate without disruption while necessary modifications or connections are being made.With XTORC's Hot Tapping services, we supply everything needed for the job, including split tees, valves, fittings, and all associated accessories. Our team ensures seamless integration of new systems with the existing infrastructure, providing a safe, efficient solution that minimizes downtime and ensures ongoing operational efficiency. Hot tapping with an active line demands precision, and with XTORC's expertise, you can trust that each tap will be completed to the highest safety and quality standards.Choose XTORC for reliable, safe, and efficient hot tapping solutions that allow your operations to continue uninterrupted, while meeting the demands of critical infrastructure and pipeline projects.
+                {isExpanded 
+                ?
+                 `XTORC provides expert on-site Hot Tapping services, offering a full suite of solutions that includes the supply of equipment, split tees, and other essential accessories for a range of critical applications. Hot tapping is a specialized procedure that allows for the safe and efficient installation of branches, fittings, or valves onto existing pipelines and pressure vessels without shutting down the active system. This service is crucial for industries such as Oil and Gas, petrochemicals, and utilities, where downtime can result in significant operational losses and safety risks.The nature of hot tapping with an active line makes it a highly technical and critical job. Ensuring the integrity of the pipeline and the safety of personnel while performing the tap is paramount. XTORC's experienced team utilizes state-of-the-art equipment and follows strict safety protocols to perform hot tapping on pressurized lines with minimal risk. Our services ensure that pipelines can continue to operate without disruption while necessary modifications or connections are being made.With XTORC's Hot Tapping services, we supply everything needed for the job, including split tees, valves, fittings, and all associated accessories. Our team ensures seamless integration of new systems with the existing infrastructure, providing a safe, efficient solution that minimizes downtime and ensures ongoing operational efficiency. Hot tapping with an active line demands precision, and with XTORC's expertise, you can trust that each tap will be completed to the highest safety and quality standards.Choose XTORC for reliable, safe, and efficient hot tapping solutions that allow your operations to continue uninterrupted, while meeting the demands of critical infrastructure and pipeline projects.`
+                :
+                `XTORC provides expert on-site Hot Tapping services, offering a full suite of solutions that includes the supply of equipment, split tees, and other essential accessories for a range of critical applications. Hot tapping is a specialized procedure that allows for the safe and efficient installation of branches, fittings, or valves onto existing pipelines and pressure vessels without shutting down the active system. This service is crucial for industries such as Oil and Gas, petrochemicals, and utilities, where downtime can result in significant operational losses and safety risks.The nature of hot tapping with an active line makes it a highly technical and critical job. Ensuring the integrity of the pipeline and the safety of personnel while performing the tap is paramount. XTORC's experienced team utilizes state-of-the-art equipment and follows strict safety protocols to perform hot tapping on pressurized lines with minimal risk. Our services ensure that pipelines can continue to operate without disruption while necessary modifications or connections are being made.`}
+              <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-red-500 font-semibold pl-1"
+              >
+                {isExpanded ?'Read Less' :'Read More'}
+
+              </button>
               </p>
             </div>
           </div>

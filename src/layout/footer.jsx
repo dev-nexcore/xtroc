@@ -3,7 +3,7 @@ import React from "react";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { path } from "framer-motion/client";
+
 
 const Footer = () => {
   return (

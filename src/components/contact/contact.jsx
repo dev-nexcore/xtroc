@@ -98,7 +98,7 @@ export default function ContactPage() {
 
       {/* ✅ RIGHT SIDE CARD (Top-Right Fixed) */}
       <motion.div
-        className="hidden md:block absolute top-12 right-[-80] w-[600px]"
+        className="hidden md:block absolute top-9 right-[-70] w-[600px]"
         variants={fadeInUp}
         initial="hidden"
         animate="visible"
@@ -109,7 +109,7 @@ export default function ContactPage() {
         >
           <div className="space-y-4 px-5 text-sm sm:text-base md:text-2xl">
             <p className="flex items-start gap-3">
-              <MapPinned className="text-red-600 flex-shrink-0" /> B-35, Plot No
+              <MapPinned className="text-red-600 flex-shrink-0" /> B-Wing 3rd Floor Office No.35, Plot No
               C-39A, TTC Industrial
               <br /> Area, MIDC Industrial Area, Pawne,
               <br /> Navi Mumbai, Maharashtra 400710

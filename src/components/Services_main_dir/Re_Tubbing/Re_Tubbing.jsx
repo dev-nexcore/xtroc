@@ -1,7 +1,9 @@
-import React from "react";
+'use client'
+import React,{useState} from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const ReTubbing = () => {
+  const [isExpanded, setIsExpanded]= useState(false);
   return (
     <div
       className="bg-black text-white"
@@ -32,7 +34,18 @@ const ReTubbing = () => {
             {/* Description */}
             <div className="space-y-4 text-gray-200 leading-relaxed">
               <p>
-                XTORC offers professional Hydraulic Tools Calibration services to ensure the precision and reliability of your torquing and tensioning equipment. Calibration is essential to maintain the accuracy of hydraulic tools, which play a crucial role in tightening and securing bolts in a wide range of industries, including Oil and Gas, Infrastructure, and Manufacturing.Proper calibration of hydraulic tools is vital for ensuring the correct torque and tension is applied during operations. Even minor discrepancies in calibration can lead to over-tightening or under-tightening, resulting in equipment failure, leaks, or safety hazards. XTORC's calibration services ensure that your hydraulic tools consistently deliver precise performance, preventing costly mistakes and enhancing the safety and efficiency of your projects.Our expert team uses advanced equipment and techniques to calibrate your tools to meet industry standards, ensuring optimal accuracy for every use. Whether you are working on critical bolting operations, machinery maintenance, or structural installations, having properly calibrated tools is crucial to achieving the right fastening strength and minimizing operational risks.With XTORC's Hydraulic Tools Calibration services, you can trust that your equipment will perform to its highest potential, providing accurate and reliable results every time. Keep your projects on track and ensure the safety and integrity of your operations with our precise calibration solutions.
+                {isExpanded ?
+                `XTORC offers professional Hydraulic Tools Calibration services to ensure the precision and reliability of your torquing and tensioning equipment. Calibration is essential to maintain the accuracy of hydraulic tools, which play a crucial role in tightening and securing bolts in a wide range of industries, including Oil and Gas, Infrastructure, and Manufacturing.Proper calibration of hydraulic tools is vital for ensuring the correct torque and tension is applied during operations. Even minor discrepancies in calibration can lead to over-tightening or under-tightening, resulting in equipment failure, leaks, or safety hazards. XTORC's calibration services ensure that your hydraulic tools consistently deliver precise performance, preventing costly mistakes and enhancing the safety and efficiency of your projects.Our expert team uses advanced equipment and techniques to calibrate your tools to meet industry standards, ensuring optimal accuracy for every use. Whether you are working on critical bolting operations, machinery maintenance, or structural installations, having properly calibrated tools is crucial to achieving the right fastening strength and minimizing operational risks.With XTORC's Hydraulic Tools Calibration services, you can trust that your equipment will perform to its highest potential, providing accurate and reliable results every time. Keep your projects on track and ensure the safety and integrity of your operations with our precise calibration solutions.`
+              :
+              `XTORC offers professional Hydraulic Tools Calibration services to ensure the precision and reliability of your torquing and tensioning equipment. Calibration is essential to maintain the accuracy of hydraulic tools, which play a crucial role in tightening and securing bolts in a wide range of industries, including Oil and Gas, Infrastructure, and Manufacturing.Proper calibration of hydraulic tools is vital for ensuring the correct torque and tension is applied during operations. Even minor discrepancies in calibration can lead to over-tightening or under-tightening, resulting in equipment failure, leaks, or safety hazards. XTORC's calibration services ensure that your hydraulic tools consistently deliver precise performance, preventing costly mistakes and enhancing the safety and efficiency of your projects.`}
+                
+              <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-red-500 font-semibold pl-1"
+              >
+                {isExpanded ?'Read Less' :'Read More'}
+
+              </button>
               </p>
             </div>
           </div>

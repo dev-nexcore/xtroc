@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronDown, Rotate3D } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { BsDash } from "react-icons/bs";
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 const Navbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
@@ -286,6 +287,7 @@ const Navbar = () => {
                   {/* Main Categories */}
                   <div className="flex font-bold flex-col h-full w-[300px]">
                     <button
+                    
                       onClick={() => setActiveSubmenu("insitu-machinning")}
                       className={`flex items-center w-full flex-1 px-4 text-base text-gray-800 text-left ${
                         activeSubmenu === "insitu-machinning"
@@ -293,6 +295,7 @@ const Navbar = () => {
                           : "hover:bg-[#D9D9D9]"
                       }`}
                     >
+                      <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 md:mr-4" />
                       Insitu Machinning
                     </button>
 
@@ -304,6 +307,7 @@ const Navbar = () => {
                           : "hover:bg-[#D9D9D9]"
                       }`}
                     >
+                      <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 md:mr-4" />
                       Bolting Tools
                     </button>
 
@@ -315,6 +319,7 @@ const Navbar = () => {
                           : "hover:bg-[#D9D9D9]"
                       }`}
                     >
+                      <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 md:mr-4" />
                       Bolt Tensioner
                     </button>
 
@@ -326,6 +331,7 @@ const Navbar = () => {
                           : "hover:bg-[#D9D9D9]"
                       }`}
                     >
+                      <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 md:mr-4" />
                       Hydraulic Torquing Power Pack
                     </button>
 
@@ -337,6 +343,7 @@ const Navbar = () => {
                           : "hover:bg-[#D9D9D9]"
                       }`}
                     >
+                      <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 md:mr-4" />
                       Accesories
                     </button>
 
@@ -348,6 +355,7 @@ const Navbar = () => {
                           : "hover:bg-[#D9D9D9]"
                       }`}
                     >
+                      <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 md:mr-4" />
                       Impact Sockets
                     </button>
                   </div>

@@ -120,7 +120,7 @@ const ContactUs = () => {
       rel="noopener noreferrer"
       className="text-white  underline hover:text-red-600 mt-1"
     >
-      <p className=" ml-3 text-center">B-35, Plot No C-39A, TTC Industrial Area, <br />
+      <p className=" ml-3 text-center">B-Wing 3rd Floor Office No.35, Plot No C-39A, TTC Industrial Area, <br />
       MIDC Industrial Area, Pawne, Navi Mumbai, <br />
       Maharashtra 400710</p>
     </a>

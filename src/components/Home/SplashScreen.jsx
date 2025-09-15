@@ -12,9 +12,9 @@ const SplashScreen = () => {
       transition={{ duration: 0.8 }}
     >
       <img
-        src="xtroc_india.png"
+        src="XTORC_LOGO.png"
         alt="Splash Logo"
-        className="w-120 h-120 object-contain"
+        className="w-150 h-150 object-contain "
       />
     </motion.div>
   );
