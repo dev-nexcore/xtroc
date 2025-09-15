@@ -34,23 +34,13 @@ const Socket = () => {
             </div>
 
             {/* Description */}
-            {/* <div className="space-y-4 text-gray-200 leading-relaxed">
+             <div className="space-y-4 text-gray-200 leading-relaxed text-2xl">
               <p>
-                A hydraulic torque wrench is a power tool designed to exert torque on a fastener to achieve proper tightening or loosening of a connection through the use of hydraulics. A torque wrench is applied to the nut either directly or in conjunction with an impact socket. Hydraulic torque wrenches apply a predetermined, controlled amount of torque to a properly lubricated fastener.
+                  The range of Imperial Impact Sockets with square drives is from 3/4" to 2.1/2" and the across flat
+ sizes go up to 6.7/8". The Metric Impact Sockets  offer 56 models with square drives ranging from
+ 3/4" to 2.1/2" and across flat sizes up to 145mm.
               </p>
-              <p>
-                The hydraulic torque wrench was invented in early 1970s. The concept of a hydraulic powered torque wrench was first introduced on the market sometime in the early 1960s in a primitive form, and several key advances have been developed by manufacturers since that time which provided major advancements in the technology and usability of the tools far beyond the original concept tool.
-              </p>
-              <p>
-                Newer tools offer benefits such as lighter weights, smaller nose radius dimensions for fitting into tight spaces, use of exotic alloys, actuation triggers on the tool itself, multi-position reaction members, 360° × 360° hose swivels, and the ability to run multiple tools simultaneously from a single power pack.
-              </p>
-              <p>
-                There are two types of hydraulic torque wrenches: square drive and low profile. Depending on the application, one or the other will be the best tool to use.
-              </p>
-              <p>
-                The main characteristics of a hydraulic torque wrench which set it apart from other powered wrenches of similar function are that (1) it must generate torque using only hydraulic means (2) it must be self ratcheting, and (3) it must include an accurate method of determining the amount of torque applied.
-              </p>
-            </div> */}
+            </div> 
           </div>
 
           {/* Right Section */}

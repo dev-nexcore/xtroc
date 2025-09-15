@@ -51,21 +51,17 @@ const SquareDrive = () => {
                 Square Drive - XTS Series
 
               </h1>
-              <div className="w-28 sm:w-40 md:w-60 h-1 bg-red-600 rounded-2xl"></div>
+              <div className="w-28 sm:w-40 md:w-110 h-1 bg-red-600 rounded-2xl"></div>
             </div>
 
             {/* Description */}
-            {/* <div className="text-base sm:text-lg md:text-2xl p-2 sm:p-4 font-base text-gray-200 leading-relaxed">
+             <div className="text-base sm:text-lg md:text-2xl p-2 sm:p-4 font-base text-gray-200 leading-relaxed">
               <p>
-                Model No.: XHP-1500 Maximum Working Pressure: 1600 Bar Tanks Size:
-                1.8 / 2.4 Ltr. The XTORC Two-Stage Hand Pumps come with Standard
-                Pressure Gauge; this gives the user precise and safe control over
-                the work carried out. The gauge is directly mounted onto the pump
-                and is well protected by the specially designed pump lever. - Return
-                connections on all pumps - Robust design - Aluminum Tank - Easy and
-                simple maintenance
+                The range of Imperial Impact Sockets with square drives is from 3/4" to 2.1/2" and the across flat
+ sizes go up to 6.7/8". The Metric Impact Sockets offer 56 models with square drives ranging from
+ 3/4" to 2.1/2" and across flat sizes up to 145mm
               </p>
-            </div> */}
+            </div> 
           </div>
         </div>
       </div>
