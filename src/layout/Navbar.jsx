@@ -194,7 +194,7 @@ const Navbar = () => {
     },
     {
       id: "re-tubing",
-      name: "Re-Tubing of Boilers & Heat Exchangers",
+      name: "Callibration",
       img: "callib.avif",
       path: "retubbing",
       width: 400,
