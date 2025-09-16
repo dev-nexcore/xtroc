@@ -62,7 +62,7 @@ const NutSplitter = () => {
                   rounded-tl-2xl rounded-br-2xl rounded-tr-none rounded-bl-none
                   sm:h-[400px] h-[200px] flex items-center justify-center text-black">
                 <img
-                  src="nutSplitter.png"
+                  src="#.png"
                   alt=" image Not provided"
                   className="w-full h-full object-contain"
                 />
