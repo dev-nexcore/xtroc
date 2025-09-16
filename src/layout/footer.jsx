@@ -14,9 +14,9 @@ const Footer = () => {
           <div className="space-y-4 pl-2 sm:pl-4">
             <div className="w-60 h-20 sm:w-72 sm:h-24 flex items-center">
               <img
-                src="/xtorc.png"
+                src="/XTORC_LOGO.png"
                 alt="Xtorc Logo"
-                className="w-[24rem] h-[8rem] sm:w-[26rem] sm:h-[9rem] xl:-ml-6"
+                className="w-[24rem] h-[8rem] sm:w-[26rem] sm:h-[20rem] xl:-ml-0"
               />
             </div>
 

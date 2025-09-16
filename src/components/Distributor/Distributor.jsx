@@ -57,12 +57,13 @@ function DistributorPage() {
 
         {/* Bottom Description Text */}
         <motion.p
-          variants={fadeInUp}
-          className="text-white text-lg leading-relaxed max-w-2xl mx-auto mt-6 text-center font-poppins font-base "
-        >
-         Join our global network of partners and deliver industry-leading solutions to your market with unmatched support and exclusive benefits. <br/>
-With 40+ distributors worldwide and over $10M in annual revenue growth, our partners benefit from exclusive territory rights, comprehensive training, and dedicated account management.
-        </motion.p>
+  variants={fadeInUp}
+  className="text-white text-lg leading-relaxed max-w-2xl mx-auto mt-6 text-center font-poppins font-base "
+>
+  Be part of our journey as we grow. At Xtorc, we’re building strong partnerships with passionate distributors who believe in innovation and long-term impact.  
+  <br />
+  As an early partner, you’ll gain access to new markets, priority support, and the chance to shape the future of our distribution network right from the start.
+</motion.p>
       </motion.div>
     </div>
   );

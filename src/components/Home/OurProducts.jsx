@@ -116,7 +116,7 @@ const OurProducts = () => {
   >
     {/* Red background wrapper */}
     <div
-      className={`flex items-center justify-center rounded-2xl bg-red-600 transition-all duration-500 ${
+      className={`flex items-center justify-center rounded-2xl bg-white border-red-500 transition-all duration-500 ${
         index === 1 ? "w-80 h-60" : "w-48 h-36"
       }`}
     >

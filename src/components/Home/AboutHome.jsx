@@ -99,7 +99,7 @@ const AboutHome = () => {
   <motion.h2
     variants={item}
     className="text-white xl:font-bold text-center lg:text-left 
-               text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+               text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl md:mr-100 lg:mr-0
                leading-tight"
     style={{ fontFamily: "Impact, sans-serif" }}
   >
@@ -108,25 +108,26 @@ const AboutHome = () => {
 
   {/* Right Images */}
   <motion.div
-    variants={item}
-    className="relative flex-shrink-0"
-  >
-    {/* Main Logo */}
-    <img
-      src="/xtroc.png"
-      alt="Xtorc"
-      className="w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 h-auto"
-    />
+  variants={item}
+  className="relative flex-shrink-0 md:inline-block md:whitespace-nowrap md:mt-[-80] lg:mt-0 md:mr-[-160] lg:mr-0"
+>
+  {/* Main Logo */}
+  <img
+    src="/xtroc.png"
+    alt="Xtorc"
+    className="w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 h-auto "
+  />
 
-    {/* Overlay Image */}
-    <img
-      src="/build.png"
-      alt="Build"
-      className="absolute w-20 sm:w-28 md:w-36 lg:w-40 xl:w-48 
-                 -bottom-20 sm:-bottom-16 md:-bottom-36 lg:-bottom-40 xl:-bottom-46
-                 -right-14 sm:-right-6 md:-right-24 lg:-right-24 xl:-right-28"
-    />
-  </motion.div>
+  {/* Overlay Image */}
+  <img
+    src="/build.png"
+    alt="Build"
+    className="absolute w-20 sm:w-28 md:w-36 lg:w-40 xl:w-48 
+               -bottom-20 sm:-bottom-16 md:-bottom-36 lg:-bottom-40 xl:-bottom-46
+               -right-14 sm:-right-6 md:-right-24 lg:-right-24 xl:-right-28"
+  />
+</motion.div>
+
 </div>
 
 
