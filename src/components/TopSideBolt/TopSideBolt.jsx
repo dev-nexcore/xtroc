@@ -28,7 +28,7 @@ const TopSideBolt = () => {
                   h-[250px] sm:h-[300px] md:h-[400px] w-full max-w-[500px] flex items-center justify-center"
               >
                 <img
-                  src="images/BoltingTools/"
+                  src="product2.png"
                   alt="Hydraulic Nut Splitter"
                   className="w-full h-full object-contain"
                 />
@@ -55,17 +55,11 @@ const TopSideBolt = () => {
             </div>
 
             {/* Description */}
-            {/* <div className="text-base sm:text-lg md:text-2xl p-2 sm:p-4 font-base text-gray-200 leading-relaxed">
+             <div className="text-base sm:text-lg md:text-2xl p-2 sm:p-4 font-base text-gray-200 leading-relaxed">
               <p>
-                Model No.: XHP-1500 Maximum Working Pressure: 1600 Bar Tanks Size:
-                1.8 / 2.4 Ltr. The XTORC Two-Stage Hand Pumps come with Standard
-                Pressure Gauge; this gives the user precise and safe control over
-                the work carried out. The gauge is directly mounted onto the pump
-                and is well protected by the specially designed pump lever. - Return
-                connections on all pumps - Robust design - Aluminum Tank - Easy and
-                simple maintenance
+                A Top Side Bolt Tensioner is a hydraulic tool designed to apply controlled tension to bolts and studs from the top side of the joint. It uses hydraulic pressure to elongate the bolt, allowing the nut to be easily rotated down by hand without frictional losses. This ensures accurate preload, uniform tightening, and minimal risk of bolt fatigue or over-torque.
               </p>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

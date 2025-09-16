@@ -67,9 +67,9 @@ const Navbar = () => {
 
 // ✅ children of bolt-tensioner
 "bolt-tensioner": [
-  { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img:"",path: "topsidebolt" },
-  { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner",img:"images/bolt-tensioning/multi-stud.png", path: "multistagebolt" },
-  { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img:"",path: "subseabolt" },
+  { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img:"product2.png",path: "topsidebolt" },
+  { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner",img:"multistagebolt.jpg", path: "multistagebolt" },
+  { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img:"subsea.jpg",path: "subseabolt" },
 ],
 
     // "bolt-tensioner": [
@@ -105,7 +105,7 @@ const Navbar = () => {
         img: "images/Power-Pack/XAP 700.png",
         path: "xap700",
       },
-      { id: "xep1500", name: "XEP1500", img: null, path: "xep1500" },
+      { id: "xep1500", name: "XEP1500", img: "images/Power-Pack/xep1500.png", path: "xep1500" },
       {
         id: "xap1500",
         name: "XAP1500",
@@ -137,8 +137,11 @@ const Navbar = () => {
       {
         id: "nut-splitters",
         name: "Nut Splitters",
-        img: null,
-        path: "nutsplitter",
+        img: "nut_spilitter.jpg",
+        path: "hydralicnut",
+        
+        width: 600,
+        height: 400
       },
       {
         id: "sockets",

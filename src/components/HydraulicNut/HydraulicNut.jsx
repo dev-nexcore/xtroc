@@ -28,9 +28,9 @@ const HydraulicNut = () => {
                   h-[320px] flex items-center justify-center"
               >
                 <img
-                  src="light.png"
+                  src="nut_spilitter.jpg"
                   alt="Hydraulic Nut Splitter"
-                  className="w-full h-auto object-contain rotate-[-28deg]"
+                  className="w-[25rem] h-auto object-contain "
                 />
               </div>
             </div>

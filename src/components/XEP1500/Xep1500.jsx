@@ -38,8 +38,8 @@ const Xep1500= () => {
               <p>
                 HYDRAULIC BOLT TENSIONERS<br/>
  • XEP1500/XAP1500 HYDRAULIC<br/>
- • POWER PACK FOR BOLT<br/>
- • TENSIONERS  <br/>
+ • POWER PACK FOR BOLT
+  TENSIONERS  <br/>
 • ACCESORIES<br/>
 
               </p>

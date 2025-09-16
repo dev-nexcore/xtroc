@@ -8,7 +8,7 @@ const OurProducts = () => {
   const products = [
     {
       id: 0,
-      src: "/product1.png",
+      src: "/SquareDrive.png",
       alt: "Product 1",
       title: "Hydraulic Torque Wrenches",
     },

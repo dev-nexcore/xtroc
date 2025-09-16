@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Home = () => {
   const router = useRouter();
   const products = [
-    { id: 0, src: "/product1.png", alt: "Product 1" },
+    { id: 0, src: "/SquareDrive.png", alt: "Product 1" },
     { id: 1, src: "/product2.png", alt: "Product 2" },
     { id: 2, src: "/product3.png", alt: "Product 3" },
     { id: 3, src: "/product4.png", alt: "Product 4" },
