@@ -137,8 +137,8 @@ const Navbar = () => {
       {
         id: "nut-splitters",
         name: "Nut Splitters",
-        img: "nut_spilitter.jpg",
-        path: "hydralicnut",
+        img: "nutsplitter.png",
+        path: "nutsplitter",
         
         width: 600,
         height: 400
