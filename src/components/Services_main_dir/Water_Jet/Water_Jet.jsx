@@ -59,7 +59,7 @@ const WaterJet = () => {
         w-full md:w-[550px] max-w-[500px] h-[400px] sm:h-[500px] md:h-[500px] flex items-center justify-center"
     >
       <img
-        src="jet.png"
+        src="wjet.jpg"
         alt="Hydraulic Bolt Tensioner"
         className="w-[500px] h-full"
       />
