@@ -206,7 +206,7 @@ const Navbar = () => {
     {
       id: "water-jet",
       name: "Water Jet Cutting",
-      img: "jet.png",
+      img: "wjet.jpg",
       path: "waterjet",
       width: 400,
       height: 400,      
