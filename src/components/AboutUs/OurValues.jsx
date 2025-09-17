@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
-const CountingNumber = ({ target, duration = 2000 }) => {
+const CountingNumber = ({ target, duration = 3000 ,start}) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const CountingNumber = ({ target, duration = 2000 }) => {
         cancelAnimationFrame(animationFrame);
       }
     };
-  }, [target, duration]);
+  }, [target, duration,start]);
 
   return <span>{count}</span>;
 };
@@ -35,6 +35,9 @@ const CountingNumber = ({ target, duration = 2000 }) => {
 const OurValues = () => {
   const [missionVisible, setMissionVisible] = useState(false);
   const [visionVisible, setVisionVisible] = useState(false);
+
+  const statsRef = useRef(null);
+  const statsInView = useInView(statsRef, { once: true, amount: 0.3 });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,11 +69,12 @@ const OurValues = () => {
     <div className="bg-black text-white min-h-screen p-8">
       <div className="max-w-7xl mx-auto">
         {/* Stats Section */}
-        <motion.div
+     <motion.div
+          ref={statsRef} // attach ref
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3}}
           className="mb-16"
         >
           <div className="flex flex-col md:flex-row items-center justify-center gap-2 lg:gap-0 ">
@@ -83,13 +87,15 @@ const OurValues = () => {
               }}
             >
               <div
-                className="flex text-7xl font-bold mb-2 p-10 px-40  "
+                className="flex text-7xl font-bold mb-2 p-10 px-40"
                 style={{ color: "#D01A1A" }}
               >
-                <CountingNumber target={25} />
-              <div className="text-white md:text-6xl text-4xl md:px-4 md:py-2 py-5 px-5">Products</div>
+                {/* Pass statsInView as start */}
+                <CountingNumber target={25} start={statsInView} />
+                <div className="text-white md:text-6xl text-4xl md:px-4 md:py-2 py-5 px-5">
+                  Products
+                </div>
               </div>
-              {/* <div className="text-white text-xl">Products</div> */}
             </div>
 
             {/* 15 Years Card */}
@@ -100,20 +106,14 @@ const OurValues = () => {
                 clipPath: "polygon(25% 0px, 100% 0px, 100% 100%, 0% 100%)",
               }}
             >
-              {/* <div
-                className="text-6xl font-bold mb-2"
-                style={{ color: "#D01A1A" }}
-              >
-                <CountingNumber target={15} />
-              </div> */}
-              <div className="flex text-white text-2xl  md:px-38 lg:px-30 md:py-0 lg:py-2 px-40">
+              <div className="flex text-white text-2xl md:px-38 lg:px-30 md:py-0 lg:py-2 px-40">
                 Years of Combined Sales <br /> & Operation Expertise
                 <div
-                className="text-7xl lg:text-7xl font-bold mb-2 mt-10 px-2 lg:mt-3 "
-                style={{ color: "#D01A1A" }}
-              >
-                <CountingNumber target={15} />
-              </div>
+                  className="text-7xl lg:text-7xl font-bold mb-2 mt-10 px-2 lg:mt-3"
+                  style={{ color: "#D01A1A" }}
+                >
+                  <CountingNumber target={15} start={statsInView} />
+                </div>
               </div>
             </div>
           </div>
