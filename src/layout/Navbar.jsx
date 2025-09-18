@@ -19,6 +19,19 @@ const Navbar = () => {
   const serviceRef = useRef(null);
   const productRef = useRef(null);
 
+  const closeProductDropdown = () => {
+  setIsProductsOpen(false);
+  setActiveSubmenu(null);
+  setSelectedProduct(null);
+  setActiveChildMenu([]);
+};
+
+// Function to close all service dropdowns
+const closeServiceDropdown = () => {
+  setIsServicesOpen(false);
+  setSelectedService(null);
+};
+
   // Subcategories + images
   const categories = {
     "insitu-machinning": [
@@ -439,7 +452,10 @@ const Navbar = () => {
                               width: `${selectedProduct.width || 400}px`,
                               height: `${selectedProduct.height || 400}px`,
                             }}
-                            onClick={() => router.push(selectedProduct.path)}
+                            onClick={() => {
+  closeProductDropdown();
+  router.push(selectedProduct.path);
+}}
                           />
                         ) : (
                           <div
@@ -448,7 +464,10 @@ const Navbar = () => {
                               width: `${selectedProduct.width || 400}px`,
                               height: `${selectedProduct.height || 300}px`,
                             }}
-                            onClick={() => router.push(selectedProduct.path)}
+                            onClick={() => {
+  closeProductDropdown();
+  router.push(selectedProduct.path);
+}}
                           >
                             Image not provided
                           </div>
@@ -520,7 +539,10 @@ const Navbar = () => {
                               width: `${selectedService.width}px`,
                               height: `${selectedService.height}px`,
                             }}
-                            onClick={() => router.push(selectedService.path)}
+                            onClick={() => {
+  closeServiceDropdown();
+  router.push(selectedService.path);
+}}
                           />
                         ) : (
                           <div
@@ -529,7 +551,10 @@ const Navbar = () => {
                               width: `${selectedService.width}px`,
                               height: `${selectedService.height}px`,
                             }}
-                            onClick={() => router.push(selectedService.path)}
+                            onClick={() => {
+  closeServiceDropdown();
+  router.push(selectedService.path);
+}}
                           >
                             Image not provided
                           </div>
