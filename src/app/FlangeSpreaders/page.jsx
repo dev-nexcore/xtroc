@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
 
- <Navbar/>
+ 
  <WhatsappLogo/>
  <MobileNavbar/>
      <div className="hidden md:block">

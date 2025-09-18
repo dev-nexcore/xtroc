@@ -12,7 +12,7 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      <Navbar/>
+      
       <MobileNavbar/>
       <WhatsappLogo/>
       <ChatBoat/>
