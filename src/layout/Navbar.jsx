@@ -25,7 +25,7 @@ const Navbar = () => {
       {
         id: "pipe-cutting",
         name: "Pipe Cutting Machine XTCB Series",
-        img: "images/Insitumachinning/pipe.png",
+        img: "product4.png",
         path: "pipeCutting",
         width: 500,
         height: 400
@@ -68,7 +68,7 @@ const Navbar = () => {
 // ✅ children of bolt-tensioner
 "bolt-tensioner": [
   { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img:"product2.png",path: "topsidebolt" },
-  { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner",img:"multistagebolt.jpg", path: "multistagebolt" },
+  { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner",img:"multistagebolt.png", path: "multistagebolt" },
   { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img:"subsea.jpg",path: "subseabolt" },
 ],
 
@@ -137,7 +137,7 @@ const Navbar = () => {
       {
         id: "nut-splitters",
         name: "Nut Splitters",
-        img: "nut_spilitter.jpg",
+        img: "nut_spilitter.png",
         path: "hydralicnut",
         
         width: 600,

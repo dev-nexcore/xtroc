@@ -9,7 +9,7 @@ const categories = {
     {
       id: "pipe-cutting",
       name: "Pipe Cutting Machine XTCB Series",
-      img: "images/Insitumachinning/pipe.png",
+      img: "product4.png",
       path: "pipeCutting",
     },
     {
@@ -61,7 +61,7 @@ const categories = {
         {
           id: "multi-stage-tensioner",
           name: "Multi Stage Bolt Tensioner",
-          img: "multistagebolt.jpg",
+          img: "multistagebolt.png",
           path: "multistagebolt",
         },
         {
@@ -118,7 +118,7 @@ const categories = {
     {
       id: "nut-splitters",
       name: "Nut Splitters",
-      img: "nut_spilitter.jpg",
+      img: "nut_spilitter.png",
       path: "nutsplitter",
     },
     {

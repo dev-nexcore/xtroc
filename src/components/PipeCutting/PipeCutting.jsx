@@ -45,7 +45,7 @@ const PipeCutting = () => {
                   rounded-tl-2xl rounded-br-2xl rounded-tr-none rounded-bl-none 
                 h-[300px]  sm:h-[400px] flex items-center justify-center">
                 <img
-                  src="/images/insitumachinning/pipe.png"
+                  src="/product4.png"
                   alt="Hydraulic Bolt Tensioner"
                   className="w-full h-full object-contain"
                 />
