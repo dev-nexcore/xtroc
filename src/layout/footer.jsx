@@ -16,7 +16,7 @@ const Footer = () => {
               <img
                 src="/XTORC_LOGO.png"
                 alt="Xtorc Logo"
-                className="w-[24rem] h-[8rem] sm:w-[26rem] sm:h-[20rem] xl:-ml-0"
+                className="w-[24rem] h-[12rem] sm:w-[26rem] sm:h-[20rem] xl:-ml-0"
               />
             </div>
 
@@ -93,7 +93,7 @@ const Footer = () => {
                 { name: "Products", path: "/product" },
                 { name: "Download", path: "download" },
                 
-                { name: "Services", path: "/services" },
+                // { name: "Services", path: "/services" },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center space-x-2">
                   <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 md:mr-4" />
@@ -161,7 +161,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start space-x-2">
                 <MapPin className="w-5 h-5 text-red-600 mt-1 flex-shrink-0 md:mr-4" />
-                <p className="text-xs sm:text-sm leading-relaxed">
+                <p className="text-xs sm:text-sm  leading-relaxed">
                   B-Wing 3rd Floor Office No.35, Plot No C-39A, TTC Industrial Area, MIDC Industrial
                   Area, Pawne, Navi Mumbai, Maharashtra 400710
                 </p>

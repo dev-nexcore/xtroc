@@ -136,7 +136,7 @@ const AboutHome = () => {
 
         {/* Tagline */}
         <p className="text-center text-3xl md:text-5xl font-impact text-white" style={{ fontFamily: "Impact"}}>
-          "The X Factor in Your Industrial Needs"
+          The X Factor in Your Industrial Needs
         </p>
       </motion.div>
     </>

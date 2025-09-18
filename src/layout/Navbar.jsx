@@ -576,7 +576,7 @@ const Navbar = () => {
               Contact us
             </Link>
             <Link
-              href="/Joinus"
+              href="/joinus"
               className={`text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold ${
                 pathname === "/Joinus" ? "border-b-2 border-red-500" : ""
               }`}

@@ -21,7 +21,7 @@ const categories = {
     {
       id: "flange-facing",
       name: "Flange Facing Machine",
-      img: null,
+      img: "facing.jpg",
       path: "flangefacing",
     },
   ],
@@ -31,38 +31,46 @@ const categories = {
       name: "Hydraulic Torque Wrench",
       img: null,
       path: "hydraulictorque",
+      subItems: [
+        {
+          id: "square-drive",
+          name: "Square Drive - XTS Series",
+          img: "images/BoltingTools/squaredrive.png",
+          path: "squaredrive",
+        },
+        {
+          id: "hex-drive",
+          name: "Hex Drive - XTH Series",
+          img: "images/BoltingTools/hexdrive.png",
+          path: "hexdrive",
+        },
+      ]
     },
     {
-      id: "square-drive",
-      name: "Square Drive - XTS Series",
-      img: "images/BoltingTools/squaredrive.png",
-      path: "squaredrive",
-    },
-    {
-      id: "hex-drive",
-      name: "Hex Drive - XTH Series",
-      img: "images/BoltingTools/hexdrive.png",
-      path: "hexdrive",
-    },
-  ],
-  "bolt-tensioner": [
-    {
-      id: "topside-tensioner",
-      name: "Top Side Bolt Tensioner",
+      id: "bolt-tensioner",
+      name: "Bolt Tensioner",
       img: null,
-      path: "topsidebolt",
-    },
-    {
-      id: "multi-stage-tensioner",
-      name: "Multi Stage Bolt Tensioner",
-      img: null,
-      path: "multistagebolt",
-    },
-    {
-      id: "subsea-tensioner",
-      name: "Subsea Bolt Tensioner",
-      img: null,
-      path: "subseabolt",
+      path: "bolttensioner",
+      subItems: [
+        {
+          id: "topside-tensioner",
+          name: "Top Side Bolt Tensioner",
+          img: "product2.png",
+          path: "topsidebolt",
+        },
+        {
+          id: "multi-stage-tensioner",
+          name: "Multi Stage Bolt Tensioner",
+          img: "multistagebolt.jpg",
+          path: "multistagebolt",
+        },
+        {
+          id: "subsea-tensioner",
+          name: "Subsea Bolt Tensioner",
+          img: "subsea.jpg",
+          path: "subseabolt",
+        },
+      ]
     },
   ],
   "hydraulic-powerpack": [
@@ -78,7 +86,7 @@ const categories = {
       img: "images/Power-Pack/XAP 700.png",
       path: "xap700",
     },
-    { id: "xep1500", name: "XEP1500", img: null, path: "xep1500" },
+    { id: "xep1500", name: "XEP1500", img: "images/Power-Pack/XAP1500.png", path: "xep1500" },
     {
       id: "xap1500",
       name: "XAP1500",
@@ -110,7 +118,7 @@ const categories = {
     {
       id: "nut-splitters",
       name: "Nut Splitters",
-      img: null,
+      img: "nut_spilitter.jpg",
       path: "nutsplitter",
     },
     {
@@ -184,7 +192,8 @@ const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
   const [activeSub, setActiveSub] = useState(null);
-  const [activeService, setActiveService] = useState(false); // NEW state for Services
+  const [activeSubItem, setActiveSubItem] = useState(null);
+  const [activeService, setActiveService] = useState(false);
   const pathname = usePathname();
 
   return (
@@ -253,20 +262,64 @@ const MobileNavbar = () => {
                     {activeSub === cat && (
                       <div className="ml-4 mt-1 space-y-2">
                         {categories[cat].map((item) => (
-                          <Link
-                            key={item.id}
-                            href={`/${item.path}`} // add leading slash for correct routing
-                            className="flex items-center gap-2 py-1"
-                          >
-                            {item.img && (
-                              <img
-                                src={`/${item.img}`}
-                                alt={item.name}
-                                className="w-10 h-10 object-contain"
-                              />
+                          <div key={item.id}>
+                            {/* Main item */}
+                            <div className="flex items-center justify-between">
+                              <Link
+                                href={`/${item.path}`}
+                                className="flex items-center gap-2 py-1 flex-1"
+                              >
+                                {item.img && (
+                                  <img
+                                    src={`/${item.img}`}
+                                    alt={item.name}
+                                    className="w-10 h-10 object-contain"
+                                  />
+                                )}
+                                <span>{item.name}</span>
+                              </Link>
+                              
+                              {/* Sub-item dropdown button */}
+                              {item.subItems && (
+                                <button
+                                  onClick={() =>
+                                    setActiveSubItem(
+                                      activeSubItem === item.id ? null : item.id
+                                    )
+                                  }
+                                  className="ml-2"
+                                >
+                                  {activeSubItem === item.id ? (
+                                    <ChevronUp className="h-4 w-4" />
+                                  ) : (
+                                    <ChevronDown className="h-4 w-4" />
+                                  )}
+                                </button>
+                              )}
+                            </div>
+
+                            {/* Sub-items */}
+                            {item.subItems && activeSubItem === item.id && (
+                              <div className="ml-6 mt-1 space-y-1">
+                                {item.subItems.map((subItem) => (
+                                  <Link
+                                    key={subItem.id}
+                                    href={`/${subItem.path}`}
+                                    className="flex items-center gap-2 py-1"
+                                  >
+                                    {subItem.img && (
+                                      <img
+                                        src={`/${subItem.img}`}
+                                        alt={subItem.name}
+                                        className="w-8 h-8 object-contain"
+                                      />
+                                    )}
+                                    <span className="text-sm">{subItem.name}</span>
+                                  </Link>
+                                ))}
+                              </div>
                             )}
-                            <span>{item.name}</span>
-                          </Link>
+                          </div>
                         ))}
                       </div>
                     )}
