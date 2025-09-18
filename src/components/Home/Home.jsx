@@ -11,7 +11,7 @@ const Home = () => {
     { id: 2, src: "/product2.png", alt: "Product 3" },
     { id: 3, src: "/product4.png", alt: "Product 4" },
     { id: 4, src: "/product3.png", alt: "Product 4" },
-    { id: 5, src: "/product6.png", alt: "Product 4" },
+    // { id: 5, src: "/product6.png", alt: "Product 4" },
   ];
 
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
