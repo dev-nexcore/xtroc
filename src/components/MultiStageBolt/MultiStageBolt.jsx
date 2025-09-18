@@ -86,7 +86,7 @@ const MultiStageBolt = () => {
                   rounded-tl-2xl rounded-br-2xl rounded-tr-none rounded-bl-none
                   h-[320px] flex items-center justify-center">
                 <img
-                  src="multistagebolt.jpg"
+                  src="multistagebolt.png"
                   alt="Multi Stage Bolt Tensioner"
                   className="w-full h-[19rem] object-contain "
                 />

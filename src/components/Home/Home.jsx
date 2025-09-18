@@ -6,10 +6,12 @@ import { motion } from "framer-motion";
 const Home = () => {
   const router = useRouter();
   const products = [
-    { id: 0, src: "/SquareDrive.png", alt: "Product 1" },
-    { id: 1, src: "/product2.png", alt: "Product 2" },
-    { id: 2, src: "/product3.png", alt: "Product 3" },
+    { id: 0, src: "/SquareDrive.png", alt: "Product 1"},
+    { id: 1, src: "/product5.png", alt: "Product 2" },
+    { id: 2, src: "/product2.png", alt: "Product 3" },
     { id: 3, src: "/product4.png", alt: "Product 4" },
+    { id: 4, src: "/product3.png", alt: "Product 4" },
+    { id: 5, src: "/product6.png", alt: "Product 4" },
   ];
 
   const [currentProductIndex, setCurrentProductIndex] = useState(0);

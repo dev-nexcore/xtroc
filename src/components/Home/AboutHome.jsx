@@ -118,14 +118,14 @@ const AboutHome = () => {
     className="w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 h-auto "
   />
 
-  {/* Overlay Image */}
-  <img
+
+  {/* <img
     src="/build.png"
     alt="Build"
     className="absolute w-20 sm:w-28 md:w-36 lg:w-40 xl:w-48 
                -bottom-20 sm:-bottom-16 md:-bottom-36 lg:-bottom-40 xl:-bottom-46
                -right-14 sm:-right-6 md:-right-24 lg:-right-24 xl:-right-28"
-  />
+  /> */}
 </motion.div>
 
 </div>
@@ -136,7 +136,7 @@ const AboutHome = () => {
 
         {/* Tagline */}
         <p className="text-center text-3xl md:text-5xl font-impact text-white" style={{ fontFamily: "Impact"}}>
-          "The X Factor in Your Industrial Needs"
+          The X Factor in Your Industrial Needs
         </p>
       </motion.div>
     </>

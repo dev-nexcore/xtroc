@@ -187,6 +187,20 @@ const OurValues = () => {
           </button>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex justify-center mb-8"
+        >
+          <button className=" text-red-500 px-8 py-3 text-4xl font-semibold  hover:bg-gray-200 transition-colors sm:hidden">
+            Our Values
+            <div className="h-1 w-60 bg-red-500 mt:2 rounded-lg"></div>
+          </button>
+          
+        </motion.div>
+
         {/* Values Section */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -292,7 +306,7 @@ const OurValues = () => {
             </div>
 
            
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block">
               <div className="w-60 h-60 rounded-full flex items-center justify-center bg-[#D01A1A] text-white hover:bg-white hover:text-[#D01A1A] transition-colors duration-300 shadow-lg">
                 <h4 className="text-3xl font-bold text-center leading-tight">
                   Our
