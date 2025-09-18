@@ -19,7 +19,7 @@ const products = [
   {
     id: 1,
     title: "Hydraulic Torque Wrenches",
-    img: "product1.png",
+    img: "images/BoltingTools/squaredrive.png",
     desc: "Designed for precision and durability, our hydraulic torque wrenches are ideal for heavy-duty applications across multiple industries, ensuring accurate and efficient tightening or loosening of bolts."
   },
   {

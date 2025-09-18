@@ -197,7 +197,7 @@ const Navbar = () => {
     },
     {
       id: "re-tubing",
-      name: "Callibration",
+      name: "Calibration",
       img: "callib.avif",
       path: "retubbing",
       width: 400,
