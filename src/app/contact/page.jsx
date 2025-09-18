@@ -9,7 +9,7 @@ import Navbar from "@/layout/Navbar";
 export default function Page() {
   return (
     <>
-      <Navbar />
+      
       <MobileNavbar />
       <ContactPage />
       <WhatsappLogo />

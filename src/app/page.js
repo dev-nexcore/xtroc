@@ -38,7 +38,7 @@ const Page = () => {
             transition={{ duration: 1 }}
           >
             <div className="hidden md:block">
-              <Navbar />
+             
             </div>
             <div className="md:hidden">
               <MobileNavbar />

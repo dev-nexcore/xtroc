@@ -111,7 +111,7 @@ const ContactUs = () => {
   viewport={{ once: true }}
   className="flex items-center gap-4"
 >
-  <MapPin className="w-6 h-6 text-red-600 mt-1 flex-shrink-0 mb-2 md:ml-3" />
+  <MapPin className="w-6 h-6 text-red-600 -mt-6 flex-shrink-0 mb-2 md:ml-3" />
 
   <div className="relative group">
     <a
@@ -120,9 +120,7 @@ const ContactUs = () => {
       rel="noopener noreferrer"
       className="text-white  underline hover:text-red-600 mt-1"
     >
-      <p className=" ml-3 text-center">B-Wing 3rd Floor Office No.35, Plot No C-39A, TTC Industrial Area, <br />
-      MIDC Industrial Area, Pawne, Navi Mumbai, <br />
-      Maharashtra 400710</p>
+      <p className="ml-3 text-lg mb-5 mt-10 text-left">B-Wing 3rd Floor Office No.35, Plot No C-39A, TTC Industrial Area,MIDC Industrial Area, Pawne, Navi Mumbai Maharashtra 400710</p>
     </a>
 
     {/* Tooltip */}
@@ -142,9 +140,9 @@ const ContactUs = () => {
         />
       </svg>
        <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 hidden group-hover:flex items-center gap-2 bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg">
-<div className="absolute left-1 -translate-x-1 -top-14 mt-2 hidden group-hover:flex items-center bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+<div className="absolute left-1 -translate-x-1 -top-14 mt-10 hidden group-hover:flex items-center bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg">
   <div className="flex items-center gap-2">
-    <FaLink className="text-red-500" />
+    <FaLink className="text-red-500 " />
     <span>Open maps.app.goo.gl/Djw4bBEvEV2WwS3NA</span>
   </div>
 </div>
@@ -163,10 +161,10 @@ const ContactUs = () => {
                   viewport={{ once: true }}
                   className="flex items-center gap-4"
                 >
-                  <Mail className="w-6 h-6 text-red-600 flex-shrink-0 md:ml-3 " />
+                  <Mail className="w-6 h-6 text-red-600 flex-shrink-0 md:ml-3 -mt-6 " />
                   <a
                     href="mailto:ENQUIRY@XTORCIND.COM"
-                    className="text-white hover:text-red-600 transition-colors ml-5"
+                    className="text-white hover:text-red-600 transition-colors ml-5 mb-5 text-lg"
                   >
                     ENQUIRY@XTORCIND.COM
                   </a>
@@ -183,7 +181,7 @@ const ContactUs = () => {
                   <div className="space-y-1 ml-5">
                     <a
                       href="tel:+919619561695"
-                      className="block text-white hover:text-red-600 transition-colors"
+                      className="block text-white hover:text-red-600 transition-colors text-lg"
                     >
                       +91 9619561695 / 8108810057
                     </a>

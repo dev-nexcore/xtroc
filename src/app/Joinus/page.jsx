@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <>
     
-    <Navbar/>
+
     <MobileNavbar/>
  <CareersSection/>
  <WhatsappLogo/>

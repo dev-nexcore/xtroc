@@ -10,7 +10,7 @@ import Navbar from "@/layout/Navbar";
 export default function Page() {
   return (
     <>
- <Navbar/>
+
 <MobileNavbar/>
  <Services/>
      <div className="hidden md:block">

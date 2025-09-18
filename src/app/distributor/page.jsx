@@ -9,7 +9,7 @@ import DistributorPage from '@/components/Distributor/Distributor';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+    
       <MobileNavbar/>
        <DistributorPage/>
         <WhatsappLogo/>
