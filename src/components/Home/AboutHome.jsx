@@ -86,53 +86,39 @@ const AboutHome = () => {
       {/* Why To Choose Section */}
       <motion.div
         className="px-6 py-16 text-white bg-black"
-        // style={{
-        //   clipPath: "polygon(0 5%, 100% 0%, 100% 95%, 0% 100%)",
-        // }}
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
       >
-     <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-center gap-6 lg:gap-20 sm:">
-  {/* Left Text */}
-  <motion.h2
-    variants={item}
-    className="text-white xl:font-bold text-center lg:text-left 
-               text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl md:mr-100 lg:mr-0
-               leading-tight"
-    style={{ fontFamily: "Impact, sans-serif" }}
-  >
-    Why To Choose
-  </motion.h2>
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-center gap-6 lg:gap-20">
+          {/* Left Text */}
+          <motion.h2
+            variants={item}
+            className="text-white xl:font-bold text-center lg:text-left 
+                       text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl md:mr-100 lg:mr-0
+                       leading-tight"
+            style={{ fontFamily: "Impact, sans-serif" }}
+          >
+            Why To Choose
+          </motion.h2>
 
-  {/* Right Images */}
-  <motion.div
-  variants={item}
-  className="relative flex-shrink-0 md:inline-block md:whitespace-nowrap md:mt-[-80] lg:mt-0 md:mr-[-160] lg:mr-0"
->
-  {/* Main Logo */}
-  <img
-    src="/xtroc.png"
-    alt="Xtorc"
-    className="w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 h-auto "
-  />
+          {/* Right Images */}
+          <motion.div
+            variants={item}
+            className="relative flex-shrink-0 md:inline-block md:whitespace-nowrap md:mt-[-80] lg:mt-0 md:mr-[-160] lg:mr-0"
+          >
+            {/* Main Logo */}
+            <img
+              src="/XTORC_LOGO.png"
+              alt="Xtorc"
+              className="w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 h-auto"
+            />
+          </motion.div>
+        </div>
 
-
-  {/* <img
-    src="/build.png"
-    alt="Build"
-    className="absolute w-20 sm:w-28 md:w-36 lg:w-40 xl:w-48 
-               -bottom-20 sm:-bottom-16 md:-bottom-36 lg:-bottom-40 xl:-bottom-46
-               -right-14 sm:-right-6 md:-right-24 lg:-right-24 xl:-right-28"
-  /> */}
-</motion.div>
-
-</div>
-
-
-        {/* Red border */}
-        <div className="w-100 h-1.5 bg-[#D01A1A] mx-auto my-6 rounded"></div>
+        {/* Red border - moved up with negative margin */}
+        <div className="w-130 h-1.5 bg-[#D01A1A] mx-auto mt-[-110px] mb-6 rounded"></div>
 
         {/* Tagline */}
         <p className="text-center text-3xl md:text-5xl font-impact text-white" style={{ fontFamily: "Impact"}}>
