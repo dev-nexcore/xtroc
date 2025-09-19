@@ -112,13 +112,13 @@ const AboutHome = () => {
             <img
               src="/XTORC_LOGO.png"
               alt="Xtorc"
-              className="w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 h-auto"
+              className="w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 h-auto md:mt-[-95] lg:mt-0"
             />
           </motion.div>
         </div>
 
         {/* Red border - moved up with negative margin */}
-        <div className="w-130 h-1.5 bg-[#D01A1A] mx-auto mt-[-110px] mb-6 rounded"></div>
+        <div className="w-130 h-1.5 bg-[#D01A1A] mx-auto lg:mt-[-110px] mb-6 md:mt-[-60px] rounded"></div>
 
         {/* Tagline */}
         <p className="text-center text-3xl md:text-5xl font-impact text-white" style={{ fontFamily: "Impact"}}>
