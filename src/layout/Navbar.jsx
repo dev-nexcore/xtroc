@@ -82,7 +82,7 @@ const closeServiceDropdown = () => {
 "bolt-tensioner": [
   { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img:"product2.png",path: "topsidebolt" },
   { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner",img:"multistagebolt.png", path: "multistagebolt" },
-  { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img:"subsea.jpg",path: "subseabolt" },
+  { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img:"subsea.png",path: "subseabolt" },
 ],
 
     // "bolt-tensioner": [
