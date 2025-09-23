@@ -601,9 +601,9 @@ const closeServiceDropdown = () => {
               Contact us
             </Link>
             <Link
-              href="/joinus"
+              href="/Joinus"
               className={`text-white hover:border-b-2 border-red-500 transition-colors duration-200 text-base font-bold ${
-                pathname === "/joinus" ? "border-b-2 border-red-500" : ""
+                pathname === "/Joinus" ? "border-b-2 border-red-500" : ""
               }`}
             >
               Join us
