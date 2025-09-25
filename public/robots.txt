@@ -1,14 +1,11 @@
-
-# robots.txt 
-# Allow all user-agents (bots) to access all content
 User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
 
+# If there are staging or test versions:
+# Disallow: /staging/
 
-# Block specific paths (for example, if you have private areas you don't want crawled)
-# Disallow: /private/
+Allow: /
 
-# Allow bots to access specific files or directories
-# Allow: /public/
-
-# Sitemap location
-Sitemap: https://drshaziawaghoo.com/sitemap.xml
+Sitemap: https://xtorcind.com/sitemap.xml
