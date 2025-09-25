@@ -22,8 +22,16 @@ export async function GET() {
     "pipe-beveling",
     "hydraulic-power-packs",
     "flange-spreaders",
-    
+
   ];
+  const serviceCategories=[
+    "Bolt-Torquing-Tensioning",
+    "Cold-Cutting-Beveling",
+    "Flange-Facing-Machining",
+    "Hot-Tapping-Line-Stopple",
+    "Calibration",
+    "Water-jet-Cutting"
+  ]
 
   // Combine all URLs
   const allPages = [
