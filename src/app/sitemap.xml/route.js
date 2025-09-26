@@ -22,6 +22,23 @@ export async function GET() {
     "pipe-beveling",
     "hydraulic-power-packs",
     "flange-spreaders",
+    "pipe-Cutting",
+    "bevellingmachine",
+    "flangefacing",
+    "squaredrive",
+    "topsidebolt",
+    "multistagebolt",
+    "subseabolt",
+    "xep700",
+    "xap700",
+    "xep1500",
+    "xap1500",
+    "hydraulicjack",
+    "handPumps",
+    "FlangeSpreaders",
+    "hydralicnut",
+    "socket",
+    "reducer"
 
   ];
   const serviceCategories=[
