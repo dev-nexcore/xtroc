@@ -74,13 +74,13 @@ const closeServiceDropdown = () => {
 // ✅ children of hydraulic-torque
 "hydraulic-torque": [
   { id: "square-drive", name: "Square Drive" ,img:"images/BoltingTools/squaredrive.png",path:"squaredrive"},
-  { id: "hex-drive", name: "Hex Drive",img:"images/BoltingTools/hexdrive.png",path:"hexdrive" }
+  { id: "hex-drive", name: "Hex Drive",img:"product2.png",path:"hexdrive" }
   
 ],
 
 // ✅ children of bolt-tensioner
 "bolt-tensioner": [
-  { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img:"product2.png",path: "topsidebolt" },
+  { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img:"product5.png",path: "topsidebolt" },
   { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner",img:"multistagebolt.png", path: "multistagebolt" },
   { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img:"subsea.png",path: "subseabolt" },
 ],
