@@ -44,7 +44,7 @@ const ColdCutting = () => {
                className="text-red-500 font-semibold pl-1"
                
                >
-                {isExpanded ? 'Read Leass' :'Read More'}
+                {isExpanded ? 'Read Less' :'Read More'}
 
                </button>
               </p>

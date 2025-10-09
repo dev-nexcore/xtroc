@@ -1,7 +1,7 @@
-
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const productVariants = {
   hidden: (direction) => ({
@@ -20,25 +20,29 @@ const products = [
     id: 1,
     title: "Hydraulic Torque Wrenches",
     img: "images/BoltingTools/squaredrive.png",
-    desc: "Designed for precision and durability, our hydraulic torque wrenches are ideal for heavy-duty applications across multiple industries, ensuring accurate and efficient tightening or loosening of bolts."
+    desc: "Designed for precision and durability, our hydraulic torque wrenches are ideal for heavy-duty applications across multiple industries, ensuring accurate and efficient tightening or loosening of bolts.",
+    link: "/squaredrive"
   },
   {
     id: 2,
     title: "Pipe Cutting & Beveling Machines",
     img: "product4.png",
     desc: "Engineered for precision and safety...",
+    link: "/pipeCutting"
   },
   {
     id: 3,
     title: "Bolt Tensioning Solutions",
     img: "product2.png",
-    desc: "Experience unmatched reliability with our advanced multi-stud and hydraulic bolt tensioners, paired with electric and pneumatic powerpacks for superior performance under demanding conditions."
+    desc: "Experience unmatched reliability with our advanced multi-stud and hydraulic bolt tensioners, paired with electric and pneumatic powerpacks for superior performance under demanding conditions.",
+    link: "/hexdrive"
   },
   {
     id: 4,
     title: "Hydraulic Equipment",
     img: "product3.png",
-    desc: "From hydrotest pumps to hydraulic jacks, our robust equipment offers versatility and reliability to support a range of industrial applications."
+    desc: "From hydrotest pumps to hydraulic jacks, our robust equipment offers versatility and reliability to support a range of industrial applications.",
+    link: "/hydraulicjack"
   }
 ];
 
@@ -81,32 +85,23 @@ const Innovations = () => {
               viewport={{ once: true, amount: 0.2 }}
               custom={direction}
             >
-              {/* Product Image */}
-              <div className="relative">
+              {/* Product Image with Link */}
+              <Link href={product.link} className="relative group">
                 <img
                   src={product.img}
                   alt={product.title}
-                  className={`object-cover bg-gray-200 rounded
-                    ${product.id === 2 
-                      ? "h-65 w-65 md:h-80 md:w-80 lg:h-[500px] lg:w-[500px] rotate-[-90deg]" 
-                      : "h-65 w-65 md:h-80 md:w-80 lg:h-[500px] lg:w-[500px]"
-                    }`}
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
+                  className={`object-cover bg-gray-200 rounded 
+                    h-65 w-65 md:h-80 md:w-80 lg:h-[500px] lg:w-[500px]
+                    ${product.id === 2 ? "rotate-[-90deg]" : ""}`}
+                  onError={(e) => e.target.src = '/placeholder.png'} // fallback image
                 />
 
-                <div className="hidden w-[400px] h-[300px] bg-gray-200 rounded  items-center justify-center ">
-                  <span className="text-gray-500">Product {i + 1}</span>
-                </div>
-
-                <div className="absolute top-0 right-0 w-11 h-full bg-red-600 flex items-center justify-center transition-all duration-300">
+                <div className="absolute top-0 right-0 w-11 h-full bg-red-600 flex items-center justify-center transition-all duration-300 group-hover:bg-red-700">
                   <span className="text-white text-xs font-bold transform -rotate-90 whitespace-nowrap md:text-xl">
                     {product.title}
                   </span>
                 </div>
-              </div>
+              </Link>
 
               {/* Text Section */}
               <div className="flex-1 text-center">

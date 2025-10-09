@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 
 const categories = {
-  "insitu-machinning": [
+  "Insitu-Machinning": [
     {
       id: "pipe-cutting",
       name: "Pipe Cutting Machine XTCB Series",
@@ -25,7 +25,7 @@ const categories = {
       path: "flangefacing",
     },
   ],
-  "bolting-tools": [
+  "Bolting-Tools": [
     {
       id: "hydraulic-torque",
       name: "Hydraulic Torque Wrench",
@@ -73,7 +73,7 @@ const categories = {
       ]
     },
   ],
-  "hydraulic-powerpack": [
+  "Hydraulic-Powerpack": [
     {
       id: "xep700",
       name: "XEP700",
@@ -94,7 +94,7 @@ const categories = {
       path: "xap1500",
     },
   ],
-  accesories: [
+  Accesories: [
     {
       id: "jacks",
       name: "Jacks / Cylinders",
@@ -114,7 +114,7 @@ const categories = {
       path: "FlangeSpreaders",
     },
   ],
-  "impact-sockets": [
+  "Impact-Sockets": [
     {
       id: "nut-splitters",
       name: "Nut Splitters",

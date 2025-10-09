@@ -29,7 +29,7 @@ const MultiStageBolt = () => {
             {/* Description */}
             <div className="space-y-4 text-gray-200 leading-relaxed">
               <p>
-                Engineered to meet the challenges of critical industrial bolting applications, Multi Stage Hydraulic Bolt Tensioners are ideal for environments requiring higher load capacities or tighter access than conventional tensioners can handle. Our MST series units expand the range of solutions and provide effective tensioning end results.
+                Engineered to meet the challenges of critical industrial bolting applications, Multi Stage Hydraulic Bolt Tensioners are ideal for environments requiring higher load capacities or tighter access than conventional tensioners can handle. Our XMT series units expand the range of solutions and provide effective tensioning end results.
               </p>
             </div>
 
@@ -39,7 +39,7 @@ const MultiStageBolt = () => {
                 <li className="flex items-start gap-2">
                   <span className="text-white  flex-shrink-0 p-3">•</span>
                   <span>
-                    Delivering concentrated hydraulic tension directly along the stud axis, our MST series eliminates the risk of twist-induced thread or galling damage.
+                    Delivering concentrated hydraulic tension directly along the stud axis, our XMT series eliminates the risk of twist-induced thread or galling damage.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">

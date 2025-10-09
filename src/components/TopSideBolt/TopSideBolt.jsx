@@ -28,7 +28,7 @@ const TopSideBolt = () => {
                   h-[250px] sm:h-[300px] md:h-[400px] w-full max-w-[500px] flex items-center justify-center"
               >
                 <img
-                  src="product2.png"
+                  src="product5.png"
                   alt="Hydraulic Nut Splitter"
                   className="w-full h-full object-contain"
                 />
