@@ -257,23 +257,25 @@
 // export default Xep700;
 
 
-
-
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const Xep700= () => {
+const Xep700 = () => {
   // Data for the Technical Specification table
   const techSpecs = [
     { label: "Model No.", value: "XEP-700" },
     { label: "Power Rating Flow Rate", value: "1.5 KW" },
     { label: "Maximum Pressure", value: "700Bar/10,000 PSI" },
-    { label: "Flow Rate", value: (
-      <>
-        9.7LPM @ 70Bar<br />
-        0.97LPM @ 700 Bar
-      </>
-    )},
+    {
+      label: "Flow Rate",
+      value: (
+        <>
+          9.7LPM @ 70Bar
+          <br />
+          0.97LPM @ 700 Bar
+        </>
+      ),
+    },
     { label: "Capacity", value: "6 Ltr./2 Gallon" },
   ];
 
@@ -298,7 +300,10 @@ const Xep700= () => {
           <div className="space-y-6">
             {/* Title with Impact font */}
             <div>
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl px-10 text-center font-base text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
+              <h1
+                className="text-4xl px-10 text-center font-base text-white mb-2"
+                style={{ fontFamily: "Impact, sans-serif" }}
+              >
                 XEP 700
               </h1>
               <div className="rounded-2xl h-1 bg-red-600"></div>
@@ -314,19 +319,51 @@ const Xep700= () => {
                 ATEX Zone-2 Class T3 Gas Group IIA
               </p>
               <ul>
-                <li><span className="font-semibold text-red-600">•</span> Three Phase Electric Motor 1.1 kW 440V</li>
-                <li><span className="font-semibold text-red-600">•</span> Axial-piston pump mod</li>
-                <li><span className="font-semibold text-red-600">•</span> 3/2 solenoid valve 24DC and inversion valve</li>
+                <li>
+                  <span className="font-semibold text-red-600">•</span> Three
+                  Phase Electric Motor 1.1 kW 440V
+                </li>
+                <li>
+                  <span className="font-semibold text-red-600">•</span>{" "}
+                  Axial-piston pump mod
+                </li>
+                <li>
+                  <span className="font-semibold text-red-600">•</span> 3/2
+                  solenoid valve 24DC and inversion valve
+                </li>
               </ul>
               <p>Weight: Kg (Lbs) 36 (79)</p>
               <ul>
-                <li><span className="font-semibold text-red-600">•</span> Oil flow 9.4 Litres/min @ 0-70 Bar (2.48 g/min@1015 PSI) and 0.9 Litres/min @ 700 Bar (0.23 g/min@ 10000 PSI)</li>
-                <li><span className="font-semibold text-red-600">•</span> Pressure regulator on P Line to set the torque value</li>
-                <li><span className="font-semibold text-red-600">•</span> Adjustable Relief Valve on return line</li>
-                <li><span className="font-semibold text-red-600">•</span> Pressure Gauge DN 100 range 0-1000 Bar (14500 PSI)</li>
-                <li><span className="font-semibold text-red-600">•</span> Reservoir Capacity 10 Litres (2.64 Gallon)</li>
-                <li><span className="font-semibold text-red-600">•</span> Recommended Hydraulic Oil ISO 32 and above Also available in Air Operated Type (PAE-ATEX)</li>
-                <li><span className="font-semibold text-red-600">•</span> The pump includes remote control and electric box</li>
+                <li>
+                  <span className="font-semibold text-red-600">•</span> Oil flow
+                  9.4 Litres/min @ 0-70 Bar (2.48 g/min@1015 PSI) and 0.9
+                  Litres/min @ 700 Bar (0.23 g/min@ 10000 PSI)
+                </li>
+                <li>
+                  <span className="font-semibold text-red-600">•</span>{" "}
+                  Pressure regulator on P Line to set the torque value
+                </li>
+                <li>
+                  <span className="font-semibold text-red-600">•</span>{" "}
+                  Adjustable Relief Valve on return line
+                </li>
+                <li>
+                  <span className="font-semibold text-red-600">•</span>{" "}
+                  Pressure Gauge DN 100 range 0-1000 Bar (14500 PSI)
+                </li>
+                <li>
+                  <span className="font-semibold text-red-600">•</span>{" "}
+                  Reservoir Capacity 10 Litres (2.64 Gallon)
+                </li>
+                <li>
+                  <span className="font-semibold text-red-600">•</span>{" "}
+                  Recommended Hydraulic Oil ISO 32 and above Also available in
+                  Air Operated Type (PAE-ATEX)
+                </li>
+                <li>
+                  <span className="font-semibold text-red-600">•</span> The
+                  pump includes remote control and electric box
+                </li>
               </ul>
             </div>
           </div>
@@ -336,9 +373,10 @@ const Xep700= () => {
             {/* Product Image */}
             <div className="relative">
               <div
-                className="bg-white rounded-2xl p-6 border-t-12 border-r-12 border-red-600 
+                className="bg-white rounded-2xl p-6 border-t-12 border-r-12 border-red-600
                   rounded-tl-2xl rounded-br-2xl rounded-tr-none rounded-bl-none
-                  sm:h-[400px] h-[200px] flex items-center justify-center text-black">
+                  sm:h-[400px] h-[200px] flex items-center justify-center text-black"
+              >
                 <img
                   src="images/Power-Pack/XEP700.png"
                   alt="XEP 700"
@@ -359,87 +397,91 @@ const Xep700= () => {
           </div>
         </div>
       </div>
-      
-      {/* --- NEW SECTION: Safety Features & Technical Specs --- */}
 
+      {/* --- NEW SECTION: Safety Features & Technical Specs (RESTYLED) --- */}
       <div className="max-w-6xl mx-auto px-6 py-12">
-        <h2 className="text-2xl font-bold text-red-600 mb-6">EQUIPPED WITH SAFETY FEATURES</h2>
-        <p className="text-xl text-white mb-6">NOTE: Also available as Conventional Electric Power pack. Pump will be supplied with Remote Control Pendant</p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          {/* Column 1: With Auto Cycle & Technical Features */}
-          <div className="flex flex-col gap-6">
-            
-            {/* With Auto Cycle Section */}
-            <div className="flex flex-col items-center text-center">
-              <h3 className="font-bold text-red-500 mb-4 text-xl">With Auto Cycle</h3>
-              <div className="bg-white p-2 rounded-lg mb-4">
-                {/* Placeholder image tag for Auto Cycle image */}
-                <img src="images/auto-cycle.png" alt="With Auto Cycle" className="w-full max-w-xs" />
+        <div>
+           <h2 className="text-4xl text-center text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
+              EQUIPPED WITH SAFETY FEATURES
+            </h2>
+            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto" style={{ maxWidth: '500px' }}></div>
+        </div>
+        <p className="mt-8 text-xl text-gray-200 leading-relaxed text-center">
+          NOTE: Also available as Conventional Electric Power pack. Pump will be supplied with Remote Control Pendant
+        </p>
+
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Column: Features */}
+          <div className="space-y-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center">
+               <div>
+                <h3 className="font-semibold text-white mb-3 text-xl">
+                  With Auto Cycle
+                </h3>
+                {/* Placeholder for 'With Auto Cycle' image */}
+                <div className="bg-gray-700 border border-gray-500 rounded-lg h-48 flex items-center justify-center text-gray-400">
+                  <span>Image Placeholder</span>
+                </div>
               </div>
-               <h3 className="font-bold text-red-500 mb-4 text-xl">Without Auto Cycle</h3>
-            <div className="bg-white p-2 rounded-lg mb-4">
-              {/* Placeholder image tag for Without Auto Cycle image */}
-              <img src="images/without-auto-cycle.png" alt="Without Auto Cycle" className="w-full max-w-xs" />
-            </div>
-           
-              <div className="text-sm text-gray-300 text-left w-full">
-                <h4 className="font-semibold text-red-500 mb-2 text-xl">Fully Automatic Power Pack</h4>
-                <ul className="list-none space-y-1">
-                  <li>• Faster and reliable in operations.</li>
-                  <li>• High repeatability of the bolting process without pressing the button again and again.</li>
-                </ul>
+              <div>
+                <h3 className="font-semibold text-white mb-3 text-xl">
+                  Without Auto Cycle
+                </h3>
+                {/* Placeholder for 'Without Auto Cycle' image */}
+                <div className="bg-gray-700 border border-gray-500 rounded-lg h-48 flex items-center justify-center text-gray-400">
+                   <span>Image Placeholder</span>
+                </div>
               </div>
             </div>
 
-            {/* NEWLY ADDED: Temperature Management */}
-            <div className="text-sm text-gray-300 text-left w-full space-y-2 pt-4">
-                <h4 className="font-semibold text-red-500 text-xl">Temperature Management</h4>
-                <p className="font-normal">In-built heat exchanger to cool the system</p>
-                <ul className="list-none space-y-1 ml-4">
-                    <li>• The unique concept of the high-speed cooling and heat exchanger optimizes cooling for **Continuous operation**</li>
-                    <li>• Power pack switches off automatically if temperature rises **above 80°C**</li>
+            <div className="space-y-6 text-lg text-gray-300">
+               <div>
+                <h4 className="text-2xl font-bold text-red-600 mb-2">Fully Automatic Power Pack</h4>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Faster and reliable in operations.</li>
+                  <li>High repeatability of the bolting process without pressing the button again and again.</li>
                 </ul>
-
-                <h4 className="font-semibold text-red-500 pt-2 text-xl">Oil immersed Motor</h4>
-                <ul className="list-none space-y-1 ml-4">
-                    <li>• Noiseless and vibration free operations Effective temperature equalisation by cooling.</li>
-                    <li>• motor, pump & oil at the same time</li>
+              </div>
+               <div>
+                <h4 className="text-2xl font-bold text-red-600 mb-2">Temperature Management</h4>
+                <p>In-built heat exchanger to cool the system.</p>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>The unique concept of the high-speed cooling and heat exchanger optimizes cooling for Continuous operation.</li>
+                  <li>Power pack switches off automatically if temperature rises above 80°C.</li>
                 </ul>
-
-                <h4 className="font-semibold text-red-500 pt-2 text-xl">PLC Controlled System</h4>
-                <p className="font-normal">Effectively controlled operations of power packs.</p>
-                <p className="ml-4">If the power pack remains idle continuously more than 3 minutes, it gets switched off automatically.</p>
+              </div>
+               <div>
+                <h4 className="text-2xl font-bold text-red-600 mb-2">Oil immersed Motor</h4>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Noiseless and vibration free operations Effective temperature equalisation by cooling.</li>
+                  <li>motor, pump & oil at the same time.</li>
+                </ul>
+              </div>
+               <div>
+                <h4 className="text-2xl font-bold text-red-600 mb-2">PLC Controlled System</h4>
+                <p>Effectively controlled operations of power packs. If the power pack remains idle continuously more than 3 minutes, it gets switched off automatically.</p>
+              </div>
             </div>
           </div>
 
-          {/* Column 2: Without Auto Cycle */}
-          
-          
-          {/* Column 3: Technical Specification Table */}
-          <div className="col-span-1">
-            <h3 className="font-bold text-red-600 mb-4">TECHNICAL SPECIFICATION:</h3>
-            <div className="border border-white/50 w-full shadow-lg">
-              <table className="w-full border-collapse">
-                <tbody>
-                  {techSpecs.map((spec, index) => (
-                    <tr key={index}>
-                      <td className="p-3 border-b border-r border-white/50 bg-gray-800 text-sm md:text-base font-medium">
-                        {spec.label}
-                      </td>
-                      <td className="p-3 border-b border-white/50 bg-black/80 text-center text-sm md:text-base">
-                        {spec.value}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+          {/* Right Column: Technical Specification Table (Restyled) */}
+          <div>
+            <div className="border border-gray-600 rounded-lg overflow-hidden">
+                <div className="bg-gray-800 py-4">
+                    <h3 className="text-3xl text-white text-center mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>TECHNICAL SPECIFICATION</h3>
+                </div>
+                <div className="divide-y divide-gray-700">
+                    {techSpecs.map((spec, index) => (
+                        <div key={index} className="grid grid-cols-2 bg-black hover:bg-gray-900 transition-colors">
+                            <div className="p-4 text-xl font-medium text-gray-300 border-r border-gray-700">{spec.label}</div>
+                            <div className="p-4 text-xl text-white text-right">{spec.value}</div>
+                        </div>
+                    ))}
+                </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   );
 };
