@@ -111,7 +111,7 @@ const Xap1500 = () => {
           <div className="space-y-6">
             {/* Title with Impact font */}
             <div>
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-2 text-center" style={{ fontFamily: 'Impact, sans-serif' }}>
                   XAP 1500
               </h1>
               <div className="rounded-2xl h-1 bg-red-600"></div>
@@ -164,7 +164,7 @@ const Xap1500 = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
               HAND PUMPS FOR BOLT TENSIONERS
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: '600px' }}></div>
+            <div className="w-125 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: '600px' }}></div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Section (Image Placeholder) */}

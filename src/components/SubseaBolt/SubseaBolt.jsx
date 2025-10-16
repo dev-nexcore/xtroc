@@ -118,11 +118,11 @@ const SubseaBolt = () => {
               <h1 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
                 Subsea Bolt Tensioner
               </h1>
-              <div className=" rounded-2xl h-1 bg-red-600"></div>
+              <div className=" rounded-2xl h-1 bg-red-600 w-83"></div>
             </div>
 
             {/* Description */}
-              <div className="space-y-4 text-xl text-gray-200 leading-relaxed">
+              <div className="space-y-4 text-2xl text-gray-200 leading-relaxed">
               <p>XTORC subsea Bolt tensioners are manufactured to suit the demanding
 requirements of divers working in harsh subsea environments. We provide a
 complete range of Subsea Tensioners which incorporate the Split Reaction Nut

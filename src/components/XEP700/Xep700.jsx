@@ -310,7 +310,7 @@ const Xep700 = () => {
             </div>
 
             {/* Description (Existing) */}
-            <div className="space-y-4 text-lg text-gray-200 leading-relaxed">
+            <div className="space-y-4 text-xl text-gray-200 leading-relaxed">
               <p>
                 Hydraulic Pump with Three Phase Electric Motor
                 <br />
@@ -434,7 +434,7 @@ const Xep700 = () => {
               </div>
             </div>
 
-            <div className="space-y-6 text-lg text-gray-300">
+            <div className="space-y-6 text-xl text-gray-300">
                <div>
                 <h4 className="text-2xl font-bold text-red-600 mb-2">Fully Automatic Power Pack</h4>
                 <ul className="list-disc list-inside space-y-1">

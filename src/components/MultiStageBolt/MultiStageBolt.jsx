@@ -223,9 +223,9 @@ const MultiStageBoltTensioner = () => {
                   <span>Max. Tensioning Load up to 1,231 KN.</span>
                 </li>
                  <div className="space-y-4 text-gray-200 leading-relaxed text-lg">
-              <p>
+              {/* <p>
                 To meet electricity generation targets Wind Turbines must be installed rapidly and these structures require a strong foundation, it is a task which requires a tool that can be relied upon repeatedly.
-              </p>
+              </p> */}
             </div>
               </ul>
             </div>
@@ -325,11 +325,11 @@ const MultiStageBoltTensioner = () => {
               </p>
             </div>
 
-        <div className="mb-10 text-center">
+        <div className="mb-10 text-center mt-10">
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
               XMT SERIES SPECIFICATIONS
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: '400px' }}></div>
+            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2 " style={{ maxWidth: '400px' }}></div>
         </div>
 
         <div className="border border-gray-600 rounded-lg overflow-hidden">

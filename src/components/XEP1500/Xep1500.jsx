@@ -106,12 +106,12 @@ const Xep1500 = () => {
             {/* Title */}
             <div>
               <h1
-                className="text-2xl sm:text-3xl lg:text-4xl font-base text-white mb-2"
+                className="text-2xl sm:text-3xl lg:text-4xl font-base text-white mb-2 text-center"
                 style={{ fontFamily: "Impact, sans-serif" }}
               >
                 XEP 1500
               </h1>
-              <div className="rounded-2xl h-1 bg-red-600 w-35 "></div>
+              <div className="rounded-2xl h-1 bg-red-600  "></div>
             </div>
 
             {/* Description */}
@@ -133,12 +133,12 @@ const Xep1500 = () => {
                 ULTRA HIGH PRESSURE ELECTRIC PUMP
               </h1>
               <p
-                className="text-2xl  text-red-500 mb-2"
+                className="text-3xl  text-white mb-2"
                 style={{ fontFamily: "Impact, sans-serif" }}
               >
                 FOR TENSIONING APPLICATIONS
               </p>
-              <div className="rounded-2xl h-1 bg-red-600 mt-2 w-45"></div>
+              <div className="rounded-2xl h-1 bg-red-600 mt-2 "></div>
             </div>
 
             {/* Features */}

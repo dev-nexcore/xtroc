@@ -304,15 +304,17 @@ const BoltTensionersPage = () => {
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
                 Hydraulic Bolt Tensioners
               </h1>
-              <div className="w-30 sm:w-40 md:w-1 h-1 bg-red-600 rounded-2xl"></div>
+             
+                <div className="w-120 rounded-2xl h-1 bg-red-600  mt-2" style={{ maxWidth: '600px' }}></div>
+        
             </div>
 
             {/* Description */}
-            <div className="text-base sm:text-lg md:text-2xl p-2 sm:p-1 font-base text-gray-200 leading-relaxed space-y-1">
-               <p>
+            <div className="text-2xl sm:text-lg md:text-2xl p-2 sm:p-1 font-base text-gray-200 leading-relaxed space-y-1">
+               <p className="text-2xl">
                 A <strong>Top-Side Bolt Tensioner</strong> is designed to apply controlled tension from the top side of a joint. It ensures accurate preload and uniform tightening without frictional losses by elongating the bolt before the nut is secured.
               </p>
-              <p>
+              <p className="text-2xl">
                 A <strong>Spring Return Bolt Tensioner</strong> is a hydraulic tool designed for fast and reliable bolt tightening. It uses hydraulic pressure to stretch the bolt, and an integrated spring mechanism automatically retracts the piston after the operation.
               </p>
             </div>

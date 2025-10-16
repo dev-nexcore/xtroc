@@ -293,13 +293,13 @@ const HandPumps = () => {
 
   // Helper function to render the table (reused from the previous step)
   const renderTable = (data, isDimTable = false) => (
-    <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-12 pb-12 overflow-x-auto">
+    <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-12 pb-12 ">
       <div className="inline-block min-w-full">
         <div className="shadow-lg border border-white/50"> {/* Added main border */}
           <table className="min-w-full border-collapse">
             <thead>
               {/* Table Headers: Uses colSpan to merge cells for XTH-2, XTH-4, etc. */}
-              <tr className="bg-red-700 text-lg font-bold">
+              <tr className="bg-red-700 text-xl font-bold">
                 {/* The first two columns (Label and Unit) span two rows visually */}
                 <th rowSpan="2" className="py-3 px-2 sm:px-4 text-center border-r border-white/50 bg-gray-700">
                   {data.headers[0]}
@@ -334,7 +334,7 @@ const HandPumps = () => {
             </thead>
             <tbody>
               {data.rows.map((row, rowIndex) => (
-                <tr key={rowIndex} className="text-sm sm:text-base">
+                <tr key={rowIndex} className="text-xl sm:text-base">
                   {/* Label Column */}
                   <td className="py-2 px-2 sm:px-4 text-left border-t border-b border-l border-r border-white/50 
                                    bg-gray-700 font-semibold whitespace-nowrap">
@@ -428,8 +428,10 @@ const HandPumps = () => {
       
       {/* ------------------------------------------------------------- */}
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6">
-        <h2 className="text-2xl font-bold text-red-600 mb-4">XTH Series Technical Specifications</h2>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6 ">
+        <h2 className="text-3xl font-bold text-white-600 mb-4 text-center">XTH Series Technical Specifications</h2>
+         <div className=" sm:w-40 md:w-130 h-1 bg-red-600 rounded-2xl mb-5 mx-auto "></div>
+
       </div>
       
       {/* Table 1: Technical Specifications */}
@@ -438,7 +440,9 @@ const HandPumps = () => {
       {/* ------------------------------------------------------------- */}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6">
-        <h2 className="text-2xl font-bold text-red-600 mb-4">XTH Series Dimensional Data</h2>
+        <h2 className="text-3xl font-bold text-white-600 mb-4 text-center">XTH Series Dimensional Data</h2>
+          <div className=" sm:w-40 md:w-110 h-1 bg-red-600 rounded-2xl mb-5 mx-auto "></div>
+
       </div>
 
       {/* Table 2: Dimensional Data (NEWLY ADDED) */}
