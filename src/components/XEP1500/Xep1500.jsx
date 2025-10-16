@@ -111,7 +111,7 @@ const Xep1500 = () => {
               >
                 XEP 1500
               </h1>
-              <div className="rounded-2xl h-1 bg-red-600 w-24"></div>
+              <div className="rounded-2xl h-1 bg-red-600 w-35 "></div>
             </div>
 
             {/* Description */}
@@ -127,18 +127,18 @@ const Xep1500 = () => {
             {/* Sub Heading */}
             <div>
               <h1
-                className="text-4xl text-white mb-2"
+                className="text-3xl text-white mb-2"
                 style={{ fontFamily: "Impact, sans-serif" }}
               >
                 ULTRA HIGH PRESSURE ELECTRIC PUMP
               </h1>
               <p
-                className="text-xl text-red-500 font-semibold"
+                className="text-2xl  text-red-500 mb-2"
                 style={{ fontFamily: "Impact, sans-serif" }}
               >
                 FOR TENSIONING APPLICATIONS
               </p>
-              <div className="rounded-2xl h-1 bg-red-600 mt-2 w-32"></div>
+              <div className="rounded-2xl h-1 bg-red-600 mt-2 w-45"></div>
             </div>
 
             {/* Features */}
@@ -203,10 +203,66 @@ const Xep1500 = () => {
                 Download Catalog
               </button>
             </div>
+            
           </div>
         </div>
       </div>
+      {/* --- Technical Specifications Table --- */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
+        <div className="mb-10 text-center">
+            <h2 className="text-4xl text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
+              XEP 1500 SERIES SPECIFICATIONS
+            </h2>
+            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: '600px' }}></div>
+        </div>
+
+        <div className="border border-gray-600 rounded-lg overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="min-w-full">
+              <thead className="bg-gray-800 text-lg">
+                <tr className="text-red-500">
+                  <th className="p-4 text-center border-r border-gray-700">Model</th>
+                  <th className="p-4 text-center border-r border-gray-700">Reservoir (L)</th>
+                  <th className="p-4 text-center border-r border-gray-700">Motor (KW)</th>
+                  <th className="p-4 text-center border-r border-gray-700">Supply *</th>
+                  <th className="p-4 text-center border-r border-gray-700">Max. Working Pressure</th>
+                  <th className="p-4 text-center border-r border-gray-700">Size (mm)</th>
+                  <th className="p-4 text-center border-r border-gray-700">Control Line (m)</th>
+                  <th className="p-4 text-center border-r border-gray-700">Output Flow (L/min)</th>
+                  <th className="p-4 text-center border-r border-gray-700">Weight (kg)</th>
+                  <th className="p-4 text-center">Mode of Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-black text-center text-lg border-t border-gray-700">
+                  <td className="p-4 font-medium text-gray-300 border-r border-gray-700">XEP 1500</td>
+                  <td rowSpan="2" className="p-4 text-white border-r border-gray-700 align-middle">7.6</td>
+                  <td rowSpan="2" className="p-4 text-white border-r border-gray-700 align-middle">1.1</td>
+                  <td rowSpan="2" className="p-4 text-white border-r border-gray-700 align-middle">220V/50Hz/single phase</td>
+                  <td rowSpan="2" className="p-4 text-white border-r border-gray-700 align-middle">2000 bar/ <br/>29000 psi</td>
+                  <td rowSpan="2" className="p-4 text-white border-r border-gray-700 align-middle">375x300x410</td>
+                  <td rowSpan="2" className="p-4 text-white border-r border-gray-700 align-middle">6</td>
+                  <td rowSpan="2" className="p-4 text-white border-r border-gray-700 align-middle">
+                    2@ <br/> 50 bar/725 psi <br/> 0.3@ <br/> 2000 bar/29000 psi
+                  </td>
+                  <td rowSpan="2" className="p-4 text-white border-r border-gray-700 align-middle">20</td>
+                  <td className="p-4 text-white">Single Acting</td>
+                </tr>
+                <tr className="bg-black text-center text-lg border-t border-gray-700">
+                   <td className="p-4 font-medium text-gray-300 border-r border-gray-700">XEP 1500D</td>
+                   <td className="p-4 text-white">Double Acting</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+           <div className="bg-gray-800 p-3 text-left text-gray-400">
+             *Supply: Voltage and frequency can be demanded by customer
+           </div>
+        </div>
+      </div>
+      
     </div>
+
   );
 };
 
