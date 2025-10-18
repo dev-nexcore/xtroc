@@ -42,7 +42,7 @@ const Product = () => {
               Products
             </h2>
 
-            <div className="h-1.5 mb-6 bg-red-600 rounded-full md:w-110"></div>
+            <div className="h-1.5 mb-5 bg-red-600 rounded-full md:w-70"></div>
 
             <h3
               className="text-3xl sm:text-4xl font-semi mb-6 text-white"

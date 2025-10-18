@@ -286,22 +286,6 @@ const MultiStageBoltTensioner = () => {
                   <span className="text-red-500 font-bold flex-shrink-0 pt-1">•</span>
                   <span>Optional gear drive allows the user rotate the nut quickly</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold flex-shrink-0 pt-1">•</span>
-                  <span>Custom Built Tools with Synchronized Tensioner Operation.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold flex-shrink-0 pt-1">•</span>
-                  <span>An Auto retract mechanism makes installation faster.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold flex-shrink-0 pt-1">•</span>
-                  <span>High Tensioning Force available for various thread profiles and a wide range of Bolt Sizes.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 font-bold flex-shrink-0 pt-1">•</span>
-                  <span>Compatible with Electrical, Pneumatic and Manually Operated Power Packs.</span>
-                </li>
               </ul>
             </div>
           </div>
@@ -312,18 +296,6 @@ const MultiStageBoltTensioner = () => {
        {/* --- Technical Specifications Section --- */}
        
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
-
-          <div className="mb-10 text-center">
-            <h2 className="text-4xl text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
-              WIND TURBINE FOUNDATION BOLT TENSIONER XWT SERIES
-            </h2>
-            <div className="w-200 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: '800px' }}></div>
-        </div>
-        <div className="space-y-4 text-gray-200 leading-relaxed text-lg">
-              <p>
-                To meet electricity generation targets Wind Turbines must be installed rapidly and these structures require a strong foundation, it is a task which requires a tool that can be relied upon repeatedly.
-              </p>
-            </div>
 
         <div className="mb-10 text-center mt-10">
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>

@@ -314,9 +314,6 @@ const BoltTensionersPage = () => {
                <p className="text-2xl">
                 A <strong>Top-Side Bolt Tensioner</strong> is designed to apply controlled tension from the top side of a joint. It ensures accurate preload and uniform tightening without frictional losses by elongating the bolt before the nut is secured.
               </p>
-              <p className="text-2xl">
-                A <strong>Spring Return Bolt Tensioner</strong> is a hydraulic tool designed for fast and reliable bolt tightening. It uses hydraulic pressure to stretch the bolt, and an integrated spring mechanism automatically retracts the piston after the operation.
-              </p>
             </div>
           </div>
         </div>
@@ -392,76 +389,6 @@ const BoltTensionersPage = () => {
         </div>
       </div>
       
-      {/* --- XST SERIES: Technical Specifications Section --- */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
-        <div className="mb-10 text-center">
-            <h2 className="text-4xl text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
-              SPRING RETURN HYDRAULIC BOLT TENSIONER
-            </h2>
-      
-            <div className="w-160 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: '600px' }}></div>
-        </div>
-
-        <div className="border border-gray-600 rounded-lg overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="min-w-full">
-              <thead className="bg-gray-800 text-lg">
-                <tr>
-                  <th rowSpan="2" className="p-4 text-center border-r border-gray-700 text-red-500">Model</th>
-                  <th colSpan="4" className="p-4 text-center border-r border-gray-700 text-red-500">BOLT SIZE</th>
-                  <th rowSpan="2" className="p-4 text-center border-r border-gray-700 text-red-500">Max. Load <br/> KN (Ton)</th>
-                  <th rowSpan="2" className="p-4 text-center border-r border-gray-700 text-red-500">Hyd. Area <br/> cm² (in²)</th>
-                  <th rowSpan="2" className="p-4 text-center border-r border-gray-700 text-red-500">A <br/> mm (in)</th>
-                  <th rowSpan="2" className="p-4 text-center border-r border-gray-700 text-red-500">B <br/> mm (in)</th>
-                  <th rowSpan="2" className="p-4 text-center border-r border-gray-700 text-red-500">C <br/> mm (in)</th>
-                  <th rowSpan="2" className="p-4 text-center border-r border-gray-700 text-red-500">Clearance <br/> Dmm (in)</th>
-                  <th rowSpan="2" className="p-4 text-center text-red-500">Weight <br/> Kg (lbs)</th>
-                </tr>
-                <tr className="font-medium text-gray-300">
-                  <th className="p-3 font-medium text-center border-t border-r border-gray-700">Imperial</th>
-                  <th className="p-3 font-medium text-center border-t border-r border-gray-700">Model</th>
-                  <th className="p-3 font-medium text-center border-t border-r border-gray-700">Metric</th>
-                  <th className="p-3 font-medium text-center border-t border-r border-gray-700">Model</th>
-                </tr>
-              </thead>
-              <tbody>
-                {xstTableData.rows.map((row, rowIndex) => (
-                  <React.Fragment key={`xst-${rowIndex}`}>
-                    {row.bolts.map((bolt, boltIndex) => (
-                      <tr key={`xst-${rowIndex}-${boltIndex}`} className="bg-black text-center text-lg border-t border-gray-700">
-                        {boltIndex === 0 && (
-                          <td rowSpan={row.bolts.length} className="p-4 font-medium text-gray-300 border-r border-gray-700 align-middle">
-                            {row.model}
-                          </td>
-                        )}
-                        <td className="p-4 text-white border-r border-gray-700">{bolt.impSize}</td>
-                        <td className="p-4 text-white border-r border-gray-700">{bolt.impModel}</td>
-                        <td className="p-4 text-white border-r border-gray-700">{bolt.metSize}</td>
-                        <td className="p-4 text-white border-r border-gray-700">{bolt.metModel}</td>
-                        {boltIndex === 0 && (
-                          <>
-                            <td rowSpan={row.bolts.length} className="p-4 text-white border-r border-gray-700 align-middle">{row.maxLoad}</td>
-                            <td rowSpan={row.bolts.length} className="p-4 text-white border-r border-gray-700 align-middle">{row.hydArea}</td>
-                            <td rowSpan={row.bolts.length} className="p-4 text-white border-r border-gray-700 align-middle">{row.dimA}</td>
-                          </>
-                        )}
-                        <td className="p-4 text-white border-r border-gray-700">{bolt.dimB}</td>
-                        <td className="p-4 text-white border-r border-gray-700">{bolt.dimC}</td>
-                        <td className="p-4 text-white border-r border-gray-700">{bolt.clearance}</td>
-                        {boltIndex === 0 && (
-                            <td rowSpan={row.bolts.length} className="p-4 font-medium text-gray-300 align-middle">
-                              {row.weight}
-                            </td>
-                        )}
-                      </tr>
-                    ))}
-                  </React.Fragment>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

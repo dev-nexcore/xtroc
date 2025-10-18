@@ -158,58 +158,6 @@ const Xap1500 = () => {
         </div>
       </div>
 
-      {/* --- NEW SECTION: XHP-1500 Hand Pump --- */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
-         <div className="mb-10 text-center">
-            <h2 className="text-4xl text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
-              HAND PUMPS FOR BOLT TENSIONERS
-            </h2>
-            <div className="w-125 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: '600px' }}></div>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Section (Image Placeholder) */}
-             <div className="relative">
-              <div
-                className="bg-white rounded-2xl p-6 border-t-12 border-r-12 border-red-600 
-                  rounded-tl-2xl rounded-br-2xl rounded-tr-none rounded-bl-none
-                  sm:h-[400px] h-[300px] flex items-center justify-center text-gray-500">
-                {/* You can add your image here later */}
-                <span>Hand Pump Image Placeholder</span>
-              </div>
-            </div>
-            {/* Right Section (Text from image) */}
-            <div className="space-y-6">
-                 <div className="space-y-4 text-gray-200 text-xl leading-relaxed">
-                    <p>
-                        <span className="font-bold">Model No.: XHP-1500</span> <br/>
-                        <span className="font-bold">Maximum Working Pressure:</span> 1600 Bar <br/>
-                        <span className="font-bold">Tanks Size:</span> 1.8 / 2.4 Ltr.
-                    </p>
-                    <p>
-                        The XTORC Two-Stage Hand Pumps come with a Standard Pressure Gauge; this gives the user precise and safe control over the work carried out. The gauge is directly mounted onto the pump and is well protected by the specially designed pump lever.
-                    </p>
-                    <ul className="space-y-2 pt-4">
-                       <li className="flex items-start gap-2">
-                            <span className="text-red-500 font-bold flex-shrink-0 pt-1">•</span>
-                            <span>Return connections on all pumps</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-red-500 font-bold flex-shrink-0 pt-1">•</span>
-                            <span>Robust design</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-red-500 font-bold flex-shrink-0 pt-1">•</span>
-                            <span>Aluminum Tank</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-red-500 font-bold flex-shrink-0 pt-1">•</span>
-                            <span>Easy and simple maintenance</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-      </div>
     </div>
   );
 };

@@ -415,22 +415,12 @@ const Xep700 = () => {
           <div className="space-y-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center">
                <div>
-                <h3 className="font-semibold text-white mb-3 text-xl">
-                  With Auto Cycle
-                </h3>
-                {/* Placeholder for 'With Auto Cycle' image */}
-                <div className="bg-gray-700 border border-gray-500 rounded-lg h-48 flex items-center justify-center text-gray-400">
-                  <span>Image Placeholder</span>
-                </div>
+                
+                
               </div>
               <div>
-                <h3 className="font-semibold text-white mb-3 text-xl">
-                  Without Auto Cycle
-                </h3>
-                {/* Placeholder for 'Without Auto Cycle' image */}
-                <div className="bg-gray-700 border border-gray-500 rounded-lg h-48 flex items-center justify-center text-gray-400">
-                   <span>Image Placeholder</span>
-                </div>
+                
+        
               </div>
             </div>
 

@@ -145,8 +145,6 @@ const closeServiceDropdown = () => {
         img: "images/accesories/flangespreaders.png",
         path: "FlangeSpreaders",
       },
-    ],
-    "impact-sockets": [
       {
         id: "nut-splitters",
         name: "Nut Splitters",
@@ -156,6 +154,8 @@ const closeServiceDropdown = () => {
         width: 600,
         height: 400
       },
+    ],
+    "impact-sockets": [
       {
         id: "sockets",
         name: "Sockets",
@@ -384,7 +384,7 @@ const closeServiceDropdown = () => {
                       }`}
                     >
                       <FaAngleDoubleRight className="text-red-500 text-xl  flex-shrink-0 md:mr-4" />
-                      Impact Sockets
+                      Sockets & Reducers
                     </button>
                   </div>
 

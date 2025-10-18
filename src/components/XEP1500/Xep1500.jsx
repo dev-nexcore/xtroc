@@ -114,16 +114,6 @@ const Xep1500 = () => {
               <div className="rounded-2xl h-1 bg-red-600  "></div>
             </div>
 
-            {/* Description */}
-            <div className="space-y-4 text-2xl text-gray-200 leading-relaxed">
-              <p>
-                HYDRAULIC BOLT TENSIONERS
-                <br />• XEP1500/XAP1500 HYDRAULIC
-                <br />• POWER PACK FOR BOLT TENSIONERS
-                <br />• ACCESSORIES
-              </p>
-            </div>
-
             {/* Sub Heading */}
             <div>
               <h1
