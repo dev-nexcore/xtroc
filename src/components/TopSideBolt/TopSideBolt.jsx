@@ -332,7 +332,7 @@ const BoltTensionersPage = () => {
         <div className="border border-gray-600 rounded-lg overflow-hidden">
           <div className="overflow-x-auto">
             <table className="min-w-full">
-              <thead className="bg-gray-800 text-lg">
+              <thead className="bg-gray-800 text-xl">
                 <tr>
                   <th rowSpan="2" className="p-4 text-center border-r border-gray-700">Model</th>
                   <th colSpan="2" className="p-4 text-center border-r border-gray-700 text-red-500">Bolt Size</th>

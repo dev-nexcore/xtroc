@@ -181,18 +181,18 @@ const MultiStageBoltTensioner = () => {
               <h1 className="text-4xl font-bold text-white mb-2">
                 Multi Stage Bolt Tensioners
               </h1>
-              <div className="w-120 rounded-2xl h-1 bg-red-600"></div>
+              <div className="w-130 rounded-2xl h-1 bg-red-600"></div>
             </div>
 
             {/* Description */}
-            <div className="space-y-4 text-gray-200 leading-relaxed text-lg">
+            <div className="space-y-4 text-gray-200 leading-relaxed text-xl">
               <p>
                 Engineered to meet the challenges of critical industrial bolting applications, Multi Stage Hydraulic Bolt Tensioners are ideal for environments requiring higher load capacities or tighter access than conventional tensioners can handle. Our XMT series units expand the range of solutions and provide effective tensioning end results.
               </p>
             </div>
 
             {/* Bullet Points */}
-            <div className="space-y-3 text-gray-200 text-lg">
+            <div className="space-y-3 text-gray-200 text-xl">
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <span className="text-red-500 font-bold flex-shrink-0 pt-1">•</span>
@@ -261,7 +261,7 @@ const MultiStageBoltTensioner = () => {
                 Features:
               </h2>
 
-              <ul className="space-y-2 text-gray-200 text-lg">
+              <ul className="space-y-2 text-gray-200 text-xl">
                 <li className="flex items-start gap-2">
                   <span className="text-red-500 font-bold flex-shrink-0 pt-1">•</span>
                   <span>Working Pressure 1500Bar / 21755 psi</span>

@@ -218,12 +218,12 @@ const PipeCutting = () => {
 
              {/* Description */}
              <div className="space-y-4 text-xl text-gray-200 leading-relaxed">
-               <p>The **Split Frame Machine** is ideal for all types of pipe cutting, beveling and end preparation
+               <p>The Split Frame Machine is ideal for all types of pipe cutting, beveling and end preparation
                operations. The split frame design allows the machine to split in half at the frame and mount around the
                OD of the in-line pipe or fittings for strong, stable clamping.</p>
                <br /> <p>The equipment performs precision in-line cut or simultaneous cut/bevel, single cut/bevel, counterbore
-               and flange facing operations, as well as weld end preparation on open ended pipe, ranging from **2 to 56
-               inches O.D. (DN20-1400)**, on most wall thickness and material.</p>
+               and flange facing operations, as well as weld end preparation on open ended pipe, ranging from 2 to 56
+               inches O.D. (DN20-1400), on most wall thickness and material.</p>
              </div>
            </div>
 
@@ -255,7 +255,7 @@ const PipeCutting = () => {
          </div>
        </div>
 
-       <h2 className="text-xl sm:text-2xl font-bold text-red-600 mb-4 ml-50 text-center">Above 56 inches can be supplied on request.</h2>
+       <h2 className="text-xl sm:text-2xl font-bold text-red-600 mb-4 ml-10 text-center">Above 56 inches can be supplied on request.</h2>
 
        <div className="max-w-7xl mx-auto py-8 px-6">
          {/* Drive Specifications (Now placed above the table) */}
