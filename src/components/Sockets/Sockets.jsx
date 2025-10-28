@@ -268,8 +268,8 @@ const Socket = () => {
       </div>
 
       {/* --- Technical Specifications Table --- */}
-
-             <img
+<div className="flex justify-center">
+ <img
                   src="Impactsocketimage1.png"
                   alt="Hydraulic Nut Splitter"
                   className="w-[400px] h-[350px] mx-auto mb-10 object-contain"
@@ -280,12 +280,14 @@ const Socket = () => {
                   alt="Hydraulic Nut Splitter"
                   className="w-[400px] h-[350px] mx-auto mb-10 object-contain"
                 />
+</div>
+            
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="mb-10 text-center">
           <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
             Technical Specifications
           </h2>
-          <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "600px" }}></div>
+          <div className="w-100 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "600px" }}></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* First Half of the Table */}

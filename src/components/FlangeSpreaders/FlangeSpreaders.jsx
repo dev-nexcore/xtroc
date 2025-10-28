@@ -176,7 +176,7 @@ const FlangeSpreaders = () => {
               <h1 className="text-4xl font-bold text-white mb-2">
                 Flange Spreaders
               </h1>
-              <div className="w-40 h-1 bg-red-600 rounded-2xl"></div>
+              <div className="w-120 h-1 bg-red-600 rounded-2xl"></div>
             </div>
 
             {/* Description */}
