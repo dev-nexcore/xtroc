@@ -268,10 +268,10 @@ const Socket = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* First Half of the Table */}
           <div className="border border-gray-600 rounded-lg overflow-hidden">
-            <table className="w-full text-xs">
+            <table className="w-full text-small">
               <thead className="bg-gray-800">
                 <tr>
-                  <th className="p-2 text-center border-r border-gray-700">Model</th>
+                  <th className="p-8 text-center border-r border-gray-700">Model</th>
                   <th className="p-2 text-center border-r border-gray-700">Square Drive</th>
                   <th className="p-2 text-center border-r border-gray-700">Nut A/F Inch</th>
                   <th className="p-2 text-center border-r border-gray-700">Nut A/F mm</th>
@@ -302,7 +302,7 @@ const Socket = () => {
 
           {/* Second Half of the Table */}
           <div className="border border-gray-600 rounded-lg overflow-hidden">
-            <table className="w-full text-xs">
+            <table className="w-full text-small">
               <thead className="bg-gray-800">
                 <tr>
                   <th className="p-2 text-center border-r border-gray-700">Model</th>

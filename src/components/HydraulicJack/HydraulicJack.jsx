@@ -139,10 +139,10 @@ const HydraulicJack = () => {
 
   // Data for the SINGLE ACTING HIGH TONNAGE HYDRAULIC CYLINDER table (Third table)
   const highTonnageTableData = [
-    { ton: 50, stroke: 50, model: 'STH 50-50', effectiveArea: 78.5, oilCapacity: 392, collapsedHeight: 238, extendHeight: 288, outsideDia: 140, cylinderBoreDia: 100, plungerDia: 70, baseToAdvancePort: 41, weight: 21.5 },
-    { ton: 50, stroke: 150, model: 'STH 50-150', effectiveArea: 78.5, oilCapacity: 784, collapsedHeight: 238, extendHeight: 338, outsideDia: 140, cylinderBoreDia: 100, plungerDia: 70, baseToAdvancePort: 41, weight: 26 },
-    { ton: 50, stroke: 200, model: 'STH 50-200', effectiveArea: 78.5, oilCapacity: 1176, collapsedHeight: 288, extendHeight: 438, outsideDia: 140, cylinderBoreDia: 100, plungerDia: 70, baseToAdvancePort: 41, weight: 31 },
-    { ton: 50, stroke: 300, model: 'STH 50-300', effectiveArea: 78.5, oilCapacity: 1568, collapsedHeight: 338, extendHeight: 538, outsideDia: 140, cylinderBoreDia: 100, plungerDia: 70, baseToAdvancePort: 41, weight: 35 },
+    { ton: 50, stroke: 50, model: 'STH 50-50', effectiveArea: 78.5, oilCapacity: 392, collapsedHeight: 188, extendHeight: 238, outsideDia: 140, cylinderBoreDia: 100, plungerDia: 70, baseToAdvancePort: 41, weight: 21.5 },
+    { ton: 50, stroke: 100, model: 'STH 50-100', effectiveArea: 78.5, oilCapacity: 784, collapsedHeight: 238, extendHeight: 338, outsideDia: 140, cylinderBoreDia: 100, plungerDia: 70, baseToAdvancePort: 41, weight: 26 },
+    { ton: 50, stroke: 150, model: 'STH 50-150', effectiveArea: 78.5, oilCapacity: 1176, collapsedHeight: 288, extendHeight: 438, outsideDia: 140, cylinderBoreDia: 100, plungerDia: 70, baseToAdvancePort: 41, weight: 31 },
+    { ton: 50, stroke: 200, model: 'STH 50-200', effectiveArea: 78.5, oilCapacity: 1568, collapsedHeight: 338, extendHeight: 538, outsideDia: 140, cylinderBoreDia: 100, plungerDia: 70, baseToAdvancePort: 41, weight: 35 },
     { ton: 50, stroke: 300, model: 'STH 50-300', effectiveArea: 78.5, oilCapacity: 2352, collapsedHeight: 438, extendHeight: 738, outsideDia: 140, cylinderBoreDia: 100, plungerDia: 70, baseToAdvancePort: 41, weight: 44 },
     { ton: 100, stroke: 50, model: 'STH 100-50', effectiveArea: 153.9, oilCapacity: 770, collapsedHeight: 216, extendHeight: 266, outsideDia: 180, cylinderBoreDia: 140, plungerDia: 100, baseToAdvancePort: 54, weight: 42 },
     { ton: 100, stroke: 100, model: 'STH 100-100', effectiveArea: 153.9, oilCapacity: 1540, collapsedHeight: 266, extendHeight: 366, outsideDia: 180, cylinderBoreDia: 140, plungerDia: 100, baseToAdvancePort: 54, weight: 49 },
@@ -181,8 +181,8 @@ const HydraulicJack = () => {
     { capacityTon: '160 (1619)', stroke: 50, model: 'SLLH 160-50', oilCapacity: 1040, collapsedHeight: 148, extendedHeight: 193, outsideDia: 224, cylinderBoreDia: 172, plungerDiaThread: 'Tr171x8', baseToAdvancePort: 27, saddleDia: 160, saddleProtrusionFromPiston: 9, saddleMaxTiltAngle: 5, plungerDia: 40, weight: 45.5 },
     { capacityTon: '200 (1999)', stroke: 45, model: 'SLLH 200-45', oilCapacity: 1285, collapsedHeight: 155, extendedHeight: 200, outsideDia: 245, cylinderBoreDia: 190.7, plungerDiaThread: 'Tr190x6', baseToAdvancePort: 30, saddleDia: 180, saddleProtrusionFromPiston: 10, saddleMaxTiltAngle: 5, plungerDia: 43, weight: 57 },
     { capacityTon: '260 (2560)', stroke: 50, model: 'SLLH 250-50', oilCapacity: 1695, collapsedHeight: 159, extendedHeight: 204, outsideDia: 275, cylinderBoreDia: 216, plungerDiaThread: 'Tr215x6', baseToAdvancePort: 32, saddleDia: 200, saddleProtrusionFromPiston: 11, saddleMaxTiltAngle: 5, plungerDia: 44, weight: 74 },
-    { capacityTon: '400 (3916)', stroke: 50, model: 'SLLH 400-50', oilCapacity: 2517, collapsedHeight: 178, extendedHeight: 223, outsideDia: 350, cylinderBoreDia: 270, plungerDiaThread: 'Tr266x8', baseToAdvancePort: 41, saddleDia: 251, saddleProtrusionFromPiston: 11, saddleMaxTiltAngle: 5, plungerDia: 55, weight: 134 },
-    { capacityTon: '520 (5114)', stroke: 50, model: 'SLLH 500-50', oilCapacity: 3287, collapsedHeight: 192, extendedHeight: 237, outsideDia: 400, cylinderBoreDia: 305, plungerDiaThread: 'Tr304x6', baseToAdvancePort: 48, saddleDia: 289, saddleProtrusionFromPiston: 10, saddleMaxTiltAngle: 5, plungerDia: 62, weight: 188 },
+    { capacityTon: '400 (3916)', stroke: 50, model: 'SLLH 400-50', oilCapacity: 2517, collapsedHeight: 178, extendedHeight: 223, outsideDia: 350, cylinderBoreDia: 270, plungerDiaThread: 'Tr266x8', baseToAdvancePort: 41, saddleDia: 251, saddleProtrusionFromPiston: 11, saddleMaxTiltAngle: 4, plungerDia: 55, weight: 134 },
+    { capacityTon: '520 (5114)', stroke: 50, model: 'SLLH 500-50', oilCapacity: 3287, collapsedHeight: 192, extendedHeight: 237, outsideDia: 400, cylinderBoreDia: 305, plungerDiaThread: 'Tr304x6', baseToAdvancePort: 48, saddleDia: 289, saddleProtrusionFromPiston: 10, saddleMaxTiltAngle: 3, plungerDia: 62, weight: 188 },
   ];
 
 // Data for the NEW Single Acting Low Profile Hydraulic Cylinder table (Fifth table) based on the provided image
@@ -222,6 +222,44 @@ const HydraulicJack = () => {
     { ton: 145, stroke: 203, model: 'DHH 1500-203', maxCylAdvance: 1429, maxCylRetract: 749, oilAdvance: 4191, oilRetract: 2198, collapsedHeight: 359, extendedHeight: 562, outsideDia: 247, cylinderBoreDia: 190.5, plungerDia: 150, weight: 111 },
   ];
 
+  // Data for the NEW DOUBLE ACTING HIGH TONNAGE HYDRAULIC CYLINDER table (Eighth table)
+  const doubleActingHighTonnageTableData = [
+    { ton: 50, stroke: 50, model: 'DHT50-50', capAdvance: 500, capRetract: 255, oilAdvance: 392, oilRetract: 200, colH: 188, extH: 238, outD: 140, boreD: 100, plungerD: 70, weight: 21.5 },
+    { ton: 50, stroke: 100, model: 'DHT50-100', capAdvance: 500, capRetract: 255, oilAdvance: 784, oilRetract: 400, colH: 238, extH: 338, outD: 140, boreD: 100, plungerD: 70, weight: 26 },
+    { ton: 50, stroke: 150, model: 'DHT50-150', capAdvance: 500, capRetract: 255, oilAdvance: 1176, oilRetract: 600, colH: 288, extH: 438, outD: 140, boreD: 100, plungerD: 70, weight: 31 },
+    { ton: 50, stroke: 200, model: 'DHT50-200', capAdvance: 500, capRetract: 255, oilAdvance: 1568, oilRetract: 800, colH: 338, extH: 538, outD: 140, boreD: 100, plungerD: 70, weight: 35 },
+    { ton: 50, stroke: 300, model: 'DHT50-300', capAdvance: 500, capRetract: 255, oilAdvance: 2352, oilRetract: 1200, colH: 438, extH: 738, outD: 140, boreD: 100, plungerD: 70, weight: 44 },
+    { ton: 100, stroke: 50, model: 'DHT100-50', capAdvance: 1000, capRetract: 490, oilAdvance: 770, oilRetract: 377, colH: 216, extH: 266, outD: 180, boreD: 140, plungerD: 100, weight: 42 },
+    { ton: 100, stroke: 100, model: 'DHT100-100', capAdvance: 1000, capRetract: 490, oilAdvance: 1540, oilRetract: 754, colH: 266, extH: 366, outD: 180, boreD: 140, plungerD: 100, weight: 49 },
+    { ton: 100, stroke: 150, model: 'DHT100-150', capAdvance: 1000, capRetract: 490, oilAdvance: 2310, oilRetract: 1131, colH: 316, extH: 466, outD: 180, boreD: 140, plungerD: 100, weight: 56 },
+    { ton: 100, stroke: 200, model: 'DHT100-200', capAdvance: 1000, capRetract: 490, oilAdvance: 3080, oilRetract: 1508, colH: 366, extH: 566, outD: 180, boreD: 140, plungerD: 100, weight: 63 },
+    { ton: 100, stroke: 300, model: 'DHT100-300', capAdvance: 1000, capRetract: 490, oilAdvance: 4620, oilRetract: 2262, colH: 466, extH: 766, outD: 180, boreD: 140, plungerD: 100, weight: 70 },
+    { ton: 150, stroke: 50, model: 'DHT150-50', capAdvance: 1390, capRetract: 709, oilAdvance: 1005, oilRetract: 512, colH: 224, extH: 274, outD: 210, boreD: 160, plungerD: 112, weight: 44 },
+    { ton: 150, stroke: 100, model: 'DHT150-100', capAdvance: 1390, capRetract: 709, oilAdvance: 2010, oilRetract: 1025, colH: 274, extH: 374, outD: 210, boreD: 160, plungerD: 112, weight: 57 },
+    { ton: 150, stroke: 150, model: 'DHT150-150', capAdvance: 1390, capRetract: 709, oilAdvance: 3015, oilRetract: 1537, colH: 324, extH: 474, outD: 210, boreD: 160, plungerD: 112, weight: 70 },
+    { ton: 150, stroke: 200, model: 'DHT150-200', capAdvance: 1390, capRetract: 709, oilAdvance: 4020, oilRetract: 2050, colH: 374, extH: 574, outD: 210, boreD: 160, plungerD: 112, weight: 83 },
+    { ton: 150, stroke: 300, model: 'DHT150-300', capAdvance: 1390, capRetract: 709, oilAdvance: 6030, oilRetract: 3075, colH: 474, extH: 774, outD: 210, boreD: 160, plungerD: 112, weight: 109 },
+    { ton: 200, stroke: 100, model: 'DHT200-100', capAdvance: 2000, capRetract: 875, oilAdvance: 3141, oilRetract: 1374, colH: 296, extH: 396, outD: 250, boreD: 200, plungerD: 150, weight: 109 },
+    { ton: 200, stroke: 150, model: 'DHT200-150', capAdvance: 2000, capRetract: 875, oilAdvance: 4712, oilRetract: 2061, colH: 346, extH: 496, outD: 250, boreD: 200, plungerD: 150, weight: 121 },
+    { ton: 200, stroke: 200, model: 'DHT200-200', capAdvance: 2000, capRetract: 875, oilAdvance: 6282, oilRetract: 2748, colH: 396, extH: 596, outD: 250, boreD: 200, plungerD: 150, weight: 132 },
+    { ton: 200, stroke: 300, model: 'DHT200-300', capAdvance: 2000, capRetract: 875, oilAdvance: 9423, oilRetract: 4122, colH: 496, extH: 796, outD: 250, boreD: 200, plungerD: 150, weight: 155 },
+    { ton: 300, stroke: 100, model: 'DHT300-100', capAdvance: 3193, capRetract: 1537, oilAdvance: 4906, oilRetract: 2363, colH: 327, extH: 427, outD: 315, boreD: 250, plungerD: 180, weight: 180 },
+    { ton: 300, stroke: 200, model: 'DHT300-200', capAdvance: 3193, capRetract: 1537, oilAdvance: 9812, oilRetract: 4726, colH: 427, extH: 627, outD: 315, boreD: 250, plungerD: 180, weight: 220 },
+    { ton: 300, stroke: 300, model: 'DHT300-300', capAdvance: 3193, capRetract: 1537, oilAdvance: 14718, oilRetract: 7089, colH: 527, extH: 827, outD: 315, boreD: 250, plungerD: 180, weight: 260 },
+    { ton: 400, stroke: 100, model: 'DHT400-100', capAdvance: 3919, capRetract: 1317, oilAdvance: 5723, oilRetract: 1924, colH: 355, extH: 455, outD: 355, boreD: 270, plungerD: 220, weight: 255 },
+    { ton: 400, stroke: 200, model: 'DHT400-200', capAdvance: 3919, capRetract: 1317, oilAdvance: 11446, oilRetract: 3848, colH: 455, extH: 655, outD: 355, boreD: 270, plungerD: 220, weight: 310 },
+    { ton: 400, stroke: 300, model: 'DHT400-300', capAdvance: 3919, capRetract: 1317, oilAdvance: 17169, oilRetract: 5772, colH: 555, extH: 855, outD: 355, boreD: 270, plungerD: 220, weight: 375 },
+    { ton: 500, stroke: 100, model: 'DHT500-100', capAdvance: 5000, capRetract: 1948, oilAdvance: 8038, oilRetract: 3133, colH: 375, extH: 475, outD: 395, boreD: 320, plungerD: 250, weight: 326 },
+    { ton: 500, stroke: 200, model: 'DHT500-200', capAdvance: 5000, capRetract: 1948, oilAdvance: 16076, oilRetract: 6266, colH: 475, extH: 675, outD: 395, boreD: 320, plungerD: 250, weight: 394 },
+    { ton: 500, stroke: 300, model: 'DHT500-300', capAdvance: 5000, capRetract: 1948, oilAdvance: 24114, oilRetract: 9399, colH: 575, extH: 875, outD: 395, boreD: 320, plungerD: 250, weight: 462 },
+    { ton: 600, stroke: 100, model: 'DHT600-100', capAdvance: 6300, capRetract: 2488, oilAdvance: 10174, oilRetract: 4019, colH: 436, extH: 536, outD: 450, boreD: 360, plungerD: 280, weight: 542 },
+    { ton: 600, stroke: 200, model: 'DHT600-200', capAdvance: 6300, capRetract: 2488, oilAdvance: 20348, oilRetract: 8038, colH: 536, extH: 736, outD: 450, boreD: 360, plungerD: 280, weight: 634 },
+    { ton: 600, stroke: 300, model: 'DHT600-300', capAdvance: 6300, capRetract: 2488, oilAdvance: 30522, oilRetract: 12057, colH: 636, extH: 936, outD: 450, boreD: 360, plungerD: 280, weight: 726 },
+    { ton: 800, stroke: 100, model: 'DHT800-100', capAdvance: 8000, capRetract: 2880, oilAdvance: 12566, oilRetract: 4522, colH: 477, extH: 577, outD: 550, boreD: 400, plungerD: 320, weight: 796 },
+    { ton: 800, stroke: 200, model: 'DHT800-200', capAdvance: 8000, capRetract: 2880, oilAdvance: 25132, oilRetract: 9044, colH: 577, extH: 777, outD: 550, boreD: 400, plungerD: 320, weight: 944 },
+    { ton: 800, stroke: 300, model: 'DHT800-300', capAdvance: 8000, capRetract: 2880, oilAdvance: 37698, oilRetract: 13566, colH: 677, extH: 977, outD: 550, boreD: 400, plungerD: 320, weight: 1092 },
+  ];
+
   const hollowCapacitySpans = {};
   hollowTableData.forEach(row => {
     hollowCapacitySpans[row.capacity] = (hollowCapacitySpans[row.capacity] || 0) + 1;
@@ -257,6 +295,11 @@ const HydraulicJack = () => {
     doubleActingHollowCapacitySpans[row.ton] = (doubleActingHollowCapacitySpans[row.ton] || 0) + 1;
   });
 
+  const doubleActingHighTonnageCapacitySpans = {};
+  doubleActingHighTonnageTableData.forEach(row => {
+    doubleActingHighTonnageCapacitySpans[row.ton] = (doubleActingHighTonnageCapacitySpans[row.ton] || 0) + 1;
+  });
+
 
 
   let lastHollowCapacity = null;
@@ -266,7 +309,7 @@ const HydraulicJack = () => {
   let lastLowProfileHydraulicCapacity = null;
   let lastLowFlatHydraulicCapacity = null;
   let lastDoubleActingHollowCapacity = null;
-
+  let lastDoubleActingHighTonnageCapacity = null;
 
   return (
     <div className="bg-black text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -423,7 +466,7 @@ const HydraulicJack = () => {
                            </td>
                         )}
                         <td className="p-2 text-white border-r border-gray-700">{row.stroke}</td>
-                        <td className="p-2 font-medium text-gray-300 border-r border-gray-700">{row.model}</td>
+                        <td className="p-3 font-medium text-gray-300 border-r border-gray-700">{row.model}</td>
                         <td className="p-2 text-white border-r border-gray-700">{row.oil}</td>
                         <td className="p-2 text-white border-r border-gray-700">{row.colH}</td>
                         <td className="p-2 text-white border-r border-gray-700">{row.extH}</td>
@@ -456,7 +499,7 @@ const HydraulicJack = () => {
                     <th className="p-3 text-center border-r border-gray-700">ton</th>
                     <th className="p-3 text-center border-r border-gray-700">Stroke <br/> (mm)</th>
                     <th className="p-3 text-center border-r border-gray-700">Model <br/> Number</th>
-                    <th className="p-3 text-center border-r border-gray-700">Cylinder Effective <br/> Area (cm²)</th>
+                    <th className="p-3 text-center border-r border-gray-700">Cylinder Effective <br/> Area (cm³)</th>
                     <th className="p-3 text-center border-r border-gray-700">Oil Capacity <br/> (cm³)</th>
                     <th className="p-3 text-center border-r border-gray-700">Collapsed Height <br/> (mm)</th>
                     <th className="p-3 text-center border-r border-gray-700">Extend Height <br/> (mm)</th>
@@ -481,7 +524,7 @@ const HydraulicJack = () => {
                            </td>
                         )}
                         <td className="p-2 text-white border-r border-gray-700">{row.stroke}</td>
-                        <td className="p-2 font-medium text-gray-300 border-r border-gray-700">{row.model}</td>
+                        <td className="p-3 font-medium text-gray-300 border-r border-gray-700">{row.model}</td>
                         <td className="p-2 text-white border-r border-gray-700">{row.effectiveArea}</td>
                         <td className="p-2 text-white border-r border-gray-700">{row.oilCapacity}</td>
                         <td className="p-2 text-white border-r border-gray-700">{row.collapsedHeight}</td>
@@ -641,8 +684,8 @@ const HydraulicJack = () => {
         </div>
         <div className="border border-gray-600 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
-            <table className="min-w-full">
-                <thead className="bg-gray-800 text-xs">
+            <table className="max-w-full">
+                <thead className="bg-gray-800 text-sm">
                 <tr>
                     <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Cylinder Capacity <br/> ton (kN)</th>
                     <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Stroke <br/> (mm)</th>
@@ -709,7 +752,7 @@ const HydraulicJack = () => {
         <div className="border border-gray-600 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
             <table className="min-w-full">
-                <thead className="bg-gray-800 text-xs">
+                <thead className="bg-gray-800 text-small">
                 <tr>
                     <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Cylinder Capacity <br/> ton (kN)</th>
                     <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Stroke <br/> (mm)</th>
@@ -775,7 +818,7 @@ const HydraulicJack = () => {
         <div className="border border-gray-600 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
             <table className="min-w-full">
-                <thead className="bg-gray-800 text-xs">
+                <thead className="bg-gray-800 text-medim">
                 <tr>
                     <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Cylinder Capacity <br/> ton (kN)</th>
                     <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Stroke <br/> (mm)</th>
@@ -810,7 +853,7 @@ const HydraulicJack = () => {
                            </td>
                         )}
                         <td className="p-2 text-white border-r border-gray-700">{row.stroke}</td>
-                        <td className="p-2 font-medium text-gray-300 border-r border-gray-700">{row.model}</td>
+                        <td className="p-3 font-medium text-gray-300 border-r border-gray-700">{row.model}</td>
                         <td className="p-2 text-white border-r border-gray-700">{row.maxCylAdvance}</td>
                         <td className="p-2 text-white border-r border-gray-700">{row.maxCylRetract}</td>
                         <td className="p-2 text-white border-r border-gray-700">{row.oilAdvance}</td>
@@ -821,6 +864,74 @@ const HydraulicJack = () => {
                         <td className="p-2 text-white border-r border-gray-700">{row.cylinderBoreDia}</td>
                         <td className="p-2 text-white border-r border-gray-700">{row.plungerDia}</td>
                         <td className="p-2 text-white">{row.weight}</td>
+                    </tr>
+                  );
+                })}
+                </tbody>
+            </table>
+            </div>
+        </div>
+      </div>
+
+
+      {/* --- NEWLY ADDED: DOUBLE ACTING HIGH TONNAGE HYDRAULIC CYLINDER TABLE --- */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
+        <div className="mb-10 text-center">
+            <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
+              DOUBLE ACTING HIGH TONNAGE HYDRAULIC CYLINDER
+            </h2>
+            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
+        </div>
+        <div className="border border-gray-600 rounded-lg overflow-hidden">
+            {/* Removed overflow-x-auto and min-w-full */}
+            <div>
+            <table className="w-full">
+                <thead className="bg-gray-800 text-medium">
+                <tr>
+                    <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Cylinder Capacity <br/> ton (kN)</th>
+                    <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Stroke <br/> (mm)</th>
+                    <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Model Number</th>
+                    <th className="p-2 text-center border-r border-gray-700" colSpan="2">Max. Cylinder <br/> Capacity (kN)</th>
+                    <th className="p-2 text-center border-r border-gray-700" colSpan="2">Oil Capacity <br/> (cm³)</th>
+                    <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Collapsed Height <br/> A <br/> (mm)</th>
+                    <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Extended Height <br/> B <br/> (mm)</th>
+                    <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Outside Dia. <br/> C <br/> (mm)</th>
+                    <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Cylinder <br/> Bore Dia. <br/> D <br/> (mm)</th>
+                    <th className="p-2 text-center border-r border-gray-700" rowSpan="2">Plunger <br/> Dia. <br/> (Thread) <br/> E <br/> (mm)</th>
+                    <th className="p-2 text-center" rowSpan="2">Weight <br/> (Kg)</th>
+                </tr>
+                <tr>
+                    <th className="p-2 text-center border-r border-gray-700">Advance</th>
+                    <th className="p-2 text-center border-r border-gray-700">Retract</th>
+                    <th className="p-2 text-center border-r border-gray-700">Advance</th>
+                    <th className="p-2 text-center border-r border-gray-700">Retract</th>
+                </tr>
+                </thead>
+                <tbody>
+                {doubleActingHighTonnageTableData.map((row, index) => {
+                  const showTonCell = row.ton !== lastDoubleActingHighTonnageCapacity;
+                  if (showTonCell) {
+                    lastDoubleActingHighTonnageCapacity = row.ton;
+                  }
+                  return (
+                    <tr key={index} className="bg-black text-center text-medium border-t border-gray-700"> {/* Smallest text */}
+                        {showTonCell && (
+                           <td rowSpan={doubleActingHighTonnageCapacitySpans[row.ton]} className="p-1 font-medium text-gray-300 border-r border-gray-700 align-middle"> {/* Less padding */}
+                            {row.ton}
+                           </td>
+                        )}
+                        <td className="p-1 text-white border-r border-gray-700">{row.stroke}</td>
+                        <td className="p-3 font-medium text-gray-300 border-r border-gray-700">{row.model}</td>
+                        <td className="p-1 text-white border-r border-gray-700">{row.capAdvance}</td>
+                        <td className="p-1 text-white border-r border-gray-700">{row.capRetract}</td>
+                        <td className="p-1 text-white border-r border-gray-700">{row.oilAdvance}</td>
+                        <td className="p-1 text-white border-r border-gray-700">{row.oilRetract}</td>
+                        <td className="p-1 text-white border-r border-gray-700">{row.colH}</td>
+                        <td className="p-1 text-white border-r border-gray-700">{row.extH}</td>
+                        <td className="p-1 text-white border-r border-gray-700">{row.outD}</td>
+                        <td className="p-1 text-white border-r border-gray-700">{row.boreD}</td>
+                        <td className="p-1 text-white border-r border-gray-700">{row.plungerD}</td>
+                        <td className="p-1 text-white">{row.weight}</td>
                     </tr>
                   );
                 })}
