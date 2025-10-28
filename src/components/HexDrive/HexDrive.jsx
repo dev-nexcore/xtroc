@@ -438,7 +438,11 @@ const HandPumps = () => {
       {renderTable(specTableData)}
       
       {/* ------------------------------------------------------------- */}
-      
+       <img
+                  src="Hexdriveblueprint.png"
+                  alt="Hexdriveblueprint"
+                  className="w-[400px] h-[350px] mx-auto mb-10 object-contain"
+                />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6">
         <h2 className="text-3xl font-bold text-white-600 mb-4 text-center">XTH Series Dimensional Data</h2>
           <div className=" sm:w-40 md:w-110 h-1 bg-red-600 rounded-2xl mb-5 mx-auto "></div>

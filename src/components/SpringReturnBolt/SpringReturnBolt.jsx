@@ -131,7 +131,11 @@ const SpringReturnBolt = () => {
                   h-[250px] sm:h-[300px] md:h-[400px] w-full max-w-[500px] flex items-center justify-center text-gray-500"
               >
                 {/* Replace with your image */}
-                <span>Spring Return Tensioner Image Placeholder</span>
+                 <img
+    src="Springreturnbolt.png"
+    alt="Springreturnbolt"
+    className="w-[400px] h-[350px] object-contain"
+  />
               </div>
             </div>
 
@@ -162,7 +166,15 @@ const SpringReturnBolt = () => {
           </div>
         </div>
       </div>
-      
+            
+
+  <img
+    src="Springreturnhydraulicboltblueprint.png"
+    alt="Springreturnhydraulicboltblueprint"
+    className="w-[400px] h-[350px] mx-auto object-contain"
+  />
+
+
       {/* --- Technical Specifications Section --- */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="mb-10 text-center">
