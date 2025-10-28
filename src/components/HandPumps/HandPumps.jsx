@@ -146,7 +146,7 @@ const HandPumps = () => {
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
                 Hand Pumps & Hoses
               </h1>
-              <div className="w-28 sm:w-40 md:w-60 h-1 bg-red-600 rounded-2xl"></div>
+              <div className="w-100 sm:w-40 md:w-100 h-1 bg-red-600 rounded-2xl"></div>
             </div>
 
             {/* Description */}
@@ -171,12 +171,13 @@ const HandPumps = () => {
       </div>
 
        {/* --- Technical Specifications Table --- */}
+       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="mb-10 text-center">
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
               Technical Specifications
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "600px" }}></div>
+            <div className="w-100 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "600px" }}></div>
         </div>
 
         <div className="border border-gray-600 rounded-lg overflow-hidden">

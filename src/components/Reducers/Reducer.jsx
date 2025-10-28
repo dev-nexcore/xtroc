@@ -184,22 +184,22 @@ const Reducer = () => {
       { outsideAfMm: 105, outsideAfInch: '', insideAfMm: 90, insideAfInch: '', model_h32: '', model_h42: '', model_h53: 'XHR-8-105-90', model_h64: 'XHR-14-100-95', model_h85: '' },
       { outsideAfMm: 105, outsideAfInch: '', insideAfMm: 95, insideAfInch: '', model_h32: '', model_h42: '', model_h53: 'XHR-8-105-95', model_h64: 'XHR-14-105-90', model_h85: '' },
       { outsideAfMm: 105, outsideAfInch: '', insideAfMm: 100, insideAfInch: '', model_h32: '', model_h42: '', model_h53: 'XHR-8-105-100', model_h64: 'XHR-14-105-95', model_h85: '' }, // Model mismatch 109 vs 110? Assuming 109 based on model
-      { outsideAfMm: 110, outsideAfInch: '', insideAfMm: 95, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-105-100', model_h85: '' },
-      { outsideAfMm: 110, outsideAfInch: '', insideAfMm: 100, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-110-95', model_h85: 'XHR-32-110-95' },
-      { outsideAfMm: 110, outsideAfInch: '', insideAfMm: 105, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-110-100', model_h85: 'XHR-32-110-100' },
-      { outsideAfMm: 115, outsideAfInch: '', insideAfMm: 100, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-110-105', model_h85: 'XHR-32-110-105' },
-      { outsideAfMm: 115, outsideAfInch: '', insideAfMm: 105, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-115-100', model_h85: 'XHR-32-115-100' },
-      { outsideAfMm: 115, outsideAfInch: '', insideAfMm: 110, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-115-105', model_h85: 'XHR-32-115-105' },
-      { outsideAfMm: 135, outsideAfInch: '', insideAfMm: 110, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-115-110', model_h85: 'XHR-32-115-110' },
+      { outsideAfMm: 110, outsideAfInch: '', insideAfMm: 95, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-105-100', model_h85: 'XHR-32-110-95' },
+      { outsideAfMm: 110, outsideAfInch: '', insideAfMm: 100, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-110-95', model_h85: 'XHR-32-110-100' },
+      { outsideAfMm: 110, outsideAfInch: '', insideAfMm: 105, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-110-100', model_h85: 'XHR-32-110-105' },
+      { outsideAfMm: 115, outsideAfInch: '', insideAfMm: 100, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-110-105', model_h85: 'XHR-32-115-100' },
+      { outsideAfMm: 115, outsideAfInch: '', insideAfMm: 105, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-115-100', model_h85: 'XHR-32-115-105' },
+      { outsideAfMm: 115, outsideAfInch: '', insideAfMm: 110, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-115-105', model_h85: 'XHR-32-115-110' },
+      { outsideAfMm: 135, outsideAfInch: '', insideAfMm: 110, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: 'XHR-14-115-110', model_h85: 'XHR-32-135-110' },
       { outsideAfMm: 135, outsideAfInch: '', insideAfMm: 115, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-135-110' },
-      { outsideAfMm: 135, outsideAfInch: '', insideAfMm: 120, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-135-110' },
-      { outsideAfMm: 145, outsideAfInch: '', insideAfMm: 110, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-135-130' },
-      { outsideAfMm: 145, outsideAfInch: '', insideAfMm: 115, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-145-110' },
-      { outsideAfMm: 145, outsideAfInch: '', insideAfMm: 130, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-145-115' },
-      { outsideAfMm: 160, outsideAfInch: '', insideAfMm: 130, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-145-130' },
-      { outsideAfMm: 160, outsideAfInch: '', insideAfMm: 145, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-160-130' },
-      { outsideAfMm: 175, outsideAfInch: '', insideAfMm: 145, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-160-145' },
-      { outsideAfMm: 175, outsideAfInch: '', insideAfMm: 160, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-175-145' },
+      { outsideAfMm: 135, outsideAfInch: '', insideAfMm: 120, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-135-130' },
+      { outsideAfMm: 145, outsideAfInch: '', insideAfMm: 110, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-145-110' },
+      { outsideAfMm: 145, outsideAfInch: '', insideAfMm: 115, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-145-115' },
+      { outsideAfMm: 145, outsideAfInch: '', insideAfMm: 130, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-145-130' },
+      { outsideAfMm: 160, outsideAfInch: '', insideAfMm: 130, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-160-130' },
+      { outsideAfMm: 160, outsideAfInch: '', insideAfMm: 145, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-160-145' },
+      { outsideAfMm: 175, outsideAfInch: '', insideAfMm: 145, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-175-145' },
+      { outsideAfMm: 175, outsideAfInch: '', insideAfMm: 160, insideAfInch: '', model_h32: '', model_h42: '', model_h53: '', model_h64: '', model_h85: 'XHR-32-175-160' },
   ];
 
   return (
@@ -281,7 +281,7 @@ const Reducer = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
               Hexagon Reducer Bush Specifications (Type 1)
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "600px" }}></div>
+            <div className="w-250 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "600px" }}></div>
         </div>
         <div className="border border-gray-600 rounded-lg overflow-hidden">
           <div>
@@ -321,7 +321,7 @@ const Reducer = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
               Hexagon Reducer Bush Specifications (Type 2)
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "600px" }}></div>
+            <div className="w-220 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "600px" }}></div>
         </div>
         <div className="border border-gray-600 rounded-lg overflow-hidden">
           <div>

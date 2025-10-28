@@ -220,7 +220,7 @@ const Socket = () => {
             </div>
 
             {/* Description */}
-            <div className="space-y-4 text-gray-200 leading-relaxed text-xl">
+            <div className="space-y-4 text-gray-200 leading-relaxed text-2xl">
               <p>
                 The range of Imperial Impact Sockets with square drives is from 3/4" to 2.1/2" and the across flat
                 sizes go up to 6.1/8". The Metric Impact Sockets offer comprehensive models with square drives ranging from
@@ -268,6 +268,18 @@ const Socket = () => {
       </div>
 
       {/* --- Technical Specifications Table --- */}
+
+             <img
+                  src="Impactsocketimage1.png"
+                  alt="Hydraulic Nut Splitter"
+                  className="w-[400px] h-[350px] mx-auto mb-10 object-contain"
+                />
+
+                       <img
+                  src="Impactsocketimage2.png"
+                  alt="Hydraulic Nut Splitter"
+                  className="w-[400px] h-[350px] mx-auto mb-10 object-contain"
+                />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="mb-10 text-center">
           <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
