@@ -676,7 +676,7 @@ const Navbar = () => {
     ],
     "bolt-tensioner": [
         { id: "topside-tensioner", name: "Top Side Bolt Tensioner", img: "/product5.png", path: "/topsidebolt", width: 350, height: 400 },
-        { id: "spring-return-tensioner", name: "Spring Return Bolt Tensioner", img: "/SpringReturnBolt.png", path: "/springreturnbolt", width: 350, height: 400 },
+        { id: "spring-return-tensioner", name: "Spring Return Bolt Tensioner", img: "/Springreturnbolt.png", path: "/springreturnbolt", width: 350, height: 400 },
         { id: "multi-stage-tensioner", name: "Multi Stage Bolt Tensioner", img: "/multistagebolt.png", path: "/multistagebolt", width: 400, height: 350 },
         { id: "subsea-tensioner", name: "Subsea Bolt Tensioner", img: "/subsea.png", path: "/subseabolt", width: 380, height: 400 },
     ],

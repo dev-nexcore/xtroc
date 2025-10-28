@@ -487,7 +487,7 @@ const categories = {
         {
           id: "spring-return-tensioner",
           name: "Spring Return Bolt Tensioner",
-          img: "product5.png", // Use appropriate image if available (same as topside for now)
+          img: "Springreturnbolt.png", // Use appropriate image if available (same as topside for now)
           path: "springreturnbolt",
         },
         {
