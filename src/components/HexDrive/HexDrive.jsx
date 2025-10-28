@@ -410,7 +410,7 @@ const HandPumps = () => {
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
                 Hex Drive - XTH Series
               </h1>
-              <div className="w-28 sm:w-40 md:w-110 h-1 bg-red-600 rounded-2xl"></div>
+              <div className="w-28 sm:w-40 md:w-100 h-1 bg-red-600 rounded-2xl"></div>
             </div>
 
             {/* Description */}
