@@ -200,10 +200,20 @@ const SquareDrive = () => {
             </div>
 
             {/* Download Catalog Button */}
-            <div className="flex justify-center lg:justify-start lg:ml-30">
+            {/* <div className="flex justify-center lg:justify-start lg:ml-30">
               <button className="bg-white text-red-600 px-6 sm:px-8 py-2 sm:py-3 text-lg sm:text-2xl rounded-2xl font-bold ">
                 Download Catalog
               </button>
+            </div> */}
+               <div className="flex justify-center lg:justify-start lg:ml-30">
+              <a
+                href="XTORC BROCHURE.pdf"
+                download
+                className="bg-white text-red-600 px-8 py-3 rounded-2xl text-2xl font-bold border-2 border-red-600 
+               hover:bg-red-700 hover:text-white transition-all duration-300"
+              >
+                Download Catalog
+              </a>
             </div>
           </div>
 

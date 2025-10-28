@@ -33,15 +33,24 @@ const HydraulicTorque = () => {
             </div>
 
 
-            <div className="flex justify-center py-10">
+            {/* <div className="flex justify-center py-10">
               <button 
                 className="text-red-600 px-8 py-3 rounded-2xl text-2xl font-bold transition-colors"
                 style={{ backgroundColor: '#ffffff'}}
               >
                 Download Catalog
               </button>
+            </div> */}
+      <div className="flex justify-center lg:justify-start lg:ml-30">
+              <a
+                href="XTORC BROCHURE.pdf"
+                download
+                className="bg-white text-red-600 px-8 py-3 rounded-2xl text-2xl font-bold border-2 border-red-600 
+               hover:bg-red-700 hover:text-white transition-all duration-300"
+              >
+                Download Catalog
+              </a>
             </div>
-
             
           </div>
 

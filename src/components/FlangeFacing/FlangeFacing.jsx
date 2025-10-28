@@ -269,13 +269,23 @@ Tube sheet mounting kit adds a mounted way for heat exchanger repair. Milling he
               </div>
             </div>
 
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <button
                 className="text-red-600 px-8 py-3 rounded-2xl text-2xl font-bold hover:bg-red-700 hover:text-white transition-colors"
                 style={{ backgroundColor: '#ffffff' }}
               >
                 Download Catalog
               </button>
+            </div> */}
+            <div className="flex justify-center">
+              <a
+                href="XTORC IN-SITU MACHINES BROCHURE.pdf"
+                download
+                className="bg-white text-red-600 px-8 py-3 rounded-2xl text-2xl font-bold border-2 border-red-600 
+               hover:bg-red-700 hover:text-white transition-all duration-300"
+              >
+                Download Catalog
+              </a>
             </div>
           </div>
         </div>
