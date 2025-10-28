@@ -318,6 +318,12 @@ const BoltTensionersPage = () => {
           </div>
         </div>
       </div>
+
+             <img
+                  src="Topsidebolttensionerblueprint.png"
+                  alt="Topsidebolttensionerblueprint"
+                  className=" mx-auto mb-10 object-contain"
+                />
       
       {/* --- XBT SERIES: Technical Specifications Section --- */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
