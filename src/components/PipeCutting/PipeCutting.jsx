@@ -296,7 +296,7 @@ const PipeCutting = () => {
 
 
          {/* XTCB Series Machine Range Table */}
-         <div>
+         {/* <div>
            <h2 className="text-xl sm:text-2xl font-bold text-red-600 mb-4 ml-2">XTCB Series Machine Range:</h2>
            <div className="overflow-x-auto shadow-lg rounded-lg border border-gray-700">
              <table className="min-w-full divide-y divide-gray-700">
@@ -336,7 +336,61 @@ const PipeCutting = () => {
                </tbody>
              </table>
            </div>
-         </div>
+         </div> */}
+
+
+<div className="px-4 sm:px-6 lg:px-12 py-12">
+    <div>
+        {/* हेडिंग को केंद्र में किया गया है और टेक्स्ट कलर white किया गया है */}
+        <h2 className="text-xl sm:text-2xl font-bold text-white text-center mb-2">
+            XTCB Series Machine Range:
+        </h2>
+
+      
+        <div className="rounded-2xl h-1 bg-red-600 mx-auto" style={{ maxWidth: "400px" }}></div>
+      
+        <div className="overflow-x-auto shadow-lg rounded-lg border border-gray-600 mt-8"> 
+            <table className="min-w-full divide-y divide-gray-700 border-collapse">
+                <thead className="bg-gray-800 text-medium text-white"> 
+                    <tr>
+                        <th className="py-2 px-1 sm:px-2 text-xl font-semibold uppercase tracking-wider text-center border-r border-gray-700" rowSpan="2">Model</th>
+                        <th className="py-2 px-1 sm:px-2 text-xl font-semibold uppercase tracking-wider text-center border-r border-gray-700" colSpan="2">Machine ID</th>
+                        <th className="py-2 px-1 sm:px-2 text-xl font-semibold uppercase tracking-wider text-center border-r border-gray-700" colSpan="2">Machine OD</th>
+                        <th className="py-2 px-1 sm:px-2 text-xl font-semibold uppercase tracking-wider text-center border-r border-gray-700" colSpan="2">Mounting Range</th>
+                        <th className="py-2 px-1 sm:px-2 text-xl font-semibold uppercase tracking-wider text-center" colSpan="2">Ring Weight (Kg)</th>
+                    </tr>
+                    <tr>
+                        <th className="py-1 px-1 text-xl font-medium uppercase text-center bg-gray-700 border-l border-r border-gray-700 text-white">mm</th> 
+                        <th className="py-1 px-1 text-xl font-medium uppercase text-center bg-gray-700 border-r border-gray-700 text-white">Inch</th>
+                        <th className="py-1 px-1 text-xl font-medium uppercase text-center bg-gray-700 border-r border-gray-700 text-white">mm</th>
+                        <th className="py-1 px-1 text-xl font-medium uppercase text-center bg-gray-700 border-r border-gray-700 text-white">Inch</th>
+                        <th className="py-1 px-1 text-xl font-medium uppercase text-center bg-gray-700 border-r border-gray-700 text-white">mm</th>
+                        <th className="py-1 px-1 text-xl font-medium uppercase text-center bg-gray-700 border-r border-gray-700 text-white">Inch</th>
+                        <th className="py-1 px-1 text-xl font-medium uppercase text-center bg-gray-700 border-r border-gray-700 text-white">W/O Accessories</th>
+                        <th className="py-1 px-1 text-xl font-medium uppercase text-center bg-gray-700 text-white">With Accessories</th>
+                    </tr>
+                </thead>
+                {/* टेबल बॉडी के लिए डेटा 'machineData' से आएगा */}
+                <tbody className="bg-black divide-y divide-gray-700 text-gray-300"> 
+                    {machineData.map((item, index) => (
+                        // सभी rows के लिए bg-black का उपयोग करें, जैसे पहले टेबल में था
+                        <tr key={item.model} className="bg-black border-t border-gray-700"> 
+                            <td className="py-2 px-1 sm:px-2 whitespace-nowrap text-xl font-medium text-center text-red-400 border-r border-gray-700">{item.model}</td>
+                            <td className="py-2 px-1 whitespace-nowrap text-xl text-center border-r border-gray-700 text-white">{item.machineIdMm}</td>
+                            <td className="py-2 px-1 whitespace-nowrap text-xl text-center border-r border-gray-700 text-white">{item.machineIdInch}</td>
+                            <td className="py-2 px-1 whitespace-nowrap text-xl text-center border-r border-gray-700 text-white">{item.machineOdMm}</td>
+                            <td className="py-2 px-1 whitespace-nowrap text-xl text-center border-r border-gray-700 text-white">{item.machineOdInch}</td>
+                            <td className="py-2 px-1 whitespace-nowrap text-xl text-center border-r border-gray-700 text-white">{item.mountingRangeMm}</td>
+                            <td className="py-2 px-1 whitespace-nowrap text-xl text-center border-r border-gray-700 text-white">{item.mountingRangeInch}</td>
+                            <td className="py-2 px-1 whitespace-nowrap text-xl text-center font-semibold border-r border-gray-700 text-gray-300">{item.ringWeightWo}</td>
+                            <td className="py-2 px-1 whitespace-nowrap text-xl text-center font-semibold text-gray-300">{item.ringWeightWith}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
        </div>
      </div>
    );

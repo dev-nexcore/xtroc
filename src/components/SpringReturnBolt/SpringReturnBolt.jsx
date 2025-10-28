@@ -169,8 +169,8 @@ const SpringReturnBolt = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
               SPRING RETURN HYDRAULIC BOLT TENSIONER
             </h2>
-            <p className="text-2xl text-red-500 font-semibold" style={{ fontFamily: 'Impact, sans-serif' }}>XST SERIES</p>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: '600px' }}></div>
+            <p className="text-4xl text-white-500 " style={{ fontFamily: 'Impact, sans-serif' }}>XST SERIES</p>
+            <div className="w-160 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: '600px' }}></div>
         </div>
 
         {/* Data Sheet Table */}

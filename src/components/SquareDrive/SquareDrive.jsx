@@ -117,7 +117,7 @@ const SquareDrive = () => {
   };
 
   const renderTable = (data) => (
-    <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-12 pb-12 overflow-x-auto">
+    <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-12 pb-12 overflow-x-auto mt-4">
       <div className="inline-block min-w-full">
         <div className="shadow-lg">
           <table className="min-w-full border-collapse">
@@ -232,7 +232,8 @@ const SquareDrive = () => {
       {/* ------------------------------------------------------------- */}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6">
-        <h2 className="text-2xl font-bold text-white mb-4">Technical Specifications</h2>
+        <h2 className="text-2xl font-bold text-white mb-2 text-center  ">Technical Specifications</h2>
+           <div className="rounded-2xl  h-1 bg-red-600 mx-auto" style={{ maxWidth: "280px" }}></div>
       </div>
       
       {/* Table 1: Specifications (from previous request) */}
@@ -241,7 +242,8 @@ const SquareDrive = () => {
       {/* ------------------------------------------------------------- */}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6">
-        <h2 className="text-2xl font-bold text-white mb-4">Dimensional Data</h2>
+        <h2 className="text-2xl font-bold text-white mb-2 text-center">Dimensional Data</h2>
+           <div className="rounded-2xl h-1 bg-red-600 mx-auto" style={{ maxWidth: "220px" }}></div>
       </div>
 
       {/* Table 2: Dimensional Data (from new image) */}
