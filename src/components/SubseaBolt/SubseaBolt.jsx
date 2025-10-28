@@ -175,7 +175,7 @@ nut engagement. </p>
              <img
                   src="SubseaBoltTable1blueprint.png"
                   alt="Hydraulic Nut Splitter"
-                  className="w-[400px] h-[350px] mx-auto mb-10 object-contain"
+                  className="w-[400px] h-[350px] mx-auto object-contain"
                 />
       <div className="px-4 sm:px-6 lg:px-12 py-12">
         <div className="mb-10 text-center">
