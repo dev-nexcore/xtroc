@@ -154,7 +154,7 @@ const SpringReturnBolt = () => {
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
                 Spring Return Bolt Tensioner
               </h1>
-              <div className="w-28 sm:w-40 md:w-60 h-1 bg-red-600 rounded-2xl"></div>
+              <div className="w-28 sm:w-40 md:w-150 h-1 bg-red-600 rounded-2xl"></div>
             </div>
 
             {/* Description */}
@@ -179,7 +179,7 @@ const SpringReturnBolt = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="mb-10 text-center">
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: 'Impact, sans-serif' }}>
-              SPRING RETURN HYDRAULIC BOLT TENSIONER
+              Spring Return Hydraulic Bolt Tensioner
             </h2>
             <p className="text-4xl text-white-500 " style={{ fontFamily: 'Impact, sans-serif' }}>XST SERIES</p>
             <div className="w-160 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: '600px' }}></div>

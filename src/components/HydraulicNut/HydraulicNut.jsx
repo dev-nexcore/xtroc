@@ -246,6 +246,12 @@ const HydraulicNut = () => {
       </div>
 
       {/* --- XNSL SERIES TABLE --- */}
+
+             <img
+                  src="NutsplittersTable1blueprint.png"
+                  alt="Hydraulic Nut Splitter"
+                  className="w-[400px] h-[350px] mx-auto mb-10 object-contain"
+                />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="mb-10 text-center">
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
@@ -303,6 +309,11 @@ const HydraulicNut = () => {
       </div>
 
       {/* --- XNSH SERIES TABLE --- */}
+                   <img
+                  src="NutsplittersTable2blueprint.png"
+                  alt="Hydraulic Nut Splitter"
+                  className="w-[400px] h-[350px] mx-auto mb-10 object-contain"
+                />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="mb-10 text-center">
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>

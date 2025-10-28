@@ -336,7 +336,7 @@ const HydraulicJack = () => {
             </div>
 
             {/* Description */}
-           <div className="space-y-4 text-gray-200 text-xl leading-relaxed">
+           <div className="space-y-4 text-gray-200 text-2xl leading-relaxed">
               <p>
                 XTORC's Cylinders operate with a maximum pressure of 700 Bar.
                 With Single and Double Acting ranges, XTORC's Cylinders show versatility in operational requirements and fulfill the need of the user. All Single Acting Cylinders are spring return and Double Acting Cylinders are oil return.
@@ -377,7 +377,7 @@ const HydraulicJack = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
               SINGLE-ACTING HOLLOW HYDRAULIC CYLINDER
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
+            <div className="w-160 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
         </div>
         <div className="border border-gray-600 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
@@ -433,7 +433,7 @@ const HydraulicJack = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
               SINGLE ACTING HYDRAULIC CYLINDERS
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
+            <div className="w-140 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
         </div>
         <div className="border border-gray-600 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
@@ -489,7 +489,7 @@ const HydraulicJack = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
               SINGLE ACTING HIGH TONNAGE HYDRAULIC CYLINDER
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
+            <div className="w-180 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
         </div>
         <div className="border border-gray-600 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
@@ -549,7 +549,7 @@ const HydraulicJack = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
               SINGLE ACTING LOW PROFILE LOCK-NUT HYDRAULIC CYLINDER
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
+            <div className="w-200 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
         </div>
         <div className="border border-gray-600 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
@@ -615,7 +615,7 @@ const HydraulicJack = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
               SINGLE ACTING LOW PROFILE HYDRAULIC CYLINDER
             </h2>
-            <div className="w- rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
+            <div className="w-180 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
         </div>
         <div className="border border-gray-600 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
@@ -747,7 +747,7 @@ const HydraulicJack = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
               DOUBLE ACTING HOLLOW HYDRAULIC CYLINDER
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
+            <div className="w-160 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
         </div>
         <div className="border border-gray-600 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
@@ -813,7 +813,7 @@ const HydraulicJack = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
               DOUBLE ACTING HOLLOW HYDRAULIC CYLINDER
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
+            <div className="w-160 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
         </div>
         <div className="border border-gray-600 rounded-lg overflow-hidden">
             <div className="overflow-x-auto">
@@ -880,7 +880,7 @@ const HydraulicJack = () => {
             <h2 className="text-4xl text-white mb-2" style={{ fontFamily: "Impact, sans-serif" }}>
               DOUBLE ACTING HIGH TONNAGE HYDRAULIC CYLINDER
             </h2>
-            <div className="w-120 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
+            <div className="w-190 rounded-2xl h-1 bg-red-600 mx-auto mt-2" style={{ maxWidth: "800px" }}></div>
         </div>
         <div className="border border-gray-600 rounded-lg overflow-hidden">
             {/* Removed overflow-x-auto and min-w-full */}
