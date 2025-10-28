@@ -163,7 +163,7 @@ const Xep1500 = () => {
                 sm:h-[400px] h-[200px] flex items-center justify-center text-black"
               >
                 <img
-                  src="images/Power-Pack/XEP1500.png"
+                  src="xep1500.png"
                   alt="XEP 1500 Power Pack"
                   className="w-full h-full object-contain"
                 />
