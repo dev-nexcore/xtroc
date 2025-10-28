@@ -241,10 +241,18 @@ const SquareDrive = () => {
       
       {/* ------------------------------------------------------------- */}
       
+             <img
+                  src="Sqauredriveblueprint.png"
+                  alt="Square Drive Blueprint"
+                  className="w-[500px] h-[450px] mx-auto mb-10 object-contain"
+                />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6">
         <h2 className="text-2xl font-bold text-white mb-2 text-center">Dimensional Data</h2>
            <div className="rounded-2xl h-1 bg-red-600 mx-auto" style={{ maxWidth: "220px" }}></div>
       </div>
+
+      
 
       {/* Table 2: Dimensional Data (from new image) */}
       {renderTable(dimTableData)}
