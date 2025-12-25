@@ -21,7 +21,7 @@ const ChatBoat = () => {
         <div className="fixed md:bottom-21 md:left-20 bottom-20 left-8 h-100 w-80 bg-white rounded-2xl shadow-lg z-50">
           {/* Header */}
           <div className="bg-[#D01A1A] h-20 rounded-t-2xl px-4 py-2 text-white">
-            <p className="text-2xl font-bold">XTROC</p>
+            <p className="text-2xl font-bold">XTORC</p>
             <span className="text-sm">Replies in few seconds</span>
           </div>
 

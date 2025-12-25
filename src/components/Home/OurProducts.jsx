@@ -7,7 +7,7 @@ const OurProducts = () => {
 
   const products = [
     { id: 0, src: "/SquareDrive.png", alt: "Product 1", title: "Hydraulic Torque Wrenches" },
-    { id: 1, src: "/product2.png",  alt: "Product 2", title: "Bolt Tensioning Solutions" },
+    { id: 1, src: "/product2.png",  alt: "Product 2", title: "Hex Drive" },
     { id: 2, src: "/product3.png",  alt: "Product 3", title: "Hydraulic Equipment" },
     { id: 3, src: "/product4.png",  alt: "Product 4", title: "Pipe Cutting & Beveling Machines" },
   ];
